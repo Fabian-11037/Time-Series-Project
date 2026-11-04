@@ -1,0 +1,50 @@
+[
+  {
+    "notebook": "05_dependencia.ipynb",
+    "seconds": 9.903,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "06_covariables.ipynb",
+    "seconds": 10.501,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "07_texto.ipynb",
+    "seconds": 13.195,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "08_validacion.ipynb",
+    "seconds": 7.145,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "09_literatura.ipynb",
+    "seconds": 4.528,
+    "code_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "10_conclusiones.ipynb",
+    "seconds": 4.448,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "01_datos.ipynb",
+    "seconds": 7.228,
+    "code_cells": 2,
+    "errors": 0
+  },
+  {
+    "notebook": "03_objetivo.ipynb",
+    "seconds": 6.461,
+    "code_cells": 2,
+    "errors": 0
+  }
+]

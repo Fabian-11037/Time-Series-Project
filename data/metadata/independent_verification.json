@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-11-04T04:14:40.202588+00:00",
+  "checks": {
+    "titulares_prensa_2000_2025.csv": {
+      "rows": 561072,
+      "unique_ids": 561072,
+      "by_source": {
+        "Dinero": 129,
+        "El Colombiano": 461461,
+        "El Espectador": 8550,
+        "El Tiempo": 49350,
+        "La República": 10381,
+        "Portafolio": 1815,
+        "Semana": 29386
+      }
+    },
+    "titulares_prensa_2020_2025.csv": {
+      "rows": 115480,
+      "unique_ids": 115480,
+      "by_source": {
+        "Dinero": 129,
+        "El Colombiano": 15869,
+        "El Espectador": 8550,
+        "El Tiempo": 49350,
+        "La República": 10381,
+        "Portafolio": 1815,
+        "Semana": 29386
+      }
+    },
+    "titulos_informes_ideam_xm.csv": {
+      "rows": 7629,
+      "unique_ids": 7629,
+      "by_source": {
+        "IDEAM": 7223,
+        "XM": 406
+      }
+    },
+    "textos_ampliados_fechas_declaradas_2000_2025.csv": {
+      "rows": 568294,
+      "unique_ids": 568294,
+      "by_source": {
+        "Dinero": 129,
+        "El Colombiano": 461461,
+        "El Espectador": 8550,
+        "El Tiempo": 49350,
+        "IDEAM": 7223,
+        "La República": 10381,
+        "Portafolio": 1815,
+        "Semana": 29385
+      }
+    },
+    "textos_disponibilidad_verificada_2020_2025.csv": {
+      "rows": 62572,
+      "unique_ids": 62572,
+      "by_source": {
+        "El Espectador": 4697,
+        "El Tiempo": 48323,
+        "La República": 8162,
+        "Portafolio": 391,
+        "Semana": 999
+      }
+    }
+  },
+  "exact_duplicate_url_title_day_groups": 0,
+  "all_exported_sources_allowed": true,
+  "no_topic_columns": true,
+  "strict_temporal_filter_passed": true,
+  "monthly_grid_complete": true
+}

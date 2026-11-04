@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "verified_at": "2026-11-04T00:03:42.104798+00:00",
+  "monthly_metric_checks": 2184,
+  "all_monthly_checks_pass": true,
+  "numeric_cells_compared": 721772,
+  "checks": [
+    "original_export_hashes",
+    "no_duplicate_keys",
+    "consecutive_intervals",
+    "312_months_per_metric",
+    "no_null_numeric_values",
+    "every_consolidated_cell_matches_metric_extract",
+    "hour_labels_and_interval_length"
+  ]
+}

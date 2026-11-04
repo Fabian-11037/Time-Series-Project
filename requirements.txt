@@ -1,0 +1,12 @@
+jupyter-book==1.0.4
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+statsmodels
+scikit-learn
+nbformat
+nbclient
+ipykernel
+

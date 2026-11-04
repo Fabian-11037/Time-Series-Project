@@ -1,0 +1,9 @@
+{
+  "snapshots_digest_and_capture_verified": 274,
+  "exact_entry_observations_verified": 66207,
+  "snapshots_failed": 39,
+  "snapshots_digest_not_reproduced": 2,
+  "publication_after_capture_observations": 1,
+  "unique_titles_with_verified_version": 62572,
+  "titles_with_only_conflicting_archived_dates": 1
+}

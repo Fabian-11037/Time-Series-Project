@@ -1,0 +1,649 @@
+month,medium,recovered_title_records_by_declared_publication_month,distinct_urls_with_title,days_with_declared_publication,calendar_days,days_without_recovered_publication,declared_timestamp_with_zone,verified_versions_by_capture_availability_month,days_with_verified_availability,official_titles_by_reference_folder_month_not_publication,candidate_first_paragraph_records,days_with_candidate_headers,monthly_url_indexes_discovered,monthly_url_indexes_downloaded,full_editorial_corpus_completeness,status
+2020-01,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-01,El Colombiano,2252,2252,31,31,0,2252,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-01,El Espectador,8,8,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-01,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-01,La República,24,24,15,31,16,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-01,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-01,Semana,11,11,10,31,21,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-01,IDEAM,11,11,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-01,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-02,Dinero,0,0,0,29,29,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-02,El Colombiano,2216,2216,29,29,0,2216,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-02,El Espectador,6,6,6,29,23,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-02,El Tiempo,0,0,0,29,29,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-02,La República,13,13,11,29,18,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-02,Portafolio,0,0,0,29,29,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-02,Semana,19,19,13,29,16,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-02,IDEAM,12,12,4,29,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-02,XM,0,0,0,29,29,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-03,El Colombiano,2519,2519,31,31,0,2519,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-03,El Espectador,234,234,16,31,15,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-03,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-03,La República,11,11,10,31,21,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-03,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-03,Semana,17,17,12,31,19,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-03,IDEAM,13,13,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-03,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-04,El Colombiano,2528,2528,30,30,0,2528,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-04,El Espectador,175,175,12,30,18,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-04,El Tiempo,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-04,La República,12,12,10,30,20,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-04,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-04,Semana,23,23,16,30,14,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-04,IDEAM,12,12,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-04,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-05,El Colombiano,2416,2416,31,31,0,2416,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-05,El Espectador,9,9,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-05,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-05,La República,13,13,11,31,20,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-05,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-05,Semana,30,30,17,31,14,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-05,IDEAM,12,12,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-05,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-06,El Colombiano,1273,1273,15,30,15,1273,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-06,El Espectador,4,4,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-06,El Tiempo,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-06,La República,29,29,16,30,14,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-06,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-06,Semana,39,39,16,30,14,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-06,IDEAM,13,13,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-06,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-07,El Colombiano,1,1,1,31,30,1,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-07,El Espectador,3,3,3,31,28,1,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-07,El Tiempo,1,1,1,31,30,1,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-07,La República,20,20,14,31,17,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-07,Portafolio,2,2,2,31,29,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-07,Semana,202,202,25,31,6,2,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-07,IDEAM,15,15,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-07,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-08,Dinero,22,21,11,31,20,22,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-08,El Colombiano,108,105,26,31,5,108,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-08,El Espectador,95,86,28,31,3,90,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-08,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-08,La República,74,74,23,31,8,62,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-08,Portafolio,77,77,26,31,5,77,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-08,Semana,405,383,31,31,0,202,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-08,IDEAM,13,13,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-08,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-09,Dinero,21,21,14,30,16,21,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-09,El Colombiano,159,159,29,30,1,159,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-09,El Espectador,109,105,29,30,1,101,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-09,El Tiempo,4,3,3,30,27,4,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-09,La República,82,79,28,30,2,54,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-09,Portafolio,67,67,27,30,3,67,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-09,Semana,398,390,30,30,0,152,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-09,IDEAM,13,13,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-09,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-10,Dinero,24,22,17,31,14,24,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-10,El Colombiano,208,206,31,31,0,208,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-10,El Espectador,117,109,30,31,1,110,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-10,El Tiempo,2,2,2,31,29,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-10,La República,104,102,29,31,2,85,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-10,Portafolio,94,93,28,31,3,94,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-10,Semana,441,429,31,31,0,153,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-10,IDEAM,13,13,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-10,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-11,Dinero,25,25,16,30,14,25,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-11,El Colombiano,131,131,26,30,4,131,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-11,El Espectador,147,144,28,30,2,142,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-11,El Tiempo,2,2,2,30,28,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-11,La República,81,81,28,30,2,52,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-11,Portafolio,55,55,21,30,9,55,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-11,Semana,439,433,30,30,0,213,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-11,IDEAM,12,12,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-11,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-12,Dinero,14,14,9,31,22,14,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-12,El Colombiano,203,196,29,31,2,203,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-12,El Espectador,221,215,30,31,1,212,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-12,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2020-12,La República,106,104,30,31,1,80,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-12,Portafolio,36,36,22,31,9,36,0,0,0,0,0,1,1,not_certified,partial_recovery
+2020-12,Semana,609,588,31,31,0,359,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-12,IDEAM,19,19,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2020-12,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-01,Dinero,23,23,12,31,19,23,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-01,El Colombiano,185,177,30,31,1,185,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-01,El Espectador,269,258,30,31,1,267,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-01,El Tiempo,2,2,2,31,29,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-01,La República,122,117,31,31,0,94,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-01,Portafolio,46,46,21,31,10,46,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-01,Semana,547,523,31,31,0,399,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-01,IDEAM,12,12,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-01,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-02,Dinero,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-02,El Colombiano,98,96,26,28,2,98,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-02,El Espectador,277,267,28,28,0,272,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-02,El Tiempo,0,0,0,28,28,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-02,La República,126,122,26,28,2,105,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-02,Portafolio,72,72,23,28,5,72,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-02,Semana,691,669,28,28,0,480,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-02,IDEAM,12,12,4,28,24,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-02,XM,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-03,El Colombiano,83,83,28,31,3,83,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-03,El Espectador,340,328,31,31,0,324,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-03,El Tiempo,3,3,3,31,28,3,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-03,La República,139,138,29,31,2,107,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-03,Portafolio,93,93,29,31,2,93,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-03,Semana,656,648,31,31,0,483,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-03,IDEAM,12,12,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-03,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-04,El Colombiano,79,77,30,30,0,79,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-04,El Espectador,308,299,30,30,0,283,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-04,El Tiempo,1005,1003,6,30,24,1005,1004,1,0,0,0,1,1,not_certified,partial_recovery
+2021-04,La República,106,106,28,30,2,74,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-04,Portafolio,66,66,25,30,5,66,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-04,Semana,806,780,30,30,0,540,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-04,IDEAM,13,13,5,30,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-04,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-05,El Colombiano,77,74,30,31,1,77,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-05,El Espectador,264,257,31,31,0,243,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-05,El Tiempo,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-05,La República,119,119,30,31,1,98,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-05,Portafolio,75,75,27,31,4,75,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-05,Semana,676,658,31,31,0,418,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-05,IDEAM,11,11,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-05,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-06,El Colombiano,96,96,28,30,2,96,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-06,El Espectador,239,230,30,30,0,196,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-06,El Tiempo,2,2,2,30,28,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-06,La República,285,276,28,30,2,270,173,1,0,0,0,1,1,not_certified,partial_recovery
+2021-06,Portafolio,92,91,30,30,0,92,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-06,Semana,684,664,30,30,0,427,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-06,IDEAM,12,12,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-06,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-07,El Colombiano,151,150,29,31,2,151,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-07,El Espectador,305,301,28,31,3,283,100,1,0,0,0,0,0,not_certified,partial_recovery
+2021-07,El Tiempo,1,1,1,31,30,1,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-07,La República,136,136,31,31,0,106,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-07,Portafolio,99,99,27,31,4,99,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-07,Semana,527,518,31,31,0,322,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-07,IDEAM,12,12,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-07,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-08,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-08,El Colombiano,191,190,28,31,3,191,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-08,El Espectador,180,180,28,31,3,172,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-08,El Tiempo,4,4,4,31,27,4,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-08,La República,126,125,31,31,0,100,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-08,Portafolio,83,83,27,31,4,83,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-08,Semana,689,674,30,31,1,469,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-08,IDEAM,13,13,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-08,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-09,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-09,El Colombiano,289,287,30,30,0,289,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-09,El Espectador,227,226,30,30,0,223,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-09,El Tiempo,1001,1000,9,30,21,1001,997,1,0,0,0,1,1,not_certified,partial_recovery
+2021-09,La República,149,148,29,30,1,118,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-09,Portafolio,129,127,29,30,1,129,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-09,Semana,788,775,30,30,0,596,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-09,IDEAM,14,14,3,30,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-09,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-10,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-10,El Colombiano,244,239,27,31,4,244,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-10,El Espectador,181,181,28,31,3,164,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-10,El Tiempo,1205,1199,11,31,20,1205,982,1,0,0,0,1,1,not_certified,partial_recovery
+2021-10,La República,121,119,23,31,8,95,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-10,Portafolio,94,94,24,31,7,94,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-10,Semana,591,581,30,31,1,413,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-10,IDEAM,13,13,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-10,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-11,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-11,El Colombiano,264,258,28,30,2,264,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-11,El Espectador,172,172,27,30,3,172,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-11,El Tiempo,769,769,9,30,21,769,981,1,0,0,0,1,1,not_certified,partial_recovery
+2021-11,La República,127,127,28,30,2,109,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-11,Portafolio,94,94,25,30,5,94,0,0,0,0,0,1,1,not_certified,partial_recovery
+2021-11,Semana,695,678,30,30,0,481,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-11,IDEAM,12,12,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-11,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-12,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-12,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-12,El Espectador,6,6,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-12,El Tiempo,979,979,7,31,24,979,978,1,0,0,0,1,1,not_certified,partial_recovery
+2021-12,La República,70,70,13,31,18,55,57,1,0,0,0,1,1,not_certified,partial_recovery
+2021-12,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2021-12,Semana,167,167,28,31,3,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-12,IDEAM,24,24,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2021-12,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-01,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-01,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-01,El Espectador,102,102,4,31,27,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-01,El Tiempo,1,1,1,31,30,1,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-01,La República,12,12,8,31,23,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-01,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-01,Semana,118,118,24,31,7,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-01,IDEAM,12,12,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-01,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-02,Dinero,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-02,El Colombiano,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-02,El Espectador,3,3,2,28,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-02,El Tiempo,988,988,8,28,20,988,986,1,0,0,0,1,1,not_certified,partial_recovery
+2022-02,La República,29,29,17,28,11,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-02,Portafolio,0,0,0,28,28,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-02,Semana,215,215,27,28,1,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-02,IDEAM,12,12,4,28,24,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-02,XM,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-03,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-03,El Espectador,4,4,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-03,El Tiempo,1342,1341,9,31,22,1342,999,1,0,0,0,1,1,not_certified,partial_recovery
+2022-03,La República,21,21,15,31,16,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-03,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-03,Semana,648,648,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-03,IDEAM,14,14,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-03,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-04,El Colombiano,1,1,1,30,29,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-04,El Espectador,6,6,5,30,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-04,El Tiempo,645,645,4,30,26,645,985,1,0,0,0,1,1,not_certified,partial_recovery
+2022-04,La República,16,16,12,30,18,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-04,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-04,Semana,532,532,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-04,IDEAM,13,13,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-04,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-05,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-05,El Espectador,11,11,11,31,20,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-05,El Tiempo,1,1,1,31,30,1,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-05,La República,26,26,16,31,15,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-05,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-05,Semana,758,758,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-05,IDEAM,12,12,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-05,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-06,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-06,El Espectador,80,80,6,30,24,75,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-06,El Tiempo,986,985,6,30,24,986,984,1,0,0,0,1,1,not_certified,partial_recovery
+2022-06,La República,38,38,14,30,16,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-06,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-06,Semana,878,878,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-06,IDEAM,14,14,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-06,XM,0,0,0,30,30,0,0,0,5,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-07,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-07,El Espectador,134,134,10,31,21,125,200,2,0,0,0,0,0,not_certified,partial_recovery
+2022-07,El Tiempo,10,10,1,31,30,10,10,1,0,0,0,1,1,not_certified,partial_recovery
+2022-07,La República,30,30,15,31,16,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-07,Portafolio,11,11,8,31,23,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-07,Semana,2016,2016,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-07,IDEAM,15,15,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-07,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-08,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-08,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-08,El Espectador,110,110,10,31,21,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-08,El Tiempo,10,10,1,31,30,10,10,1,0,0,0,1,1,not_certified,partial_recovery
+2022-08,La República,240,240,23,31,8,207,207,1,0,0,0,1,1,not_certified,partial_recovery
+2022-08,Portafolio,14,14,12,31,19,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-08,Semana,4197,4197,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-08,IDEAM,13,13,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-08,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-09,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-09,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-09,El Espectador,104,104,5,30,25,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-09,El Tiempo,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-09,La República,196,196,20,30,10,163,164,1,0,0,0,1,1,not_certified,partial_recovery
+2022-09,Portafolio,17,17,15,30,15,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-09,Semana,4224,4224,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-09,IDEAM,9,9,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-09,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-10,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-10,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-10,El Espectador,103,103,4,31,27,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-10,El Tiempo,999,999,6,31,25,999,999,2,0,0,0,1,1,not_certified,partial_recovery
+2022-10,La República,151,151,13,31,18,134,134,1,0,0,0,1,1,not_certified,partial_recovery
+2022-10,Portafolio,108,108,18,31,13,0,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-10,Semana,3873,3873,30,31,1,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-10,IDEAM,10,10,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-10,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-11,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-11,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-11,El Espectador,100,100,1,30,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-11,El Tiempo,994,994,4,30,26,994,994,1,0,0,0,1,1,not_certified,partial_recovery
+2022-11,La República,188,188,2,30,28,188,0,0,0,0,0,1,1,not_certified,partial_recovery
+2022-11,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-11,Semana,50,50,19,30,11,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-11,IDEAM,14,14,5,30,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-11,XM,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-12,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-12,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-12,El Espectador,100,100,2,31,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2022-12,El Tiempo,2968,2927,13,31,18,2968,1985,3,0,0,0,1,1,not_certified,partial_recovery
+2022-12,La República,85,85,3,31,28,85,273,2,0,0,0,1,1,not_certified,partial_recovery
+2022-12,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2022-12,Semana,50,50,26,31,5,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-12,IDEAM,18,18,6,31,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2022-12,XM,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-01,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-01,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-01,El Espectador,95,95,1,31,30,95,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-01,El Tiempo,988,988,6,31,25,988,1969,2,0,0,0,1,1,not_certified,partial_recovery
+2023-01,La República,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-01,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-01,Semana,30,30,19,31,12,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-01,IDEAM,6,6,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-01,XM,0,0,0,31,31,0,0,0,6,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-02,Dinero,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-02,El Colombiano,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-02,El Espectador,5,5,1,28,27,5,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-02,El Tiempo,2,2,2,28,26,2,0,0,0,0,0,1,1,not_certified,partial_recovery
+2023-02,La República,0,0,0,28,28,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-02,Portafolio,0,0,0,28,28,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-02,Semana,30,30,16,28,12,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-02,IDEAM,7,7,4,28,24,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-02,XM,0,0,0,28,28,0,0,0,6,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-03,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-03,El Espectador,100,100,2,31,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-03,El Tiempo,2742,2733,12,31,19,2742,1000,2,0,0,0,1,1,not_certified,partial_recovery
+2023-03,La República,384,384,7,31,24,384,186,2,0,0,0,1,1,not_certified,partial_recovery
+2023-03,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-03,Semana,36,36,24,31,7,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-03,IDEAM,9,9,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-03,XM,0,0,0,31,31,0,0,0,6,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-04,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-04,El Espectador,100,100,2,30,28,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-04,El Tiempo,219,219,2,30,28,219,973,1,0,0,0,1,1,not_certified,partial_recovery
+2023-04,La República,73,73,2,30,28,73,237,1,0,0,0,1,1,not_certified,partial_recovery
+2023-04,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-04,Semana,24,24,16,30,14,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-04,IDEAM,8,8,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-04,XM,0,0,0,30,30,0,0,0,6,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-05,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-05,El Espectador,100,100,1,31,30,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-05,El Tiempo,1988,1987,8,31,23,1988,1987,3,0,0,0,1,1,not_certified,partial_recovery
+2023-05,La República,231,231,4,31,27,231,265,2,0,0,0,1,1,not_certified,partial_recovery
+2023-05,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-05,Semana,37,37,18,31,13,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-05,IDEAM,9,9,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-05,XM,0,0,0,31,31,0,0,0,6,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-06,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-06,El Espectador,100,100,1,30,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-06,El Tiempo,1013,1013,5,30,25,1013,1012,2,0,0,0,1,1,not_certified,partial_recovery
+2023-06,La República,557,557,8,30,22,557,557,3,0,0,0,1,1,not_certified,partial_recovery
+2023-06,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-06,Semana,66,66,23,30,7,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-06,IDEAM,9,9,4,30,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-06,XM,0,0,0,30,30,0,0,0,19,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-07,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-07,El Espectador,100,100,1,31,30,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2023-07,El Tiempo,2019,2015,10,31,21,2019,2017,2,0,0,0,1,1,not_certified,partial_recovery
+2023-07,La República,102,102,2,31,29,102,0,0,0,0,0,1,1,not_certified,partial_recovery
+2023-07,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-07,Semana,46,46,23,31,8,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-07,IDEAM,9,9,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-07,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-08,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-08,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-08,El Espectador,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-08,El Tiempo,8,8,4,31,27,8,0,0,0,0,0,1,1,not_certified,partial_recovery
+2023-08,La República,28,28,1,31,30,28,130,1,0,0,0,1,1,not_certified,partial_recovery
+2023-08,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-08,Semana,92,92,26,31,5,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-08,IDEAM,8,8,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-08,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-09,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-09,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-09,El Espectador,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-09,El Tiempo,6,6,5,30,25,6,0,0,0,0,0,1,1,not_certified,partial_recovery
+2023-09,La República,372,372,6,30,24,372,372,2,0,0,0,1,1,not_certified,partial_recovery
+2023-09,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-09,Semana,281,281,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-09,IDEAM,10,10,5,30,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-09,XM,0,0,0,30,30,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-10,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-10,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-10,El Espectador,200,200,3,31,28,200,200,2,0,0,0,0,0,not_certified,partial_recovery
+2023-10,El Tiempo,1987,1986,9,31,22,1987,1985,2,0,0,0,1,1,not_certified,partial_recovery
+2023-10,La República,296,296,4,31,27,296,141,1,0,0,0,1,1,not_certified,partial_recovery
+2023-10,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-10,Semana,35,35,3,31,28,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-10,IDEAM,14,14,5,31,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-10,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,El Espectador,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,El Tiempo,997,997,6,30,24,997,994,1,0,0,0,1,1,not_certified,partial_recovery
+2023-11,La República,238,238,3,30,27,238,393,2,0,0,0,1,1,not_certified,partial_recovery
+2023-11,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-11,IDEAM,16,16,5,30,25,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-11,XM,0,0,0,30,30,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-12,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-12,El Colombiano,4,4,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-12,El Espectador,200,200,3,31,28,200,200,2,0,0,0,0,0,not_certified,partial_recovery
+2023-12,El Tiempo,1010,1010,8,31,23,1010,10,1,0,0,0,1,1,not_certified,partial_recovery
+2023-12,La República,326,326,8,31,23,326,289,2,0,0,0,1,1,not_certified,partial_recovery
+2023-12,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-12,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2023-12,IDEAM,31,31,10,31,21,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2023-12,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,El Espectador,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,El Tiempo,3937,3918,17,31,14,3937,4000,4,0,0,0,1,1,not_certified,partial_recovery
+2024-01,La República,6,6,1,31,30,6,43,1,0,0,0,1,1,not_certified,partial_recovery
+2024-01,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-01,IDEAM,72,72,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-01,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-02,Dinero,0,0,0,29,29,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-02,El Colombiano,1,1,1,29,28,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-02,El Espectador,100,100,2,29,27,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-02,El Tiempo,111,111,18,29,11,111,999,1,0,0,0,1,1,not_certified,partial_recovery
+2024-02,La República,127,127,3,29,26,127,127,1,0,0,0,1,1,not_certified,partial_recovery
+2024-02,Portafolio,0,0,0,29,29,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-02,Semana,0,0,0,29,29,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-02,IDEAM,68,68,29,29,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-02,XM,0,0,0,29,29,0,0,0,9,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-03,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-03,El Espectador,200,200,3,31,28,200,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-03,El Tiempo,424,390,22,31,9,424,446,1,0,0,0,1,1,not_certified,partial_recovery
+2024-03,La República,231,231,7,31,24,231,231,3,0,0,0,1,1,not_certified,partial_recovery
+2024-03,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-03,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-03,IDEAM,74,74,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-03,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-04,El Colombiano,1,1,1,30,29,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-04,El Espectador,100,100,2,30,28,100,200,2,0,0,0,0,0,not_certified,partial_recovery
+2024-04,El Tiempo,1576,1552,17,30,13,1576,830,1,0,0,0,1,1,not_certified,partial_recovery
+2024-04,La República,144,144,2,30,28,144,0,0,0,0,0,1,1,not_certified,partial_recovery
+2024-04,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-04,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-04,IDEAM,71,71,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-04,XM,0,0,0,30,30,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-05,El Colombiano,2,2,1,31,30,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-05,El Espectador,400,399,5,31,26,400,400,3,0,0,0,0,0,not_certified,partial_recovery
+2024-05,El Tiempo,1508,1444,26,31,5,1508,2247,3,0,0,0,1,1,not_certified,partial_recovery
+2024-05,La República,206,206,3,31,28,206,350,2,0,0,0,1,1,not_certified,partial_recovery
+2024-05,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-05,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-05,IDEAM,76,76,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-05,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,El Espectador,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,El Tiempo,731,701,23,30,7,731,670,1,0,0,0,1,1,not_certified,partial_recovery
+2024-06,La República,371,371,5,30,25,371,371,2,0,0,0,1,1,not_certified,partial_recovery
+2024-06,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-06,IDEAM,144,144,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-06,XM,0,0,0,30,30,0,0,0,19,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-07,El Colombiano,1,1,1,31,30,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-07,El Espectador,300,300,5,31,26,300,300,3,0,0,0,0,0,not_certified,partial_recovery
+2024-07,El Tiempo,1542,1506,17,31,14,1542,1585,3,0,0,0,1,1,not_certified,partial_recovery
+2024-07,La República,556,556,9,31,22,556,556,3,0,0,0,1,1,not_certified,partial_recovery
+2024-07,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-07,Semana,300,299,5,31,26,300,300,3,0,0,0,0,0,not_certified,partial_recovery
+2024-07,IDEAM,358,358,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-07,XM,0,0,0,31,31,0,0,0,9,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,El Espectador,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,El Tiempo,99,99,9,31,22,99,124,1,0,0,0,1,1,not_certified,partial_recovery
+2024-08,La República,127,127,2,31,29,127,0,0,0,0,0,1,1,not_certified,partial_recovery
+2024-08,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-08,IDEAM,362,362,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-08,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-09,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-09,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-09,El Espectador,100,100,1,30,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-09,El Tiempo,1191,1142,21,30,9,1191,680,1,0,0,0,1,1,not_certified,partial_recovery
+2024-09,La República,620,620,8,30,22,620,747,4,0,0,0,1,1,not_certified,partial_recovery
+2024-09,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-09,Semana,300,300,3,30,27,300,300,3,0,0,0,0,0,not_certified,partial_recovery
+2024-09,IDEAM,346,346,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-09,XM,0,0,0,30,30,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-10,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-10,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-10,El Espectador,129,129,3,31,28,129,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-10,El Tiempo,84,84,12,31,19,84,610,1,0,0,0,1,1,not_certified,partial_recovery
+2024-10,La República,135,135,2,31,29,135,0,0,0,0,0,1,1,not_certified,partial_recovery
+2024-10,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-10,Semana,100,100,1,31,30,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-10,IDEAM,350,350,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-10,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-11,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-11,El Colombiano,1,1,1,30,29,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-11,El Espectador,71,71,1,30,29,71,100,1,0,0,0,0,0,not_certified,partial_recovery
+2024-11,El Tiempo,848,790,11,30,19,848,862,1,0,0,0,1,1,not_certified,partial_recovery
+2024-11,La República,101,101,1,30,29,101,236,1,0,0,0,1,1,not_certified,partial_recovery
+2024-11,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-11,Semana,200,200,3,30,27,200,200,2,0,0,0,0,0,not_certified,partial_recovery
+2024-11,IDEAM,350,350,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-11,XM,0,0,0,30,30,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,El Colombiano,1,1,1,31,30,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-12,El Espectador,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,El Tiempo,17,17,14,31,17,17,0,0,0,0,0,1,1,not_certified,partial_recovery
+2024-12,La República,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2024-12,IDEAM,361,361,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2024-12,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-01,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-01,El Colombiano,4,4,4,31,27,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-01,El Espectador,100,100,1,31,30,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2025-01,El Tiempo,518,506,18,31,13,518,526,1,0,0,0,1,1,not_certified,partial_recovery
+2025-01,La República,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-01,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-01,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-01,IDEAM,245,245,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-01,XM,0,0,0,31,31,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-02,Dinero,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-02,El Colombiano,2,2,2,28,26,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-02,El Espectador,100,100,2,28,26,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2025-02,El Tiempo,1966,1911,19,28,9,1966,1984,3,0,0,0,1,1,not_certified,partial_recovery
+2025-02,La República,194,194,3,28,25,194,194,1,0,0,0,1,1,not_certified,partial_recovery
+2025-02,Portafolio,0,0,0,28,28,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-02,Semana,0,0,0,28,28,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-02,IDEAM,300,300,28,28,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-02,XM,0,0,0,28,28,0,0,0,7,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-03,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-03,El Colombiano,1,1,1,31,30,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-03,El Espectador,86,86,1,31,30,86,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-03,El Tiempo,635,619,17,31,14,635,619,1,0,0,0,1,1,not_certified,partial_recovery
+2025-03,La República,133,133,2,31,29,133,0,0,0,0,0,1,1,not_certified,partial_recovery
+2025-03,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-03,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-03,IDEAM,342,342,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-03,XM,0,0,0,31,31,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-04,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-04,El Colombiano,79,79,9,30,21,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-04,El Espectador,214,214,4,30,26,214,300,3,0,0,0,0,0,not_certified,partial_recovery
+2025-04,El Tiempo,839,833,20,30,10,839,13,1,0,0,0,1,1,not_certified,partial_recovery
+2025-04,La República,372,372,7,30,23,372,505,3,0,0,0,1,1,not_certified,partial_recovery
+2025-04,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-04,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-04,IDEAM,331,331,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-04,XM,0,0,0,30,30,0,0,0,3,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-05,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-05,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-05,El Espectador,298,297,4,31,27,298,298,3,0,0,0,0,0,not_certified,partial_recovery
+2025-05,El Tiempo,1185,1162,25,31,6,1185,1579,3,0,0,0,1,1,not_certified,partial_recovery
+2025-05,La República,175,175,2,31,29,175,175,1,0,0,0,1,1,not_certified,partial_recovery
+2025-05,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-05,Semana,100,100,2,31,29,100,99,1,0,0,0,0,0,not_certified,partial_recovery
+2025-05,IDEAM,365,365,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-05,XM,0,0,0,31,31,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-06,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-06,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-06,El Espectador,82,82,1,30,29,82,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-06,El Tiempo,444,431,14,30,16,444,807,2,0,0,0,1,1,not_certified,partial_recovery
+2025-06,La República,262,262,5,30,25,262,262,2,0,0,0,1,1,not_certified,partial_recovery
+2025-06,Portafolio,0,0,0,30,30,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-06,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-06,IDEAM,331,331,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-06,XM,0,0,0,30,30,0,0,0,14,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-07,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-07,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-07,El Espectador,17,17,1,31,30,17,99,1,0,0,0,0,0,not_certified,partial_recovery
+2025-07,El Tiempo,1103,1059,17,31,14,1103,1121,3,0,0,0,1,1,not_certified,partial_recovery
+2025-07,La República,188,188,2,31,29,188,188,1,0,0,0,1,1,not_certified,partial_recovery
+2025-07,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-07,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-07,IDEAM,349,349,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-07,XM,0,0,0,31,31,0,0,0,3,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-08,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-08,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-08,El Espectador,159,159,3,31,28,159,100,1,0,0,0,0,0,not_certified,partial_recovery
+2025-08,El Tiempo,767,709,19,31,12,767,406,1,0,0,0,1,1,not_certified,partial_recovery
+2025-08,La República,61,61,2,31,29,61,0,0,0,0,0,1,1,not_certified,partial_recovery
+2025-08,Portafolio,100,100,3,31,28,100,0,0,0,0,0,1,1,not_certified,partial_recovery
+2025-08,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-08,IDEAM,345,345,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-08,XM,0,0,0,31,31,0,0,0,3,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-09,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-09,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-09,El Espectador,132,132,3,30,27,132,100,1,0,0,0,0,0,not_certified,partial_recovery
+2025-09,El Tiempo,860,814,15,30,15,860,1248,2,0,0,0,1,1,not_certified,partial_recovery
+2025-09,La República,229,229,3,30,27,229,290,2,0,0,0,1,1,not_certified,partial_recovery
+2025-09,Portafolio,55,55,1,30,29,55,100,1,0,0,0,1,1,not_certified,partial_recovery
+2025-09,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-09,IDEAM,327,327,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-09,XM,0,0,0,30,30,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-10,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-10,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-10,El Espectador,109,109,2,31,29,109,200,2,0,0,0,0,0,not_certified,partial_recovery
+2025-10,El Tiempo,1615,1525,24,31,7,1615,1646,2,0,0,0,1,1,not_certified,partial_recovery
+2025-10,La República,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-10,Portafolio,158,158,5,31,26,158,213,2,0,0,0,1,1,not_certified,partial_recovery
+2025-10,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-10,IDEAM,363,363,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-10,XM,0,0,0,31,31,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-11,Dinero,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-11,El Colombiano,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-11,El Espectador,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-11,El Tiempo,366,366,15,30,15,366,387,1,0,0,0,1,1,not_certified,partial_recovery
+2025-11,La República,194,194,4,30,26,194,184,1,0,0,0,1,1,not_certified,partial_recovery
+2025-11,Portafolio,78,78,4,30,26,78,78,1,0,0,0,1,1,not_certified,partial_recovery
+2025-11,Semana,0,0,0,30,30,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-11,IDEAM,325,325,30,30,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-11,XM,0,0,0,30,30,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-12,Dinero,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-12,El Colombiano,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-12,El Espectador,100,100,2,31,29,100,100,1,0,0,0,0,0,not_certified,partial_recovery
+2025-12,El Tiempo,81,81,10,31,21,81,93,1,0,0,0,1,1,not_certified,partial_recovery
+2025-12,La República,115,115,2,31,29,115,125,1,0,0,0,1,1,not_certified,partial_recovery
+2025-12,Portafolio,0,0,0,31,31,0,0,0,0,0,0,1,1,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-12,Semana,0,0,0,31,31,0,0,0,0,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications
+2025-12,IDEAM,358,358,31,31,0,0,0,0,0,0,0,0,0,not_certified,partial_recovery
+2025-12,XM,0,0,0,31,31,0,0,0,2,0,0,0,0,not_certified,no_titles_recovered_not_proof_of_no_publications

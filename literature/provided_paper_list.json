@@ -1,0 +1,158 @@
+{
+  "xl/worksheets/sheet1.xml": [
+    {
+      "A1": "Título",
+      "B1": "Año",
+      "C1": "Tipo",
+      "D1": "Aporte / hallazgo",
+      "E1": "¿Usa Time-MMD?",
+      "F1": "Verificación",
+      "G1": "Enlace (arXiv)"
+    },
+    {
+      "A2": "Time-MMD: Multi-Domain Multimodal Dataset for Time Series Analysis",
+      "B2": "2024",
+      "C2": "Dataset / benchmark",
+      "D2": "Define Time-MMD (9 dominios, texto alineado) y MM-TSFlib. Reporta ≈ −15 % de MSE al añadir texto (hasta ≈ −40 %).",
+      "E2": "Es el benchmark",
+      "F2": "Revisión previa del proyecto",
+      "G2": "https://arxiv.org/abs/2406.08627"
+    },
+    {
+      "A3": "Are Language Models Actually Useful for Time Series Forecasting? (Tan et al., NeurIPS 2024)",
+      "B3": "2024",
+      "C3": "Crítica a LLM en series",
+      "D3": "Quitar el LLM iguala o supera a varios modelos con LLM (Time-LLM, CALF, OFA).",
+      "E3": "No (series sin texto)",
+      "F3": "Revisión previa del proyecto",
+      "G3": "https://arxiv.org/abs/2406.16964"
+    },
+    {
+      "A4": "Does Text Actually Help? Uncovering and Resolving Text Collapse in Multimodal Time Series Forecasting (REST-TS)",
+      "B4": "2026",
+      "C4": "Texto + series",
+      "D4": "Define «text collapse»: la rama de texto casi no cambia la salida; las ganancias vienen de la arquitectura. REST-TS supervisa el texto solo sobre el residual numérico. Mejoras de MSE vs. TaTS de ≈20 % en algunos dominios; −9.4 % en Traffic.",
+      "E4": "Sí, benchmark principal; FNF y FNSPID fuera de dominio",
+      "F4": "Leído (texto)",
+      "G4": "https://arxiv.org/abs/2606.19413"
+    },
+    {
+      "A5": "Text Reinforcement for Multimodal Time Series Forecasting (TeR-TSF)",
+      "B5": "2025",
+      "C5": "Texto + series",
+      "D5": "Un LLM pequeño reescribe el texto con DPO. MSE medio: solo serie 0.771, serie+texto 0.768, TeR-TSF 0.631. Sin RL el texto generado empeora (0.953).",
+      "E5": "Sí (8 dominios, partición 7:1:2)",
+      "F5": "Leído (texto)",
+      "G5": "https://arxiv.org/abs/2509.00687"
+    },
+    {
+      "A6": "Rethinking Multimodal Time-Series Forecasting Evaluation (TimesX)",
+      "B6": "2026",
+      "C6": "Crítica de benchmarks",
+      "D6": "Los benchmarks multimodales son pequeños, con riesgo de fuga y contexto desigual. Con contexto propio el MASE en Time-MMD baja de 0.906 a 0.840. Gemini-2.0-Flash empeora 14.8 % tras su fecha de corte.",
+      "E6": "Sí, en una ablación",
+      "F6": "Leído (texto)",
+      "G6": "https://arxiv.org/abs/2607.06973"
+    },
+    {
+      "A7": "Dual-Forecaster: A Multimodal Time Series Model Integrating Descriptive and Predictive Texts",
+      "B7": "2025",
+      "C7": "Texto + series",
+      "D7": "Integra texto descriptivo y predictivo con la serie.",
+      "E7": "Por verificar",
+      "F7": "Solo título (búsqueda)",
+      "G7": "https://arxiv.org/abs/2505.01135"
+    },
+    {
+      "A8": "Semantics or Structure? Auditing Text Sensitivity in Multimodal Time-Series Forecasting",
+      "B8": "2026",
+      "C8": "Auditoría del texto",
+      "D8": "Audita la sensibilidad de los modelos al texto.",
+      "E8": "Por verificar",
+      "F8": "Solo título (búsqueda)",
+      "G8": "https://arxiv.org/abs/2608.22321"
+    },
+    {
+      "A9": "LLM as Forecasting Planner: Training-Free Text Conditioning for Time-Series Foundation Models",
+      "B9": "2026",
+      "C9": "Texto + series",
+      "D9": "Condiciona modelos fundacionales de series con texto sin entrenamiento adicional.",
+      "E9": "Por verificar",
+      "F9": "Solo título (búsqueda)",
+      "G9": "https://arxiv.org/abs/2607.24892"
+    },
+    {
+      "A10": "Event-Driven Reasoning and Multi-Level Alignment for ...",
+      "B10": "2026",
+      "C10": "Texto + series",
+      "D10": "Título truncado en la búsqueda; abrir el enlace para el título completo.",
+      "E10": "Por verificar",
+      "F10": "Solo título (búsqueda)",
+      "G10": "https://arxiv.org/abs/2603.15452"
+    },
+    {
+      "A11": "From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space",
+      "B11": "2026",
+      "C11": "Texto + series",
+      "D11": "Apareció en la búsqueda de NSW-EPNews.",
+      "E11": "Por verificar",
+      "F11": "Solo título (búsqueda)",
+      "G11": "https://arxiv.org/abs/2603.12664"
+    },
+    {
+      "A13": "Nota: «Leído (texto)» = se leyó el contenido del paper en esta sesión; «Solo título» = aparece en la búsqueda del 2026-11-03 y no se ha leído; «Revisión previa» = verificado en la fase de literatura del proyecto, sin releer hoy. Los años de los arXiv 26xx corresponden al identificador."
+    }
+  ],
+  "xl/worksheets/sheet2.xml": [
+    {
+      "A1": "Título",
+      "B1": "Año",
+      "C1": "Dominio",
+      "D1": "Tamaño y fechas",
+      "E1": "Licencia",
+      "F1": "Verificación",
+      "G1": "Enlace (paper)",
+      "H1": "Enlace (datos / código)"
+    },
+    {
+      "A2": "FNSPID: A Comprehensive Financial News Dataset in Time Series",
+      "B2": "2024",
+      "C2": "Finanzas",
+      "D2": "15.7 M noticias, 29.7 M precios, 4,775 empresas S&P 500; 1999–2023.",
+      "E2": "Ambigua (README de GitHub se contradice; tarjeta de Hugging Face no leída)",
+      "F2": "Leído (texto)",
+      "G2": "https://arxiv.org/abs/2402.06698",
+      "H2": "https://github.com/Zdong104/FNSPID_Financial_News_Dataset"
+    },
+    {
+      "A3": "NSW-EPNews: A News-Augmented Benchmark for Electricity Price Forecasting with LLMs",
+      "B3": "2025",
+      "C3": "Electricidad (NSW, Australia)",
+      "D3": ">175,000 precios semihorarios; ≈3.6 mil artículos; 2015–2024.",
+      "E3": "No verificada",
+      "F3": "Leído (texto)",
+      "G3": "https://arxiv.org/abs/2506.11050",
+      "H3": "https://figshare.com/s/e25f3a98679d347f2a2e"
+    },
+    {
+      "A4": "MoTime: A Dataset Suite for Multimodal Time Series Forecasting",
+      "B4": "2025",
+      "C4": "Comercio electrónico, web, medios",
+      "D4": "8 datasets (p. ej. MovieLens 10,505 × 84,518); 1995–2023; texto mayormente estático por ítem.",
+      "E4": "No verificada",
+      "F4": "Leído (texto)",
+      "G4": "https://arxiv.org/abs/2505.15072",
+      "H4": "https://www.kaggle.com/datasets/krissssss/multimodal-time-series-forecasting/"
+    },
+    {
+      "A5": "Time-MMD (repositorio de datos)",
+      "B5": "2024",
+      "C5": "9 dominios",
+      "D5": "Energy: 1,622 filas semanales y 354 informes desde 2011 (conteo propio de los archivos).",
+      "E5": "No declarada en el repositorio",
+      "F5": "Verificado localmente (hash)",
+      "G5": "https://github.com/AdityaLab/Time-MMD",
+      "H5": "https://github.com/AdityaLab/MM-TSFlib"
+    }
+  ]
+}

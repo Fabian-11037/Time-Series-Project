@@ -1,0 +1,7 @@
+hallazgo,preprocesamiento,arquitectura_y_validación
+Integridad y rangos,Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.,Máscaras de calidad; no borrar extremos de precio.
+Distribución y regímenes,Comparar escala robusta/log1p usando train; evaluar pérdida robusta.,Memoria y adaptación a nivel/varianza; no escoger por prueba.
+Ciclos y dependencia,Calendario y rezagos diarios/semanales; filtros operativos causales.,Contexto semanal y salida diaria como propuesta previa al benchmark.
+Covariables,Conservar ciudades y frecuencias; acumulados hacia atrás.,"E1 numérico multivariado, sin demanda/clima futuros realizados."
+Texto y cobertura,Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.,Texto sólo para fases posteriores; utilidad y agrupamiento aprendidos con train.
+Validación,"Cortes temporales, purga de etiquetas que cruzan cortes y prueba congelada.",Mismos orígenes e igual presupuesto; inferencia temporal en benchmark.

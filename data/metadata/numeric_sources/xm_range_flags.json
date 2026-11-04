@@ -1,0 +1,219 @@
+[
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-01",
+    "hour": null,
+    "value": 1.49144,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-02",
+    "hour": null,
+    "value": 1.4887,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-03",
+    "hour": null,
+    "value": 1.48386,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-04",
+    "hour": null,
+    "value": 1.47925,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-05",
+    "hour": null,
+    "value": 1.47512,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-06",
+    "hour": null,
+    "value": 1.47135,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-07",
+    "hour": null,
+    "value": 1.46815,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-08",
+    "hour": null,
+    "value": 1.46835,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-09",
+    "hour": null,
+    "value": 1.46847,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-10",
+    "hour": null,
+    "value": 1.46855,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-11",
+    "hour": null,
+    "value": 1.46789,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-12",
+    "hour": null,
+    "value": 1.46349,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-13",
+    "hour": null,
+    "value": 1.45989,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-14",
+    "hour": null,
+    "value": 1.45495,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-15",
+    "hour": null,
+    "value": 1.45129,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-16",
+    "hour": null,
+    "value": 1.44902,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-17",
+    "hour": null,
+    "value": 1.44504,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-18",
+    "hour": null,
+    "value": 1.44141,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-19",
+    "hour": null,
+    "value": 1.43692,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-20",
+    "hour": null,
+    "value": 1.43527,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-21",
+    "hour": null,
+    "value": 1.43775,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-22",
+    "hour": null,
+    "value": 1.43733,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-23",
+    "hour": null,
+    "value": 1.43568,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-24",
+    "hour": null,
+    "value": 1.4308,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-25",
+    "hour": null,
+    "value": 1.42612,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-26",
+    "hour": null,
+    "value": 1.42199,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-27",
+    "hour": null,
+    "value": 1.41817,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-28",
+    "hour": null,
+    "value": 1.41303,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-29",
+    "hour": null,
+    "value": 1.41003,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-30",
+    "hour": null,
+    "value": 1.40855,
+    "kind": "outside_fraction_0_1"
+  },
+  {
+    "metric": "PorcVoluUtilDiar",
+    "date": "2000-01-31",
+    "hour": null,
+    "value": 1.40638,
+    "kind": "outside_fraction_0_1"
+  }
+]

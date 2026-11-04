@@ -1,0 +1,860 @@
+{
+  "snapshot": "2026-11-03",
+  "timezone": "America/Bogota",
+  "files": [
+    {
+      "path": "data/metadata/archive_version_verification.json",
+      "bytes": 319,
+      "rows": null,
+      "sha256": "8048d2aa896f6e83d9f083931fdef7f6a296e7ca4eb5497c4f9eb4a6a1df739a"
+    },
+    {
+      "path": "data/metadata/availability_rules.json",
+      "bytes": 3307,
+      "rows": null,
+      "sha256": "f75d6f94e93f8dbee4428b2b647c8533aee8715e56a70328d793c30c16fc2070"
+    },
+    {
+      "path": "data/metadata/coverage_2000_2025_by_month_source.csv",
+      "bytes": 293846,
+      "rows": null,
+      "sha256": "db400a545b4cef123c07bc0def672da6de7558d1d518744b259d26e5bd9ee7c7"
+    },
+    {
+      "path": "data/metadata/coverage_2020_2025_by_month_source.csv",
+      "bytes": 61161,
+      "rows": null,
+      "sha256": "ccb8e0c32a23e34fb561d153fcfd99da7506c2b99c3772a77c739b114d54334f"
+    },
+    {
+      "path": "data/metadata/coverage_summary.json",
+      "bytes": 5674,
+      "rows": null,
+      "sha256": "059a94ea2639925a70fcadc90b32e3ccf29d18310a4b4f1fc12e5d6febff5005"
+    },
+    {
+      "path": "data/metadata/data_dictionary.csv",
+      "bytes": 10631,
+      "rows": null,
+      "sha256": "fd6a93d64850f22178557c892eacc88705fe2fc57f2e49051b5a844cbcd8eb23"
+    },
+    {
+      "path": "data/metadata/import_counts.json",
+      "bytes": 3617,
+      "rows": null,
+      "sha256": "922988bc656ca69aa0165f950d553be4772d913d8a8051e755400bfaf422a880"
+    },
+    {
+      "path": "data/metadata/independent_verification.json",
+      "bytes": 1785,
+      "rows": null,
+      "sha256": "94b20c2482ed0f73aaaad634740a6d1c3528aec18555e45bd81c32dd61815382"
+    },
+    {
+      "path": "data/metadata/numeric_dataset_schema.json",
+      "bytes": 4009,
+      "rows": null,
+      "sha256": "ea079a847f831c6a8fe718c9878f078310b045369a3e3169fbf8d002581e86b1"
+    },
+    {
+      "path": "data/metadata/numeric_particion_cronologica_propuesta.json",
+      "bytes": 918,
+      "rows": null,
+      "sha256": "58a3db603878110972ba66db1b2c2a43692960c3d1f095c3eb5305885eefc5a0"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_audit.json",
+      "bytes": 7001,
+      "rows": null,
+      "sha256": "408abcce5afb0d596f5e393cd9811d9fd7a59fccdab9e5e04c49c4ed370c6500"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_coverage_by_month.csv",
+      "bytes": 348575,
+      "rows": null,
+      "sha256": "1bd602de7cb7e6cd323c18cd09dc419d746a3b85b395fd0f7c04130abb0f033e"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_grid_metadata.json",
+      "bytes": 90329,
+      "rows": null,
+      "sha256": "367cad916bafff99777b5616baf6bca9d201932576c3c7d397cd1b0237b6ff3b"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_independent_verification.json",
+      "bytes": 350,
+      "rows": null,
+      "sha256": "a61b62d0e48da4c166bf04a890ccf436b96504a61c93c56e0b46367ab4f146b8"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_issues.json",
+      "bytes": 4,
+      "rows": null,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_raw_manifest.json",
+      "bytes": 6687,
+      "rows": null,
+      "sha256": "21f3a69141b06d71e108a550bc034daed9bd55a8fa085601039d1194a42ea53f"
+    },
+    {
+      "path": "data/metadata/numeric_sources/clima_VALIDACION_CLIMA.md",
+      "bytes": 3018,
+      "rows": null,
+      "sha256": "44d06edb3fc32ce576a06334ca2c373e446e695f3bad7b505529777904f5cc18"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_audit.json",
+      "bytes": 5048,
+      "rows": null,
+      "sha256": "0ed97aff51b89eeea9cec4ae4ea60fa1537f6b15a934558b07829da7008385fe"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_coverage_by_month.csv",
+      "bytes": 81482,
+      "rows": null,
+      "sha256": "50e31dafe4ddaeb5b99d65d741bdb308d9c2d2865afece60d7490203bc2efdf4"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_independent_verification.json",
+      "bytes": 450,
+      "rows": null,
+      "sha256": "18237e560cbbacd30848e0aa700f3100ab51f4bcb831abc40a10920d14df221e"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_issues.json",
+      "bytes": 4,
+      "rows": null,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_metadata_metricas.json",
+      "bytes": 3145,
+      "rows": null,
+      "sha256": "929f10e83128676c8ba5ff958df451484d30b8355c3c997a6f66371eafcf19cb"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_range_flags.json",
+      "bytes": 4684,
+      "rows": null,
+      "sha256": "8f034dddcfa16219db3db8d92c53a0a95f7256d0eae496408f0bbba8ad5316aa"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_raw_manifest.json",
+      "bytes": 845444,
+      "rows": null,
+      "sha256": "18a991e3c7d57046a7859d7c13548e60b1c42817a0288c50e7e1f718eebfdeff"
+    },
+    {
+      "path": "data/metadata/numeric_sources/xm_VALIDACION_COMPLETA.md",
+      "bytes": 2918,
+      "rows": null,
+      "sha256": "757a7c151b6e91015911f7d68546da2b75b7a30997820df38cd16a5efaae2bcb"
+    },
+    {
+      "path": "data/metadata/numeric_verification.json",
+      "bytes": 579,
+      "rows": null,
+      "sha256": "b871700a15f05860f986044ec96e470228ed516b10eb80a3e035f1e811aad39a"
+    },
+    {
+      "path": "data/metadata/source_catalog.json",
+      "bytes": 17252,
+      "rows": null,
+      "sha256": "91cc3e1db2093c1fe6d749859207c221e361b9763a6b65f73a79d16c165433b7"
+    },
+    {
+      "path": "data/metadata/source_provenance.json",
+      "bytes": 246967,
+      "rows": null,
+      "sha256": "42e1f06d5f8ecf33f160d8c5f13f398f38f3bd744c6a85cdd8e4ebb5c8a0d663"
+    },
+    {
+      "path": "data/numeric/hourly/2000.csv.gz",
+      "bytes": 436058,
+      "rows": 8784,
+      "sha256": "71d616ec8309924c157a622fb0f3e17a575d06256fe3bb06d9257fbfe6b3990b"
+    },
+    {
+      "path": "data/numeric/hourly/2001.csv.gz",
+      "bytes": 435666,
+      "rows": 8760,
+      "sha256": "43c4454dece32559fe1e6cf9300eaf53974f63b15787e966a0559f1fe5cdc98d"
+    },
+    {
+      "path": "data/numeric/hourly/2002.csv.gz",
+      "bytes": 435587,
+      "rows": 8760,
+      "sha256": "89f5204496fac93a733979b9dfa415826b62b58443191f6613d60dcd1ed0750a"
+    },
+    {
+      "path": "data/numeric/hourly/2003.csv.gz",
+      "bytes": 437458,
+      "rows": 8760,
+      "sha256": "9b161211726b97d924428ab0d6b566b20cc6df8fa20eb4e56c457e1eed7f506d"
+    },
+    {
+      "path": "data/numeric/hourly/2004.csv.gz",
+      "bytes": 438749,
+      "rows": 8784,
+      "sha256": "733e4c8d4c70fedaf52e0f71470e957fa6d5470198ab882c4d7c8c5a45b35900"
+    },
+    {
+      "path": "data/numeric/hourly/2005.csv.gz",
+      "bytes": 441358,
+      "rows": 8760,
+      "sha256": "c85e1a9aa2b2532e6f7c99067fccfab53a418a793df77ca351e115251d2758e4"
+    },
+    {
+      "path": "data/numeric/hourly/2006.csv.gz",
+      "bytes": 441398,
+      "rows": 8760,
+      "sha256": "061bf6b1a4fce5ff06fcf14e782c7fef500fc759fd81e78a4ab22652f59509da"
+    },
+    {
+      "path": "data/numeric/hourly/2007.csv.gz",
+      "bytes": 443133,
+      "rows": 8760,
+      "sha256": "aebf3e73934220a4eeb41bfa12b0a19622959afcd1a5bad1fb180b93fc6437a8"
+    },
+    {
+      "path": "data/numeric/hourly/2008.csv.gz",
+      "bytes": 445180,
+      "rows": 8784,
+      "sha256": "4dcc5413bbef1078f6389b77c46ad2b9a5a1c7817d3367764011dddb3e31eaa8"
+    },
+    {
+      "path": "data/numeric/hourly/2009.csv.gz",
+      "bytes": 442286,
+      "rows": 8760,
+      "sha256": "7ef64ee6d7f1d529f84523339a6616c9ae7a59f9987f5fdf3ade827090ae23d7"
+    },
+    {
+      "path": "data/numeric/hourly/2010.csv.gz",
+      "bytes": 451209,
+      "rows": 8760,
+      "sha256": "9d66a2a4178ed4225d4914effe2a23829f3c74fa368753feab1da51ae5b73264"
+    },
+    {
+      "path": "data/numeric/hourly/2011.csv.gz",
+      "bytes": 449367,
+      "rows": 8760,
+      "sha256": "3ba863b2ea8d81caeb0e5fd1f8bb8d47345aa3672f90d6c84e65b26daa1b59dc"
+    },
+    {
+      "path": "data/numeric/hourly/2012.csv.gz",
+      "bytes": 448389,
+      "rows": 8784,
+      "sha256": "c4536a41a44bda7b57d1dbd248f2624d45b7909b3f2dccf74a545ead8e13966e"
+    },
+    {
+      "path": "data/numeric/hourly/2013.csv.gz",
+      "bytes": 448856,
+      "rows": 8760,
+      "sha256": "af8b990e1ff497d36203a16ee3f8d975be8a327f5ae46e59f6ee9468c7cec5fd"
+    },
+    {
+      "path": "data/numeric/hourly/2014.csv.gz",
+      "bytes": 448434,
+      "rows": 8760,
+      "sha256": "023f188bafb445138aa2a92b74b1d477e5c5d7c4de63d81c80bd63c462227e1e"
+    },
+    {
+      "path": "data/numeric/hourly/2015.csv.gz",
+      "bytes": 445165,
+      "rows": 8760,
+      "sha256": "1932a41a21dccb5e2bd8c9e53e7674447842f6d5c7e3d0829a32d94db17857c2"
+    },
+    {
+      "path": "data/numeric/hourly/2016.csv.gz",
+      "bytes": 447948,
+      "rows": 8784,
+      "sha256": "0b0e80f1b96f206acd4103e687ba4d13dcdfab6f62966bced620fd40329d34d8"
+    },
+    {
+      "path": "data/numeric/hourly/2017.csv.gz",
+      "bytes": 445019,
+      "rows": 8760,
+      "sha256": "4818385ff0d2323d7c12414904bae05d2182acd25b83c272bbe9739aa2f97199"
+    },
+    {
+      "path": "data/numeric/hourly/2018.csv.gz",
+      "bytes": 443759,
+      "rows": 8760,
+      "sha256": "fb1d79f2e557ddb9454d249ee050b1a5335ae57330792cf57e2cf8d8cfe73677"
+    },
+    {
+      "path": "data/numeric/hourly/2019.csv.gz",
+      "bytes": 444260,
+      "rows": 8760,
+      "sha256": "3702372763b8b21ff11d6c0456de841f4935f41306a0812f1022d2c8d5f15946"
+    },
+    {
+      "path": "data/numeric/hourly/2020.csv.gz",
+      "bytes": 447614,
+      "rows": 8784,
+      "sha256": "add4d4e7b75e8c1d0ac6a4f0462d7b51c101923248ee3b3344632264e2cfd19a"
+    },
+    {
+      "path": "data/numeric/hourly/2021.csv.gz",
+      "bytes": 448179,
+      "rows": 8760,
+      "sha256": "d771be17e56f3d869d51b0a6ccdbe257cfdcde1194473d769c6f74627d7e1aba"
+    },
+    {
+      "path": "data/numeric/hourly/2022.csv.gz",
+      "bytes": 451890,
+      "rows": 8760,
+      "sha256": "0554a77c5557910d410f8a2d5cceeb21010775492d44a94b757ef7e899343d2c"
+    },
+    {
+      "path": "data/numeric/hourly/2023.csv.gz",
+      "bytes": 448742,
+      "rows": 8760,
+      "sha256": "6a912508fb77dcf76b6b779c9cdf3abecca503f5702db5f1fb6f63301d3bd97c"
+    },
+    {
+      "path": "data/numeric/hourly/2024.csv.gz",
+      "bytes": 451047,
+      "rows": 8784,
+      "sha256": "d9bc3e2bddbcaff729a7013c7449975f1b13fc407f83e5e499ddb441fc532a37"
+    },
+    {
+      "path": "data/numeric/hourly/2025.csv.gz",
+      "bytes": 449379,
+      "rows": 8760,
+      "sha256": "997e9b849959bfdb2c92660175adaf2d516164464a78ebabb33b8ef2f4c81d72"
+    },
+    {
+      "path": "data/numeric/hydrology/2000.csv.gz",
+      "bytes": 6019,
+      "rows": 366,
+      "sha256": "6a45607d27af63fc13fc215d63c0cdda2b84047c18ffd3da51c3df5073f13722"
+    },
+    {
+      "path": "data/numeric/hydrology/2001.csv.gz",
+      "bytes": 6080,
+      "rows": 365,
+      "sha256": "543719f9d7cd3b06072e7be8f6b764a5b56df8be7f2fc384c27f5f0c3ee1b1c3"
+    },
+    {
+      "path": "data/numeric/hydrology/2002.csv.gz",
+      "bytes": 6529,
+      "rows": 365,
+      "sha256": "b9565d39dcf0efc2d1513d93df6f08c6f6433fe4530f9230de8eb89e0f2f5800"
+    },
+    {
+      "path": "data/numeric/hydrology/2003.csv.gz",
+      "bytes": 6790,
+      "rows": 365,
+      "sha256": "443afc005a0b1c67d7c4944c06f3837ee5f28a3d794f7abcf980c2c6f6f93633"
+    },
+    {
+      "path": "data/numeric/hydrology/2004.csv.gz",
+      "bytes": 6590,
+      "rows": 366,
+      "sha256": "7404c62554ec7a04dc6ff4e9b55fda6cbaa4861e9c646f34dc2aacdb12caa60c"
+    },
+    {
+      "path": "data/numeric/hydrology/2005.csv.gz",
+      "bytes": 6862,
+      "rows": 365,
+      "sha256": "18d5bfeec5716c1ad8d67713aa0d66ae1bbf3e92a32daffe984445eaa78ee03c"
+    },
+    {
+      "path": "data/numeric/hydrology/2006.csv.gz",
+      "bytes": 6788,
+      "rows": 365,
+      "sha256": "4f86cc08fa5203e62fb3bea6198474c658515dc6aa95ad378d73278d25b16f5c"
+    },
+    {
+      "path": "data/numeric/hydrology/2007.csv.gz",
+      "bytes": 6936,
+      "rows": 365,
+      "sha256": "812e119b0285ccf2345f51a4d04baac6996e77885b291a85b1fc2ac5ff1019df"
+    },
+    {
+      "path": "data/numeric/hydrology/2008.csv.gz",
+      "bytes": 6844,
+      "rows": 366,
+      "sha256": "0ba8c3deab1965d6a065e65db8fab5db001c194446cfcf1e319cb62802406f1d"
+    },
+    {
+      "path": "data/numeric/hydrology/2009.csv.gz",
+      "bytes": 6848,
+      "rows": 365,
+      "sha256": "793662f64e538d3b9dff9ddf1d0a6e8d9286970931aeca90cbfbb31abd2ef461"
+    },
+    {
+      "path": "data/numeric/hydrology/2010.csv.gz",
+      "bytes": 6815,
+      "rows": 365,
+      "sha256": "c4463a6a14d6bb403e7ce439a6fc32f08a996bc287b03da8361d93ddc645675b"
+    },
+    {
+      "path": "data/numeric/hydrology/2011.csv.gz",
+      "bytes": 6876,
+      "rows": 365,
+      "sha256": "7d21da3f0a055601afef1854d83d38f7f1820efc1cb8340e7ca8b08d1ab4f48e"
+    },
+    {
+      "path": "data/numeric/hydrology/2012.csv.gz",
+      "bytes": 6886,
+      "rows": 366,
+      "sha256": "e594230534ad4870d7690618cf14ed243a1525750ad5843b61482a866ce3cea6"
+    },
+    {
+      "path": "data/numeric/hydrology/2013.csv.gz",
+      "bytes": 6975,
+      "rows": 365,
+      "sha256": "db8e405151c1470f4ec898d225e0a49cc65aee2f9da52ea74f3a9b0b3bf15ce7"
+    },
+    {
+      "path": "data/numeric/hydrology/2014.csv.gz",
+      "bytes": 6732,
+      "rows": 365,
+      "sha256": "d491f41efc572d6264d4a3b02ab77f1e262d4390b4d18b14842d1ee3414b61aa"
+    },
+    {
+      "path": "data/numeric/hydrology/2015.csv.gz",
+      "bytes": 6886,
+      "rows": 365,
+      "sha256": "c943c5948d4e145283367cad20e5b344b8efcd7c03aac6c8a9f76c7e04659ad5"
+    },
+    {
+      "path": "data/numeric/hydrology/2016.csv.gz",
+      "bytes": 6232,
+      "rows": 366,
+      "sha256": "d7a685e1c19a544af727f229013bcf105027f47db4507b844659254349ee19e8"
+    },
+    {
+      "path": "data/numeric/hydrology/2017.csv.gz",
+      "bytes": 6230,
+      "rows": 365,
+      "sha256": "109d9a497d750dd31b9facba97a1105e3aa99b6b3363798d71a0185631488c6e"
+    },
+    {
+      "path": "data/numeric/hydrology/2018.csv.gz",
+      "bytes": 6234,
+      "rows": 365,
+      "sha256": "cc40d8ba2d9e1c4ade97ccdfdb66358c499cfe1f884418215744ea0648e7407c"
+    },
+    {
+      "path": "data/numeric/hydrology/2019.csv.gz",
+      "bytes": 6276,
+      "rows": 365,
+      "sha256": "69f13da635bbd6de76c8d554f59ae0c9b15d9f80ea0bb76626badbe311c2a4e0"
+    },
+    {
+      "path": "data/numeric/hydrology/2020.csv.gz",
+      "bytes": 6216,
+      "rows": 366,
+      "sha256": "feaf7713b158b16393bd75b1a94d0eb147b928aa876d967bec956074c89d00cc"
+    },
+    {
+      "path": "data/numeric/hydrology/2021.csv.gz",
+      "bytes": 6239,
+      "rows": 365,
+      "sha256": "12cee7d8c18d4c4bfa1ac49b5954ed6db88267c761478d804269b57ee0388f3d"
+    },
+    {
+      "path": "data/numeric/hydrology/2022.csv.gz",
+      "bytes": 6326,
+      "rows": 365,
+      "sha256": "de9f3c062dd77179a6868e2bb0bf2ebeae0c7c4086ea7ed59c443b47382aacdb"
+    },
+    {
+      "path": "data/numeric/hydrology/2023.csv.gz",
+      "bytes": 6374,
+      "rows": 365,
+      "sha256": "228d6adfec337e872ecc898f414d3cf0619c032c1c54d464b315f71b14716126"
+    },
+    {
+      "path": "data/numeric/hydrology/2024.csv.gz",
+      "bytes": 6279,
+      "rows": 366,
+      "sha256": "6e8db13e57e1eda121e0b8f43af89205237db1f81a070151776092a370e4194c"
+    },
+    {
+      "path": "data/numeric/hydrology/2025.csv.gz",
+      "bytes": 6879,
+      "rows": 365,
+      "sha256": "af682c21f10b31c77e0a5f22529b7a0722b5221631b2485bf5c9ca39f4db6a38"
+    },
+    {
+      "path": "data/provenance/archive_capture_metadata.json",
+      "bytes": 241712,
+      "rows": null,
+      "sha256": "72c41c29412c06bb9ee5e60b78fb09d41e2e09d2ba0de1b82c324d200eba5fa9"
+    },
+    {
+      "path": "data/provenance/verified_archive_entries.jsonl.gz",
+      "bytes": 3443854,
+      "rows": null,
+      "sha256": "2a175a8f4dabfea3c922e4b2b219f2d028800dfb328d5cba5f1d762ae0a48f1a"
+    },
+    {
+      "path": "data/test_freeze.json",
+      "bytes": 1839,
+      "rows": null,
+      "sha256": "5d0edb551c303538975219577e369d42d15e6ac00e3cf00e7cdf088e09d18fac"
+    },
+    {
+      "path": "data/text/official/ideam/2020.csv.gz",
+      "bytes": 26660,
+      "rows": 158,
+      "sha256": "59e8c1f3d097d8d7232a57bc636dae899821827dcd43933073030d5c44a3153a"
+    },
+    {
+      "path": "data/text/official/ideam/2021.csv.gz",
+      "bytes": 27549,
+      "rows": 160,
+      "sha256": "b947d32d40f4e2a263f8719a90b467089bafb6d86f82946da41f16498f2ac702"
+    },
+    {
+      "path": "data/text/official/ideam/2022.csv.gz",
+      "bytes": 26726,
+      "rows": 156,
+      "sha256": "c4558886bac00d369b9c3511163319a04a867635dd6a9d2e7ee0979e03715dc6"
+    },
+    {
+      "path": "data/text/official/ideam/2023.csv.gz",
+      "bytes": 26244,
+      "rows": 136,
+      "sha256": "6b0ab8d4ee3628e20fbdb9e50adc62785b5de40395331fb45d8fb528ea5efc0e"
+    },
+    {
+      "path": "data/text/official/ideam/2024.csv.gz",
+      "bytes": 424672,
+      "rows": 2632,
+      "sha256": "77256a4645878eaa8b763ffbe7c9fef0bb71ab678d3af5b0d5ddc6b8d1582ff1"
+    },
+    {
+      "path": "data/text/official/ideam/2025.csv.gz",
+      "bytes": 636343,
+      "rows": 3981,
+      "sha256": "2982fb6f7a606e6bc8f7e8119069d81fcbfe74cb458243f293cf5e9007ba14f1"
+    },
+    {
+      "path": "data/text/official/xm/undated.csv.gz",
+      "bytes": 40113,
+      "rows": 406,
+      "sha256": "8199a46bc00351099fd19da514fd11e0323fe0d9d1391d3a99a8899a322f1c0d"
+    },
+    {
+      "path": "data/text/press/dinero/2020.csv.gz",
+      "bytes": 14368,
+      "rows": 106,
+      "sha256": "19fe2b546a3b04baa97845b977cf6ad3b6e6320657290ec1934643c38db00223"
+    },
+    {
+      "path": "data/text/press/dinero/2021.csv.gz",
+      "bytes": 3662,
+      "rows": 23,
+      "sha256": "e8b853d8d14ed825edc7970afa3cf3d215b4216dd2ab45699de0e4af89b4a81e"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2004.csv.gz",
+      "bytes": 25861,
+      "rows": 309,
+      "sha256": "edc57c10e5c6d15b4b2097d22d8f99032f5b8d7990deb7f472d2635c008acf8d"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2005.csv.gz",
+      "bytes": 30307,
+      "rows": 364,
+      "sha256": "3360747cb520bb8ef9e4f7dc64f6eef5d9e565d98974e035db63cf74b13157e0"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2006.csv.gz",
+      "bytes": 30006,
+      "rows": 361,
+      "sha256": "f0358b057b9cfe7f0247e18d3716b8f701e8a777413d791c4d7b08f3a72204d0"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2007.csv.gz",
+      "bytes": 29992,
+      "rows": 360,
+      "sha256": "01ba9891c3ea7ca9d31056d12e6c173917525c647484341826679f6a88bb0fe9"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2008.csv.gz",
+      "bytes": 2162814,
+      "rows": 20118,
+      "sha256": "b29490638b41bd4fe76fa8b820495dcb61e8106bfeb3d86c91c74239399101d3"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2009.csv.gz",
+      "bytes": 4221485,
+      "rows": 38161,
+      "sha256": "2829a49593ef47143aadd0effc8c5609d0f94e333c9fc7ba4122b9af1d3c8080"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2010.csv.gz",
+      "bytes": 3863836,
+      "rows": 34622,
+      "sha256": "103fd00298611aa9e616a51760ea2b29a92aeff8e57bf33cb4187a0ddc23b14f"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2011.csv.gz",
+      "bytes": 4141859,
+      "rows": 36129,
+      "sha256": "ee7acc5437e9b8a590638d4d11b56f9217b58a6cbd85bf35f57dec04a76fa512"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2012.csv.gz",
+      "bytes": 4930275,
+      "rows": 40545,
+      "sha256": "ae5595ef0d45c9589e2f2b344e8ba2441250b6132ad3fcff86fa8dcc271c0700"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2013.csv.gz",
+      "bytes": 5741953,
+      "rows": 46676,
+      "sha256": "9bf39b7e7d8cd9bff55ee4539ec368f4ef93902888c66557ce85d1bbf28f663b"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2014.csv.gz",
+      "bytes": 5379197,
+      "rows": 44088,
+      "sha256": "fbd6911d42606381261e05bb2c850c5e0660fbd8cfd28a6bdf2ad0d8b65687c7"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2015.csv.gz",
+      "bytes": 5118999,
+      "rows": 41851,
+      "sha256": "cc42436b93818e3f3a2031afccf7eacdb4afc72a4159d4a92366fc164ff298df"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2016.csv.gz",
+      "bytes": 4835048,
+      "rows": 39870,
+      "sha256": "c6ec6cfd6d5046981340673581bc89e7fe5c8d761addbe7342676f75bd2f2ddf"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2017.csv.gz",
+      "bytes": 4425615,
+      "rows": 37087,
+      "sha256": "a77a2166a8abb086e1db42cd417de19d26e26b93ecba4d879cdac5b624f3e6ec"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2018.csv.gz",
+      "bytes": 4022996,
+      "rows": 34225,
+      "sha256": "1f47fa473c1163228253f6f56670336aab53d55b1012c6de0e6d08190d4c5df7"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2019.csv.gz",
+      "bytes": 3706320,
+      "rows": 30826,
+      "sha256": "30f59275640c4e623e0e5a2e8eb955a06408d653fad87e820a830dfa76d3f95a"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2020.csv.gz",
+      "bytes": 1736032,
+      "rows": 14014,
+      "sha256": "0a6273e6a7e164a40fc17654be385bc8226ae25c7437af5c77ce38a5f59a27b2"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2021.csv.gz",
+      "bytes": 235268,
+      "rows": 1757,
+      "sha256": "3053475794bedf5b5265cff96b37027b00185706efb614bac90fed4b2839e60e"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2022.csv.gz",
+      "bytes": 579,
+      "rows": 1,
+      "sha256": "e4d78f56308170a5bb8c6add8a33e38c9c189cecffb14a3552355a1d519b07f1"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2023.csv.gz",
+      "bytes": 1024,
+      "rows": 4,
+      "sha256": "e3ac1bee71cbe0079fbebc1fffbed237eb9fed5a0c17f2c411b7ddd0602d0aca"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2024.csv.gz",
+      "bytes": 1486,
+      "rows": 7,
+      "sha256": "c3c4f4210b01f9a55712d7a4e753f514d7d721dcf74e446df538df0058897423"
+    },
+    {
+      "path": "data/text/press/el_colombiano/2025.csv.gz",
+      "bytes": 12042,
+      "rows": 86,
+      "sha256": "d0845199e0d005b43f49a4ecd651487fe0d17128c46728473496eaef2aebf241"
+    },
+    {
+      "path": "data/text/press/el_espectador/2020.csv.gz",
+      "bytes": 141121,
+      "rows": 1128,
+      "sha256": "edc51c4e7dcb3ac53e9e0a4f3c17297eceb30d37d4719b087459b6595e3342a4"
+    },
+    {
+      "path": "data/text/press/el_espectador/2021.csv.gz",
+      "bytes": 359230,
+      "rows": 2768,
+      "sha256": "8e3dace56a6c7cd0a22128322d1102413aa4d82284095724870a6f1c84b1b996"
+    },
+    {
+      "path": "data/text/press/el_espectador/2022.csv.gz",
+      "bytes": 120937,
+      "rows": 857,
+      "sha256": "c900902bbe214b9caa3cd039aa6f62aa64207de85122d0b51b6f040bd216b1fa"
+    },
+    {
+      "path": "data/text/press/el_espectador/2023.csv.gz",
+      "bytes": 141515,
+      "rows": 1000,
+      "sha256": "8b6adf44b3e2009de29f03a997fc703400e95bf87c35b081ccdab89986b14c25"
+    },
+    {
+      "path": "data/text/press/el_espectador/2024.csv.gz",
+      "bytes": 200591,
+      "rows": 1400,
+      "sha256": "1ba1f0df24df869784440a828468b90640b2d1bd7490c9f87af99bbc3be6a72a"
+    },
+    {
+      "path": "data/text/press/el_espectador/2025.csv.gz",
+      "bytes": 204222,
+      "rows": 1397,
+      "sha256": "cfb60dc8a9b6dfd7d113630ad7179534e685e73dcd25d852725a1bcfd2a465bc"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2020.csv.gz",
+      "bytes": 1814,
+      "rows": 9,
+      "sha256": "b123afa440794aaa3233cc6a8afeb7a61b4e365cb1cf6cdc785c572ff8a01b4d"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2021.csv.gz",
+      "bytes": 666638,
+      "rows": 4971,
+      "sha256": "e0257151855827f5c2be853f7cc8638a9c25bfadebae6c7ba342fb4010b85169"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2022.csv.gz",
+      "bytes": 1211916,
+      "rows": 8944,
+      "sha256": "972eeb1881cd54be2afaa9bb9ff28ad75106ac717e6bdde878422470dd6cbaab"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2023.csv.gz",
+      "bytes": 1819467,
+      "rows": 12979,
+      "sha256": "8531d150a84abf16ccce518a54e8e16d54c04e8bcb8b27b80592730354491d17"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2024.csv.gz",
+      "bytes": 1864895,
+      "rows": 12068,
+      "sha256": "38cb7decacd2d7d4099078a8494d4c41e72bf4475307ace865f7b4c21ab08117"
+    },
+    {
+      "path": "data/text/press/el_tiempo/2025.csv.gz",
+      "bytes": 1719006,
+      "rows": 10379,
+      "sha256": "c6921868abdb63a24ad42c546e7dfe978856a95f251433cdf44dac9eb7dd2e94"
+    },
+    {
+      "path": "data/text/press/la_republica/2020.csv.gz",
+      "bytes": 78432,
+      "rows": 569,
+      "sha256": "5fbab67c8664185ed7b0bb1eb85b1e0cfbe7edf849b29d0585b70a5b011e3c00"
+    },
+    {
+      "path": "data/text/press/la_republica/2021.csv.gz",
+      "bytes": 224340,
+      "rows": 1626,
+      "sha256": "383fe6d220c876925ec075e58dd42617ebe4e54ee10f1fdcfe0fbd6f6d80b33e"
+    },
+    {
+      "path": "data/text/press/la_republica/2022.csv.gz",
+      "bytes": 144659,
+      "rows": 1032,
+      "sha256": "956bfb22fbf62d14eda4202600666b2cab7ef76e754258562ec40fe207136def"
+    },
+    {
+      "path": "data/text/press/la_republica/2023.csv.gz",
+      "bytes": 360457,
+      "rows": 2607,
+      "sha256": "9d886bc37d79ac590d11c60d2391767c7b58ea488ab90b24d4c2b8fd4fbd6415"
+    },
+    {
+      "path": "data/text/press/la_republica/2024.csv.gz",
+      "bytes": 363011,
+      "rows": 2624,
+      "sha256": "5822ba226e4e223d8d8c0e01a8e3d598c9d59054e7f0a282b5edea271a815d87"
+    },
+    {
+      "path": "data/text/press/la_republica/2025.csv.gz",
+      "bytes": 266289,
+      "rows": 1923,
+      "sha256": "1e2c16c2473988edf12380657a8074a48da5a5d461fa7ab85cc70edaf209ddfc"
+    },
+    {
+      "path": "data/text/press/portafolio/2020.csv.gz",
+      "bytes": 39774,
+      "rows": 331,
+      "sha256": "d7bb44cd2968c80817ff3d8362372a30a7a1c8c44d75b46a66c7f12488781c0d"
+    },
+    {
+      "path": "data/text/press/portafolio/2021.csv.gz",
+      "bytes": 119972,
+      "rows": 943,
+      "sha256": "806682c0c1f75e619b25952c576751a026ab4eba70d51577d4b5fdf5cc6fdec1"
+    },
+    {
+      "path": "data/text/press/portafolio/2022.csv.gz",
+      "bytes": 18041,
+      "rows": 150,
+      "sha256": "2852d7191c66c8c9cf0a771b1953abee00783353fd473561c4a8fdf14d1a1514"
+    },
+    {
+      "path": "data/text/press/portafolio/2025.csv.gz",
+      "bytes": 58256,
+      "rows": 391,
+      "sha256": "5811f73d52b1c0a3d941b4b5c34f49729cc4d2fea4fc9655c3c130b132d1aaed"
+    },
+    {
+      "path": "data/text/press/semana/2020.csv.gz",
+      "bytes": 325069,
+      "rows": 2633,
+      "sha256": "de682cba51729ddb421de71c255e78caf3b36d09b511268bcc04bb6b78e4f637"
+    },
+    {
+      "path": "data/text/press/semana/2021.csv.gz",
+      "bytes": 1028090,
+      "rows": 7517,
+      "sha256": "c45b8e9cfb86ec07cdd1004522a49ee4596a5ac0ff99ac0d36eb4323980902d3"
+    },
+    {
+      "path": "data/text/press/semana/2022.csv.gz",
+      "bytes": 2209546,
+      "rows": 17559,
+      "sha256": "96cbcc15949b285ef36c8f3325db2f497970072ee0a3ead1aef721a165376cb8"
+    },
+    {
+      "path": "data/text/press/semana/2023.csv.gz",
+      "bytes": 97877,
+      "rows": 677,
+      "sha256": "d1b8e5940334af1594a6a64bbbb2fb2a911706f8ac1c0d83b641a592b91fd5ae"
+    },
+    {
+      "path": "data/text/press/semana/2024.csv.gz",
+      "bytes": 154619,
+      "rows": 900,
+      "sha256": "2940de1472598e0158bcd6c823c4709155328d55ebd60a7237356bd022f52b00"
+    },
+    {
+      "path": "data/text/press/semana/2025.csv.gz",
+      "bytes": 16821,
+      "rows": 100,
+      "sha256": "6f78469284eeb951f9008fad880e7b04dce2daacc76af3fb8bf494f9b87745c1"
+    }
+  ],
+  "upstream_hourly_sha256": "59dc010c106f5bc14022b48af7473df55e22dc4b2f7c2890b24e3d5fa505526b",
+  "upstream_hydrology_sha256": "a73f81e21ca011ebfb768fa3ac89283f3648bba59070e63aea12d9d1d1dfe843"
+}

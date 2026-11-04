@@ -1,0 +1,10 @@
+:root { --pst-color-primary: #245b8d; --pst-color-secondary: #2b8c77; }
+.bd-main .bd-content .bd-article-container { max-width: 1050px; }
+.bd-article { font-size: 1rem; line-height: 1.65; }
+.bd-article h1 { color: #173c5c; font-weight: 650; }
+.bd-article h2 { color: #245b8d; margin-top: 2rem; }
+.cell_output .output { overflow-x: auto; }
+.cell_output table { font-size: .9rem; line-height: 1.45; }
+.cell_output img { max-width: 100%; height: auto; }
+.admonition { border-radius: .3rem; }
+

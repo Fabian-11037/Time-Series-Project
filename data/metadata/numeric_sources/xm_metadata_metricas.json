@@ -1,0 +1,79 @@
+[
+  {
+    "MetricId": "DemaReal",
+    "MetricName": "Demanda Real por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "HourlyEntities",
+    "Url": "https://servapibi.xm.com.co/hourly",
+    "Filter": "No aplica",
+    "MetricUnits": "kWh",
+    "MetricDescription": "Demanda de usuarios regulados y no regulados que hacen parte del Sistema Interconectado Nacional (no incluye Alumbrado Público)"
+  },
+  {
+    "MetricId": "DemaCome",
+    "MetricName": "Demanda Comercial por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "HourlyEntities",
+    "Url": "https://servapibi.xm.com.co/hourly",
+    "Filter": "No aplica",
+    "MetricUnits": "kWh",
+    "MetricDescription": "Considera la demanda propia de cada comercializador mas la paticipacion en la perdidas del STN y los consumos propios de los generadores."
+  },
+  {
+    "MetricId": "PrecBolsNaci",
+    "MetricName": "Precio Bolsa Nacional por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "HourlyEntities",
+    "Url": "https://servapibi.xm.com.co/hourly",
+    "Filter": "No aplica",
+    "MetricUnits": "COP/kWh",
+    "MetricDescription": "Precio de oferta de la última planta flexible para atender la demanda comercial nacional, más delta de incremento para remunerar los costos no cubiertos de las plantas térmicas en el despacho ideal."
+  },
+  {
+    "MetricId": "AporEner",
+    "MetricName": "Aportes  Energía por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "DailyEntities",
+    "Url": "https://servapibi.xm.com.co/daily",
+    "Filter": "No aplica",
+    "MetricUnits": "kWh",
+    "MetricDescription": "Caudales en energia de los rios que aportan agua a algun embalse del SIN"
+  },
+  {
+    "MetricId": "VoluUtilDiarEner",
+    "MetricName": "Volumen Útil diario Energía por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "DailyEntities",
+    "Url": "https://servapibi.xm.com.co/daily",
+    "Filter": "No aplica",
+    "MetricUnits": "kWh",
+    "MetricDescription": "Volumen almacenado por encima del Nivel Minimo Tecnico, reportado diariamente por los agentes. En % corresponde a la relacion entre el Volumen Util Diario y la Capacidad Util del Embalse"
+  },
+  {
+    "MetricId": "CapaUtilDiarEner",
+    "MetricName": "Capacidad Útil Energía por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "DailyEntities",
+    "Url": "https://servapibi.xm.com.co/daily",
+    "Filter": "No aplica",
+    "MetricUnits": "kWh",
+    "MetricDescription": "Corresponde al Volumen Útil del Embalse, que se define como el volumen almacenado entre el nivel Mínimo Técnico y el Nivel Máximo Físico"
+  },
+  {
+    "MetricId": "PorcVoluUtilDiar",
+    "MetricName": "Volumen Útil  diario % por Sistema",
+    "Entity": "Sistema",
+    "MaxDays": 31,
+    "Type": "DailyEntities",
+    "Url": "https://servapibi.xm.com.co/daily",
+    "Filter": "No aplica",
+    "MetricUnits": "%",
+    "MetricDescription": "Porcentaje de llenado del area util de un embalse (Volumen almacenado por encima del Nivel Mínimo Técnico)"
+  }
+]

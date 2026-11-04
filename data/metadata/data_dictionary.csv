@@ -1,0 +1,62 @@
+tabla,campo,rol,unidad,fuente,politica_temporal
+horaria,timestamp_start_colombia,metadata,,XM / ERA5,No es entrada directa del E1
+horaria,timestamp_end_colombia,metadata,,XM / ERA5,No es entrada directa del E1
+horaria,date,metadata,,XM / ERA5,No es entrada directa del E1
+horaria,xm_hour,metadata,,XM / ERA5,No es entrada directa del E1
+horaria,precio_bolsa_cop_kwh,objetivo y rezagos,COP/kWh,XM,Etiqueta futura; rezagos sólo si disponibles en origen
+horaria,demanda_real_kwh,covariable numérica,kWh por intervalo horario,XM,Sólo pasado; versión y publicación retrospectivas no certificadas
+horaria,demanda_comercial_kwh,covariable numérica,kWh por intervalo horario,XM,Sólo pasado; versión y publicación retrospectivas no certificadas
+horaria,temperature_2m_c_bogota,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_bogota,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_bogota,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_medellin,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_medellin,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_medellin,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_cali,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_cali,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_cali,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_barranquilla,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_barranquilla,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_barranquilla,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_cartagena,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_cartagena,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_cartagena,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_bucaramanga,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_bucaramanga,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_bucaramanga,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_pereira,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_pereira,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_pereira,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+horaria,temperature_2m_c_cucuta,covariable numérica,°C,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,relative_humidity_2m_pct_cucuta,covariable numérica,%,ERA5 vía Open-Meteo,Instantánea; reanálisis retrospectivo; no realización futura
+horaria,precipitation_preceding_hour_mm_cucuta,covariable numérica,mm en la hora anterior,ERA5 vía Open-Meteo,Acumulado previo a la marca; reanálisis retrospectivo
+hidrología diaria,date,metadata,día Colombia,XM,No expandir desde 00:00 del mismo día sin regla de publicación; conservar valores y banderas originales
+hidrología diaria,llenado_valor_original,covariable numérica,fracción original,XM,No expandir desde 00:00 del mismo día sin regla de publicación; conservar valores y banderas originales
+hidrología diaria,reserva_util_kwh,covariable numérica,kWh,XM,No expandir desde 00:00 del mismo día sin regla de publicación; conservar valores y banderas originales
+hidrología diaria,capacidad_util_kwh,covariable numérica,kWh,XM,No expandir desde 00:00 del mismo día sin regla de publicación; conservar valores y banderas originales
+hidrología diaria,aportes_kwh_dia,covariable numérica,kWh en intervalo diario,XM,No expandir desde 00:00 del mismo día sin regla de publicación; conservar valores y banderas originales
+texto,id,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,source,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,source_kind,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,title_kind,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,url,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,canonical_url,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,title_raw,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,publication_date_claimed,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,published_at_claimed,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,date_precision,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,modified_at_claimed,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,retrieved_at,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,availability_status,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,available_at_verified,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,capture_at_verified,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,availability_proof,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,version_sha256,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,available_at_assumed,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,assumed_availability_basis,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,quarantined,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,quarantine_reason,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,provenance_source,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,raw_file,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,reference_period_claimed,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen
+texto,metadata_json,auditoría / contexto futuro E2-E3; excluido de E1,metadato o texto,medio / IDEAM / XM,Ver availability_rules.json; fechas supuestas y comprobadas separadas; sin fecha no se asigna origen

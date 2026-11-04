@@ -1,0 +1,58 @@
+[
+  {
+    "name": "time_mmd",
+    "url": "https://arxiv.org/pdf/2406.08627v2",
+    "bytes": 1331903,
+    "sha256": "93eee33de77071071a412114512008daafe98feb765375103940d36da8f223e8",
+    "pages": 46,
+    "checked_sections": "methods, results table and relevant appendices; beginning/middle/end extraction inspected"
+  },
+  {
+    "name": "tan_2024",
+    "url": "https://arxiv.org/pdf/2406.16964v2",
+    "bytes": 7561568,
+    "sha256": "2af6a3dc791357b716058fbee47f790ba549853fcdfb65d39c9da3abed3a6c2b",
+    "pages": 28,
+    "checked_sections": "methods, results table and relevant appendices; beginning/middle/end extraction inspected"
+  },
+  {
+    "name": "nsw_epnews",
+    "url": "https://arxiv.org/pdf/2506.11050v1",
+    "bytes": 946651,
+    "sha256": "d753b72bbf0e7868681d0cd150082b19c58f11df102c4b0bacdbb4539bdfb0be",
+    "pages": 29,
+    "checked_sections": "methods, results table and relevant appendices; beginning/middle/end extraction inspected"
+  },
+  {
+    "name": "lago_2021",
+    "url": "https://jesuslago.com/wp-content/uploads/1-s2.0-S0306261921004529-main-1.pdf",
+    "bytes": 1540324,
+    "sha256": "ab1d0e5901c11b93c8457e3926028e042b1de17694e4ebf9c92ccde6ea36f5fb",
+    "pages": 21,
+    "checked_sections": "methods, results table and relevant appendices; beginning/middle/end extraction inspected"
+  },
+  {
+    "name": "rest_ts",
+    "url": "https://arxiv.org/pdf/2606.19413",
+    "bytes": 10401794,
+    "sha256": "ccfd2840dc35022a1a14000ceb0790a2ee44935f1946283d3bca6b52f53f9da3",
+    "pages": 38,
+    "checked_sections": "methods, central results and relevant evaluation/limitation appendices"
+  },
+  {
+    "name": "ter_tsf",
+    "url": "https://arxiv.org/pdf/2509.00687",
+    "bytes": 1615400,
+    "sha256": "2e79eb70f8992039039dbfa76d95f09e315881b6e414c9ba6aeeeab4825c0e17",
+    "pages": 12,
+    "checked_sections": "methods, central results and relevant evaluation/limitation appendices"
+  },
+  {
+    "name": "timesx",
+    "url": "https://arxiv.org/pdf/2607.06973",
+    "bytes": 12795309,
+    "sha256": "0bafba484d8d6a730b0d644949438e48ec0be77652f84372f582244140499dfa",
+    "pages": 115,
+    "checked_sections": "methods, central results and relevant evaluation/limitation appendices"
+  }
+]

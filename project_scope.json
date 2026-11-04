@@ -1,0 +1,14 @@
+{
+  "E1": {
+    "numeric_only": true,
+    "text_allowed": false,
+    "text_derived_numeric_features_allowed": false,
+    "models_trained": false
+  },
+  "E2_E3": {
+    "text_corpus_preserved": true,
+    "authorized_expanded_text_scenario": "declared_dates",
+    "historical_version_warning_required": true
+  },
+  "original_Time_MMD_E1_modified": false
+}

@@ -1,0 +1,3538 @@
+[
+  {
+    "city": "Bogota",
+    "year": 2000,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2000,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2000,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2000,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2000,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2000,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2000,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2000,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2001,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2001,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2001,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2001,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2001,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2001,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2001,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2001,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2002,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2002,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2002,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2002,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2002,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2002,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2002,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2002,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2003,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2003,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2003,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2003,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2003,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2003,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2003,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2003,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2004,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2004,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2004,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2004,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2004,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2004,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2004,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2004,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2005,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2005,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2005,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2005,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2005,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2005,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2005,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2005,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2006,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2006,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2006,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2006,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2006,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2006,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2006,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2006,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2007,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2007,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2007,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2007,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2007,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2007,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2007,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2007,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2008,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2008,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2008,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2008,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2008,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2008,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2008,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2008,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2009,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2009,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2009,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2009,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2009,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2009,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2009,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2009,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2010,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2010,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2010,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2010,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2010,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2010,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2010,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2010,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2011,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2011,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2011,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2011,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2011,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2011,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2011,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2011,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2012,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2012,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2012,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2012,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2012,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2012,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2012,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2012,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2013,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2013,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2013,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2013,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2013,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2013,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2013,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2013,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2014,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2014,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2014,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2014,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2014,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2014,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2014,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2014,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2015,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2015,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2015,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2015,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2015,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2015,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2015,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2015,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2016,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2016,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2016,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2016,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2016,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2016,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2016,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2016,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2017,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2017,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2017,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2017,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2017,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2017,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2017,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2017,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2018,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2018,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2018,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2018,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2018,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2018,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2018,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2018,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2019,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2019,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2019,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2019,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2019,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2019,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2019,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2019,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2020,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2020,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2020,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2020,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2020,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2020,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2020,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2020,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2021,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2021,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2021,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2021,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2021,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2021,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2021,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2021,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2022,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2022,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2022,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2022,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2022,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2022,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2022,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2022,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2023,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2023,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2023,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2023,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2023,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2023,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2023,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2023,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2024,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2024,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2024,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2024,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2024,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2024,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2024,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2024,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bogota",
+    "year": 2025,
+    "requested_latitude": 4.711,
+    "requested_longitude": -74.0721,
+    "grid_latitude": 4.75,
+    "grid_longitude": -74.0,
+    "elevation": 2557.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Medellin",
+    "year": 2025,
+    "requested_latitude": 6.2442,
+    "requested_longitude": -75.5812,
+    "grid_latitude": 6.25,
+    "grid_longitude": -75.5,
+    "elevation": 1476.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cali",
+    "year": 2025,
+    "requested_latitude": 3.4516,
+    "requested_longitude": -76.532,
+    "grid_latitude": 3.5,
+    "grid_longitude": -76.5,
+    "elevation": 1009.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Barranquilla",
+    "year": 2025,
+    "requested_latitude": 10.9685,
+    "requested_longitude": -74.7813,
+    "grid_latitude": 10.75,
+    "grid_longitude": -74.75,
+    "elevation": 21.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cartagena",
+    "year": 2025,
+    "requested_latitude": 10.391,
+    "requested_longitude": -75.4794,
+    "grid_latitude": 10.5,
+    "grid_longitude": -75.5,
+    "elevation": 13.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Bucaramanga",
+    "year": 2025,
+    "requested_latitude": 7.1193,
+    "requested_longitude": -73.1227,
+    "grid_latitude": 7.25,
+    "grid_longitude": -73.25,
+    "elevation": 969.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Pereira",
+    "year": 2025,
+    "requested_latitude": 4.8133,
+    "requested_longitude": -75.6961,
+    "grid_latitude": 4.75,
+    "grid_longitude": -75.75,
+    "elevation": 1410.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  {
+    "city": "Cucuta",
+    "year": 2025,
+    "requested_latitude": 7.8891,
+    "requested_longitude": -72.4967,
+    "grid_latitude": 8.0,
+    "grid_longitude": -72.5,
+    "elevation": 311.0,
+    "timezone": "America/Bogota",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  }
+]

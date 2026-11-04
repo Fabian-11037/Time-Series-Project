@@ -1,0 +1,184 @@
+[
+  {
+    "year": 2000,
+    "file": "raw/2000.json.gz",
+    "sha256_response": "21de4c200ebaa9f67272edb936da25d1b9b1ee97034c39836fd9ff7c388616f7",
+    "retrieved_at": "2026-11-04T00:05:58.476004+00:00",
+    "bundle_path": "raw/clima/2000.json.gz"
+  },
+  {
+    "year": 2001,
+    "file": "raw/2001.json.gz",
+    "sha256_response": "fe738b1f101be692da2c271b19a48a5565774670c9a13a993ee6e1ec2e4f396b",
+    "retrieved_at": "2026-11-04T00:09:04.014822+00:00",
+    "bundle_path": "raw/clima/2001.json.gz"
+  },
+  {
+    "year": 2002,
+    "file": "raw/2002.json.gz",
+    "sha256_response": "9aa34981fdbe775c8f9ae55d1a5f6ddf4501df91de5397afae110c270b37557f",
+    "retrieved_at": "2026-11-04T00:09:25.990755+00:00",
+    "bundle_path": "raw/clima/2002.json.gz"
+  },
+  {
+    "year": 2003,
+    "file": "raw/2003.json.gz",
+    "sha256_response": "1af3335efdc825dbd0a2c5a9e28f25ae7b550a2efd48bd8986389d24d1f6dbb4",
+    "retrieved_at": "2026-11-04T00:09:47.135664+00:00",
+    "bundle_path": "raw/clima/2003.json.gz"
+  },
+  {
+    "year": 2004,
+    "file": "raw/2004.json.gz",
+    "sha256_response": "c436f8d0e5c7a5f1f5bcf6ad84c603e10705fdefa4675c6098f46a39e665b97d",
+    "retrieved_at": "2026-11-04T00:10:05.652779+00:00",
+    "bundle_path": "raw/clima/2004.json.gz"
+  },
+  {
+    "year": 2005,
+    "file": "raw/2005.json.gz",
+    "sha256_response": "a6a3da5c7676121580b01e75641ce49f0a535265eb64291e0fa58391073480eb",
+    "retrieved_at": "2026-11-04T00:10:25.479800+00:00",
+    "bundle_path": "raw/clima/2005.json.gz"
+  },
+  {
+    "year": 2006,
+    "file": "raw/2006.json.gz",
+    "sha256_response": "0af0542e0992648073ed8fea9041cba943cebd9a38d375fb77a954824e967825",
+    "retrieved_at": "2026-11-04T00:12:09.805818+00:00",
+    "bundle_path": "raw/clima/2006.json.gz"
+  },
+  {
+    "year": 2007,
+    "file": "raw/2007.json.gz",
+    "sha256_response": "35a0708ac36562f14d484edcc78cac0261505f5e8396329ad311d1088dc426b0",
+    "retrieved_at": "2026-11-04T00:12:27.940322+00:00",
+    "bundle_path": "raw/clima/2007.json.gz"
+  },
+  {
+    "year": 2008,
+    "file": "raw/2008.json.gz",
+    "sha256_response": "aa3d860cc273ebc6cb17b3a03ef6d922f11ae11143ab70fb35c459d744dcb3f1",
+    "retrieved_at": "2026-11-04T00:12:48.111809+00:00",
+    "bundle_path": "raw/clima/2008.json.gz"
+  },
+  {
+    "year": 2009,
+    "file": "raw/2009.json.gz",
+    "sha256_response": "c9fbf005b68a02e09bf3b5175d4d6f4d284b29a24bfeb94e0c775742e57cb96b",
+    "retrieved_at": "2026-11-04T00:13:05.236365+00:00",
+    "bundle_path": "raw/clima/2009.json.gz"
+  },
+  {
+    "year": 2010,
+    "file": "raw/2010.json.gz",
+    "sha256_response": "04ba99798815ef53ad9e841fde51fec15845ebffbffbbbafd245575bfe73d9b5",
+    "retrieved_at": "2026-11-04T00:13:24.308351+00:00",
+    "bundle_path": "raw/clima/2010.json.gz"
+  },
+  {
+    "year": 2011,
+    "file": "raw/2011.json.gz",
+    "sha256_response": "17a6b1bb927a8454c119e41422c58fc53533561c3c1d4772a0bb1bb93d211231",
+    "retrieved_at": "2026-11-04T00:13:39.491780+00:00",
+    "bundle_path": "raw/clima/2011.json.gz"
+  },
+  {
+    "year": 2012,
+    "file": "raw/2012.json.gz",
+    "sha256_response": "d6a820f96b18a495b0559053cae30f970f5ee307d04d91acd97b673154817a85",
+    "retrieved_at": "2026-11-04T00:13:55.278062+00:00",
+    "bundle_path": "raw/clima/2012.json.gz"
+  },
+  {
+    "year": 2013,
+    "file": "raw/2013.json.gz",
+    "sha256_response": "d53a12dd2832274f168d4cf6f6c34085f2c3a7b23f969a469731f2eeb24152c4",
+    "retrieved_at": "2026-11-04T00:14:10.343175+00:00",
+    "bundle_path": "raw/clima/2013.json.gz"
+  },
+  {
+    "year": 2014,
+    "file": "raw/2014.json.gz",
+    "sha256_response": "d3af795301b3ab9d15b74d6d9b45c5608b5f3b85f9e5c530a6e86f7ae8a7c8ae",
+    "retrieved_at": "2026-11-04T00:14:26.101978+00:00",
+    "bundle_path": "raw/clima/2014.json.gz"
+  },
+  {
+    "year": 2015,
+    "file": "raw/2015.json.gz",
+    "sha256_response": "311643a791836618588c9e76bceb45abd7638416bbf6f480968bed6faac87e57",
+    "retrieved_at": "2026-11-04T00:14:41.777479+00:00",
+    "bundle_path": "raw/clima/2015.json.gz"
+  },
+  {
+    "year": 2016,
+    "file": "raw/2016.json.gz",
+    "sha256_response": "a5a80e7caf2e6440753b63de5aca9370dc69f22799cbbfee5fae249994a7495c",
+    "retrieved_at": "2026-11-04T00:14:56.916810+00:00",
+    "bundle_path": "raw/clima/2016.json.gz"
+  },
+  {
+    "year": 2017,
+    "file": "raw/2017.json.gz",
+    "sha256_response": "215e3bf6f5f158abd798e1193f6f7207e51a23395c91aa747a5dbffafa267cb0",
+    "retrieved_at": "2026-11-04T00:15:12.831979+00:00",
+    "bundle_path": "raw/clima/2017.json.gz"
+  },
+  {
+    "year": 2018,
+    "file": "raw/2018.json.gz",
+    "sha256_response": "36b6e042c761408af5b80ee5e98f366633082b63a2d23288e9eb456727221784",
+    "retrieved_at": "2026-11-04T00:15:27.929836+00:00",
+    "bundle_path": "raw/clima/2018.json.gz"
+  },
+  {
+    "year": 2019,
+    "file": "raw/2019.json.gz",
+    "sha256_response": "72439120f9cb795f10a7354c05e101214a043841b080d0791a4cb9199a1eda29",
+    "retrieved_at": "2026-11-04T00:15:43.622611+00:00",
+    "bundle_path": "raw/clima/2019.json.gz"
+  },
+  {
+    "year": 2020,
+    "file": "raw/2020.json.gz",
+    "sha256_response": "78ba97cabd796775aae3efebe094f72d73885331469ae25587c56660e97a7e80",
+    "retrieved_at": "2026-11-04T00:15:59.262014+00:00",
+    "bundle_path": "raw/clima/2020.json.gz"
+  },
+  {
+    "year": 2021,
+    "file": "raw/2021.json.gz",
+    "sha256_response": "05c06e0d049e0169cc27201f167d380b415c74e8c306c079a98e0b6e94028ca6",
+    "retrieved_at": "2026-11-04T00:16:14.387209+00:00",
+    "bundle_path": "raw/clima/2021.json.gz"
+  },
+  {
+    "year": 2022,
+    "file": "raw/2022.json.gz",
+    "sha256_response": "afd32106b0aab1ce3232d9d8f16afdafdcfac5c4c190f445a3b9d3b50ab6729c",
+    "retrieved_at": "2026-11-04T00:16:29.494678+00:00",
+    "bundle_path": "raw/clima/2022.json.gz"
+  },
+  {
+    "year": 2023,
+    "file": "raw/2023.json.gz",
+    "sha256_response": "b5963257bcdea67e2bd89901bc3adaec6956f0e6d47f5e649f547fe5e70402a1",
+    "retrieved_at": "2026-11-04T00:17:12.481855+00:00",
+    "bundle_path": "raw/clima/2023.json.gz"
+  },
+  {
+    "year": 2024,
+    "file": "raw/2024.json.gz",
+    "sha256_response": "1395bf4eaf13f4eb44ab85fc699f25ce5d8bd4446265b303c0e29a9e1c373622",
+    "retrieved_at": "2026-11-04T00:17:42.372875+00:00",
+    "bundle_path": "raw/clima/2024.json.gz"
+  },
+  {
+    "year": 2025,
+    "file": "raw/2025.json.gz",
+    "sha256_response": "59d4b239c8445bc2595a00336a5fe871042a6e7c58d04aa71293f08c5b2e8e31",
+    "retrieved_at": "2026-11-04T00:18:04.363029+00:00",
+    "bundle_path": "raw/clima/2025.json.gz"
+  }
+]

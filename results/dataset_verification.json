@@ -1,0 +1,25 @@
+{
+  "files_verified": 142,
+  "counts": {
+    "hourly": 227928,
+    "hydrology": 9497,
+    "text": 568701,
+    "text_IDEAM": 7223,
+    "expanded_dated_text": 568294,
+    "text_XM": 406,
+    "text_Dinero": 129,
+    "text_El Colombiano": 461461,
+    "text_El Espectador": 8550,
+    "verified_text": 62572,
+    "text_El Tiempo": 49350,
+    "text_La República": 10381,
+    "text_Portafolio": 1815,
+    "text_Semana": 29386
+  },
+  "duplicate_ids": 0,
+  "hourly_calendar_complete": true,
+  "daily_calendar_complete": true,
+  "test_hashes_unchanged": true,
+  "test_target_distribution_read": false,
+  "no_manual_topic_columns": true
+}

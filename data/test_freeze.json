@@ -1,0 +1,56 @@
+{
+  "recorded_at": "2026-11-04T04:18:31.522581+00:00",
+  "test_start": "2022-01-01T00:00:00-05:00",
+  "test_end_exclusive": "2026-01-01T00:00:00-05:00",
+  "policy": "Structural integrity only in EDA; no target distributions, correlations or predictive results.",
+  "files": [
+    {
+      "path": "data/numeric/hourly/2022.csv.gz",
+      "bytes": 451890,
+      "rows": 8760,
+      "sha256": "0554a77c5557910d410f8a2d5cceeb21010775492d44a94b757ef7e899343d2c"
+    },
+    {
+      "path": "data/numeric/hourly/2023.csv.gz",
+      "bytes": 448742,
+      "rows": 8760,
+      "sha256": "6a912508fb77dcf76b6b779c9cdf3abecca503f5702db5f1fb6f63301d3bd97c"
+    },
+    {
+      "path": "data/numeric/hourly/2024.csv.gz",
+      "bytes": 451047,
+      "rows": 8784,
+      "sha256": "d9bc3e2bddbcaff729a7013c7449975f1b13fc407f83e5e499ddb441fc532a37"
+    },
+    {
+      "path": "data/numeric/hourly/2025.csv.gz",
+      "bytes": 449379,
+      "rows": 8760,
+      "sha256": "997e9b849959bfdb2c92660175adaf2d516164464a78ebabb33b8ef2f4c81d72"
+    },
+    {
+      "path": "data/numeric/hydrology/2022.csv.gz",
+      "bytes": 6326,
+      "rows": 365,
+      "sha256": "de9f3c062dd77179a6868e2bb0bf2ebeae0c7c4086ea7ed59c443b47382aacdb"
+    },
+    {
+      "path": "data/numeric/hydrology/2023.csv.gz",
+      "bytes": 6374,
+      "rows": 365,
+      "sha256": "228d6adfec337e872ecc898f414d3cf0619c032c1c54d464b315f71b14716126"
+    },
+    {
+      "path": "data/numeric/hydrology/2024.csv.gz",
+      "bytes": 6279,
+      "rows": 366,
+      "sha256": "6e8db13e57e1eda121e0b8f43af89205237db1f81a070151776092a370e4194c"
+    },
+    {
+      "path": "data/numeric/hydrology/2025.csv.gz",
+      "bytes": 6879,
+      "rows": 365,
+      "sha256": "af682c21f10b31c77e0a5f22529b7a0722b5221631b2485bf5c9ca39f4db6a38"
+    }
+  ]
+}

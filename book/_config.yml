@@ -1,0 +1,32 @@
+title: "Precio eléctrico colombiano: datos y análisis exploratorio"
+author: "Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte"
+copyright: "2026"
+language: es
+execute:
+  execute_notebooks: "off"
+repository:
+  url: https://github.com/Fabian-11037/Time-Series-Project
+  branch: main
+  path_to_book: book
+html:
+  use_repository_button: true
+  use_issues_button: true
+  home_page_in_navbar: true
+  extra_footer: "EDA del candidato colombiano. Texto ampliado con disponibilidad supuesta; versiones verificadas separadas."
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - amsmath
+    - colon_fence
+sphinx:
+  config:
+    language: es
+    html_static_path: ["_static"]
+    html_css_files: ["custom.css"]
+    html_theme_options:
+      navigation_with_keys: false
+      show_navbar_depth: 1
+      show_toc_level: 2
+      pygments_light_style: friendly
+    suppress_warnings: ["myst.header"]
+

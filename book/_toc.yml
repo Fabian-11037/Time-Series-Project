@@ -1,0 +1,16 @@
+format: jb-book
+root: intro
+chapters:
+  - file: 01_datos
+  - file: 02_calidad
+  - file: 03_objetivo
+  - file: 04_estacionalidad
+  - file: 05_dependencia
+  - file: 06_covariables
+  - file: 07_texto
+  - file: 08_validacion
+  - file: 09_literatura
+  - file: 10_conclusiones
+  - file: reproducibilidad
+  - file: referencias
+

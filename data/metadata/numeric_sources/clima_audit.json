@@ -1,0 +1,248 @@
+{
+  "audited_at": "2026-11-04T00:18:20.551457+00:00",
+  "start": "2000-01-01",
+  "end_inclusive": "2025-12-31",
+  "source": "Open-Meteo Historical Weather API; explicit models=era5",
+  "timezone": "America/Bogota",
+  "expected_hours_per_city": 227928,
+  "expected_city_hours": 1823424,
+  "expected_numeric_values": 5470272,
+  "all_checks_pass": true,
+  "stats_by_city": {
+    "Bogota": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 3.2,
+        "relative_humidity_2m": 6,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 26.4,
+        "relative_humidity_2m": 100,
+        "precipitation": 14.5
+      },
+      "calendar_and_values_pass": true
+    },
+    "Medellin": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 12.7,
+        "relative_humidity_2m": 23,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 32.7,
+        "relative_humidity_2m": 100,
+        "precipitation": 17.0
+      },
+      "calendar_and_values_pass": true
+    },
+    "Cali": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 14.5,
+        "relative_humidity_2m": 42,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 31.7,
+        "relative_humidity_2m": 100,
+        "precipitation": 22.3
+      },
+      "calendar_and_values_pass": true
+    },
+    "Barranquilla": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 21.9,
+        "relative_humidity_2m": 30,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 37.7,
+        "relative_humidity_2m": 100,
+        "precipitation": 17.4
+      },
+      "calendar_and_values_pass": true
+    },
+    "Cartagena": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 23.1,
+        "relative_humidity_2m": 39,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 35.1,
+        "relative_humidity_2m": 99,
+        "precipitation": 17.4
+      },
+      "calendar_and_values_pass": true
+    },
+    "Bucaramanga": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 13.2,
+        "relative_humidity_2m": 45,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 29.6,
+        "relative_humidity_2m": 100,
+        "precipitation": 21.1
+      },
+      "calendar_and_values_pass": true
+    },
+    "Pereira": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 11.4,
+        "relative_humidity_2m": 37,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 29.3,
+        "relative_humidity_2m": 100,
+        "precipitation": 16.1
+      },
+      "calendar_and_values_pass": true
+    },
+    "Cucuta": {
+      "expected_hours": 227928,
+      "observed_hours": 227928,
+      "missing_hours": 0,
+      "duplicate_keys": 0,
+      "extra_hours": 0,
+      "nonchronological_years": 0,
+      "null_or_invalid_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "range_flags_by_variable": {
+        "temperature_2m": 0,
+        "relative_humidity_2m": 0,
+        "precipitation": 0
+      },
+      "min_by_variable": {
+        "temperature_2m": 17.2,
+        "relative_humidity_2m": 11,
+        "precipitation": 0.0
+      },
+      "max_by_variable": {
+        "temperature_2m": 41.1,
+        "relative_humidity_2m": 100,
+        "precipitation": 28.5
+      },
+      "calendar_and_values_pass": true
+    }
+  },
+  "monthly_checks": 7488,
+  "common_timestamps_exactly_aligned": true,
+  "historical_publication_vintages_verified": false
+}

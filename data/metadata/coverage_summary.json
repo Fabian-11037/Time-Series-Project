@@ -1,0 +1,143 @@
+{
+  "finished_at": "2026-11-04T04:13:13.207934+00:00",
+  "timezone": "America/Bogota",
+  "selected_sources": [
+    "Dinero",
+    "El Colombiano",
+    "El Espectador",
+    "El Tiempo",
+    "La República",
+    "Portafolio",
+    "Semana",
+    "IDEAM",
+    "XM"
+  ],
+  "exports": {
+    "titulares_prensa_2000_2025.csv": 561072,
+    "titulares_prensa_2020_2025.csv": 115480,
+    "titulos_informes_ideam_xm.csv": 7629,
+    "textos_ampliados_fechas_declaradas_2000_2025.csv": 568294,
+    "textos_disponibilidad_verificada_2020_2025.csv": 62572
+  },
+  "by_source": {
+    "Dinero": {
+      "titles_all_period": 129,
+      "titles_declared_2020_2025": 129,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 0,
+      "expanded_scenario_dated_records": 129,
+      "months_2020_2025_with_declared_titles": 6,
+      "months_2020_2025_with_verified_availability": 0,
+      "calendar_days_2020_2025_with_declared_titles": 79
+    },
+    "El Colombiano": {
+      "titles_all_period": 461461,
+      "titles_declared_2020_2025": 15869,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 0,
+      "expanded_scenario_dated_records": 461461,
+      "months_2020_2025_with_declared_titles": 35,
+      "months_2020_2025_with_verified_availability": 0,
+      "calendar_days_2020_2025_with_declared_titles": 650
+    },
+    "El Espectador": {
+      "titles_all_period": 8550,
+      "titles_declared_2020_2025": 8550,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 4697,
+      "expanded_scenario_dated_records": 8550,
+      "months_2020_2025_with_declared_titles": 64,
+      "months_2020_2025_with_verified_availability": 33,
+      "calendar_days_2020_2025_with_declared_titles": 650
+    },
+    "El Tiempo": {
+      "titles_all_period": 49350,
+      "titles_declared_2020_2025": 49350,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 48323,
+      "expanded_scenario_dated_records": 49350,
+      "months_2020_2025_with_declared_titles": 61,
+      "months_2020_2025_with_verified_availability": 46,
+      "calendar_days_2020_2025_with_declared_titles": 613
+    },
+    "La República": {
+      "titles_all_period": 10381,
+      "titles_declared_2020_2025": 10381,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 8162,
+      "expanded_scenario_dated_records": 10381,
+      "months_2020_2025_with_declared_titles": 67,
+      "months_2020_2025_with_verified_availability": 31,
+      "calendar_days_2020_2025_with_declared_titles": 830
+    },
+    "Portafolio": {
+      "titles_all_period": 1815,
+      "titles_declared_2020_2025": 1815,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 391,
+      "expanded_scenario_dated_records": 1815,
+      "months_2020_2025_with_declared_titles": 25,
+      "months_2020_2025_with_verified_availability": 3,
+      "calendar_days_2020_2025_with_declared_titles": 479
+    },
+    "Semana": {
+      "titles_all_period": 29386,
+      "titles_declared_2020_2025": 29386,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 1,
+      "versions_verified_available_by_end_2025": 999,
+      "expanded_scenario_dated_records": 29385,
+      "months_2020_2025_with_declared_titles": 51,
+      "months_2020_2025_with_verified_availability": 5,
+      "calendar_days_2020_2025_with_declared_titles": 1174
+    },
+    "IDEAM": {
+      "titles_all_period": 7223,
+      "titles_declared_2020_2025": 7223,
+      "titles_publication_date_unknown": 0,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 0,
+      "expanded_scenario_dated_records": 7223,
+      "months_2020_2025_with_declared_titles": 72,
+      "months_2020_2025_with_verified_availability": 0,
+      "calendar_days_2020_2025_with_declared_titles": 953
+    },
+    "XM": {
+      "titles_all_period": 406,
+      "titles_declared_2020_2025": 0,
+      "titles_publication_date_unknown": 406,
+      "quarantined": 0,
+      "versions_verified_available_by_end_2025": 0,
+      "expanded_scenario_dated_records": 0,
+      "months_2020_2025_with_declared_titles": 0,
+      "months_2020_2025_with_verified_availability": 0,
+      "calendar_days_2020_2025_with_declared_titles": 0
+    }
+  },
+  "coverage_rows_full": 2808,
+  "coverage_rows_2020_2025": 648,
+  "archive_proof_audit": {
+    "snapshots_digest_and_capture_verified": 274,
+    "exact_entry_observations_verified": 66207,
+    "snapshots_failed": 39,
+    "snapshots_digest_not_reproduced": 2,
+    "publication_after_capture_observations": 1,
+    "unique_titles_with_verified_version": 62572,
+    "titles_with_only_conflicting_archived_dates": 1
+  },
+  "strict_filter_verified_for_every_exported_version": true,
+  "exact_duplicate_ids": 0,
+  "no_manual_topics": true,
+  "historical_editorial_census_complete": false,
+  "official_current_versions_point_in_time_ready": false,
+  "numeric_vintages_point_in_time_ready": false,
+  "user_requested_unverified_texts_in_training": true,
+  "expanded_scenario": "Explicit declared-date assumptions; historical version availability unverified, cannot claim leakage-free.",
+  "note": "Capture proves the title version existed by capture, not at its claimed publication date. Official reference periods and modification dates never become availability dates."
+}

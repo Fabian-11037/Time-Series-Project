@@ -1,0 +1,45 @@
+{
+ "registros_exportados": 855,
+ "scopus": 562,
+ "wos": 293,
+ "unicos": 668,
+ "seleccionados": 83,
+ "conteos": {
+  "LSTM": {
+   "corpus_668": 130,
+   "seleccion_83": 24
+  },
+  "GRU": {
+   "corpus_668": 28,
+   "seleccion_83": 7
+  },
+  "RNN (genérica/simple)": {
+   "corpus_668": 66,
+   "seleccion_83": 5
+  },
+  "MLP / red feed-forward": {
+   "corpus_668": 33,
+   "seleccion_83": 7
+  },
+  "CNN 1D / TCN": {
+   "corpus_668": 71,
+   "seleccion_83": 7
+  },
+  "Transformer": {
+   "corpus_668": 145,
+   "seleccion_83": 21
+  },
+  "ARIMA (clásico)": {
+   "corpus_668": 32,
+   "seleccion_83": 4
+  },
+  "SVM/SVR (clásico)": {
+   "corpus_668": 21,
+   "seleccion_83": 0
+  },
+  "RF/XGBoost (clásico)": {
+   "corpus_668": 38,
+   "seleccion_83": 6
+  }
+ }
+}

@@ -1,0 +1,91 @@
+{
+  "version": "1.0",
+  "timezone": "America/Bogota",
+  "sources": [
+    "Dinero",
+    "El Colombiano",
+    "El Espectador",
+    "El Tiempo",
+    "La República",
+    "Portafolio",
+    "Semana",
+    "IDEAM",
+    "XM"
+  ],
+  "user_selected_training_text_scenario": "declared_dates",
+  "text_strict": {
+    "required": [
+      "availability_status=verified_archived_version",
+      "availability_proof=wayback_payload_digest_and_capture",
+      "nonempty version_sha256",
+      "quarantined=false",
+      "capture_at_verified <= available_at_verified <= origin"
+    ],
+    "never_substitute": [
+      "publication_date_claimed",
+      "reference_period_claimed",
+      "modified_at_claimed",
+      "retrieved_at"
+    ],
+    "day_only_original_edition": "Next-day 00:00 can be an explicit convention only after proving the original edition/version. Not applied to current copies.",
+    "archive_semantics": "The original public feed title existed by the actual crawl. The capture does not establish first publication or the archive public-release date."
+  },
+  "text_expanded": {
+    "user_explicitly_authorized": true,
+    "include_unverified_versions_in_training": true,
+    "scenario_name": "declared_dates",
+    "availability_field": "available_at_assumed",
+    "assumptions": [
+      "Aware declared timestamp used as claimed",
+      "Date without hour enters next day at 00:00 America/Bogota"
+    ],
+    "historical_version_verified": false,
+    "leakage_free_claim_allowed": false,
+    "undated_records": "Preserved in report inventory, no invented date and no chronological assignment.",
+    "quarantined_records": "Excluded from chronological selectors.",
+    "apply_scenario_consistently_across_partitions": true
+  },
+  "feature_policy": {
+    "text_input": "Original title selected at origin; source identity/relative age only if preregistered.",
+    "provenance_only_never_model_features": [
+      "retrieved_at",
+      "modified_at_claimed",
+      "version_sha256",
+      "raw_file",
+      "metadata_json",
+      "future coverage totals",
+      "quarantine_reason"
+    ]
+  },
+  "numeric_strict": {
+    "ready": false,
+    "reason": "Historical release times and revision vintages not certified.",
+    "future_realized_demand_weather_hydrology_allowed": false,
+    "daily_hydrology": "No same-day replication into hourly inputs without a documented release time.",
+    "era5": "Retrospective reanalysis; current historical values do not certify operational availability."
+  },
+  "splits": {
+    "status": "proposal_not_preregistered_for_Colombia",
+    "train": "2000-2017",
+    "validation": "2018-2021",
+    "test": "2022-2025",
+    "assignment": "All target intervals wholly in one partition; purge crossing horizons.",
+    "fit_train_only": [
+      "scalers",
+      "imputation",
+      "vocabulary",
+      "encoder",
+      "latent grouping if any",
+      "relevance and fusion"
+    ],
+    "same_origins_and_inputs_for_ablation": true,
+    "random_split": false
+  },
+  "E1_modified": false,
+  "manual_topic_labels": false,
+  "project_scope_override": {
+    "E1_numeric_only": true,
+    "E1_text_or_text_derived_features_allowed": false,
+    "text_scenarios_apply_to": "future contextual phases E2/E3"
+  }
+}

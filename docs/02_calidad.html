@@ -1,0 +1,1232 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. Calidad, integridad y sesgos de medición &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8a41dcb7" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_calidad';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="3. Distribución, anomalías y cambios de régimen" href="03_objetivo.html" />
+    <link rel="prev" title="1. Problema, fuentes y estructura" href="01_datos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Precio eléctrico colombiano: datos y análisis exploratorio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_datos.html">1. Problema, fuentes y estructura</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Calidad, integridad y sesgos de medición</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_objetivo.html">3. Distribución, anomalías y cambios de régimen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_estacionalidad.html">4. Estacionalidad y descomposición</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_dependencia.html">5. Estacionariedad, memoria y varianza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02_calidad.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2. Calidad, integridad y sesgos de medición</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="calidad-integridad-y-sesgos-de-medicion">
+<h1>2. Calidad, integridad y sesgos de medición<a class="headerlink" href="#calidad-integridad-y-sesgos-de-medicion" title="Link to this heading">#</a></h1>
+<p>Las pruebas de rango identifican incidencias; no autorizan reemplazar valores. Se examina entrenamiento para orientar el preprocesamiento. La integridad del resto del calendario se conserva en las auditorías de descarga y las huellas, sin explorar las distribuciones de prueba.</p>
+<p>El precio de XM es una medida administrativa del mercado y puede tener revisiones. No hay etiquetas de anotación humana a las que calcular acuerdo entre anotadores. Tampoco hay una muestra emparejada de estaciones con la que estimar aquí el error de ERA5: la ausencia de nulos no implica error de medición nulo.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">ROOT</span><span class="o">/</span><span class="s1">'src'</span><span class="p">))</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">colombia_energy</span><span class="w"> </span><span class="kn">import</span> <span class="n">eda</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.float_format'</span><span class="p">,</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.5g</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">quality</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>resultado</th>
+    </tr>
+    <tr>
+      <th>comprobación</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>horas esperadas</th>
+      <td>157800</td>
+    </tr>
+    <tr>
+      <th>horas recibidas</th>
+      <td>157800</td>
+    </tr>
+    <tr>
+      <th>horas ausentes</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>claves horarias duplicadas</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>valores numéricos faltantes</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>valores no finitos</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>filas hidrológicas</th>
+      <td>6575</td>
+    </tr>
+    <tr>
+      <th>claves diarias duplicadas</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>min</th>
+      <th>max</th>
+      <th>median</th>
+      <th>nulos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>precio_bolsa_cop_kwh</th>
+      <td>1.578e+05</td>
+      <td>21.531</td>
+      <td>2821.5</td>
+      <td>84.405</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>demanda_real_kwh</th>
+      <td>1.578e+05</td>
+      <td>4.1315e+05</td>
+      <td>9.8059e+06</td>
+      <td>6.1196e+06</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>demanda_comercial_kwh</th>
+      <td>1.578e+05</td>
+      <td>1.2123e+05</td>
+      <td>9.9462e+06</td>
+      <td>6.2258e+06</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bogota</th>
+      <td>1.578e+05</td>
+      <td>3.2</td>
+      <td>26.4</td>
+      <td>14.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bogota</th>
+      <td>1.578e+05</td>
+      <td>6</td>
+      <td>100</td>
+      <td>81</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bogota</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>14.5</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_medellin</th>
+      <td>1.578e+05</td>
+      <td>12.7</td>
+      <td>32.5</td>
+      <td>20.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_medellin</th>
+      <td>1.578e+05</td>
+      <td>23</td>
+      <td>100</td>
+      <td>91</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_medellin</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>17</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cali</th>
+      <td>1.578e+05</td>
+      <td>14.5</td>
+      <td>31.2</td>
+      <td>21.7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cali</th>
+      <td>1.578e+05</td>
+      <td>44</td>
+      <td>100</td>
+      <td>86</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cali</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>22.3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_barranquilla</th>
+      <td>1.578e+05</td>
+      <td>21.9</td>
+      <td>37.6</td>
+      <td>27.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_barranquilla</th>
+      <td>1.578e+05</td>
+      <td>34</td>
+      <td>100</td>
+      <td>85</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_barranquilla</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>17.4</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cartagena</th>
+      <td>1.578e+05</td>
+      <td>23.1</td>
+      <td>35.1</td>
+      <td>27.3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cartagena</th>
+      <td>1.578e+05</td>
+      <td>44</td>
+      <td>99</td>
+      <td>85</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cartagena</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>17.4</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bucaramanga</th>
+      <td>1.578e+05</td>
+      <td>13.2</td>
+      <td>29.4</td>
+      <td>21.6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bucaramanga</th>
+      <td>1.578e+05</td>
+      <td>45</td>
+      <td>100</td>
+      <td>87</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bucaramanga</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>21.1</td>
+      <td>0.5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_pereira</th>
+      <td>1.578e+05</td>
+      <td>11.4</td>
+      <td>29.3</td>
+      <td>19.2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_pereira</th>
+      <td>1.578e+05</td>
+      <td>37</td>
+      <td>100</td>
+      <td>91</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_pereira</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>16.1</td>
+      <td>1.2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cucuta</th>
+      <td>1.578e+05</td>
+      <td>17.2</td>
+      <td>41.1</td>
+      <td>27</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cucuta</th>
+      <td>1.578e+05</td>
+      <td>11</td>
+      <td>100</td>
+      <td>65</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cucuta</th>
+      <td>1.578e+05</td>
+      <td>0</td>
+      <td>25.3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fuera_de_rango</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>demanda_real_kwh</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>demanda_comercial_kwh</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bogota</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bogota</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bogota</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_medellin</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_medellin</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_medellin</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cali</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cali</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cali</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_barranquilla</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_barranquilla</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_barranquilla</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cartagena</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cartagena</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cartagena</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bucaramanga</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bucaramanga</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bucaramanga</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_pereira</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_pereira</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_pereira</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cucuta</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cucuta</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cucuta</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>llenado_valor_original</th>
+      <th>reserva_util_kwh</th>
+      <th>capacidad_util_kwh</th>
+      <th>aportes_kwh_dia</th>
+    </tr>
+    <tr>
+      <th>tiempo_colombia</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000-01-01 00:00:00-05:00</th>
+      <td>2000-01-01</td>
+      <td>1.4914</td>
+      <td>1.0808e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.6677e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-02 00:00:00-05:00</th>
+      <td>2000-01-02</td>
+      <td>1.4887</td>
+      <td>1.0788e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.4645e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-03 00:00:00-05:00</th>
+      <td>2000-01-03</td>
+      <td>1.4839</td>
+      <td>1.0753e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.7488e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-04 00:00:00-05:00</th>
+      <td>2000-01-04</td>
+      <td>1.4792</td>
+      <td>1.072e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.8418e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-05 00:00:00-05:00</th>
+      <td>2000-01-05</td>
+      <td>1.4751</td>
+      <td>1.069e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.304e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-06 00:00:00-05:00</th>
+      <td>2000-01-06</td>
+      <td>1.4713</td>
+      <td>1.0662e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.9743e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-07 00:00:00-05:00</th>
+      <td>2000-01-07</td>
+      <td>1.4682</td>
+      <td>1.0639e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.4109e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-08 00:00:00-05:00</th>
+      <td>2000-01-08</td>
+      <td>1.4684</td>
+      <td>1.0641e+10</td>
+      <td>7.2467e+09</td>
+      <td>7.4865e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-09 00:00:00-05:00</th>
+      <td>2000-01-09</td>
+      <td>1.4685</td>
+      <td>1.0642e+10</td>
+      <td>7.2467e+09</td>
+      <td>8.0338e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-10 00:00:00-05:00</th>
+      <td>2000-01-10</td>
+      <td>1.4686</td>
+      <td>1.0642e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.9729e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-11 00:00:00-05:00</th>
+      <td>2000-01-11</td>
+      <td>1.4679</td>
+      <td>1.0637e+10</td>
+      <td>7.2467e+09</td>
+      <td>8.366e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-12 00:00:00-05:00</th>
+      <td>2000-01-12</td>
+      <td>1.4635</td>
+      <td>1.0605e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.9238e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-13 00:00:00-05:00</th>
+      <td>2000-01-13</td>
+      <td>1.4599</td>
+      <td>1.0579e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.2492e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-14 00:00:00-05:00</th>
+      <td>2000-01-14</td>
+      <td>1.4549</td>
+      <td>1.0544e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.3097e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-15 00:00:00-05:00</th>
+      <td>2000-01-15</td>
+      <td>1.4513</td>
+      <td>1.0517e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.811e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-16 00:00:00-05:00</th>
+      <td>2000-01-16</td>
+      <td>1.449</td>
+      <td>1.0501e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.4607e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-17 00:00:00-05:00</th>
+      <td>2000-01-17</td>
+      <td>1.445</td>
+      <td>1.0472e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.133e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-18 00:00:00-05:00</th>
+      <td>2000-01-18</td>
+      <td>1.4414</td>
+      <td>1.0445e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.5032e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-19 00:00:00-05:00</th>
+      <td>2000-01-19</td>
+      <td>1.4369</td>
+      <td>1.0413e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.5472e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-20 00:00:00-05:00</th>
+      <td>2000-01-20</td>
+      <td>1.4353</td>
+      <td>1.0401e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.9487e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-21 00:00:00-05:00</th>
+      <td>2000-01-21</td>
+      <td>1.4378</td>
+      <td>1.0419e+10</td>
+      <td>7.2467e+09</td>
+      <td>1.0501e+08</td>
+    </tr>
+    <tr>
+      <th>2000-01-22 00:00:00-05:00</th>
+      <td>2000-01-22</td>
+      <td>1.4373</td>
+      <td>1.0416e+10</td>
+      <td>7.2467e+09</td>
+      <td>7.9968e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-23 00:00:00-05:00</th>
+      <td>2000-01-23</td>
+      <td>1.4357</td>
+      <td>1.0404e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.4711e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-24 00:00:00-05:00</th>
+      <td>2000-01-24</td>
+      <td>1.4308</td>
+      <td>1.0369e+10</td>
+      <td>7.2467e+09</td>
+      <td>4.7573e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-25 00:00:00-05:00</th>
+      <td>2000-01-25</td>
+      <td>1.4261</td>
+      <td>1.0335e+10</td>
+      <td>7.2467e+09</td>
+      <td>4.6375e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-26 00:00:00-05:00</th>
+      <td>2000-01-26</td>
+      <td>1.422</td>
+      <td>1.0305e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.4561e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-27 00:00:00-05:00</th>
+      <td>2000-01-27</td>
+      <td>1.4182</td>
+      <td>1.0277e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.3032e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-28 00:00:00-05:00</th>
+      <td>2000-01-28</td>
+      <td>1.413</td>
+      <td>1.024e+10</td>
+      <td>7.2467e+09</td>
+      <td>4.5301e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-29 00:00:00-05:00</th>
+      <td>2000-01-29</td>
+      <td>1.41</td>
+      <td>1.0218e+10</td>
+      <td>7.2467e+09</td>
+      <td>5.8131e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-30 00:00:00-05:00</th>
+      <td>2000-01-30</td>
+      <td>1.4085</td>
+      <td>1.0207e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.1913e+07</td>
+    </tr>
+    <tr>
+      <th>2000-01-31 00:00:00-05:00</th>
+      <td>2000-01-31</td>
+      <td>1.4064</td>
+      <td>1.0192e+10</td>
+      <td>7.2467e+09</td>
+      <td>6.4367e+07</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p>Se conservan <strong>31</strong> fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.</p>
+<h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
+<ul class="simple">
+<li><p><strong>Preprocesamiento:</strong> No imputar donde no hay huecos. Preservar las banderas de llenado y contrastar capacidad/volumen antes de corregir.</p></li>
+<li><p><strong>Arquitectura:</strong> Máscaras separadas para falta de texto y anomalía numérica; pérdidas robustas candidatas.</p></li>
+<li><p><strong>Validación:</strong> La integridad completa del periodo se verifica mediante manifiesto, sin explorar el objetivo de prueba.</p></li>
+<li><p><strong>Riesgos:</strong> No es posible inferir MCAR/MAR/MNAR con una matriz numérica sin faltantes. La falta de texto es selección de archivo y fuente; no se presume MCAR.</p></li>
+</ul>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_datos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">1. Problema, fuentes y estructura</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_objetivo.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">3. Distribución, anomalías y cambios de régimen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

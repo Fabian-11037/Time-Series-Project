@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "verified_at": "2026-11-04T00:18:40.850014+00:00",
+  "monthly_checks": 7488,
+  "numeric_cells_compared_in_each_export": 5470272,
+  "exports_compared": [
+    "eight_city_files",
+    "wide_weather_file"
+  ],
+  "method": "Every exported cell compared to its original annual JSON; exact timestamps and no extra rows"
+}

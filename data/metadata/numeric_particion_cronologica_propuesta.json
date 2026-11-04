@@ -1,0 +1,31 @@
+{
+  "status": "proposal_not_preregistered_not_frozen",
+  "timezone": "America/Bogota",
+  "interval_semantics": "[start_inclusive,end_exclusive)",
+  "assignment": "all target intervals of a window must belong to the same partition",
+  "lookback_hours": null,
+  "horizon_hours": null,
+  "cross_boundary_labels": "purge",
+  "random_split": false,
+  "partitions": [
+    {
+      "name": "train",
+      "start": "2000-01-01T00:00:00-05:00",
+      "end_exclusive": "2018-01-01T00:00:00-05:00",
+      "potential_hours": 157800
+    },
+    {
+      "name": "validation",
+      "start": "2018-01-01T00:00:00-05:00",
+      "end_exclusive": "2022-01-01T00:00:00-05:00",
+      "potential_hours": 35064
+    },
+    {
+      "name": "test",
+      "start": "2022-01-01T00:00:00-05:00",
+      "end_exclusive": "2026-01-01T00:00:00-05:00",
+      "potential_hours": 35064
+    }
+  ],
+  "changes_to_E1": false
+}

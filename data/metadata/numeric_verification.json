@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "verified_at": "2026-11-04T00:19:28.205683+00:00",
+  "hourly_rows": 227928,
+  "hourly_numeric_columns": 27,
+  "hourly_numeric_values": 6154056,
+  "daily_rows": 9497,
+  "daily_numeric_values": 37988,
+  "total_numeric_values": 6192044,
+  "hourly_duplicate_keys": 0,
+  "hourly_missing_hours": 0,
+  "null_or_invalid_hourly_values": 0,
+  "rows_recompared_to_both_input_tables": 227928,
+  "daily_file_exact_copy_of_validated_source": true,
+  "weather_values_verified_against_original_response": 5470272,
+  "input_monthly_checks_passed": 9672
+}

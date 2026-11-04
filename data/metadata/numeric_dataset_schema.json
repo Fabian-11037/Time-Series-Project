@@ -1,0 +1,124 @@
+{
+  "dataset": "Colombia electricity and city weather observations, 2000-2025",
+  "version": "0.1",
+  "status": "numeric_core_complete_text_and_optional_extensions_incomplete",
+  "timezone": "America/Bogota",
+  "start": "2000-01-01",
+  "end_inclusive": "2025-12-31",
+  "tables": {
+    "dataset_horario_xm_clima_2000_2025.csv": {
+      "rows": 227928,
+      "primary_key": [
+        "timestamp_start_colombia"
+      ],
+      "numeric_columns": 27,
+      "xm_columns": [
+        "precio_bolsa_cop_kwh",
+        "demanda_real_kwh",
+        "demanda_comercial_kwh"
+      ],
+      "weather_columns": [
+        "temperature_2m_c_bogota",
+        "relative_humidity_2m_pct_bogota",
+        "precipitation_preceding_hour_mm_bogota",
+        "temperature_2m_c_medellin",
+        "relative_humidity_2m_pct_medellin",
+        "precipitation_preceding_hour_mm_medellin",
+        "temperature_2m_c_cali",
+        "relative_humidity_2m_pct_cali",
+        "precipitation_preceding_hour_mm_cali",
+        "temperature_2m_c_barranquilla",
+        "relative_humidity_2m_pct_barranquilla",
+        "precipitation_preceding_hour_mm_barranquilla",
+        "temperature_2m_c_cartagena",
+        "relative_humidity_2m_pct_cartagena",
+        "precipitation_preceding_hour_mm_cartagena",
+        "temperature_2m_c_bucaramanga",
+        "relative_humidity_2m_pct_bucaramanga",
+        "precipitation_preceding_hour_mm_bucaramanga",
+        "temperature_2m_c_pereira",
+        "relative_humidity_2m_pct_pereira",
+        "precipitation_preceding_hour_mm_pereira",
+        "temperature_2m_c_cucuta",
+        "relative_humidity_2m_pct_cucuta",
+        "precipitation_preceding_hour_mm_cucuta"
+      ],
+      "time_semantics": {
+        "temperature_and_humidity": "instant at timestamp_start_colombia",
+        "precipitation": "preceding hour ending at timestamp_start_colombia",
+        "xm": "Hour01 mapped to 00:00-01:00; retain xm_hour and both interval endpoints"
+      }
+    },
+    "hidrologia_diaria_xm_2000_2025.csv": {
+      "rows": 9497,
+      "primary_key": [
+        "date"
+      ],
+      "numeric_columns": 4,
+      "join_rule": "date identifies event day, not historical publication; model inputs require availability-based lag/as-of join",
+      "automatic_same_day_hourly_expansion": false
+    },
+    "muestras_texto_no_corpus_completo.jsonl": {
+      "status": "samples_only_not_certified_for_training",
+      "manual_topic_labels": false,
+      "complete_historical_text": false
+    }
+  },
+  "cities": [
+    {
+      "id": "Bogota",
+      "latitude": 4.711,
+      "longitude": -74.0721
+    },
+    {
+      "id": "Medellin",
+      "latitude": 6.2442,
+      "longitude": -75.5812
+    },
+    {
+      "id": "Cali",
+      "latitude": 3.4516,
+      "longitude": -76.532
+    },
+    {
+      "id": "Barranquilla",
+      "latitude": 10.9685,
+      "longitude": -74.7813
+    },
+    {
+      "id": "Cartagena",
+      "latitude": 10.391,
+      "longitude": -75.4794
+    },
+    {
+      "id": "Bucaramanga",
+      "latitude": 7.1193,
+      "longitude": -73.1227
+    },
+    {
+      "id": "Pereira",
+      "latitude": 4.8133,
+      "longitude": -75.6961
+    },
+    {
+      "id": "Cucuta",
+      "latitude": 7.8891,
+      "longitude": -72.4967
+    }
+  ],
+  "weather_model": "era5",
+  "normalization_or_imputation_applied": false,
+  "training_ready_point_in_time_certified": false,
+  "splits": "proposal_only_no_E1_changes; window assignment must consider all horizon labels",
+  "sources": {
+    "XM": "https://github.com/EquipoAnaliticaXM/API_XM",
+    "weather": "https://open-meteo.com/en/docs/historical-weather-api",
+    "weather_source": "ERA5 by ECMWF/Copernicus via Open-Meteo; attribution retained"
+  },
+  "pending_extensions": [
+    "complete_news_corpus_and_historical_versions",
+    "upstream_basin_CHIRPS_precipitation",
+    "optional_wind_and_solar",
+    "optional_original_weather_forecast_runs"
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "filename": "01_Plan_Tesis_Estudiante1_Volatilidad_LLM_Stive.pdf",
+    "bytes": 557351,
+    "sha256": "bb6bd95483abddfcfc411b4cb8ce02e6b6c498a861ccfd8acf66e9d48142520d",
+    "redistributed": false,
+    "role": "internal material"
+  },
+  {
+    "filename": "02_Plan_Tesis_Estudiante2_Riesgo_VaR_Jassan.pdf",
+    "bytes": 453028,
+    "sha256": "7e09236cb1dd399ea7a676d5109240b1897e28de2ac504928d8ba50dff2b98d2",
+    "redistributed": false,
+    "role": "internal material"
+  },
+  {
+    "filename": "03_Plan_Tesis_Estudiante3_Energia_RAG_Betzaida.pdf",
+    "bytes": 719433,
+    "sha256": "1af4d7ebc7027fdd05dcdd1d7697746eeef130f3cdc2a3ee37832d113f17e34a",
+    "redistributed": false,
+    "role": "internal material"
+  },
+  {
+    "filename": "04_Plan_Tesis_Estudiante4_Transfer_Learning.pdf",
+    "bytes": 474997,
+    "sha256": "8fd3e1815519dd498025502a5996e3e9a5d4c3b1f9e643ee03949fd7fa4395ad",
+    "redistributed": false,
+    "role": "internal material"
+  },
+  {
+    "filename": "SCOPUS_TM_NLP.txt",
+    "bytes": 1342709,
+    "sha256": "ef04b68a18eb1ab542b3003f44faa0e1490e9d12f891eb77017b9d12bfdc9293",
+    "redistributed": false,
+    "role": "abstract export, not full-text verification"
+  },
+  {
+    "filename": "WOS_TM_NLP.txt",
+    "bytes": 579301,
+    "sha256": "372acbb533bb9e2890bdd43b189a280614fd01b8a94332362a83fcef715aa3a2",
+    "redistributed": false,
+    "role": "abstract export, not full-text verification"
+  },
+  {
+    "filename": "Papers_Time-MMD_y_datasets.xlsx",
+    "bytes": 9909,
+    "sha256": "37e0547d5636dcaf6d44ae0f4ad8bbef36498dae9bd5760ab1e89f14d68d18d5",
+    "redistributed": false,
+    "role": "provided reading list; entries independently checked or retained as unverified notes"
+  }
+]
