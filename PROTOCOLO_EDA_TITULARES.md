@@ -1,0 +1,16 @@
+# Ampliación del EDA de titulares
+
+4 de noviembre de 2026. Solicitud del autor: añadir análisis de titulares y tópicos. Este alcance autoriza tópicos **aprendidos automáticamente para exploración**, sin agregar etiquetas al corpus original ni atributos a los modelos del E1, que continúan siendo exclusivamente numéricos.
+
+Antes de ejecutar se fija el siguiente procedimiento:
+
+- Partición por disponibilidad supuesta en el escenario ya autorizado: entrenamiento hasta 2017, validación 2018–2021. Se conserva el desplazamiento al día siguiente para fechas sin hora. Se incluyen en validación los títulos de finales de 2017 cuya disponibilidad supuesta cae en 2018. No se abre contenido de prueba 2022–2025, ni precios o errores predictivos.
+- Diagnósticos sobre titulares originales: frecuencias de términos/bigramas, repetición, longitud y diversidad léxica en bloques de 1.000 términos de contenido. La lista lingüística de palabras funcionales del español se conserva con fuente y huella. No se filtran economía, política, clima, sentimiento o anticipación.
+- TF-IDF de unigramas y bigramas; hasta 20.000 características, mínimo 10 documentos y máximo 85 % de documentos; palabras alfabéticas de al menos tres letras. Se conservan tildes y eñes. No se usa un encoder preentrenado.
+- Ajuste TF-IDF/NMF únicamente con prensa de entrenamiento: normalización NFC, deduplicación exacta para el ajuste, al menos cuatro términos de contenido, máximo 4.000 titulares por año y 50.000 en total. Selección por orden determinista de SHA-256 del identificador. Los diagnósticos agregados conservan todas las observaciones elegibles y muestran el efecto de la repetición.
+- Ocho componentes NMF exploratorios fijados de antemano, sin afirmar que sean el número óptimo. Inicialización NNDSVDar, pérdida Frobenius, máximo 250 iteraciones, tolerancia 0,0001, semilla 11037. Otro ajuste con 11038 evalúa estabilidad de componentes por similitud coseno y emparejamiento óptimo; no selecciona el mejor resultado ni modifica el número de tópicos.
+- Los nombres de los componentes son sus términos de mayor peso, sin etiquetas temáticas manuales. Los pesos por documento son contribuciones relativas a la masa reconstruida; no son probabilidades de pertenencia ni de anticipar eventos. Vectores sin términos conocidos se dejan sin representación, nunca se fuerzan al primer tópico.
+- El modelo congelado se aplica a entrenamiento y validación por lotes. Se reportan evolución temporal, composición por medio, concentración/entropía, términos fuera del vocabulario ajustado, error de representación y ejemplos de entrenamiento. La divergencia léxica se mide en el vocabulario de entrenamiento y una casilla de términos externos; no se reestima con validación.
+- La comparación temporal puede mezclar cambios de fuente, estilo editorial y contenido. El entrenamiento está dominado por El Colombiano; los tópicos no representan un censo de medios colombianos ni una taxonomía universal. No se interpreta un tópico como señal predictiva o causal sin un benchmark posterior.
+
+Estos análisis no acreditan las versiones históricas de los textos ampliados y no resuelven la advertencia de posible fuga por revisiones. Cualquier uso futuro de tópicos como covariables requerirá su ajuste dentro del pipeline de entrenamiento; esta ampliación sólo entrega EDA.

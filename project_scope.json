@@ -10,5 +10,13 @@
     "authorized_expanded_text_scenario": "declared_dates",
     "historical_version_warning_required": true
   },
+  "headline_EDA": {
+    "automatic_topics_allowed": true,
+    "fit_split": "train",
+    "validation_projection_only": true,
+    "test_content_allowed": false,
+    "raw_manual_labels_added": false,
+    "E1_features_added": false
+  },
   "original_Time_MMD_E1_modified": false
 }

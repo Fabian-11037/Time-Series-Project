@@ -18,6 +18,7 @@ jobs:
       - run: python scripts/create_notebooks.py
       - run: python scripts/create_literature_notebooks.py
       - run: python scripts/run_eda.py
+      - run: python scripts/verify_book.py
       - uses: actions/upload-artifact@v4
         with:
           name: jupyter-book-colombia

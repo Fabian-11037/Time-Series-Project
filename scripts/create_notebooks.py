@@ -57,7 +57,7 @@ r'''Las asociaciones contemporáneas describen el sistema; no son un conjunto de
 Las ocho ciudades se conservan separadas. La heterogeneidad de temperaturas, humedad y lluvia puede ser útil para una representación multivariada. No se construye una regresión espacial: el objetivo es una única serie nacional. La lluvia urbana no sustituye precipitación en las cuencas de los embalses; ese bloque sigue pendiente. No se han descargado aquí series completas de viento/radiación.
 ''','eda.covariates()'),
 ('07_texto','7. Texto: cobertura, duplicados y disponibilidad',
-r'''Se audita la recuperación por mes y fuente, sin clasificar temas, sentimiento, anticipación ni relevancia. La comparación de cobertura usa sólo metadatos de procedencia. El análisis de longitud y coincidencias de contenido se limita a entrenamiento.
+r'''Se audita la recuperación por mes y fuente, sin asignar categorías temáticas manuales, sentimiento, anticipación ni relevancia. Por solicitud del autor se añade un análisis exploratorio de tópicos aprendidos automáticamente. Los modelos del E1 siguen siendo exclusivamente numéricos; estos tópicos no se agregan al dataset original ni a sus entradas.
 
 Por decisión del autor se incluyen versiones no acreditadas en el conjunto ampliado. `available_at_assumed` nunca se confunde con `available_at_verified`. Se usa la hora declarada con zona; si sólo se conoce el día, se supone ingreso desde las 00:00 del día siguiente en Colombia. Esto no acredita que una versión recuperada en 2026 fuera idéntica a la original. Los títulos sin fecha permanecen en el inventario y no se asignan cronológicamente.
 
@@ -77,15 +77,47 @@ def main():
     for stem,title,description,code in CHAPTERS:
         nb=nbf.v4.new_notebook(cells=[nbf.v4.new_markdown_cell('# '+title+'\n\n'+description),
             nbf.v4.new_code_cell(SETUP),nbf.v4.new_code_cell(code)])
+        if stem=='07_texto':
+            sections=[
+                ('md','''## 7.1 Contenido, repetición y diversidad léxica
+
+Se cuentan palabras de contenido, bigramas y rasgos de forma del titular, sin relacionarlos con precios. Se conservan tildes y eñes; se excluyen números y palabras funcionales del español mediante una lista pública de NLTK/Snowball guardada con su huella. No se suprimen términos por su tema o aparente utilidad.
+
+La diversidad se compara en bloques de igual cantidad de términos; una razón de tipos/tokens calculada sobre corpus de tamaños distintos no sería comparable directamente. Se muestran entrenamiento y validación por separado, sin abrir contenido de prueba. La asignación temporal se hace con disponibilidad **supuesta**, incluyendo el arrastre de textos del último día de una partición al día siguiente cuando sólo consta la fecha.'''),
+                ('code','from colombia_energy.headline_eda import HeadlineStudy\nstudy=HeadlineStudy()\nstudy.lexical()'),
+                ('md','''## 7.2 Tópicos aprendidos con TF-IDF y NMF
+
+El [protocolo de esta ampliación](https://github.com/Fabian-11037/Time-Series-Project/blob/main/PROTOCOLO_EDA_TITULARES.md) fija ocho componentes exploratorios, sin afirmar que sean óptimos. TF-IDF y ambos ajustes NMF usan exclusivamente una muestra determinista de prensa de entrenamiento, con límite por año y deduplicación exacta para el ajuste. Las frecuencias y las proyecciones agregadas conservan todas las observaciones elegibles, por lo que la muestra y el corpus proyectado no tienen el mismo peso por año.
+
+Los componentes se identifican como T01, T02, etc., y por sus términos más pesados: no reciben nombres temáticos manuales. La segunda semilla sólo diagnostica estabilidad por similitud coseno con emparejamiento óptimo; no se elige el resultado más favorable. Se muestran ejemplos de entrenamiento seleccionados por similitud con cada componente. Estos ejemplos no son etiquetas supervisadas ni contenido anticipatorio validado.
+
+La documentación primaria de [scikit-learn](https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html) ilustra NMF con TF-IDF. Este análisis no utiliza embeddings preentrenados ni un LLM para clasificar los titulares.'''),
+                ('code','study.fit_topics()'),
+                ('md','''## 7.3 Evolución temporal y composición por fuente
+
+Se congelan vocabulario, IDF y componentes. Todos los títulos de entrenamiento y validación se proyectan sobre esa misma base. Los pesos se normalizan por la masa reconstruida para evitar que la escala arbitraria de cada componente NMF sesgue su comparación. No son probabilidades de pertenencia o de anticipación.
+
+Un texto sin términos representados queda sin tópico, con pesos ausentes; no se asigna artificialmente a T01. Las medias temáticas excluyen esos textos y siempre se acompañan de la fracción sin representación. Los huecos temporales no son meses de ausencia real de noticias.'''),
+                ('code','study.profiles()'),
+                ('md','''## 7.4 Cambio del vocabulario y límites del análisis
+
+Se miden términos fuera del vocabulario ajustado y divergencia léxica entre entrenamiento y validación usando una base fija. El vocabulario no se amplía con validación. Los términos excluidos por frecuencia también cuentan como externos: no se interpreta la cifra como porcentaje de palabras desconocidas del español.
+
+La cobertura editorial, la fuente y la fecha cambian conjuntamente. Un aumento de un componente puede reflejar recuperación del archivo o estilo editorial, además de contenido. El entrenamiento está dominado por un medio; no se presenta una taxonomía universal. No se analiza correlación con precios ni mejora predictiva. E1 continúa sin NLP, y el análisis no resuelve la incertidumbre sobre versiones históricas del corpus ampliado.'''),
+                ('code','study.drift()')]
+            nb.cells.extend(nbf.v4.new_markdown_cell(text) if kind=='md' else nbf.v4.new_code_cell(text) for kind,text in sections)
         nb.metadata.kernelspec=dict(name='python3',display_name='Python 3',language='python')
         nb.metadata.language_info=dict(name='python',version='3.12')
         path=BOOK/(stem+'.ipynb')
         if path.exists():
             previous=nbf.read(path,as_version=4)
+            nb.metadata.update(previous.metadata)
             for old,new in zip(previous.cells,nb.cells):
+                if old.cell_type==new.cell_type:
+                    new.id=old.id
                 if old.cell_type==new.cell_type=='code' and old.source==new.source:
                     new.outputs=old.get('outputs',[]);new.execution_count=old.get('execution_count');new.metadata=old.metadata
         nb.cells[1].metadata['tags']=['hide-input']
-        nbf.write(nb,path)
+        with path.open('w',encoding='utf-8',newline='\n') as stream:nbf.write(nb,stream)
 
 if __name__=='__main__':main()

@@ -40,7 +40,8 @@ def main(chapters=None,build=True,execute=True):
         start=time.perf_counter();print('Ejecutando '+path.name,flush=True)
         nb=nbformat.read(path,as_version=4)
         client=NotebookClient(nb,timeout=1800,kernel_name='python3',resources={'metadata':{'path':str(ROOT/'book')}},kernel_manager_class=LocalKernelManager)
-        client.execute();nbformat.write(nb,path)
+        client.execute()
+        with path.open('w',encoding='utf-8',newline='\n') as stream:nbformat.write(nb,stream)
         errors=[out for cell in nb.cells if cell.cell_type=='code' for out in cell.get('outputs',[]) if out.output_type=='error']
         assert not errors
         records.append(dict(notebook=path.name,seconds=round(time.perf_counter()-start,3),code_cells=sum(c.cell_type=='code' for c in nb.cells),errors=0))

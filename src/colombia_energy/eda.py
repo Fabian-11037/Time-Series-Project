@@ -276,7 +276,7 @@ def text_analysis():
                 ratio=SequenceMatcher(None,orthographic(a),orthographic(b),autojunk=False).ratio()
                 if .9<=ratio<1:pairs.append(dict(url_sha256=hashlib.sha256(url.encode()).hexdigest(),similitud_caracteres=ratio))
     table(pd.DataFrame(pairs,columns=['url_sha256','similitud_caracteres']),'casi_duplicados_misma_url_train')
-    display(Markdown('Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. No se calculan temas, sentimiento ni relevancia.'))
+    display(Markdown('Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. El análisis de tópicos aprendidos se presenta después; no se calcula sentimiento ni relevancia predictiva.'))
     summary=metadata('coverage_summary.json')
     table(pd.DataFrame(summary['by_source']).T[['titles_all_period','titles_declared_2020_2025','titles_publication_date_unknown',
       'versions_verified_available_by_end_2025','months_2020_2025_with_declared_titles','months_2020_2025_with_verified_availability']],'cobertura_por_fuente')

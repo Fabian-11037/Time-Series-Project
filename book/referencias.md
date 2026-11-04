@@ -13,6 +13,9 @@ Las referencias centrales se verificaron en texto completo; sus revisiones y SHA
 
 ## Documentación de métodos y datos
 
+- Scikit-learn. [Extracción de tópicos con NMF y LDA](https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html) y [NMF](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html). Se utiliza NMF con TF-IDF, ajustado sólo con entrenamiento; no se utiliza LDA en este EDA.
+- NLTK Data / Snowball. Lista lingüística de [palabras funcionales](https://github.com/nltk/nltk_data/tree/gh-pages/packages/corpora), recurso `stopwords/spanish`. La copia exacta, la fuente y sus huellas se guardan en `resources/`.
+
 - Statsmodels. Documentación de [ADF](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.adfuller.html), [KPSS](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.kpss.html), [BDS](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.bds.html) y [MSTL](https://www.statsmodels.org/stable/generated/statsmodels.tsa.seasonal.MSTL.html). La versión instalada está fijada en `requirements.lock.txt`.
 - XM. [API de datos de XM](https://github.com/EquipoAnaliticaXM/API_XM), [Sinergox](https://sinergox.xm.com.co/) e [informes de operación y mercado](https://www.xm.com.co/nuestra-empresa/informes/informes-de-la-operacion-y-el-mercado).
 - IDEAM. [Catálogo de boletines](https://www.ideam.gov.co/sala-de-prensa/boletines).

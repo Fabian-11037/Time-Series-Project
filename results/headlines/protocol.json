@@ -1,0 +1,14 @@
+{
+  "n_topics": 8,
+  "max_features": 20000,
+  "min_df": 10,
+  "max_df": 0.85,
+  "max_per_year": 4000,
+  "max_fit_documents": 50000,
+  "min_fit_content_terms": 4,
+  "max_iter": 250,
+  "tol": 0.0001,
+  "seed": 11037,
+  "stability_seed": 11038,
+  "diversity_block_tokens": 1000
+}

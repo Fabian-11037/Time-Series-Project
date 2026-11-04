@@ -17,7 +17,9 @@ Periodo numérico: 2000–2025, hora de Colombia.
 
 Los datos están **incluidos en este repositorio**, comprimidos por año/fuente para facilitar su descarga: [numéricos](data/numeric/), [texto](data/text/), [diccionario](data/metadata/data_dictionary.csv), [manifiesto de huellas](data/manifest.json). No requieren consultar las APIs para reproducir este EDA.
 
-Medios: El Tiempo, El Espectador, Semana, Portafolio, La República, El Colombiano y Dinero. No se incluyen El Heraldo, La Silla Vacía, Las2Orillas o Razón Pública en las tablas seleccionadas. No se asignan temas, sentimiento ni relevancia.
+Medios: El Tiempo, El Espectador, Semana, Portafolio, La República, El Colombiano y Dinero. No se incluyen El Heraldo, La Silla Vacía, Las2Orillas o Razón Pública en las tablas seleccionadas. No se asignan etiquetas temáticas manuales, sentimiento ni relevancia al corpus original.
+
+El capítulo de texto incorpora **frecuencias, bigramas, diversidad léxica, tópicos NMF, evolución temporal y cambio del vocabulario**. El vocabulario y los tópicos se ajustan sólo con prensa de entrenamiento y se congelan para proyectar validación. No se abre contenido de prueba. Son resultados del EDA, separados de las entradas numéricas del E1; no se presenta su agrupamiento como capacidad predictiva. [Protocolo](PROTOCOLO_EDA_TITULARES.md).
 
 El histórico editorial es **parcial**. La [cobertura mensual](data/metadata/coverage_2000_2025_by_month_source.csv) distingue publicación declarada, captura comprobada y periodo de referencia. Un cero no demuestra que el medio no publicara noticias.
 

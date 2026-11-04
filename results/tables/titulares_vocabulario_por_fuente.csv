@@ -1,0 +1,10 @@
+particion,fuente,titulares,terminos,fraccion_fuera_vocabulario
+train,El Colombiano,380541,1822919,0.2794622251454947
+validation,Dinero,129,1043,0.31255992329817833
+validation,El Colombiano,80822,404045,0.2983999307007883
+validation,El Espectador,3896,27633,0.4510187095139869
+validation,El Tiempo,4980,29098,0.3351433088184755
+validation,IDEAM,304,660,0.5166666666666667
+validation,La República,2195,16727,0.34758175405033775
+validation,Portafolio,1274,8470,0.4462809917355372
+validation,Semana,10148,79955,0.3110999937464824

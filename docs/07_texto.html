@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8a41dcb7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -154,6 +154,10 @@
     </div>
   
 
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
   
 </div>
 
@@ -338,7 +342,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -354,6 +360,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-repeticion-y-diversidad-lexica">7.1 Contenido, repetición y diversidad léxica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limites-del-analisis">7.4 Cambio del vocabulario y límites del análisis</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -365,7 +382,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="texto-cobertura-duplicados-y-disponibilidad">
 <h1>7. Texto: cobertura, duplicados y disponibilidad<a class="headerlink" href="#texto-cobertura-duplicados-y-disponibilidad" title="Link to this heading">#</a></h1>
-<p>Se audita la recuperación por mes y fuente, sin clasificar temas, sentimiento, anticipación ni relevancia. La comparación de cobertura usa sólo metadatos de procedencia. El análisis de longitud y coincidencias de contenido se limita a entrenamiento.</p>
+<p>Se audita la recuperación por mes y fuente, sin asignar categorías temáticas manuales, sentimiento, anticipación ni relevancia. Por solicitud del autor se añade un análisis exploratorio de tópicos aprendidos automáticamente. Los modelos del E1 siguen siendo exclusivamente numéricos; estos tópicos no se agregan al dataset original ni a sus entradas.</p>
 <p>Por decisión del autor se incluyen versiones no acreditadas en el conjunto ampliado. <code class="docutils literal notranslate"><span class="pre">available_at_assumed</span></code> nunca se confunde con <code class="docutils literal notranslate"><span class="pre">available_at_verified</span></code>. Se usa la hora declarada con zona; si sólo se conoce el día, se supone ingreso desde las 00:00 del día siguiente en Colombia. Esto no acredita que una versión recuperada en 2026 fuera idéntica a la original. Los títulos sin fecha permanecen en el inventario y no se asignan cronológicamente.</p>
 <p>Se examinan repeticiones exactas, variaciones ortográficas y cambios parecidos dentro de una misma URL. No se entrenan agrupamientos semánticos sobre el corpus completo. Un título repetido en boletines diarios puede ser legítimo: la repetición no equivale automáticamente a duplicado de artículo ni a fuga de un pronóstico.</p>
 <div class="cell tag_hide-input docutils container">
@@ -375,7 +392,7 @@
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
@@ -393,7 +410,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">text_analysis</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">text_analysis</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -535,7 +552,7 @@
   <tbody>
   </tbody>
 </table>
-</div></div><p>Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. No se calculan temas, sentimiento ni relevancia.</p>
+</div></div><p>Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. El análisis de tópicos aprendidos se presenta después; no se calcula sentimiento ni relevancia predictiva.</p>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -655,6 +672,1599 @@
 </ul>
 </div>
 </div>
+<section id="contenido-repeticion-y-diversidad-lexica">
+<h2>7.1 Contenido, repetición y diversidad léxica<a class="headerlink" href="#contenido-repeticion-y-diversidad-lexica" title="Link to this heading">#</a></h2>
+<p>Se cuentan palabras de contenido, bigramas y rasgos de forma del titular, sin relacionarlos con precios. Se conservan tildes y eñes; se excluyen números y palabras funcionales del español mediante una lista pública de NLTK/Snowball guardada con su huella. No se suprimen términos por su tema o aparente utilidad.</p>
+<p>La diversidad se compara en bloques de igual cantidad de términos; una razón de tipos/tokens calculada sobre corpus de tamaños distintos no sería comparable directamente. Se muestran entrenamiento y validación por separado, sin abrir contenido de prueba. La asignación temporal se hace con disponibilidad <strong>supuesta</strong>, incluyendo el arrastre de textos del último día de una partición al día siguiente cuando sólo consta la fecha.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">colombia_energy.headline_eda</span><span class="w"> </span><span class="kn">import</span> <span class="n">HeadlineStudy</span>
+<span class="n">study</span><span class="o">=</span><span class="n">HeadlineStudy</span><span class="p">()</span>
+<span class="n">study</span><span class="o">.</span><span class="n">lexical</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>titulares</th>
+      <th>mediana_palabras_originales</th>
+      <th>terminos_contenido</th>
+      <th>vocablos_distintos</th>
+      <th>fraccion_titulo_normalizado_repetido</th>
+      <th>fraccion_con_cifras</th>
+      <th>fraccion_con_interrogacion</th>
+      <th>fraccion_sin_terminos_contenido</th>
+    </tr>
+    <tr>
+      <th>particion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>train</th>
+      <td>380541</td>
+      <td>8</td>
+      <td>1822919</td>
+      <td>72350</td>
+      <td>0.020826</td>
+      <td>0.14471</td>
+      <td>0.01522</td>
+      <td>0.00034162</td>
+    </tr>
+    <tr>
+      <th>validation</th>
+      <td>103748</td>
+      <td>9</td>
+      <td>567631</td>
+      <td>42215</td>
+      <td>0.061225</td>
+      <td>0.15936</td>
+      <td>0.052406</td>
+      <td>0.0016</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>apariciones</th>
+      <th>titulares</th>
+      <th>porcentaje_titulares</th>
+    </tr>
+    <tr>
+      <th>termino</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>colombia</th>
+      <td>15141</td>
+      <td>15131</td>
+      <td>3.9762</td>
+    </tr>
+    <tr>
+      <th>medellín</th>
+      <td>12327</td>
+      <td>12318</td>
+      <td>3.237</td>
+    </tr>
+    <tr>
+      <th>farc</th>
+      <td>6511</td>
+      <td>6507</td>
+      <td>1.7099</td>
+    </tr>
+    <tr>
+      <th>nacional</th>
+      <td>6158</td>
+      <td>6147</td>
+      <td>1.6153</td>
+    </tr>
+    <tr>
+      <th>antioquia</th>
+      <td>5961</td>
+      <td>5958</td>
+      <td>1.5657</td>
+    </tr>
+    <tr>
+      <th>años</th>
+      <td>5667</td>
+      <td>5648</td>
+      <td>1.4842</td>
+    </tr>
+    <tr>
+      <th>dos</th>
+      <td>5565</td>
+      <td>5498</td>
+      <td>1.4448</td>
+    </tr>
+    <tr>
+      <th>santos</th>
+      <td>5492</td>
+      <td>5486</td>
+      <td>1.4416</td>
+    </tr>
+    <tr>
+      <th>nuevo</th>
+      <td>5402</td>
+      <td>5391</td>
+      <td>1.4167</td>
+    </tr>
+    <tr>
+      <th>gobierno</th>
+      <td>5238</td>
+      <td>5237</td>
+      <td>1.3762</td>
+    </tr>
+    <tr>
+      <th>paz</th>
+      <td>4670</td>
+      <td>4630</td>
+      <td>1.2167</td>
+    </tr>
+    <tr>
+      <th>mundial</th>
+      <td>4176</td>
+      <td>4171</td>
+      <td>1.0961</td>
+    </tr>
+    <tr>
+      <th>presidente</th>
+      <td>4128</td>
+      <td>4118</td>
+      <td>1.0821</td>
+    </tr>
+    <tr>
+      <th>millones</th>
+      <td>4033</td>
+      <td>4029</td>
+      <td>1.0588</td>
+    </tr>
+    <tr>
+      <th>venezuela</th>
+      <td>3704</td>
+      <td>3703</td>
+      <td>0.97309</td>
+    </tr>
+    <tr>
+      <th>bogotá</th>
+      <td>3602</td>
+      <td>3599</td>
+      <td>0.94576</td>
+    </tr>
+    <tr>
+      <th>caricatura</th>
+      <td>3547</td>
+      <td>3547</td>
+      <td>0.93209</td>
+    </tr>
+    <tr>
+      <th>nueva</th>
+      <td>3557</td>
+      <td>3547</td>
+      <td>0.93209</td>
+    </tr>
+    <tr>
+      <th>policía</th>
+      <td>3407</td>
+      <td>3403</td>
+      <td>0.89425</td>
+    </tr>
+    <tr>
+      <th>unidos</th>
+      <td>3397</td>
+      <td>3397</td>
+      <td>0.89268</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="_images/63c94adfb4edacd76ef0f5d21fc7ee3ba5b30d0ebc107db84c4904002d6193fc.png" src="_images/63c94adfb4edacd76ef0f5d21fc7ee3ba5b30d0ebc107db84c4904002d6193fc.png" />
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>titulares</th>
+      <th>bloques_completos</th>
+      <th>diversidad_mediana</th>
+      <th>diversidad_q25</th>
+      <th>diversidad_q75</th>
+    </tr>
+    <tr>
+      <th>particion</th>
+      <th>anio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="14" valign="top">train</th>
+      <th>2004</th>
+      <td>309</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2005</th>
+      <td>364</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>361</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>360</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>20118</td>
+      <td>79</td>
+      <td>0.846</td>
+      <td>0.839</td>
+      <td>0.8535</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <td>38161</td>
+      <td>161</td>
+      <td>0.848</td>
+      <td>0.839</td>
+      <td>0.855</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <td>34622</td>
+      <td>148</td>
+      <td>0.844</td>
+      <td>0.836</td>
+      <td>0.85125</td>
+    </tr>
+    <tr>
+      <th>2011</th>
+      <td>36129</td>
+      <td>163</td>
+      <td>0.851</td>
+      <td>0.843</td>
+      <td>0.858</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <td>40545</td>
+      <td>205</td>
+      <td>0.847</td>
+      <td>0.839</td>
+      <td>0.854</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <td>46676</td>
+      <td>245</td>
+      <td>0.839</td>
+      <td>0.83</td>
+      <td>0.845</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>44088</td>
+      <td>225</td>
+      <td>0.843</td>
+      <td>0.834</td>
+      <td>0.851</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <td>41851</td>
+      <td>209</td>
+      <td>0.842</td>
+      <td>0.832</td>
+      <td>0.849</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>39870</td>
+      <td>199</td>
+      <td>0.825</td>
+      <td>0.8165</td>
+      <td>0.834</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <td>37087</td>
+      <td>181</td>
+      <td>0.824</td>
+      <td>0.815</td>
+      <td>0.833</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">validation</th>
+      <th>2018</th>
+      <td>34225</td>
+      <td>164</td>
+      <td>0.826</td>
+      <td>0.817</td>
+      <td>0.834</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>30826</td>
+      <td>153</td>
+      <td>0.83</td>
+      <td>0.82</td>
+      <td>0.837</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>18929</td>
+      <td>106</td>
+      <td>0.796</td>
+      <td>0.78525</td>
+      <td>0.80575</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>19768</td>
+      <td>142</td>
+      <td>0.752</td>
+      <td>0.743</td>
+      <td>0.761</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="_images/655393c73257c0f5accc827b8a01ca6f9637f8d30ab8a9cf0718bb7ba6b94436.png" src="_images/655393c73257c0f5accc827b8a01ca6f9637f8d30ab8a9cf0718bb7ba6b94436.png" />
+<p>Las bandas son cuartiles de bloques de 1.000 términos, no intervalos de confianza. Se descarta el bloque incompleto de cada año. El orden determinista por ID no es un flujo conversacional. La diversidad y los términos frecuentes describen el archivo recuperado, no calidad periodística, sentimiento ni capacidad predictiva.</p>
+</div>
+</div>
+</section>
+<section id="topicos-aprendidos-con-tf-idf-y-nmf">
+<h2>7.2 Tópicos aprendidos con TF-IDF y NMF<a class="headerlink" href="#topicos-aprendidos-con-tf-idf-y-nmf" title="Link to this heading">#</a></h2>
+<p>El <a class="reference external" href="https://github.com/Fabian-11037/Time-Series-Project/blob/main/PROTOCOLO_EDA_TITULARES.md">protocolo de esta ampliación</a> fija ocho componentes exploratorios, sin afirmar que sean óptimos. TF-IDF y ambos ajustes NMF usan exclusivamente una muestra determinista de prensa de entrenamiento, con límite por año y deduplicación exacta para el ajuste. Las frecuencias y las proyecciones agregadas conservan todas las observaciones elegibles, por lo que la muestra y el corpus proyectado no tienen el mismo peso por año.</p>
+<p>Los componentes se identifican como T01, T02, etc., y por sus términos más pesados: no reciben nombres temáticos manuales. La segunda semilla sólo diagnostica estabilidad por similitud coseno con emparejamiento óptimo; no se elige el resultado más favorable. Se muestran ejemplos de entrenamiento seleccionados por similitud con cada componente. Estos ejemplos no son etiquetas supervisadas ni contenido anticipatorio validado.</p>
+<p>La documentación primaria de <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html">scikit-learn</a> ilustra NMF con TF-IDF. Este análisis no utiliza embeddings preentrenados ni un LLM para clasificar los titulares.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">fit_topics</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>titulares_para_ajuste</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th>source</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2008</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2011</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <th>El Colombiano</th>
+      <td>4000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>terminos</th>
+      <th>coseno_otra_semilla</th>
+    </tr>
+    <tr>
+      <th>topico</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>T01</th>
+      <td>colombia · selección · mundial · selección col...</td>
+      <td>0.99998</td>
+    </tr>
+    <tr>
+      <th>T02</th>
+      <td>medellín · bogotá · medellín bogotá · policía ...</td>
+      <td>0.99997</td>
+    </tr>
+    <tr>
+      <th>T03</th>
+      <td>programación · televisión · programación telev...</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>T04</th>
+      <td>santos · farc · presidente · gobierno · paz · ...</td>
+      <td>0.79184</td>
+    </tr>
+    <tr>
+      <th>T05</th>
+      <td>nacional · atlético · atlético nacional · copa...</td>
+      <td>0.99996</td>
+    </tr>
+    <tr>
+      <th>T06</th>
+      <td>antioquia · policía · bogotá · santa · juegos ...</td>
+      <td>0.022443</td>
+    </tr>
+    <tr>
+      <th>T07</th>
+      <td>años · dos · muertos · millones · cárcel · tre...</td>
+      <td>0.84896</td>
+    </tr>
+    <tr>
+      <th>T08</th>
+      <td>nuevo · nuevo presidente · año · técnico · nue...</td>
+      <td>0.99994</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="_images/0f8280d8b98a2748e09b016087dd2673ae785a4954df891d7ce8c8a1201d26fb.png" src="_images/0f8280d8b98a2748e09b016087dd2673ae785a4954df891d7ce8c8a1201d26fb.png" />
+<p>El ajuste utilizó <strong>40,000</strong> titulares distintos de entrenamiento y <strong>4,823</strong> características. Error relativo de reconstrucción TF-IDF: <strong>0.988</strong>. Similitud coseno media entre componentes emparejados de dos semillas: <strong>0.833</strong>. Son diagnósticos internos: no certifican significado, número óptimo de tópicos ni utilidad para el precio.</p>
+<p>La muestra de ajuste cubre <strong>2008-05-22 a 2017-12-31</strong>; no se confunde con la cobertura completa del corpus proyectado. El componente menos estable es <strong>T06</strong>, con coseno <strong>0.022</strong>. El residuo conserva <strong>97.6 %</strong> de la energía cuadrática TF-IDF original: ocho componentes ofrecen una descripción muy parcial, no una representación semántica exhaustiva. Esta energía residual no es varianza explicada ni una medida de error de pronóstico.</p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>titulares_en_muestra_ajuste</th>
+    </tr>
+    <tr>
+      <th>bigrama</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>programación televisión</th>
+      <td>242</td>
+    </tr>
+    <tr>
+      <th>real madrid</th>
+      <td>172</td>
+    </tr>
+    <tr>
+      <th>presidente santos</th>
+      <td>162</td>
+    </tr>
+    <tr>
+      <th>selección colombia</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>millones dólares</th>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>proceso paz</th>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>atlético nacional</th>
+      <td>88</td>
+    </tr>
+    <tr>
+      <th>nueva york</th>
+      <td>87</td>
+    </tr>
+    <tr>
+      <th>papa francisco</th>
+      <td>85</td>
+    </tr>
+    <tr>
+      <th>presidente uribe</th>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>américa latina</th>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>james rodríguez</th>
+      <td>72</td>
+    </tr>
+    <tr>
+      <th>copa américa</th>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>corte suprema</th>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>álvaro uribe</th>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>donald trump</th>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>mil millones</th>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>juan manuel</th>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>millones pesos</th>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>valle aburrá</th>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>nairo quintana</th>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>fin semana</th>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>cristiano ronaldo</th>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>once caldas</th>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>años cárcel</th>
+      <td>48</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>topico</th>
+      <th>fecha</th>
+      <th>fuente</th>
+      <th>titular</th>
+      <th>coseno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>T01</td>
+      <td>2008-10-09</td>
+      <td>El Colombiano</td>
+      <td>Colombia elimina depósito a endeudamiento externo</td>
+      <td>0.9617</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>T01</td>
+      <td>2016-12-12</td>
+      <td>El Colombiano</td>
+      <td>Libranzas en Colombia, se liquida Elite</td>
+      <td>0.9617</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>T01</td>
+      <td>2017-05-02</td>
+      <td>El Colombiano</td>
+      <td>Mincomercio multó a Booking Colombia</td>
+      <td>0.9617</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>T02</td>
+      <td>2013-06-05</td>
+      <td>El Colombiano</td>
+      <td>Huecos y andenes deteriorados en Medellín</td>
+      <td>0.98258</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>T02</td>
+      <td>2014-06-06</td>
+      <td>El Colombiano</td>
+      <td>Cerrados duelos de clavados en E.U. y Medellín</td>
+      <td>0.98258</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>T02</td>
+      <td>2009-04-20</td>
+      <td>El Colombiano</td>
+      <td>Sirenaica descubre talentos en Medellín</td>
+      <td>0.98258</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>T03</td>
+      <td>2009-07-27</td>
+      <td>El Colombiano</td>
+      <td>Programación de televisión pars este martes, 28 de julio</td>
+      <td>0.72943</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>T03</td>
+      <td>2011-05-02</td>
+      <td>El Colombiano</td>
+      <td>Programación de televisión, martes 3 de amyo</td>
+      <td>0.72901</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>T03</td>
+      <td>2010-01-17</td>
+      <td>El Colombiano</td>
+      <td>Programación de televisión para estes, lunes 18 de enero</td>
+      <td>0.72264</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>T04</td>
+      <td>2013-04-29</td>
+      <td>El Colombiano</td>
+      <td>La paz incierta del presidente Santos</td>
+      <td>0.637</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>T04</td>
+      <td>2011-04-16</td>
+      <td>El Colombiano</td>
+      <td>Presidente Santos aclaró que no existen peleas con Uribe</td>
+      <td>0.63494</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>T04</td>
+      <td>2011-07-20</td>
+      <td>El Colombiano</td>
+      <td>Presidente Santos instaló periodo legislativo</td>
+      <td>0.59756</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>T05</td>
+      <td>2014-01-03</td>
+      <td>El Colombiano</td>
+      <td>El Complejo Laudo Natel será el búnker nacional</td>
+      <td>0.92199</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>T05</td>
+      <td>2013-02-24</td>
+      <td>El Colombiano</td>
+      <td>Los 5 males estructurales de la caficultura nacional</td>
+      <td>0.92199</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>T05</td>
+      <td>2014-11-17</td>
+      <td>El Colombiano</td>
+      <td>Las pifias defensivas castigaron a Nacional</td>
+      <td>0.92199</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>T06</td>
+      <td>2013-11-14</td>
+      <td>El Colombiano</td>
+      <td>Restablecida la expedición de pasaportes en Antioquia</td>
+      <td>0.97678</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>T06</td>
+      <td>2011-09-29</td>
+      <td>El Colombiano</td>
+      <td>Comfamiliar Camacol se fusionará con Comfenalco Antioquia</td>
+      <td>0.97678</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>T06</td>
+      <td>2009-09-10</td>
+      <td>El Colombiano</td>
+      <td>Coqueteo australiano con Antioquia y Asomineros</td>
+      <td>0.97678</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>T07</td>
+      <td>2017-03-25</td>
+      <td>El Colombiano</td>
+      <td>Albania entierra 45 años de comunismo</td>
+      <td>0.78393</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>T07</td>
+      <td>2014-05-04</td>
+      <td>El Colombiano</td>
+      <td>Hello Kitty ya es una gatita de 40 años</td>
+      <td>0.78393</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>T07</td>
+      <td>2014-10-18</td>
+      <td>El Colombiano</td>
+      <td>Los 75 años acuáticos se nadaron con abrazos</td>
+      <td>0.78393</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>T08</td>
+      <td>2008-06-27</td>
+      <td>El Colombiano</td>
+      <td>En Llanogrande nuevo almacén de Yamaha</td>
+      <td>0.97697</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>T08</td>
+      <td>2016-04-11</td>
+      <td>El Colombiano</td>
+      <td>Nuevo tipo de planetas&nbsp;&nbsp; cuya atmósfera se evaporó</td>
+      <td>0.97697</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>T08</td>
+      <td>2009-11-02</td>
+      <td>El Colombiano</td>
+      <td>El diploma y la toga tienen un nuevo requisito: Ecaes</td>
+      <td>0.97697</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="evolucion-temporal-y-composicion-por-fuente">
+<h2>7.3 Evolución temporal y composición por fuente<a class="headerlink" href="#evolucion-temporal-y-composicion-por-fuente" title="Link to this heading">#</a></h2>
+<p>Se congelan vocabulario, IDF y componentes. Todos los títulos de entrenamiento y validación se proyectan sobre esa misma base. Los pesos se normalizan por la masa reconstruida para evitar que la escala arbitraria de cada componente NMF sesgue su comparación. No son probabilidades de pertenencia o de anticipación.</p>
+<p>Un texto sin términos representados queda sin tópico, con pesos ausentes; no se asigna artificialmente a T01. Las medias temáticas excluyen esos textos y siempre se acompañan de la fracción sin representación. Los huecos temporales no son meses de ausencia real de noticias.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">profiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>T01</th>
+      <th>T02</th>
+      <th>T03</th>
+      <th>T04</th>
+      <th>T05</th>
+      <th>T06</th>
+      <th>T07</th>
+      <th>T08</th>
+      <th>represented</th>
+      <th>entropy</th>
+      <th>reconstruction_error</th>
+    </tr>
+    <tr>
+      <th>source_kind</th>
+      <th>source</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>0.11128</td>
+      <td>0.082318</td>
+      <td>0.023866</td>
+      <td>0.26069</td>
+      <td>0.10795</td>
+      <td>0.071566</td>
+      <td>0.28033</td>
+      <td>0.06199</td>
+      <td>0.95026</td>
+      <td>0.51906</td>
+      <td>0.98587</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>T01</th>
+      <th>T02</th>
+      <th>T03</th>
+      <th>T04</th>
+      <th>T05</th>
+      <th>T06</th>
+      <th>T07</th>
+      <th>T08</th>
+      <th>represented</th>
+      <th>entropy</th>
+      <th>reconstruction_error</th>
+    </tr>
+    <tr>
+      <th>source_kind</th>
+      <th>source</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="7" valign="top">news</th>
+      <th>Dinero</th>
+      <td>0.17149</td>
+      <td>0.029183</td>
+      <td>0.0078845</td>
+      <td>0.23237</td>
+      <td>0.054059</td>
+      <td>0.0856</td>
+      <td>0.3057</td>
+      <td>0.11371</td>
+      <td>1</td>
+      <td>0.56983</td>
+      <td>0.99352</td>
+    </tr>
+    <tr>
+      <th>El Colombiano</th>
+      <td>0.12274</td>
+      <td>0.10326</td>
+      <td>0.014373</td>
+      <td>0.23929</td>
+      <td>0.11516</td>
+      <td>0.081729</td>
+      <td>0.25947</td>
+      <td>0.063967</td>
+      <td>0.9296</td>
+      <td>0.51975</td>
+      <td>0.98377</td>
+    </tr>
+    <tr>
+      <th>El Espectador</th>
+      <td>0.15814</td>
+      <td>0.064149</td>
+      <td>0.017628</td>
+      <td>0.22678</td>
+      <td>0.093393</td>
+      <td>0.064946</td>
+      <td>0.29623</td>
+      <td>0.07873</td>
+      <td>0.97972</td>
+      <td>0.57615</td>
+      <td>0.98978</td>
+    </tr>
+    <tr>
+      <th>El Tiempo</th>
+      <td>0.12639</td>
+      <td>0.073153</td>
+      <td>0.016224</td>
+      <td>0.22926</td>
+      <td>0.10387</td>
+      <td>0.071248</td>
+      <td>0.31485</td>
+      <td>0.065002</td>
+      <td>0.97952</td>
+      <td>0.57703</td>
+      <td>0.99091</td>
+    </tr>
+    <tr>
+      <th>La República</th>
+      <td>0.15204</td>
+      <td>0.058468</td>
+      <td>0.013548</td>
+      <td>0.25399</td>
+      <td>0.067788</td>
+      <td>0.0622</td>
+      <td>0.2971</td>
+      <td>0.094857</td>
+      <td>0.9836</td>
+      <td>0.64322</td>
+      <td>0.9952</td>
+    </tr>
+    <tr>
+      <th>Portafolio</th>
+      <td>0.29004</td>
+      <td>0.053157</td>
+      <td>0.029071</td>
+      <td>0.19591</td>
+      <td>0.06264</td>
+      <td>0.062333</td>
+      <td>0.23014</td>
+      <td>0.076712</td>
+      <td>0.98901</td>
+      <td>0.55049</td>
+      <td>0.98162</td>
+    </tr>
+    <tr>
+      <th>Semana</th>
+      <td>0.18184</td>
+      <td>0.088531</td>
+      <td>0.022582</td>
+      <td>0.248</td>
+      <td>0.065444</td>
+      <td>0.10459</td>
+      <td>0.22162</td>
+      <td>0.067388</td>
+      <td>0.99773</td>
+      <td>0.64864</td>
+      <td>0.99184</td>
+    </tr>
+    <tr>
+      <th>official_report</th>
+      <th>IDEAM</th>
+      <td>0.097369</td>
+      <td>0.033669</td>
+      <td>0.60003</td>
+      <td>0.072456</td>
+      <td>0.079355</td>
+      <td>0.020344</td>
+      <td>0.066581</td>
+      <td>0.030197</td>
+      <td>0.59211</td>
+      <td>0.49207</td>
+      <td>0.99556</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>titulares</th>
+      <th>fraccion_sin_representacion</th>
+      <th>maxima_contribucion_media</th>
+      <th>entropia_normalizada_media</th>
+      <th>error_reconstruccion_medio</th>
+    </tr>
+    <tr>
+      <th>particion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>train</th>
+      <td>380541</td>
+      <td>0.049742</td>
+      <td>0.59097</td>
+      <td>0.51906</td>
+      <td>0.98587</td>
+    </tr>
+    <tr>
+      <th>validation</th>
+      <td>103748</td>
+      <td>0.058488</td>
+      <td>0.57324</td>
+      <td>0.54131</td>
+      <td>0.98546</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>T01</th>
+      <th>T02</th>
+      <th>T03</th>
+      <th>T04</th>
+      <th>T05</th>
+      <th>T06</th>
+      <th>T07</th>
+      <th>T08</th>
+      <th>particion</th>
+      <th>titulares_totales</th>
+      <th>titulares_representados</th>
+    </tr>
+    <tr>
+      <th>month</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2004-01</th>
+      <td>0.046647</td>
+      <td>0.011201</td>
+      <td>0</td>
+      <td>0.0014562</td>
+      <td>0.1516</td>
+      <td>0.10251</td>
+      <td>0.3487</td>
+      <td>0.33789</td>
+      <td>train</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2004-03</th>
+      <td>0.039676</td>
+      <td>0.019255</td>
+      <td>0.75907</td>
+      <td>0.075626</td>
+      <td>0.025831</td>
+      <td>0.015003</td>
+      <td>0.030759</td>
+      <td>0.034775</td>
+      <td>train</td>
+      <td>31</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>2004-04</th>
+      <td>0.065555</td>
+      <td>0.028857</td>
+      <td>0.73409</td>
+      <td>0.070253</td>
+      <td>0.045996</td>
+      <td>0.038453</td>
+      <td>0.0063198</td>
+      <td>0.01048</td>
+      <td>train</td>
+      <td>29</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>2004-05</th>
+      <td>0.040117</td>
+      <td>0.037749</td>
+      <td>0.76828</td>
+      <td>0.1139</td>
+      <td>0.017064</td>
+      <td>0.0072482</td>
+      <td>0.0043419</td>
+      <td>0.011292</td>
+      <td>train</td>
+      <td>31</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>2004-06</th>
+      <td>0.026457</td>
+      <td>0.024145</td>
+      <td>0.83368</td>
+      <td>0.068544</td>
+      <td>0.024</td>
+      <td>0.006156</td>
+      <td>0.00724</td>
+      <td>0.0097759</td>
+      <td>train</td>
+      <td>30</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2021-08</th>
+      <td>0.15033</td>
+      <td>0.081345</td>
+      <td>0.021046</td>
+      <td>0.2398</td>
+      <td>0.08028</td>
+      <td>0.098658</td>
+      <td>0.25151</td>
+      <td>0.077039</td>
+      <td>validation</td>
+      <td>1285</td>
+      <td>1272</td>
+    </tr>
+    <tr>
+      <th>2021-09</th>
+      <td>0.14542</td>
+      <td>0.078352</td>
+      <td>0.019308</td>
+      <td>0.24136</td>
+      <td>0.087593</td>
+      <td>0.087232</td>
+      <td>0.2652</td>
+      <td>0.075532</td>
+      <td>validation</td>
+      <td>2593</td>
+      <td>2563</td>
+    </tr>
+    <tr>
+      <th>2021-10</th>
+      <td>0.15229</td>
+      <td>0.074773</td>
+      <td>0.018513</td>
+      <td>0.2282</td>
+      <td>0.089621</td>
+      <td>0.079547</td>
+      <td>0.28777</td>
+      <td>0.069288</td>
+      <td>validation</td>
+      <td>2452</td>
+      <td>2417</td>
+    </tr>
+    <tr>
+      <th>2021-11</th>
+      <td>0.15089</td>
+      <td>0.073742</td>
+      <td>0.018284</td>
+      <td>0.23299</td>
+      <td>0.089593</td>
+      <td>0.085025</td>
+      <td>0.27348</td>
+      <td>0.075995</td>
+      <td>validation</td>
+      <td>2125</td>
+      <td>2102</td>
+    </tr>
+    <tr>
+      <th>2021-12</th>
+      <td>0.1346</td>
+      <td>0.078717</td>
+      <td>0.021269</td>
+      <td>0.21796</td>
+      <td>0.091908</td>
+      <td>0.076043</td>
+      <td>0.31096</td>
+      <td>0.068544</td>
+      <td>validation</td>
+      <td>1251</td>
+      <td>1223</td>
+    </tr>
+  </tbody>
+</table>
+<p>215 rows × 11 columns</p>
+</div></div><img alt="_images/ab08a21ecaeebec34cad4358f195c860bb83192ffd79fd526baece4aed4a7520.png" src="_images/ab08a21ecaeebec34cad4358f195c860bb83192ffd79fd526baece4aed4a7520.png" />
+<img alt="_images/b2144e91415450f66a800c3226ff5d769432f59fca018e14e195e92fb5d3c387.png" src="_images/b2144e91415450f66a800c3226ff5d769432f59fca018e14e195e92fb5d3c387.png" />
+<p>Los espacios sin cobertura mensual son datos no recuperados. Los pesos son contribuciones relativas de la representación NMF, no probabilidades. Los documentos sin representación se excluyen de las medias temáticas y se cuentan por separado. No se compara contra precios ni se evalúa anticipación; los cambios pueden mezclar contenido, fecha, fuente y forma del título.</p>
+</div>
+</div>
+</section>
+<section id="cambio-del-vocabulario-y-limites-del-analisis">
+<h2>7.4 Cambio del vocabulario y límites del análisis<a class="headerlink" href="#cambio-del-vocabulario-y-limites-del-analisis" title="Link to this heading">#</a></h2>
+<p>Se miden términos fuera del vocabulario ajustado y divergencia léxica entre entrenamiento y validación usando una base fija. El vocabulario no se amplía con validación. Los términos excluidos por frecuencia también cuentan como externos: no se interpreta la cifra como porcentaje de palabras desconocidas del español.</p>
+<p>La cobertura editorial, la fuente y la fecha cambian conjuntamente. Un aumento de un componente puede reflejar recuperación del archivo o estilo editorial, además de contenido. El entrenamiento está dominado por un medio; no se presenta una taxonomía universal. No se analiza correlación con precios ni mejora predictiva. E1 continúa sin NLP, y el análisis no resuelve la incertidumbre sobre versiones históricas del corpus ampliado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">drift</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>terminos</th>
+      <th>terminos_fuera_vocabulario</th>
+      <th>fraccion_fuera_vocabulario</th>
+    </tr>
+    <tr>
+      <th>particion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>train</th>
+      <td>1822919</td>
+      <td>509437</td>
+      <td>0.27946</td>
+    </tr>
+    <tr>
+      <th>validation</th>
+      <td>567631</td>
+      <td>177917</td>
+      <td>0.31344</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>titulares</th>
+      <th>terminos</th>
+      <th>fraccion_fuera_vocabulario</th>
+    </tr>
+    <tr>
+      <th>particion</th>
+      <th>fuente</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>train</th>
+      <th>El Colombiano</th>
+      <td>380541</td>
+      <td>1822919</td>
+      <td>0.27946</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">validation</th>
+      <th>Dinero</th>
+      <td>129</td>
+      <td>1043</td>
+      <td>0.31256</td>
+    </tr>
+    <tr>
+      <th>El Colombiano</th>
+      <td>80822</td>
+      <td>404045</td>
+      <td>0.2984</td>
+    </tr>
+    <tr>
+      <th>El Espectador</th>
+      <td>3896</td>
+      <td>27633</td>
+      <td>0.45102</td>
+    </tr>
+    <tr>
+      <th>El Tiempo</th>
+      <td>4980</td>
+      <td>29098</td>
+      <td>0.33514</td>
+    </tr>
+    <tr>
+      <th>IDEAM</th>
+      <td>304</td>
+      <td>660</td>
+      <td>0.51667</td>
+    </tr>
+    <tr>
+      <th>La República</th>
+      <td>2195</td>
+      <td>16727</td>
+      <td>0.34758</td>
+    </tr>
+    <tr>
+      <th>Portafolio</th>
+      <td>1274</td>
+      <td>8470</td>
+      <td>0.44628</td>
+    </tr>
+    <tr>
+      <th>Semana</th>
+      <td>10148</td>
+      <td>79955</td>
+      <td>0.3111</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="_images/bd17a9b98cb91e820fe2ee72cc1b4d38054bfa3a476f71b6684f09d5579f5689.png" src="_images/bd17a9b98cb91e820fe2ee72cc1b4d38054bfa3a476f71b6684f09d5579f5689.png" />
+<p>La divergencia Jensen–Shannon entre las frecuencias léxicas de train y validación, en el vocabulario fijo y una casilla externa, es <strong>0.0448 bits</strong>. Su rango es de 0 a 1; no es una prueba de significancia. «Fuera del vocabulario» incluye términos poco frecuentes o excluidos por las reglas TF-IDF, no sólo palabras nuevas.</p>
+<h3 class="rubric" id="id1">Implicaciones del análisis</h3>
+<ul class="simple">
+<li><p><strong>Preprocesamiento:</strong> Conservar calidad, repetición y términos no representados; si se usa texto en una fase posterior, ajustar su vocabulario y agrupamiento sólo con train.</p></li>
+<li><p><strong>Arquitectura:</strong> Los tópicos son un diagnóstico de contenido. E1 permanece sin NLP ni conteos o pesos derivados de titulares.</p></li>
+<li><p><strong>Validación:</strong> Validación sólo se proyecta con el modelo congelado. No se abrió el contenido de prueba y no se eligió el número de componentes según precios.</p></li>
+<li><p><strong>Riesgos:</strong> El archivo de entrenamiento no representa todos los medios. Estabilidad numérica no certifica coherencia semántica, utilidad predictiva o disponibilidad histórica de cada versión.</p></li>
+</ul>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -711,6 +2321,26 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-repeticion-y-diversidad-lexica">7.1 Contenido, repetición y diversidad léxica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limites-del-analisis">7.4 Cambio del vocabulario y límites del análisis</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

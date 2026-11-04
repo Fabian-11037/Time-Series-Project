@@ -1,0 +1,9 @@
+{
+  "source": "https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/stopwords.zip",
+  "retrieved_date_colombia": "2026-11-04",
+  "archive_sha256": "48c0e52d8b52546e827f53761fb30300c0ab94f70660d28bd65ba0a86270946b",
+  "extracted_file": "stopwords/spanish",
+  "sha256": "6125eadf28ba664a60bf4296147bcbd40b80be93670056fdb229960ac15e2310",
+  "terms": 313,
+  "role": "Linguistic stop words only; no topic labels or financial relevance filters"
+}
