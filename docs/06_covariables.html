@@ -212,9 +212,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -365,8 +365,8 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="demanda-clima-e-hidrologia">
 <h1>6. Demanda, clima e hidrología<a class="headerlink" href="#demanda-clima-e-hidrologia" title="Link to this heading">#</a></h1>
-<p>Las asociaciones contemporáneas describen el sistema; no son un conjunto de atributos disponibles al origen. Se comparan también covariables con 24 horas de rezago y acumulados hidrológicos pasados. La información mutua se estima en una muestra determinista de entrenamiento; no tiene interpretación causal y no se usa para seleccionar variables con prueba.</p>
-<p>Las ocho ciudades se conservan separadas. La heterogeneidad de temperaturas, humedad y lluvia puede ser útil para una representación multivariada. No se construye una regresión espacial: el objetivo es una única serie nacional. La lluvia urbana no sustituye precipitación en las cuencas de los embalses; ese bloque sigue pendiente. No se han descargado aquí series completas de viento/radiación.</p>
+<p>Se estiman asociaciones contemporáneas, asociaciones con covariables rezagadas 24 horas y acumulados hidrológicos retrospectivos. La información mutua se calcula sobre una muestra determinista de entrenamiento. Estas medidas describen dependencias estadísticas y orientan la representación multivariada.</p>
+<p>Las ocho ciudades se conservan por separado para representar la heterogeneidad meteorológica. El objetivo de pronóstico es una serie nacional. La precipitación urbana caracteriza las ubicaciones seleccionadas; representar la oferta hidroeléctrica mediante lluvia requiere observaciones adicionales en las cuencas aportantes.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -374,7 +374,7 @@
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
@@ -392,7 +392,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">covariates</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">covariates</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1147,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

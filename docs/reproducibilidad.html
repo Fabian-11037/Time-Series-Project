@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Reproducibilidad y límites &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
+    <title>Reproducibilidad &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
   
   
   
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8a41dcb7" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -67,7 +67,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Referencias y fuentes" href="referencias.html" />
-    <link rel="prev" title="10. Decisiones derivadas y correspondencia con el Entregable 1" href="10_conclusiones.html" />
+    <link rel="prev" title="10. Síntesis e implicaciones metodológicas" href="10_conclusiones.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -155,6 +155,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -212,9 +216,9 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -338,7 +342,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -349,11 +355,20 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Reproducibilidad y límites</h1>
+    <h1>Reproducibilidad</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -363,9 +378,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="reproducibilidad-y-limites">
-<h1>Reproducibilidad y límites<a class="headerlink" href="#reproducibilidad-y-limites" title="Link to this heading">#</a></h1>
-<p>El dataset está versionado en <code class="docutils literal notranslate"><span class="pre">data/</span></code> como CSV comprimidos por año y fuente. Cada archivo tiene conteo y SHA-256 en <code class="docutils literal notranslate"><span class="pre">data/manifest.json</span></code>. No se necesita volver a consultar APIs para reproducir el EDA. La hidrología conserva frecuencia diaria; las noticias son registros de texto y procedencia separados, sin multiplicar filas horarias.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="reproducibilidad">
+<h1>Reproducibilidad<a class="headerlink" href="#reproducibilidad" title="Link to this heading">#</a></h1>
+<p>El conjunto de datos se distribuye en <code class="docutils literal notranslate"><span class="pre">data/</span></code> mediante archivos CSV comprimidos por año y fuente. El manifiesto <code class="docutils literal notranslate"><span class="pre">data/manifest.json</span></code> registra conteos y huellas SHA-256. Las series horarias, la hidrología diaria y los documentos conservan sus frecuencias y unidades de observación.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 <span class="c1"># Activar .venv según el sistema operativo</span>
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.lock.txt
@@ -374,14 +389,20 @@ python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w">
 python<span class="w"> </span>scripts/create_notebooks.py
 python<span class="w"> </span>scripts/create_literature_notebooks.py
 python<span class="w"> </span>scripts/run_eda.py
+python<span class="w"> </span>scripts/verify_book.py
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">run_eda.py</span></code> ejecuta los cuadernos con el intérprete del entorno actual, comprueba errores y construye Jupyter Book 1.0.4. La construcción del libro usa las salidas ya ejecutadas; no vuelve a calcularlas al renderizar. El HTML queda en <code class="docutils literal notranslate"><span class="pre">docs/index.html</span></code>. El tiempo de ejecución depende del equipo, especialmente de STL/MSTL y los diagnósticos temporales.</p>
-<p>Las fuentes editables son los generadores en <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> y los análisis en <code class="docutils literal notranslate"><span class="pre">src/colombia_energy/eda.py</span></code>. Las figuras PNG y tablas CSV se generan en <code class="docutils literal notranslate"><span class="pre">results/</span></code>. La bibliografía distingue extracciones verificadas de los inventarios previos de resúmenes.</p>
-<p>El manifiesto de prueba se guarda antes del EDA en <code class="docutils literal notranslate"><span class="pre">data/test_freeze.json</span></code>. La lectura de prueba está bloqueada por defecto. El libro analiza entrenamiento y, de forma separada, desplazamientos de validación. El calendario y la cobertura completa se auditan como metadatos; no se usan para optimizar con el objetivo de prueba.</p>
-<p>Para E1, <code class="docutils literal notranslate"><span class="pre">model_policy.py</span></code> admite sólo variables numéricas declaradas y calendario conocido: rechaza texto, embeddings, sentimiento y conteos de noticias. Para las fases posteriores, <code class="docutils literal notranslate"><span class="pre">asof_text.py</span></code> distingue los selectores <code class="docutils literal notranslate"><span class="pre">verified</span></code> y <code class="docutils literal notranslate"><span class="pre">declared_dates</span></code>; este último incluye versiones no acreditadas por decisión del autor y compara con disponibilidad supuesta. No inventa fechas de informes sin publicación conocida.</p>
-<p>Los archivos brutos extensos de corpus/noticias y los PDF privados no se publican. Los scripts originales de adquisición se conservan en <code class="docutils literal notranslate"><span class="pre">scripts/acquisition/</span></code> como procedencia; sus rutas de salida corresponden al flujo original. <code class="docutils literal notranslate"><span class="pre">scripts/import_local_downloads.py</span></code> documenta la conversión de esa instantánea a las particiones versionadas. Las APIs y archivos web pueden cambiar: una descarga nueva no garantiza reproducir una edición histórica. Las huellas del repositorio identifican la instantánea efectivamente analizada.</p>
-<p>La disponibilidad histórica de todas las versiones numéricas no está acreditada. El texto ampliado también puede contener revisiones posteriores. Por tanto, reproducibilidad de la instantánea no equivale a un backtest operativo sin fuga. No se presentan resultados predictivos ni se declara cumplido el Entregable 1 completo.</p>
+<p><code class="docutils literal notranslate"><span class="pre">run_eda.py</span></code> ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en <code class="docutils literal notranslate"><span class="pre">docs/</span></code>. Los generadores de capítulos se encuentran en <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> y los procedimientos analíticos en <code class="docutils literal notranslate"><span class="pre">src/colombia_energy/</span></code>. Las tablas y figuras se guardan en <code class="docutils literal notranslate"><span class="pre">results/</span></code>.</p>
+<section id="particion-y-disponibilidad-temporal">
+<h2>Partición y disponibilidad temporal<a class="headerlink" href="#particion-y-disponibilidad-temporal" title="Link to this heading">#</a></h2>
+<p>El manifiesto <code class="docutils literal notranslate"><span class="pre">data/test_freeze.json</span></code> identifica los archivos de prueba. Los procedimientos analíticos utilizan entrenamiento y diagnósticos separados de validación; las verificaciones del periodo completo comprueban calendario, integridad y procedencia.</p>
+<p>El módulo <code class="docutils literal notranslate"><span class="pre">asof_text.py</span></code> implementa los escenarios <code class="docutils literal notranslate"><span class="pre">verified</span></code> y <code class="docutils literal notranslate"><span class="pre">declared_dates</span></code>. El primero utiliza capturas de versiones documentales verificadas; el segundo utiliza fechas de publicación declaradas y la regla de disponibilidad supuesta. Los informes sin fecha de publicación permanecen en el inventario sin asignación temporal.</p>
+<p>Las series numéricas y parte del corpus documental proceden de fuentes retrospectivas. La incertidumbre sobre las versiones y sus fechas efectivas de publicación limita la reconstrucción de un escenario operativo histórico y debe considerarse en el análisis de sensibilidad.</p>
+</section>
+<section id="procedencia">
+<h2>Procedencia<a class="headerlink" href="#procedencia" title="Link to this heading">#</a></h2>
+<p>Los scripts de adquisición se conservan en <code class="docutils literal notranslate"><span class="pre">scripts/acquisition/</span></code>. La conversión de la instantánea analizada se documenta en <code class="docutils literal notranslate"><span class="pre">scripts/import_local_downloads.py</span></code>. Las huellas permiten identificar los archivos utilizados y contrastar futuras actualizaciones de las fuentes. El directorio <code class="docutils literal notranslate"><span class="pre">literature/</span></code> contiene los registros de las extracciones bibliográficas verificadas.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -420,7 +441,7 @@ python<span class="w"> </span>scripts/run_eda.py
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">10. Decisiones derivadas y correspondencia con el Entregable 1</p>
+        <p class="prev-next-title">10. Síntesis e implicaciones metodológicas</p>
       </div>
     </a>
     <a class="right-next"
@@ -439,6 +460,24 @@ python<span class="w"> </span>scripts/run_eda.py
             
             
               
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -448,7 +487,7 @@ python<span class="w"> </span>scripts/run_eda.py
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

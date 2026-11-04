@@ -216,9 +216,9 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -368,7 +368,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-repeticion-y-diversidad-lexica">7.1 Contenido, repetición y diversidad léxica</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limites-del-analisis">7.4 Cambio del vocabulario y límites del análisis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limitaciones">7.4 Cambio del vocabulario y limitaciones</a></li>
 </ul>
             </nav>
         </div>
@@ -382,9 +382,9 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="texto-cobertura-duplicados-y-disponibilidad">
 <h1>7. Texto: cobertura, duplicados y disponibilidad<a class="headerlink" href="#texto-cobertura-duplicados-y-disponibilidad" title="Link to this heading">#</a></h1>
-<p>Se audita la recuperación por mes y fuente, sin asignar categorías temáticas manuales, sentimiento, anticipación ni relevancia. Por solicitud del autor se añade un análisis exploratorio de tópicos aprendidos automáticamente. Los modelos del E1 siguen siendo exclusivamente numéricos; estos tópicos no se agregan al dataset original ni a sus entradas.</p>
-<p>Por decisión del autor se incluyen versiones no acreditadas en el conjunto ampliado. <code class="docutils literal notranslate"><span class="pre">available_at_assumed</span></code> nunca se confunde con <code class="docutils literal notranslate"><span class="pre">available_at_verified</span></code>. Se usa la hora declarada con zona; si sólo se conoce el día, se supone ingreso desde las 00:00 del día siguiente en Colombia. Esto no acredita que una versión recuperada en 2026 fuera idéntica a la original. Los títulos sin fecha permanecen en el inventario y no se asignan cronológicamente.</p>
-<p>Se examinan repeticiones exactas, variaciones ortográficas y cambios parecidos dentro de una misma URL. No se entrenan agrupamientos semánticos sobre el corpus completo. Un título repetido en boletines diarios puede ser legítimo: la repetición no equivale automáticamente a duplicado de artículo ni a fuga de un pronóstico.</p>
+<p>El análisis documental comprende cobertura por mes y fuente, repetición de titulares, diversidad léxica y tópicos obtenidos mediante aprendizaje no supervisado.</p>
+<p>La disponibilidad temporal se representa mediante dos campos. <code class="docutils literal notranslate"><span class="pre">available_at_assumed</span></code> utiliza la fecha de publicación declarada y, cuando sólo consta el día, asigna disponibilidad desde las 00:00 del día siguiente en Colombia. <code class="docutils literal notranslate"><span class="pre">available_at_verified</span></code> identifica la disponibilidad respaldada por una captura de la versión exacta. Las versiones recuperadas retrospectivamente pueden contener revisiones posteriores; los registros sin fecha de publicación se conservan en el inventario documental.</p>
+<p>Se examinan repeticiones exactas, variaciones ortográficas y similitud entre títulos asociados a una misma URL. La interpretación considera la periodicidad de los boletines y las convenciones editoriales de cada fuente.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -552,7 +552,7 @@
   <tbody>
   </tbody>
 </table>
-</div></div><p>Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. El análisis de tópicos aprendidos se presenta después; no se calcula sentimiento ni relevancia predictiva.</p>
+</div></div><p>La identificación de duplicados considera la URL, la fecha y la similitud ortográfica del titular. Los títulos periódicos se conservan para distinguir repetición editorial y duplicación de registros. El procedimiento cubre variaciones ortográficas dentro de una misma URL; la paráfrasis y la sindicación entre fuentes requieren evaluación semántica adicional.</p>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -668,14 +668,14 @@
 <li><p><strong>Preprocesamiento:</strong> Conservar máscaras de recuperación/fuente y fechas supuestas/comprobadas. No rellenar texto ausente con un resumen generado.</p></li>
 <li><p><strong>Arquitectura:</strong> Encoder y mecanismo de utilidad entrenados con train; permitir que el modelo ignore texto corto/repetitivo. Agrupamiento, si se usa, se aprende dentro del pipeline.</p></li>
 <li><p><strong>Validación:</strong> Auditar cambios de fuente y cantidad de texto; comparar con/sin NLP en los mismos orígenes y con textos placebo en el benchmark futuro.</p></li>
-<li><p><strong>Riesgos:</strong> La cobertura cambia mucho entre épocas y puede actuar como atajo. El conjunto ampliado autorizado contiene versiones retrospectivas no acreditadas; no es una demostración libre de fuga. Los anexos ZIP y nombres de informes aportan una señal semántica limitada.</p></li>
+<li><p><strong>Riesgos:</strong> La variación temporal de cobertura y fuentes puede introducir asociaciones espurias. La recuperación retrospectiva limita la verificación de versiones históricas; los nombres de anexos e informes ofrecen menor especificidad documental que los titulares individuales.</p></li>
 </ul>
 </div>
 </div>
 <section id="contenido-repeticion-y-diversidad-lexica">
 <h2>7.1 Contenido, repetición y diversidad léxica<a class="headerlink" href="#contenido-repeticion-y-diversidad-lexica" title="Link to this heading">#</a></h2>
-<p>Se cuentan palabras de contenido, bigramas y rasgos de forma del titular, sin relacionarlos con precios. Se conservan tildes y eñes; se excluyen números y palabras funcionales del español mediante una lista pública de NLTK/Snowball guardada con su huella. No se suprimen términos por su tema o aparente utilidad.</p>
-<p>La diversidad se compara en bloques de igual cantidad de términos; una razón de tipos/tokens calculada sobre corpus de tamaños distintos no sería comparable directamente. Se muestran entrenamiento y validación por separado, sin abrir contenido de prueba. La asignación temporal se hace con disponibilidad <strong>supuesta</strong>, incluyendo el arrastre de textos del último día de una partición al día siguiente cuando sólo consta la fecha.</p>
+<p>Se calculan frecuencias de palabras y bigramas, longitud, repetición y características formales de los titulares. La normalización conserva tildes y eñes y excluye números y palabras funcionales mediante la lista de español de NLTK/Snowball, cuya fuente y huella se registran en el repositorio.</p>
+<p>La diversidad léxica se compara mediante bloques de igual cantidad de términos. Entrenamiento y validación se analizan por separado. La asignación temporal utiliza la disponibilidad supuesta y considera los desplazamientos entre particiones producidos por la regla de ingreso al día siguiente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">colombia_energy.headline_eda</span><span class="w"> </span><span class="kn">import</span> <span class="n">HeadlineStudy</span>
@@ -1087,15 +1087,15 @@
   </tbody>
 </table>
 </div></div><img alt="_images/655393c73257c0f5accc827b8a01ca6f9637f8d30ab8a9cf0718bb7ba6b94436.png" src="_images/655393c73257c0f5accc827b8a01ca6f9637f8d30ab8a9cf0718bb7ba6b94436.png" />
-<p>Las bandas son cuartiles de bloques de 1.000 términos, no intervalos de confianza. Se descarta el bloque incompleto de cada año. El orden determinista por ID no es un flujo conversacional. La diversidad y los términos frecuentes describen el archivo recuperado, no calidad periodística, sentimiento ni capacidad predictiva.</p>
+<p>Las bandas representan el rango intercuartílico de bloques de 1.000 términos. Se excluye el bloque incompleto de cada año y se conserva un orden determinista por identificador. La diversidad y las frecuencias caracterizan la composición léxica del archivo recuperado.</p>
 </div>
 </div>
 </section>
 <section id="topicos-aprendidos-con-tf-idf-y-nmf">
 <h2>7.2 Tópicos aprendidos con TF-IDF y NMF<a class="headerlink" href="#topicos-aprendidos-con-tf-idf-y-nmf" title="Link to this heading">#</a></h2>
-<p>El <a class="reference external" href="https://github.com/Fabian-11037/Time-Series-Project/blob/main/PROTOCOLO_EDA_TITULARES.md">protocolo de esta ampliación</a> fija ocho componentes exploratorios, sin afirmar que sean óptimos. TF-IDF y ambos ajustes NMF usan exclusivamente una muestra determinista de prensa de entrenamiento, con límite por año y deduplicación exacta para el ajuste. Las frecuencias y las proyecciones agregadas conservan todas las observaciones elegibles, por lo que la muestra y el corpus proyectado no tienen el mismo peso por año.</p>
-<p>Los componentes se identifican como T01, T02, etc., y por sus términos más pesados: no reciben nombres temáticos manuales. La segunda semilla sólo diagnostica estabilidad por similitud coseno con emparejamiento óptimo; no se elige el resultado más favorable. Se muestran ejemplos de entrenamiento seleccionados por similitud con cada componente. Estos ejemplos no son etiquetas supervisadas ni contenido anticipatorio validado.</p>
-<p>La documentación primaria de <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html">scikit-learn</a> ilustra NMF con TF-IDF. Este análisis no utiliza embeddings preentrenados ni un LLM para clasificar los titulares.</p>
+<p>El <a class="reference external" href="https://github.com/Fabian-11037/Time-Series-Project/blob/main/PROTOCOLO_EDA_TITULARES.md">protocolo del análisis documental</a> establece ocho componentes exploratorios. TF-IDF y los dos ajustes NMF se estiman con una muestra determinista de prensa de entrenamiento, deduplicada y limitada por año. Las frecuencias y las proyecciones agregadas conservan todas las observaciones elegibles; por tanto, su ponderación anual difiere de la muestra de ajuste.</p>
+<p>Los componentes se identifican mediante códigos T01, T02, etc., acompañados por sus términos de mayor peso. La estabilidad se evalúa con una segunda semilla, similitud coseno y emparejamiento óptimo. Los ejemplos de entrenamiento se seleccionan por similitud con cada componente para facilitar su interpretación.</p>
+<p>La representación sigue el procedimiento de extracción de tópicos mediante TF-IDF y NMF documentado por <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html">scikit-learn</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">fit_topics</span><span class="p">()</span>
@@ -1254,8 +1254,8 @@
   </tbody>
 </table>
 </div></div><img alt="_images/0f8280d8b98a2748e09b016087dd2673ae785a4954df891d7ce8c8a1201d26fb.png" src="_images/0f8280d8b98a2748e09b016087dd2673ae785a4954df891d7ce8c8a1201d26fb.png" />
-<p>El ajuste utilizó <strong>40,000</strong> titulares distintos de entrenamiento y <strong>4,823</strong> características. Error relativo de reconstrucción TF-IDF: <strong>0.988</strong>. Similitud coseno media entre componentes emparejados de dos semillas: <strong>0.833</strong>. Son diagnósticos internos: no certifican significado, número óptimo de tópicos ni utilidad para el precio.</p>
-<p>La muestra de ajuste cubre <strong>2008-05-22 a 2017-12-31</strong>; no se confunde con la cobertura completa del corpus proyectado. El componente menos estable es <strong>T06</strong>, con coseno <strong>0.022</strong>. El residuo conserva <strong>97.6 %</strong> de la energía cuadrática TF-IDF original: ocho componentes ofrecen una descripción muy parcial, no una representación semántica exhaustiva. Esta energía residual no es varianza explicada ni una medida de error de pronóstico.</p>
+<p>El ajuste utilizó <strong>40,000</strong> titulares distintos de entrenamiento y <strong>4,823</strong> características. Error relativo de reconstrucción TF-IDF: <strong>0.988</strong>. Similitud coseno media entre componentes emparejados de dos semillas: <strong>0.833</strong>. Estas medidas resumen la capacidad de reconstrucción y la reproducibilidad de los componentes.</p>
+<p>La muestra de ajuste cubre <strong>2008-05-22 a 2017-12-31</strong>. El componente menos estable es <strong>T06</strong>, con coseno <strong>0.022</strong>. El residuo conserva <strong>97.6 %</strong> de la energía cuadrática TF-IDF original: la energía residual cuantifica la información TF-IDF que permanece fuera de la aproximación de ocho componentes.</p>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1609,8 +1609,8 @@
 </section>
 <section id="evolucion-temporal-y-composicion-por-fuente">
 <h2>7.3 Evolución temporal y composición por fuente<a class="headerlink" href="#evolucion-temporal-y-composicion-por-fuente" title="Link to this heading">#</a></h2>
-<p>Se congelan vocabulario, IDF y componentes. Todos los títulos de entrenamiento y validación se proyectan sobre esa misma base. Los pesos se normalizan por la masa reconstruida para evitar que la escala arbitraria de cada componente NMF sesgue su comparación. No son probabilidades de pertenencia o de anticipación.</p>
-<p>Un texto sin términos representados queda sin tópico, con pesos ausentes; no se asigna artificialmente a T01. Las medias temáticas excluyen esos textos y siempre se acompañan de la fracción sin representación. Los huecos temporales no son meses de ausencia real de noticias.</p>
+<p>Los titulares de entrenamiento y validación se proyectan con vocabulario, IDF y componentes fijos. Los pesos se normalizan por la masa reconstruida para corregir la indeterminación de escala de NMF y expresar contribuciones relativas.</p>
+<p>Los documentos sin representación reciben pesos ausentes y se contabilizan por separado. Las medias se calculan sobre documentos representados y se acompañan de su cobertura. Los intervalos mensuales sin registros corresponden a vacíos en la recuperación documental.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">profiles</span><span class="p">()</span>
@@ -2104,14 +2104,14 @@
 <p>215 rows × 11 columns</p>
 </div></div><img alt="_images/ab08a21ecaeebec34cad4358f195c860bb83192ffd79fd526baece4aed4a7520.png" src="_images/ab08a21ecaeebec34cad4358f195c860bb83192ffd79fd526baece4aed4a7520.png" />
 <img alt="_images/b2144e91415450f66a800c3226ff5d769432f59fca018e14e195e92fb5d3c387.png" src="_images/b2144e91415450f66a800c3226ff5d769432f59fca018e14e195e92fb5d3c387.png" />
-<p>Los espacios sin cobertura mensual son datos no recuperados. Los pesos son contribuciones relativas de la representación NMF, no probabilidades. Los documentos sin representación se excluyen de las medias temáticas y se cuentan por separado. No se compara contra precios ni se evalúa anticipación; los cambios pueden mezclar contenido, fecha, fuente y forma del título.</p>
+<p>Los espacios sin cobertura mensual corresponden a registros no recuperados. Los pesos expresan contribuciones relativas de NMF. Las medias se calculan sobre documentos representados y se acompañan de su cobertura. Las variaciones reflejan conjuntamente contenido, periodo, fuente y características formales del titular.</p>
 </div>
 </div>
 </section>
-<section id="cambio-del-vocabulario-y-limites-del-analisis">
-<h2>7.4 Cambio del vocabulario y límites del análisis<a class="headerlink" href="#cambio-del-vocabulario-y-limites-del-analisis" title="Link to this heading">#</a></h2>
-<p>Se miden términos fuera del vocabulario ajustado y divergencia léxica entre entrenamiento y validación usando una base fija. El vocabulario no se amplía con validación. Los términos excluidos por frecuencia también cuentan como externos: no se interpreta la cifra como porcentaje de palabras desconocidas del español.</p>
-<p>La cobertura editorial, la fuente y la fecha cambian conjuntamente. Un aumento de un componente puede reflejar recuperación del archivo o estilo editorial, además de contenido. El entrenamiento está dominado por un medio; no se presenta una taxonomía universal. No se analiza correlación con precios ni mejora predictiva. E1 continúa sin NLP, y el análisis no resuelve la incertidumbre sobre versiones históricas del corpus ampliado.</p>
+<section id="cambio-del-vocabulario-y-limitaciones">
+<h2>7.4 Cambio del vocabulario y limitaciones<a class="headerlink" href="#cambio-del-vocabulario-y-limitaciones" title="Link to this heading">#</a></h2>
+<p>El desplazamiento léxico se evalúa mediante la fracción de términos externos al vocabulario de entrenamiento y la divergencia entre distribuciones de frecuencias. Los términos externos incluyen tanto vocablos nuevos como palabras excluidas por los umbrales de frecuencia.</p>
+<p>La evolución de los componentes combina variaciones de contenido, composición editorial y recuperación del archivo. El predominio de El Colombiano en entrenamiento condiciona la representación aprendida y su transferencia a otras fuentes. La interpretación de los tópicos se circunscribe a las características del corpus recuperado.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study</span><span class="o">.</span><span class="n">drift</span><span class="p">()</span>
@@ -2254,13 +2254,13 @@
   </tbody>
 </table>
 </div></div><img alt="_images/bd17a9b98cb91e820fe2ee72cc1b4d38054bfa3a476f71b6684f09d5579f5689.png" src="_images/bd17a9b98cb91e820fe2ee72cc1b4d38054bfa3a476f71b6684f09d5579f5689.png" />
-<p>La divergencia Jensen–Shannon entre las frecuencias léxicas de train y validación, en el vocabulario fijo y una casilla externa, es <strong>0.0448 bits</strong>. Su rango es de 0 a 1; no es una prueba de significancia. «Fuera del vocabulario» incluye términos poco frecuentes o excluidos por las reglas TF-IDF, no sólo palabras nuevas.</p>
+<p>La divergencia Jensen–Shannon entre las frecuencias léxicas de train y validación, en el vocabulario fijo y una casilla externa, es <strong>0.0448 bits</strong>. Se interpreta como una medida descriptiva con valores entre 0 y 1. La categoría externa agrupa términos nuevos y términos excluidos por las reglas de frecuencia.</p>
 <h3 class="rubric" id="id1">Implicaciones del análisis</h3>
 <ul class="simple">
 <li><p><strong>Preprocesamiento:</strong> Conservar calidad, repetición y términos no representados; si se usa texto en una fase posterior, ajustar su vocabulario y agrupamiento sólo con train.</p></li>
-<li><p><strong>Arquitectura:</strong> Los tópicos son un diagnóstico de contenido. E1 permanece sin NLP ni conteos o pesos derivados de titulares.</p></li>
-<li><p><strong>Validación:</strong> Validación sólo se proyecta con el modelo congelado. No se abrió el contenido de prueba y no se eligió el número de componentes según precios.</p></li>
-<li><p><strong>Riesgos:</strong> El archivo de entrenamiento no representa todos los medios. Estabilidad numérica no certifica coherencia semántica, utilidad predictiva o disponibilidad histórica de cada versión.</p></li>
+<li><p><strong>Arquitectura:</strong> La representación por tópicos permite examinar la composición documental y su variación entre fuentes y periodos.</p></li>
+<li><p><strong>Validación:</strong> Proyectar validación con vocabulario, IDF y componentes estimados en entrenamiento; mantener fijo el número de componentes del protocolo.</p></li>
+<li><p><strong>Riesgos:</strong> El predominio editorial de una fuente y la incertidumbre sobre las versiones históricas condicionan la interpretación y transferencia de los componentes.</p></li>
 </ul>
 </div>
 </div>
@@ -2336,7 +2336,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-repeticion-y-diversidad-lexica">7.1 Contenido, repetición y diversidad léxica</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limites-del-analisis">7.4 Cambio del vocabulario y límites del análisis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limitaciones">7.4 Cambio del vocabulario y limitaciones</a></li>
 </ul>
   </nav></div>
 
@@ -2351,7 +2351,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

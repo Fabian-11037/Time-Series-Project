@@ -214,9 +214,9 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -368,7 +368,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="distribucion-anomalias-y-cambios-de-regimen">
 <h1>3. Distribución, anomalías y cambios de régimen<a class="headerlink" href="#distribucion-anomalias-y-cambios-de-regimen" title="Link to this heading">#</a></h1>
 <p>Los precios están en COP nominales por kWh. Se comparan escala original y log1p, sin ajustar una transformación usando validación o prueba. Los umbrales IQR/MAD son diagnósticos explícitos y no reglas de eliminación.</p>
-<p>Las rupturas se buscan sobre la media diaria en log1p estandarizada con entrenamiento: segmentación binaria determinista, segmentos de al menos 90 días, candidatos cada 7 días, umbral de ganancia SSE de <span class="math notranslate nohighlight">\(3\log n\)</span> y un máximo de ocho rupturas. Es una heurística exploratoria de cambio de media, no una prueba confirmatoria de eventos o causas.</p>
+<p>Las rupturas se buscan sobre la media diaria en log1p estandarizada con entrenamiento: segmentación binaria determinista, segmentos de al menos 90 días, candidatos cada 7 días, umbral de ganancia SSE de <span class="math notranslate nohighlight">\(3\log n\)</span> y un máximo de ocho rupturas. El procedimiento identifica cambios exploratorios de media para el análisis de regímenes.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -866,7 +866,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

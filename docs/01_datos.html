@@ -214,9 +214,9 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -367,11 +367,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="problema-fuentes-y-estructura">
 <h1>1. Problema, fuentes y estructura<a class="headerlink" href="#problema-fuentes-y-estructura" title="Link to this heading">#</a></h1>
-<p>Este proyecto pronostica una serie temporal usando su propia historia, covariables numéricas y titulares originales. No es regresión temporal sin rezagos ni pronóstico del costo unitario de una factura.</p>
-<p>Para un origen horario <span class="math notranslate nohighlight">\(o\)</span>, la tarea candidata es <span class="math notranslate nohighlight">\(\hat{\mathbf y}_{o:o+H}=f_\theta(\mathbf y_{&lt;o},\mathbf x_{&lt;o},\mathcal T_{\le o})\)</span>, con etiquetas de los intervalos <span class="math notranslate nohighlight">\([o,o+H)\)</span> y observaciones numéricas de intervalos ya terminados. La política de disponibilidad define <span class="math notranslate nohighlight">\(\mathcal T_{\le o}\)</span>: fecha supuesta en el conjunto ampliado autorizado o captura comprobada en el estricto. La versión de la covariable también importa.</p>
-<p><strong>En los modelos del E1 se omite por completo <span class="math notranslate nohighlight">\(\mathcal T\)</span></strong>: sólo se usan variables numéricas y calendario conocido. La notación multimodal describe las fases posteriores del proyecto, no las entradas de los tres modelos del E1.</p>
-<p>El bloque horario conserva precio de bolsa, demanda real/comercial y temperatura, humedad y precipitación de ocho ciudades. La hidrología es diaria: llenado, reserva útil, capacidad útil y aportes. El reanálisis ERA5 representa puntos de rejilla; no son ocho estaciones meteorológicas observadas ni promedios poblacionales. La precipitación corresponde a la hora anterior a su marca temporal.</p>
-<p>Las cifras siguientes se calculan desde el manifiesto y la auditoría. Los archivos y sus huellas están en el repositorio. <a class="reference external" href="https://github.com/EquipoAnaliticaXM/API_XM">XM</a>, <a class="reference external" href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo</a>, <a class="reference external" href="https://www.ideam.gov.co/sala-de-prensa/boletines">IDEAM</a> y <a class="reference external" href="https://sinergox.xm.com.co/">Sinergox</a> son las fuentes principales. <a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5">ECMWF</a> explica la naturaleza retrospectiva de ERA5.</p>
+<p>El objetivo del estudio es pronosticar el precio nacional horario de bolsa a partir de su historia y de covariables del sistema energético.</p>
+<p>Para un origen horario <span class="math notranslate nohighlight">\(o\)</span>, la formulación general es <span class="math notranslate nohighlight">\(\hat{\mathbf y}_{o:o+H}=f_\theta(\mathbf y_{&lt;o},\mathbf x_{&lt;o},\mathcal T_{\le o})\)</span>, donde las etiquetas corresponden a los intervalos <span class="math notranslate nohighlight">\([o,o+H)\)</span>, las variables numéricas representan intervalos anteriores y <span class="math notranslate nohighlight">\(\mathcal T_{\le o}\)</span> contiene documentos disponibles al origen. La definición operativa de disponibilidad y la versión de cada registro se especifican en el capítulo de validación.</p>
+<p>El bloque horario incluye precio de bolsa, demanda real y comercial, temperatura, humedad y precipitación de ocho ciudades. La hidrología diaria comprende llenado, reserva útil, capacidad útil y aportes. Las variables meteorológicas corresponden a puntos de rejilla del reanálisis ERA5; la precipitación representa la hora anterior a su marca temporal.</p>
+<p>El inventario se calcula a partir del manifiesto y las auditorías de integridad. Las fuentes principales son <a class="reference external" href="https://github.com/EquipoAnaliticaXM/API_XM">XM</a>, <a class="reference external" href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo</a>, <a class="reference external" href="https://www.ideam.gov.co/sala-de-prensa/boletines">IDEAM</a> y <a class="reference external" href="https://sinergox.xm.com.co/">Sinergox</a>. La descripción de <a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5">ECMWF</a> documenta el origen y las características de ERA5.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -379,7 +378,7 @@
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
@@ -397,7 +396,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">overview</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">overview</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -598,7 +597,7 @@
     </tr>
   </tbody>
 </table>
-</div></div><p>El objetivo es el <strong>precio nacional de bolsa en COP/kWh</strong>, no el costo unitario de una factura regional. La unidad numérica es el intervalo horario del SIN; cada ciudad es un punto de rejilla ERA5. El número de horas no equivale a muestras independientes.</p>
+</div></div><p>La variable objetivo es el <strong>precio nacional de bolsa en COP/kWh</strong>. La unidad de observación es el intervalo horario del SIN; las variables meteorológicas corresponden a puntos de rejilla ERA5. La dependencia serial se considera en el diseño de validación e inferencia.</p>
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">
 <li><p><strong>Preprocesamiento:</strong> Conservar frecuencias y ubicaciones originales; no unir cada título duplicando una fila de precio.</p></li>
@@ -674,7 +673,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

@@ -51,7 +51,7 @@ def overview():
     table(pd.DataFrame(rows).set_index('bloque'),'inventario')
     summary=metadata('coverage_summary.json')
     table(pd.DataFrame(summary['by_source']).T,'inventario_texto_fuente')
-    display(Markdown('El objetivo es el **precio nacional de bolsa en COP/kWh**, no el costo unitario de una factura regional. La unidad numérica es el intervalo horario del SIN; cada ciudad es un punto de rejilla ERA5. El número de horas no equivale a muestras independientes.'))
+    display(Markdown('La variable objetivo es el **precio nacional de bolsa en COP/kWh**. La unidad de observación es el intervalo horario del SIN; las variables meteorológicas corresponden a puntos de rejilla ERA5. La dependencia serial se considera en el diseño de validación e inferencia.'))
     decision('Conservar frecuencias y ubicaciones originales; no unir cada título duplicando una fila de precio.',
        'Modelar una serie nacional con covariables multivariadas y un conjunto de textos por origen.',
        'Partición por tiempo y etiquetas completas; la cobertura de fuentes es una auditoría estructural.',
@@ -276,14 +276,14 @@ def text_analysis():
                 ratio=SequenceMatcher(None,orthographic(a),orthographic(b),autojunk=False).ratio()
                 if .9<=ratio<1:pairs.append(dict(url_sha256=hashlib.sha256(url.encode()).hexdigest(),similitud_caracteres=ratio))
     table(pd.DataFrame(pairs,columns=['url_sha256','similitud_caracteres']),'casi_duplicados_misma_url_train')
-    display(Markdown('Las coincidencias de título no se eliminan automáticamente: un boletín diario o una caricatura puede conservar el mismo título en fechas distintas. El criterio de casi duplicado anterior es ortográfico y limitado a una misma URL; no certifica ausencia de paráfrasis o sindicación entre URLs. El análisis de tópicos aprendidos se presenta después; no se calcula sentimiento ni relevancia predictiva.'))
+    display(Markdown('La identificación de duplicados considera la URL, la fecha y la similitud ortográfica del titular. Los títulos periódicos se conservan para distinguir repetición editorial y duplicación de registros. El procedimiento cubre variaciones ortográficas dentro de una misma URL; la paráfrasis y la sindicación entre fuentes requieren evaluación semántica adicional.'))
     summary=metadata('coverage_summary.json')
     table(pd.DataFrame(summary['by_source']).T[['titles_all_period','titles_declared_2020_2025','titles_publication_date_unknown',
       'versions_verified_available_by_end_2025','months_2020_2025_with_declared_titles','months_2020_2025_with_verified_availability']],'cobertura_por_fuente')
     decision('Conservar máscaras de recuperación/fuente y fechas supuestas/comprobadas. No rellenar texto ausente con un resumen generado.',
        'Encoder y mecanismo de utilidad entrenados con train; permitir que el modelo ignore texto corto/repetitivo. Agrupamiento, si se usa, se aprende dentro del pipeline.',
        'Auditar cambios de fuente y cantidad de texto; comparar con/sin NLP en los mismos orígenes y con textos placebo en el benchmark futuro.',
-       'La cobertura cambia mucho entre épocas y puede actuar como atajo. El conjunto ampliado autorizado contiene versiones retrospectivas no acreditadas; no es una demostración libre de fuga. Los anexos ZIP y nombres de informes aportan una señal semántica limitada.')
+       'La variación temporal de cobertura y fuentes puede introducir asociaciones espurias. La recuperación retrospectiva limita la verificación de versiones históricas; los nombres de anexos e informes ofrecen menor especificidad documental que los titulares individuales.')
 
 def validation_design():
     train=load_numeric();valid=load_numeric('validation')
@@ -332,4 +332,4 @@ def validation_design():
     decision('Ajustar toda transformación sólo con train. Si se recalibra con origen móvil, usar únicamente datos anteriores al origen y una política cerrada antes de prueba.',
        'Comparar capacidad de adaptación de modelos con el mismo presupuesto; no seleccionar una red con estas estadísticas de validación.',
        'Prueba congelada; sólo integridad/calendario/cobertura. Contexto pasado puede atravesar el corte, etiquetas futuras no. Origen es inicio del intervalo a pronosticar.',
-       'La validación está explorada para documentar desplazamientos y ya no es un conjunto virgen. Las cotas de disponibilidad numérica y las revisiones de texto impiden afirmar un backtest operativo libre de fuga.')
+       'El uso exploratorio de validación y la incertidumbre sobre disponibilidad y revisiones deben incorporarse a la interpretación de la evaluación predictiva.')

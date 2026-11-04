@@ -66,7 +66,7 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="9. Literatura consultada e implicaciones para el EDA" href="09_literatura.html" />
+    <link rel="next" title="9. Literatura consultada e implicaciones metodológicas" href="09_literatura.html" />
     <link rel="prev" title="7. Texto: cobertura, duplicados y disponibilidad" href="07_texto.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -212,9 +212,9 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones para el EDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Decisiones derivadas y correspondencia con el Entregable 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad y límites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
 
@@ -367,7 +367,7 @@
 <h1>8. Partición, desplazamiento y controles de fuga<a class="headerlink" href="#particion-desplazamiento-y-controles-de-fuga" title="Link to this heading">#</a></h1>
 <p>La propuesta cronológica mantiene entrenamiento, validación y prueba separados. Sólo se muestran distribuciones del objetivo y covariables de entrenamiento/validación. Del tramo de prueba se usan calendario y controles de integridad/procedencia, sin explorar sus valores para decidir preprocesamiento.</p>
 <p>KS se presenta como distancia descriptiva sin su p-valor IID; Wasserstein se normaliza con el IQR de entrenamiento. El intervalo de la diferencia de medias usa bootstrap de bloques móviles de 30 días, con 199 réplicas y semilla fija. Supone estabilidad aproximada dentro de cada periodo y se interpreta como diagnóstico.</p>
-<p>La propuesta de siguiente fase usa origen diario, contexto de una semana y salida directa de las siguientes 24 horas. Los conteos de ventanas sólo usan calendario: no leen valores de prueba. Los horizontes que atraviesan un corte se purgan. Deben cerrarse las decisiones restantes en un preregistro de benchmark antes de entrenar modelos.</p>
+<p>El diseño de pronóstico considerado utiliza origen diario, contexto de una semana y salida directa de las siguientes 24 horas. Los conteos de ventanas sólo usan calendario: no leen valores de prueba. Los horizontes que atraviesan un corte se purgan. Deben cerrarse las decisiones restantes en un preregistro de benchmark antes de entrenar modelos.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -375,7 +375,7 @@
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
@@ -393,7 +393,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">validation_design</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">validation_design</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -698,7 +698,7 @@
 <li><p><strong>Preprocesamiento:</strong> Ajustar toda transformación sólo con train. Si se recalibra con origen móvil, usar únicamente datos anteriores al origen y una política cerrada antes de prueba.</p></li>
 <li><p><strong>Arquitectura:</strong> Comparar capacidad de adaptación de modelos con el mismo presupuesto; no seleccionar una red con estas estadísticas de validación.</p></li>
 <li><p><strong>Validación:</strong> Prueba congelada; sólo integridad/calendario/cobertura. Contexto pasado puede atravesar el corte, etiquetas futuras no. Origen es inicio del intervalo a pronosticar.</p></li>
-<li><p><strong>Riesgos:</strong> La validación está explorada para documentar desplazamientos y ya no es un conjunto virgen. Las cotas de disponibilidad numérica y las revisiones de texto impiden afirmar un backtest operativo libre de fuga.</p></li>
+<li><p><strong>Riesgos:</strong> El uso exploratorio de validación y la incertidumbre sobre disponibilidad y revisiones deben incorporarse a la interpretación de la evaluación predictiva.</p></li>
 </ul>
 </div>
 </div>
@@ -748,7 +748,7 @@
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">9. Literatura consultada e implicaciones para el EDA</p>
+        <p class="prev-next-title">9. Literatura consultada e implicaciones metodológicas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -768,7 +768,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-Por Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte
+Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>

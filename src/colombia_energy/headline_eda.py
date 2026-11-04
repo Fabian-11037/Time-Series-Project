@@ -116,7 +116,7 @@ class HeadlineStudy:
             ax.fill_between(group['anio'],group['diversidad_q25'],group['diversidad_q75'],alpha=.2)
         ax.axvline(2017.5,color='#9a4949',ls='--');ax.set(xlabel='Año de disponibilidad supuesta',ylabel='Tipos / 1.000 términos',title='Diversidad léxica en bloques de igual longitud');ax.legend()
         figure(fig,'titulares_diversidad_anual')
-        display(Markdown('Las bandas son cuartiles de bloques de 1.000 términos, no intervalos de confianza. Se descarta el bloque incompleto de cada año. El orden determinista por ID no es un flujo conversacional. La diversidad y los términos frecuentes describen el archivo recuperado, no calidad periodística, sentimiento ni capacidad predictiva.'))
+        display(Markdown('Las bandas representan el rango intercuartílico de bloques de 1.000 términos. Se excluye el bloque incompleto de cada año y se conserva un orden determinista por identificador. La diversidad y las frecuencias caracterizan la composición léxica del archivo recuperado.'))
 
     def fit_topics(self):
         start=time.perf_counter()
@@ -160,9 +160,9 @@ class HeadlineStudy:
             ax.barh(self.features[idx],h[idx]/h.sum());ax.set(title=self.labels[i],xlabel='Peso relativo en el componente')
             ax.tick_params(axis='y',labelsize=10)
         figure(fig,'titulares_topicos_nmf')
-        display(Markdown(f"El ajuste utilizó **{len(self.fit):,}** titulares distintos de entrenamiento y **{len(self.features):,}** características. Error relativo de reconstrucción TF-IDF: **{self.fit_audit['relative_frobenius_error']:.3f}**. Similitud coseno media entre componentes emparejados de dos semillas: **{self.fit_audit['stability_mean_cosine']:.3f}**. Son diagnósticos internos: no certifican significado, número óptimo de tópicos ni utilidad para el precio."))
+        display(Markdown(f"El ajuste utilizó **{len(self.fit):,}** titulares distintos de entrenamiento y **{len(self.features):,}** características. Error relativo de reconstrucción TF-IDF: **{self.fit_audit['relative_frobenius_error']:.3f}**. Similitud coseno media entre componentes emparejados de dos semillas: **{self.fit_audit['stability_mean_cosine']:.3f}**. Estas medidas resumen la capacidad de reconstrucción y la reproducibilidad de los componentes."))
         weakest=min(self.stability,key=self.stability.get)
-        display(Markdown(f"La muestra de ajuste cubre **{self.fit['available'].min().date()} a {self.fit['available'].max().date()}**; no se confunde con la cobertura completa del corpus proyectado. El componente menos estable es **{self.labels[weakest]}**, con coseno **{self.stability[weakest]:.3f}**. El residuo conserva **{100*self.fit_audit['relative_frobenius_error']**2:.1f} %** de la energía cuadrática TF-IDF original: ocho componentes ofrecen una descripción muy parcial, no una representación semántica exhaustiva. Esta energía residual no es varianza explicada ni una medida de error de pronóstico."))
+        display(Markdown(f"La muestra de ajuste cubre **{self.fit['available'].min().date()} a {self.fit['available'].max().date()}**. El componente menos estable es **{self.labels[weakest]}**, con coseno **{self.stability[weakest]:.3f}**. El residuo conserva **{100*self.fit_audit['relative_frobenius_error']**2:.1f} %** de la energía cuadrática TF-IDF original: la energía residual cuantifica la información TF-IDF que permanece fuera de la aproximación de ocho componentes."))
         if notes or notes2:display(Markdown('**Convergencia:** '+str(notes+notes2)+' Se conserva el ajuste aproximado y su límite de iteraciones; no se selecciona otra configuración por sus resultados.'))
         df=np.asarray(self.x_fit.getnnz(axis=0)).ravel()
         bigrams=[i for i,t in enumerate(self.features) if ' ' in t]
@@ -232,7 +232,7 @@ class HeadlineStudy:
         fig,ax=plt.subplots(figsize=(11,5));im=ax.imshow(means,aspect='auto',vmin=0,vmax=1,cmap='Blues')
         ax.set_yticks(range(len(means)),means.index);ax.set_xticks(range(8),labels);ax.set_title('Validación: proyección por fuente, sin reajustar tópicos')
         fig.colorbar(im,ax=ax,label='Contribución media relativa');figure(fig,'titulares_topicos_validacion_fuente')
-        display(Markdown('Los espacios sin cobertura mensual son datos no recuperados. Los pesos son contribuciones relativas de la representación NMF, no probabilidades. Los documentos sin representación se excluyen de las medias temáticas y se cuentan por separado. No se compara contra precios ni se evalúa anticipación; los cambios pueden mezclar contenido, fecha, fuente y forma del título.'))
+        display(Markdown('Los espacios sin cobertura mensual corresponden a registros no recuperados. Los pesos expresan contribuciones relativas de NMF. Las medias se calculan sobre documentos representados y se acompañan de su cobertura. Las variaciones reflejan conjuntamente contenido, periodo, fuente y características formales del titular.'))
 
     def drift(self):
         known={t for t in self.features if ' ' not in t};unigrams=sorted(known)
@@ -260,8 +260,8 @@ class HeadlineStudy:
             frames={k:len(v) for k,v in [('train',self.train),('validation',self.validation)]},
             topic_assignments_are_EDA_only=True,manual_topic_names=False,numeric_or_price_data_read=False)
         (OUT/'analysis_audit.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2),encoding='utf-8')
-        display(Markdown(f'La divergencia Jensen–Shannon entre las frecuencias léxicas de train y validación, en el vocabulario fijo y una casilla externa, es **{lexical_js:.4f} bits**. Su rango es de 0 a 1; no es una prueba de significancia. «Fuera del vocabulario» incluye términos poco frecuentes o excluidos por las reglas TF-IDF, no sólo palabras nuevas.'))
+        display(Markdown(f'La divergencia Jensen–Shannon entre las frecuencias léxicas de train y validación, en el vocabulario fijo y una casilla externa, es **{lexical_js:.4f} bits**. Se interpreta como una medida descriptiva con valores entre 0 y 1. La categoría externa agrupa términos nuevos y términos excluidos por las reglas de frecuencia.'))
         decision('Conservar calidad, repetición y términos no representados; si se usa texto en una fase posterior, ajustar su vocabulario y agrupamiento sólo con train.',
-            'Los tópicos son un diagnóstico de contenido. E1 permanece sin NLP ni conteos o pesos derivados de titulares.',
-            'Validación sólo se proyecta con el modelo congelado. No se abrió el contenido de prueba y no se eligió el número de componentes según precios.',
-            'El archivo de entrenamiento no representa todos los medios. Estabilidad numérica no certifica coherencia semántica, utilidad predictiva o disponibilidad histórica de cada versión.')
+            'La representación por tópicos permite examinar la composición documental y su variación entre fuentes y periodos.',
+            'Proyectar validación con vocabulario, IDF y componentes estimados en entrenamiento; mantener fijo el número de componentes del protocolo.',
+            'El predominio editorial de una fuente y la incertidumbre sobre las versiones históricas condicionan la interpretación y transferencia de los componentes.')

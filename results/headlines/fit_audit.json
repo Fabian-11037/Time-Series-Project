@@ -28,7 +28,7 @@
   "second_convergence_warnings": [],
   "relative_frobenius_error": 0.9880154943509745,
   "stability_mean_cosine": 0.8328869731709787,
-  "seconds": 7.588617100031115,
+  "seconds": 2.9019952000235207,
   "E1_numeric_only": true,
   "raw_dataset_modified": false
 }

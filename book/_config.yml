@@ -1,5 +1,5 @@
 title: "Precio eléctrico colombiano: datos y análisis exploratorio"
-author: "Fabian José Manrique Morelos · Maestría en Estadística Aplicada · Universidad del Norte"
+author: "Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte"
 copyright: "2026"
 language: es
 execute:
@@ -12,7 +12,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   home_page_in_navbar: true
-  extra_footer: "EDA del candidato colombiano. Texto ampliado con disponibilidad supuesta; versiones verificadas separadas."
+  extra_footer: "Análisis exploratorio del precio eléctrico colombiano."
 parse:
   myst_enable_extensions:
     - dollarmath

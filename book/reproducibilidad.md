@@ -1,6 +1,6 @@
-# Reproducibilidad y límites
+# Reproducibilidad
 
-El dataset está versionado en `data/` como CSV comprimidos por año y fuente. Cada archivo tiene conteo y SHA-256 en `data/manifest.json`. No se necesita volver a consultar APIs para reproducir el EDA. La hidrología conserva frecuencia diaria; las noticias son registros de texto y procedencia separados, sin multiplicar filas horarias.
+El conjunto de datos se distribuye en `data/` mediante archivos CSV comprimidos por año y fuente. El manifiesto `data/manifest.json` registra conteos y huellas SHA-256. Las series horarias, la hidrología diaria y los documentos conservan sus frecuencias y unidades de observación.
 
 ```bash
 python -m venv .venv
@@ -11,17 +11,19 @@ python -m unittest discover -s tests
 python scripts/create_notebooks.py
 python scripts/create_literature_notebooks.py
 python scripts/run_eda.py
+python scripts/verify_book.py
 ```
 
-`run_eda.py` ejecuta los cuadernos con el intérprete del entorno actual, comprueba errores y construye Jupyter Book 1.0.4. La construcción del libro usa las salidas ya ejecutadas; no vuelve a calcularlas al renderizar. El HTML queda en `docs/index.html`. El tiempo de ejecución depende del equipo, especialmente de STL/MSTL y los diagnósticos temporales.
+`run_eda.py` ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en `docs/`. Los generadores de capítulos se encuentran en `scripts/` y los procedimientos analíticos en `src/colombia_energy/`. Las tablas y figuras se guardan en `results/`.
 
-Las fuentes editables son los generadores en `scripts/` y los análisis en `src/colombia_energy/eda.py`. Las figuras PNG y tablas CSV se generan en `results/`. La bibliografía distingue extracciones verificadas de los inventarios previos de resúmenes.
+## Partición y disponibilidad temporal
 
-El manifiesto de prueba se guarda antes del EDA en `data/test_freeze.json`. La lectura de prueba está bloqueada por defecto. El libro analiza entrenamiento y, de forma separada, desplazamientos de validación. El calendario y la cobertura completa se auditan como metadatos; no se usan para optimizar con el objetivo de prueba.
+El manifiesto `data/test_freeze.json` identifica los archivos de prueba. Los procedimientos analíticos utilizan entrenamiento y diagnósticos separados de validación; las verificaciones del periodo completo comprueban calendario, integridad y procedencia.
 
-Para E1, `model_policy.py` admite sólo variables numéricas declaradas y calendario conocido: rechaza texto, embeddings, sentimiento y conteos de noticias. Para las fases posteriores, `asof_text.py` distingue los selectores `verified` y `declared_dates`; este último incluye versiones no acreditadas por decisión del autor y compara con disponibilidad supuesta. No inventa fechas de informes sin publicación conocida.
+El módulo `asof_text.py` implementa los escenarios `verified` y `declared_dates`. El primero utiliza capturas de versiones documentales verificadas; el segundo utiliza fechas de publicación declaradas y la regla de disponibilidad supuesta. Los informes sin fecha de publicación permanecen en el inventario sin asignación temporal.
 
-Los archivos brutos extensos de corpus/noticias y los PDF privados no se publican. Los scripts originales de adquisición se conservan en `scripts/acquisition/` como procedencia; sus rutas de salida corresponden al flujo original. `scripts/import_local_downloads.py` documenta la conversión de esa instantánea a las particiones versionadas. Las APIs y archivos web pueden cambiar: una descarga nueva no garantiza reproducir una edición histórica. Las huellas del repositorio identifican la instantánea efectivamente analizada.
+Las series numéricas y parte del corpus documental proceden de fuentes retrospectivas. La incertidumbre sobre las versiones y sus fechas efectivas de publicación limita la reconstrucción de un escenario operativo histórico y debe considerarse en el análisis de sensibilidad.
 
-La disponibilidad histórica de todas las versiones numéricas no está acreditada. El texto ampliado también puede contener revisiones posteriores. Por tanto, reproducibilidad de la instantánea no equivale a un backtest operativo sin fuga. No se presentan resultados predictivos ni se declara cumplido el Entregable 1 completo.
+## Procedencia
 
+Los scripts de adquisición se conservan en `scripts/acquisition/`. La conversión de la instantánea analizada se documenta en `scripts/import_local_downloads.py`. Las huellas permiten identificar los archivos utilizados y contrastar futuras actualizaciones de las fuentes. El directorio `literature/` contiene los registros de las extracciones bibliográficas verificadas.
