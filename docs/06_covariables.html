@@ -404,52 +404,11 @@
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.png'</span><span class="p">),</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -948,18 +907,7 @@
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Número de condición de la matriz estandarizada diaria de covariables: **</span><span class="si">{</span><span class="n">condition</span><span class="si">:</span><span class="s1">.4g</span><span class="si">}</span><span class="s1">**. El VIF usa pseudoinversa si hay singularidad; se interpreta junto al número de condición, no como identificación causal.'</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>Número de condición de la matriz estandarizada diaria de covariables: <strong>189.1</strong>. El VIF usa pseudoinversa si hay singularidad; se interpreta junto al número de condición, no como identificación causal.</p>
 </div>
@@ -1264,18 +1212,7 @@
 <img alt="_images/0212bb1710b317a72e996445c22468affa27b1370a6add1723660343c5e341e9.png" src="_images/0212bb1710b317a72e996445c22468affa27b1370a6add1723660343c5e341e9.png" />
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'Conservar las ocho ciudades. Acumulados y cambios sólo hacia atrás; estandarización/selección sólo con train.'</span><span class="p">,</span> <span class="s1">'Bloques numéricos de demanda, clima e hidrología y fusión aprendida; regularizar ante covariables redundantes.'</span><span class="p">,</span> <span class="s1">'Asociaciones contemporáneas y con rezago son EDA retrospectivo, no evidencia de información conocida ni ganancia fuera de muestra.'</span><span class="p">,</span> <span class="s1">'Demanda realizada del horizonte y clima futuro realizado producirían fuga. Un día de rezago hidrológico es ilustración, no un rezago de publicación certificado. Lluvia urbana no reemplaza lluvia de cuencas aportantes; esta última no está descargada.'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">

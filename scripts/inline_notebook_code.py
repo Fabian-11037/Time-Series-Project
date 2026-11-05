@@ -49,7 +49,7 @@ def apply_presentation_visibility(nb):
         tags=[tag for tag in cell.metadata.get('tags',[]) if tag not in {'hide-input','remove-input','hide-cell'}]
         presentation=is_presentation_cell(cell.source)
         if presentation:
-            tags.append('hide-input')
+            tags.append('remove-input')
         cell.metadata['code_role']='presentation' if presentation else 'analysis'
         if tags:
             cell.metadata['tags']=tags

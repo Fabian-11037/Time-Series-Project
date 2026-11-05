@@ -404,52 +404,11 @@
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.png'</span><span class="p">),</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,18 +606,7 @@
 <img alt="_images/a5ea0ba7416689886199138718a491406c5f5e07246296b3107af4d53a4c6331.png" src="_images/a5ea0ba7416689886199138718a491406c5f5e07246296b3107af4d53a4c6331.png" />
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'Calendario conocido al origen y rezagos diarios/semanales; el ciclo anual de 365 días aproxima años bisiestos.'</span><span class="p">,</span> <span class="s1">'Contexto candidato de una semana y salida de 24 horas; CNN local con acceso a rezagos estacionales o recurrencia/atención.'</span><span class="p">,</span> <span class="s1">'Comparar contra ingenuos diarios y semanales con los mismos orígenes. No escoger ventanas usando prueba.'</span><span class="p">,</span> <span class="s1">'Descomposiciones centradas son diagnóstico de train, no preprocesamiento causal listo para desplegar. Los perfiles no demuestran causalidad de hora o estación.'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">
