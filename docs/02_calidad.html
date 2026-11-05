@@ -367,32 +367,116 @@
 <h1>2. Calidad, integridad y sesgos de medición<a class="headerlink" href="#calidad-integridad-y-sesgos-de-medicion" title="Link to this heading">#</a></h1>
 <p>La evaluación de calidad comprende continuidad temporal, unicidad de las claves, valores faltantes, finitud y rangos físicos. Las incidencias se conservan con indicadores de calidad para su interpretación y contraste con las definiciones de las fuentes.</p>
 <p>El precio de XM constituye una medida administrativa sujeta a revisión. En las variables meteorológicas, la resolución de rejilla y el carácter retrospectivo del reanálisis introducen diferencias respecto de mediciones instrumentales locales. La cuantificación de ese error requiere observaciones de estaciones emparejadas, ausentes en el conjunto analizado.</p>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">ROOT</span><span class="o">/</span><span class="s1">'src'</span><span class="p">))</span>
+
+<span class="n">ROOT</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+    <span class="n">directory</span> <span class="k">for</span> <span class="n">directory</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span> <span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">directory</span> <span class="o">/</span> <span class="s2">"data/manifest.json"</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">colombia_energy</span><span class="w"> </span><span class="kn">import</span> <span class="n">eda</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.float_format'</span><span class="p">,</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.5g</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">quality</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SPLITS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'train'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">),</span> <span class="s1">'validation'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="s1">'test'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)}</span>
+<span class="n">TIME</span> <span class="o">=</span> <span class="s1">'timestamp_start_colombia'</span>
+<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">RESULTS</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.float_format'</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.5g</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_numeric</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">allow_test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">split</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">SPLITS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Unknown split'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">split</span> <span class="o">==</span> <span class="s1">'test'</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">allow_test</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'El EDA no puede consultar valores de prueba.'</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">SPLITS</span><span class="p">[</span><span class="n">split</span><span class="p">]</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="s1">'hourly'</span> <span class="k">if</span> <span class="n">table</span> <span class="o">==</span> <span class="s1">'hourly'</span> <span class="k">else</span> <span class="s1">'hydrology'</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">'data/numeric/</span><span class="si">{</span><span class="n">folder</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">.csv.gz'</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">table</span> <span class="o">==</span> <span class="s1">'hourly'</span><span class="p">:</span>
+        <span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="n">TIME</span><span class="p">],</span> <span class="n">utc</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">'date'</span><span class="p">]))</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'tiempo_colombia'</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">quality</span><span class="p">():</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
+    <span class="n">hydro</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hydrology'</span><span class="p">)</span>
+    <span class="n">numeric</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="s1">'number'</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'xm_hour'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2000-01-01'</span><span class="p">,</span> <span class="s1">'2018-01-01'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'h'</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="n">quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'comprobación'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'horas esperadas'</span><span class="p">,</span> <span class="s1">'horas recibidas'</span><span class="p">,</span> <span class="s1">'horas ausentes'</span><span class="p">,</span> <span class="s1">'claves horarias duplicadas'</span><span class="p">,</span> <span class="s1">'valores numéricos faltantes'</span><span class="p">,</span> <span class="s1">'valores no finitos'</span><span class="p">,</span> <span class="s1">'filas hidrológicas'</span><span class="p">,</span> <span class="s1">'claves diarias duplicadas'</span><span class="p">],</span> <span class="s1">'resultado'</span><span class="p">:</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">expected</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="p">)),</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">numeric</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">numeric</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()))</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">hydro</span><span class="p">),</span> <span class="n">hydro</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()]})</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">quality</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'comprobación'</span><span class="p">),</span> <span class="s1">'calidad_train'</span><span class="p">)</span>
+    <span class="n">stats_table</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">'count'</span><span class="p">,</span> <span class="s1">'min'</span><span class="p">,</span> <span class="s1">'max'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">stats_table</span><span class="p">[</span><span class="s1">'nulos'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">stats_table</span><span class="p">,</span> <span class="s1">'rangos_train'</span><span class="p">)</span>
+    <span class="n">physical</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">numeric</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">'humidity'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+            <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="s1">'temperature'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+            <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="s1">'precipitation'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+            <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="s1">'demanda'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+            <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">physical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'fuera_de_rango'</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(),</span> <span class="s1">'controles_fisicos_train'</span><span class="p">)</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">hydro</span><span class="p">[(</span><span class="n">hydro</span><span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">hydro</span><span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">flags</span><span class="p">,</span> <span class="s1">'llenado_fuera_intervalo_train'</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Se conservan **</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="si">}</span><span class="s1">** fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.'</span><span class="p">))</span>
+    <span class="n">decision</span><span class="p">(</span><span class="s1">'No imputar donde no hay huecos. Preservar las banderas de llenado y contrastar capacidad/volumen antes de corregir.'</span><span class="p">,</span> <span class="s1">'Máscaras separadas para falta de texto y anomalía numérica; pérdidas robustas candidatas.'</span><span class="p">,</span> <span class="s1">'La integridad completa del periodo se verifica mediante manifiesto, sin explorar el objetivo de prueba.'</span><span class="p">,</span> <span class="s1">'No es posible inferir MCAR/MAR/MNAR con una matriz numérica sin faltantes. La falta de texto es selección de archivo y fuente; no se presume MCAR.'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
+<span class="n">hydro</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hydrology'</span><span class="p">)</span>
+<span class="n">numeric</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="s1">'number'</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'xm_hour'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2000-01-01'</span><span class="p">,</span> <span class="s1">'2018-01-01'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'h'</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+<span class="n">quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'comprobación'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'horas esperadas'</span><span class="p">,</span> <span class="s1">'horas recibidas'</span><span class="p">,</span> <span class="s1">'horas ausentes'</span><span class="p">,</span> <span class="s1">'claves horarias duplicadas'</span><span class="p">,</span> <span class="s1">'valores numéricos faltantes'</span><span class="p">,</span> <span class="s1">'valores no finitos'</span><span class="p">,</span> <span class="s1">'filas hidrológicas'</span><span class="p">,</span> <span class="s1">'claves diarias duplicadas'</span><span class="p">],</span> <span class="s1">'resultado'</span><span class="p">:</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">expected</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="p">)),</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">numeric</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">numeric</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()))</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">hydro</span><span class="p">),</span> <span class="n">hydro</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()]})</span>
+<span class="n">table</span><span class="p">(</span><span class="n">quality</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'comprobación'</span><span class="p">),</span> <span class="s1">'calidad_train'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -457,7 +541,18 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output text_html"><div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats_table</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">'count'</span><span class="p">,</span> <span class="s1">'min'</span><span class="p">,</span> <span class="s1">'max'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">stats_table</span><span class="p">[</span><span class="s1">'nulos'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">table</span><span class="p">(</span><span class="n">stats_table</span><span class="p">,</span> <span class="s1">'rangos_train'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -701,7 +796,27 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output text_html"><div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">physical</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">numeric</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s1">'humidity'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+        <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="s1">'temperature'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+        <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">90</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="s1">'precipitation'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+        <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="s1">'demanda'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+        <span class="n">physical</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">physical</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'fuera_de_rango'</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(),</span> <span class="s1">'controles_fisicos_train'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -829,7 +944,17 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output text_html"><div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flags</span> <span class="o">=</span> <span class="n">hydro</span><span class="p">[(</span><span class="n">hydro</span><span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">hydro</span><span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="n">table</span><span class="p">(</span><span class="n">flags</span><span class="p">,</span> <span class="s1">'llenado_fuera_intervalo_train'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1113,7 +1238,25 @@
     </tr>
   </tbody>
 </table>
-</div></div><p>Se conservan <strong>31</strong> fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Se conservan **</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="si">}</span><span class="s1">** fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.'</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Se conservan <strong>31</strong> fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'No imputar donde no hay huecos. Preservar las banderas de llenado y contrastar capacidad/volumen antes de corregir.'</span><span class="p">,</span> <span class="s1">'Máscaras separadas para falta de texto y anomalía numérica; pérdidas robustas candidatas.'</span><span class="p">,</span> <span class="s1">'La integridad completa del periodo se verifica mediante manifiesto, sin explorar el objetivo de prueba.'</span><span class="p">,</span> <span class="s1">'No es posible inferir MCAR/MAR/MNAR con una matriz numérica sin faltantes. La falta de texto es selección de archivo y fuente; no se presume MCAR.'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">
 <li><p><strong>Preprocesamiento:</strong> No imputar donde no hay huecos. Preservar las banderas de llenado y contrastar capacidad/volumen antes de corregir.</p></li>

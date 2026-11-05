@@ -14,13 +14,13 @@ python scripts/run_eda.py
 python scripts/verify_book.py
 ```
 
-`run_eda.py` ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en `docs/`. Los generadores de capítulos se encuentran en `scripts/` y los procedimientos analíticos en `src/colombia_energy/`. Las tablas y figuras se guardan en `results/`.
+`run_eda.py` ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en `docs/`. Cada cuaderno contiene las importaciones, las funciones de lectura, los controles temporales y el código que produce sus tablas y figuras. Los generadores de `scripts/` incorporan estas implementaciones como celdas ejecutables y visibles, con huellas de las fuentes utilizadas. Las tablas y figuras se guardan en `results/`.
 
 ## Partición y disponibilidad temporal
 
 El manifiesto `data/test_freeze.json` identifica los archivos de prueba. Los procedimientos analíticos utilizan entrenamiento y diagnósticos separados de validación; las verificaciones del periodo completo comprueban calendario, integridad y procedencia.
 
-El módulo `asof_text.py` implementa los escenarios `verified` y `declared_dates`. El primero utiliza capturas de versiones documentales verificadas; el segundo utiliza fechas de publicación declaradas y la regla de disponibilidad supuesta. Los informes sin fecha de publicación permanecen en el inventario sin asignación temporal.
+El capítulo de validación incluye las funciones que implementan los escenarios `verified` y `declared_dates`. El primero utiliza capturas de versiones documentales verificadas; el segundo utiliza fechas de publicación declaradas y la regla de disponibilidad supuesta. Los informes sin fecha de publicación permanecen en el inventario sin asignación temporal.
 
 Las series numéricas y parte del corpus documental proceden de fuentes retrospectivas. La incertidumbre sobre las versiones y sus fechas efectivas de publicación limita la reconstrucción de un escenario operativo histórico y debe considerarse en el análisis de sensibilidad.
 

@@ -368,32 +368,220 @@
 <p>La propuesta cronológica mantiene entrenamiento, validación y prueba separados. Sólo se muestran distribuciones del objetivo y covariables de entrenamiento/validación. Del tramo de prueba se usan calendario y controles de integridad/procedencia, sin explorar sus valores para decidir preprocesamiento.</p>
 <p>KS se presenta como distancia descriptiva sin su p-valor IID; Wasserstein se normaliza con el IQR de entrenamiento. El intervalo de la diferencia de medias usa bootstrap de bloques móviles de 30 días, con 199 réplicas y semilla fija. Supone estabilidad aproximada dentro de cada periodo y se interpreta como diagnóstico.</p>
 <p>El diseño de pronóstico considerado utiliza origen diario, contexto de una semana y salida directa de las siguientes 24 horas. Los conteos de ventanas sólo usan calendario: no leen valores de prueba. Los horizontes que atraviesan un corte se purgan. Deben cerrarse las decisiones restantes en un preregistro de benchmark antes de entrenar modelos.</p>
-<div class="cell tag_hide-input docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell source</p>
-<p class="expanded admonition-title">Hide code cell source</p>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="n">ROOT</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span><span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="s1">'data/manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">ROOT</span><span class="o">/</span><span class="s1">'src'</span><span class="p">))</span>
+
+<span class="n">ROOT</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+    <span class="n">directory</span> <span class="k">for</span> <span class="n">directory</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">(),</span> <span class="o">*</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">directory</span> <span class="o">/</span> <span class="s2">"data/manifest.json"</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">colombia_energy</span><span class="w"> </span><span class="kn">import</span> <span class="n">eda</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.float_format'</span><span class="p">,</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.5g</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">signal</span><span class="p">,</span> <span class="n">stats</span>
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eda</span><span class="o">.</span><span class="n">validation_design</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SEED</span> <span class="o">=</span> <span class="mi">11037</span>
+<span class="n">TARGET</span> <span class="o">=</span> <span class="s1">'precio_bolsa_cop_kwh'</span>
+<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">SPLITS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'train'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">),</span> <span class="s1">'validation'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="s1">'test'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)}</span>
+<span class="n">TIME</span> <span class="o">=</span> <span class="s1">'timestamp_start_colombia'</span>
+<span class="n">ALLOWED_SOURCES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'El Tiempo'</span><span class="p">,</span> <span class="s1">'El Espectador'</span><span class="p">,</span> <span class="s1">'Semana'</span><span class="p">,</span> <span class="s1">'Portafolio'</span><span class="p">,</span> <span class="s1">'La República'</span><span class="p">,</span> <span class="s1">'El Colombiano'</span><span class="p">,</span> <span class="s1">'Dinero'</span><span class="p">,</span> <span class="s1">'IDEAM'</span><span class="p">,</span> <span class="s1">'XM'</span><span class="p">}</span>
+<span class="n">RESULTS</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">'figure.figsize'</span><span class="p">:</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">4.4</span><span class="p">),</span> <span class="s1">'figure.dpi'</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s1">'savefig.dpi'</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">'axes.spines.top'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">'axes.spines.right'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">'axes.grid'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'grid.alpha'</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span> <span class="s1">'axes.prop_cycle'</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'#245b8d'</span><span class="p">,</span> <span class="s1">'#d17a32'</span><span class="p">,</span> <span class="s1">'#2b8c77'</span><span class="p">,</span> <span class="s1">'#8c5da8'</span><span class="p">,</span> <span class="s1">'#9a4949'</span><span class="p">])})</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.max_columns'</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'display.float_format'</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s1">.5g</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.png'</span><span class="p">),</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_numeric</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">allow_test</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">split</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">SPLITS</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Unknown split'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">split</span> <span class="o">==</span> <span class="s1">'test'</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">allow_test</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'El EDA no puede consultar valores de prueba.'</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">SPLITS</span><span class="p">[</span><span class="n">split</span><span class="p">]</span>
+    <span class="n">folder</span> <span class="o">=</span> <span class="s1">'hourly'</span> <span class="k">if</span> <span class="n">table</span> <span class="o">==</span> <span class="s1">'hourly'</span> <span class="k">else</span> <span class="s1">'hydrology'</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">'data/numeric/</span><span class="si">{</span><span class="n">folder</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">.csv.gz'</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">table</span> <span class="o">==</span> <span class="s1">'hourly'</span><span class="p">:</span>
+        <span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="n">TIME</span><span class="p">],</span> <span class="n">utc</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">'date'</span><span class="p">]))</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'tiempo_colombia'</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">split_for_labels</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end_exclusive</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">end_exclusive</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">start</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">end</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere zona horaria.'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">SPLITS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-01-01'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+        <span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">-01-01'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">name</span>
+    <span class="k">return</span> <span class="s1">'purged'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">aware</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">parsed</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">,</span> <span class="s1">'+00:00'</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Timestamp must have an explicit timezone'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parsed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">eligible</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">origin</span><span class="p">):</span>
+    <span class="n">cutoff</span> <span class="o">=</span> <span class="n">aware</span><span class="p">(</span><span class="n">origin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'source'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'medium'</span><span class="p">))</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOWED_SOURCES</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'availability_status'</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">'verified_archived_version'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'availability_proof'</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">'wayback_payload_digest_and_capture'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">clean_flag</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'quarantined'</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'0'</span><span class="p">,</span> <span class="s1">'false'</span><span class="p">,</span> <span class="s1">'False'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">'[0-9a-f]</span><span class="si">{64}</span><span class="s1">'</span><span class="p">,</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'version_sha256'</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">''</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">clean_flag</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">available</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'available_at_verified'</span><span class="p">)</span>
+    <span class="n">captured</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'capture_at_verified'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">available</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">captured</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">aware</span><span class="p">(</span><span class="n">captured</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">aware</span><span class="p">(</span><span class="n">available</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">cutoff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">eligible_retrospective</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">origin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Escenario autorizado: fecha declarada, SIN certificar versión histórica."""</span>
+    <span class="n">cutoff</span> <span class="o">=</span> <span class="n">aware</span><span class="p">(</span><span class="n">origin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'source'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'medium'</span><span class="p">))</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOWED_SOURCES</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'quarantined'</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'0'</span><span class="p">,</span> <span class="s1">'false'</span><span class="p">,</span> <span class="s1">'False'</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">assumed</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'available_at_assumed'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">assumed</span> <span class="ow">or</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'assumed_availability_basis'</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">'declared_timestamp_unverified_version'</span><span class="p">,</span> <span class="s1">'next_day_after_declared_date_unverified_version'</span><span class="p">}:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">aware</span><span class="p">(</span><span class="n">assumed</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">cutoff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">select_before_origin</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">scenario</span><span class="o">=</span><span class="s1">'verified'</span><span class="p">):</span>
+    <span class="n">aware</span><span class="p">(</span><span class="n">origin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">scenario</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">'verified'</span><span class="p">,</span> <span class="s1">'declared_dates'</span><span class="p">}:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Choose verified or declared_dates explicitly'</span><span class="p">)</span>
+    <span class="n">rule</span> <span class="o">=</span> <span class="n">eligible</span> <span class="k">if</span> <span class="n">scenario</span> <span class="o">==</span> <span class="s1">'verified'</span> <span class="k">else</span> <span class="n">eligible_retrospective</span>
+    <span class="n">field</span> <span class="o">=</span> <span class="s1">'available_at_verified'</span> <span class="k">if</span> <span class="n">scenario</span> <span class="o">==</span> <span class="s1">'verified'</span> <span class="k">else</span> <span class="s1">'available_at_assumed'</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">rule</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">origin</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">selected</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="p">(</span><span class="n">aware</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">field</span><span class="p">]),</span> <span class="n">r</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">verify_guards</span><span class="p">():</span>
+    <span class="n">good</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">'a'</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">'IDEAM'</span><span class="p">,</span> <span class="n">availability_status</span><span class="o">=</span><span class="s1">'verified_archived_version'</span><span class="p">,</span> <span class="n">availability_proof</span><span class="o">=</span><span class="s1">'wayback_payload_digest_and_capture'</span><span class="p">,</span> <span class="n">version_sha256</span><span class="o">=</span><span class="s1">'a'</span> <span class="o">*</span> <span class="mi">64</span><span class="p">,</span> <span class="n">capture_at_verified</span><span class="o">=</span><span class="s1">'2020-12-15T10:00:00-05:00'</span><span class="p">,</span> <span class="n">available_at_verified</span><span class="o">=</span><span class="s1">'2020-12-15T10:00:00-05:00'</span><span class="p">,</span> <span class="n">publication_date_claimed</span><span class="o">=</span><span class="s1">'2020-12-01'</span><span class="p">,</span> <span class="n">reference_period</span><span class="o">=</span><span class="s1">'2021-01'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">eligible</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="s1">'2020-12-15T10:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="s1">'2020-12-15T09:59:59-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">eligible</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="s1">'2020-12-15T15:00:00+00:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">'El Heraldo'</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">availability_status</span><span class="o">=</span><span class="s1">'unverified'</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">available_at_verified</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">available_at_assumed</span><span class="o">=</span><span class="s1">'2020-12-02T00:00:00-05:00'</span><span class="p">),</span> <span class="s1">'2021-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">capture_at_verified</span><span class="o">=</span><span class="s1">'2026-11-03T00:00:00-05:00'</span><span class="p">,</span> <span class="n">available_at_verified</span><span class="o">=</span><span class="s1">'2026-11-03T00:00:00-05:00'</span><span class="p">),</span> <span class="s1">'2021-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">quarantined</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">quarantined</span><span class="o">=</span><span class="s1">'0'</span><span class="p">),</span> <span class="s1">'2020-12-15T10:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">quarantined</span><span class="o">=</span><span class="s1">'1'</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">version_sha256</span><span class="o">=</span><span class="s1">'not-a-hash'</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="n">declared</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="n">availability_status</span><span class="o">=</span><span class="s1">'historical_version_unverified'</span><span class="p">,</span> <span class="n">available_at_verified</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">capture_at_verified</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version_sha256</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">available_at_assumed</span><span class="o">=</span><span class="s1">'2020-12-02T00:00:00-05:00'</span><span class="p">,</span> <span class="n">assumed_availability_basis</span><span class="o">=</span><span class="s1">'next_day_after_declared_date_unverified_version'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">eligible_retrospective</span><span class="p">(</span><span class="n">declared</span><span class="p">,</span> <span class="s1">'2020-12-02T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible_retrospective</span><span class="p">(</span><span class="n">declared</span><span class="p">,</span> <span class="s1">'2020-12-01T23:59:59-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible</span><span class="p">(</span><span class="n">declared</span><span class="p">,</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">eligible_retrospective</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">declared</span><span class="p">,</span> <span class="n">available_at_assumed</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span> <span class="s1">'2025-01-01T00:00:00-05:00'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">select_before_origin</span><span class="p">([</span><span class="n">declared</span><span class="p">],</span> <span class="s1">'2020-12-02T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'declared_dates'</span><span class="p">)]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">select_before_origin</span><span class="p">([</span><span class="n">good</span><span class="p">],</span> <span class="s1">'2020-12-15T10:00:00'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s1">'Naive origin accepted'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">select_before_origin</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="n">good</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">'b'</span><span class="p">),</span> <span class="n">good</span><span class="p">],</span> <span class="s1">'2020-12-15T10:00:00-05:00'</span><span class="p">)]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'OK: versiones, captura, fechas futuras, supuestos, fuentes excluidas y zona horaria.'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
+<span class="n">valid</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">(</span><span class="s1">'validation'</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">split</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">train</span><span class="p">),</span> <span class="p">(</span><span class="s1">'validation'</span><span class="p">,</span> <span class="n">valid</span><span class="p">)]:</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">TARGET</span><span class="p">,</span> <span class="s1">'demanda_real_kwh'</span><span class="p">,</span> <span class="s1">'temperature_2m_c_bogota'</span><span class="p">,</span> <span class="s1">'relative_humidity_2m_pct_barranquilla'</span><span class="p">]:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">particion</span><span class="o">=</span><span class="n">split</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">media</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">mediana</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">sd</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">p01</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">p99</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'variable'</span><span class="p">,</span> <span class="s1">'particion'</span><span class="p">]),</span> <span class="s1">'distribuciones_train_validacion'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -518,7 +706,22 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output text_html"><div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shifts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">TARGET</span><span class="p">,</span> <span class="s1">'demanda_real_kwh'</span><span class="p">,</span> <span class="s1">'demanda_comercial_kwh'</span><span class="p">,</span> <span class="s1">'temperature_2m_c_bogota'</span><span class="p">,</span> <span class="s1">'relative_humidity_2m_pct_barranquilla'</span><span class="p">]:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">valid</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+    <span class="n">shifts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">ks_D_descriptivo</span><span class="o">=</span><span class="n">stats</span><span class="o">.</span><span class="n">ks_2samp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">statistic</span><span class="p">,</span> <span class="n">wasserstein_div_IQR_train</span><span class="o">=</span><span class="n">stats</span><span class="o">.</span><span class="n">wasserstein_distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="n">scale</span><span class="p">,</span> <span class="n">diferencia_media_div_sd_train</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">a</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">shifts</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'variable'</span><span class="p">),</span> <span class="s1">'desplazamiento_train_validacion'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -580,7 +783,25 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output text_html"><div>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">valid</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+<span class="n">block</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">resample</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">starts</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">block</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">block</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">block</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">starts</span><span class="p">])[:</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+<span class="n">diffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">resample</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">resample</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">199</span><span class="p">)])</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'diferencia_media_COP_kWh'</span><span class="p">:</span> <span class="p">[</span><span class="n">b</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">()],</span> <span class="s1">'IC95_bloques_inferior'</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">diffs</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">)],</span> <span class="s1">'IC95_bloques_superior'</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">diffs</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">)],</span> <span class="s1">'dias_bloque'</span><span class="p">:</span> <span class="p">[</span><span class="n">block</span><span class="p">],</span> <span class="s1">'replicas'</span><span class="p">:</span> <span class="p">[</span><span class="mi">199</span><span class="p">]}),</span> <span class="s1">'bootstrap_shift_train_validacion'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -616,7 +837,35 @@
     </tr>
   </tbody>
 </table>
-</div></div><img alt="_images/80f5d4927cdbe7198c0d1d035969efbb8b0021d6a58d591a4bd6e9a2c2d5950b.png" src="_images/80f5d4927cdbe7198c0d1d035969efbb8b0021d6a58d591a4bd6e9a2c2d5950b.png" />
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Entrenamiento'</span><span class="p">,</span> <span class="n">train</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">valid</span><span class="p">)]:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'COP/kWh'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Distribución acumulada'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Desplazamiento visible sin consultar prueba'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'shift_train_validacion'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/80f5d4927cdbe7198c0d1d035969efbb8b0021d6a58d591a4bd6e9a2c2d5950b.png" src="_images/80f5d4927cdbe7198c0d1d035969efbb8b0021d6a58d591a4bd6e9a2c2d5950b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calendar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">'2000-01-01'</span><span class="p">,</span> <span class="s1">'2026-01-01'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'h'</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+<span class="n">origins</span> <span class="o">=</span> <span class="n">calendar</span><span class="p">[</span><span class="mi">168</span><span class="p">:</span><span class="o">-</span><span class="mi">23</span><span class="p">]</span>
+<span class="n">origins</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">origins</span><span class="o">.</span><span class="n">hour</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">((</span><span class="n">split_for_labels</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">))</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">origins</span><span class="p">))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'origenes_candidatos_calendario'</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(),</span> <span class="s1">'ventanas_calendario_sin_leer_prueba'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -653,7 +902,26 @@
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OK: versiones, captura, fechas futuras, supuestos, fuentes excluidas y zona horaria.
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tests</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">verify_guards</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">load_numeric</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+    <span class="n">tests</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">'carga de prueba bloqueada por defecto'</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s1">'Test access allowed'</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">split_for_labels</span><span class="p">(</span><span class="s1">'2017-12-31T12:00:00-05:00'</span><span class="p">,</span> <span class="s1">'2018-01-01T12:00:00-05:00'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'purged'</span>
+<span class="n">tests</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">'horizonte que cruza corte eliminado'</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tests</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'control'</span><span class="p">,</span> <span class="s1">'pasa'</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'control'</span><span class="p">),</span> <span class="s1">'controles_fuga'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OK: versiones, captura, fechas futuras, supuestos, fuentes excluidas y zona horaria.
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -692,7 +960,25 @@
     </tr>
   </tbody>
 </table>
-</div></div><p>El estadístico KS se presenta sin su p-valor IID: los días son dependientes. Wasserstein es un tamaño de desplazamiento, no prueba causal. El bootstrap de bloques conserva dependencia local y presupone estabilidad aproximada dentro de cada periodo; no corrige cambios estructurales por sí solo. Las ventanas se cuentan desde el calendario, sin leer los valores de prueba.</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'El estadístico KS se presenta sin su p-valor IID: los días son dependientes. Wasserstein es un tamaño de desplazamiento, no prueba causal. El bootstrap de bloques conserva dependencia local y presupone estabilidad aproximada dentro de cada periodo; no corrige cambios estructurales por sí solo. Las ventanas se cuentan desde el calendario, sin leer los valores de prueba.'</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>El estadístico KS se presenta sin su p-valor IID: los días son dependientes. Wasserstein es un tamaño de desplazamiento, no prueba causal. El bootstrap de bloques conserva dependencia local y presupone estabilidad aproximada dentro de cada periodo; no corrige cambios estructurales por sí solo. Las ventanas se cuentan desde el calendario, sin leer los valores de prueba.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'Ajustar toda transformación sólo con train. Si se recalibra con origen móvil, usar únicamente datos anteriores al origen y una política cerrada antes de prueba.'</span><span class="p">,</span> <span class="s1">'Comparar capacidad de adaptación de modelos con el mismo presupuesto; no seleccionar una red con estas estadísticas de validación.'</span><span class="p">,</span> <span class="s1">'Prueba congelada; sólo integridad/calendario/cobertura. Contexto pasado puede atravesar el corte, etiquetas futuras no. Origen es inicio del intervalo a pronosticar.'</span><span class="p">,</span> <span class="s1">'El uso exploratorio de validación y la incertidumbre sobre disponibilidad y revisiones deben incorporarse a la interpretación de la evaluación predictiva.'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">
 <li><p><strong>Preprocesamiento:</strong> Ajustar toda transformación sólo con train. Si se recalibra con origen móvil, usar únicamente datos anteriores al origen y una política cerrada antes de prueba.</p></li>

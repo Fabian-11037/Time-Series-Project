@@ -1,21 +1,11 @@
 """Genera las fuentes del Jupyter Book; los números se producen al ejecutarlas."""
 from pathlib import Path
 import nbformat as nbf
+from inline_notebook_code import materialize_notebook,notebook_setup
 
 ROOT=Path(__file__).resolve().parents[1]
 BOOK=ROOT/'book'
-SETUP='''%matplotlib inline
-from pathlib import Path
-import sys
-ROOT=next(p for p in [Path.cwd(),*Path.cwd().parents] if (p/'data/manifest.json').exists())
-sys.path.insert(0,str(ROOT/'src'))
-import pandas as pd
-from IPython.display import display,Markdown
-from colombia_energy import eda
-pd.set_option('display.max_rows',35)
-pd.set_option('display.max_columns',14)
-pd.set_option('display.float_format',lambda x:f'{x:.5g}')
-'''
+SETUP=notebook_setup()
 
 CHAPTERS=[
 ('01_datos','1. Problema, fuentes y estructura',
@@ -68,6 +58,7 @@ def main():
                 ('md','## 7.4 Cambio del vocabulario y limitaciones\n\nEl desplazamiento léxico se evalúa mediante la fracción de términos externos al vocabulario de entrenamiento y la divergencia entre distribuciones de frecuencias. Los términos externos incluyen tanto vocablos nuevos como palabras excluidas por los umbrales de frecuencia.\n\nLa evolución de los componentes combina variaciones de contenido, composición editorial y recuperación del archivo. El predominio de El Colombiano en entrenamiento condiciona la representación aprendida y su transferencia a otras fuentes. La interpretación de los tópicos se circunscribe a las características del corpus recuperado.'),
                 ('code','study.drift()')]
             nb.cells.extend(nbf.v4.new_markdown_cell(text) if kind=='md' else nbf.v4.new_code_cell(text) for kind,text in sections)
+        nb=materialize_notebook(nb,stem)
         nb.metadata.kernelspec=dict(name='python3',display_name='Python 3',language='python')
         nb.metadata.language_info=dict(name='python',version='3.12')
         path=BOOK/(stem+'.ipynb')
@@ -79,7 +70,6 @@ def main():
                     new.id=old.id
                 if old.cell_type==new.cell_type=='code' and old.source==new.source:
                     new.outputs=old.get('outputs',[]);new.execution_count=old.get('execution_count');new.metadata=old.metadata
-        nb.cells[1].metadata['tags']=['hide-input']
         with path.open('w',encoding='utf-8',newline='\n') as stream:nbf.write(nb,stream)
 
 if __name__=='__main__':main()

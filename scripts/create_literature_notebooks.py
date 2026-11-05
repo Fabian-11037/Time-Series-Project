@@ -2,9 +2,11 @@
 from pathlib import Path
 import nbformat as nbf
 from create_notebooks import ROOT,BOOK,SETUP
+from inline_notebook_code import materialize_notebook
 
 def write(stem,cells):
     nb=nbf.v4.new_notebook(cells=[nbf.v4.new_markdown_cell(s) if kind=='md' else nbf.v4.new_code_cell(s) for kind,s in cells])
+    nb=materialize_notebook(nb,stem)
     nb.metadata.kernelspec=dict(name='python3',display_name='Python 3',language='python')
     nb.metadata.language_info=dict(name='python',version='3.12')
     path=BOOK/(stem+'.ipynb')
@@ -15,8 +17,6 @@ def write(stem,cells):
             if previous.cell_type==current.cell_type:current.id=previous.id
             if previous.cell_type==current.cell_type=='code' and previous.source==current.source:
                 current.outputs=previous.get('outputs',[]);current.execution_count=previous.get('execution_count');current.metadata=previous.metadata
-    for cell in nb.cells:
-        if cell.cell_type=='code' and len(cell.source.splitlines())>4:cell.metadata['tags']=['hide-input']
     with path.open('w',encoding='utf-8',newline='\n') as stream:nbf.write(nb,stream)
 
 def main():

@@ -1,5 +1,6 @@
 """Comprueba ejecución y enlaces locales del libro, sin abrir datos de prueba."""
 import json
+import ast
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
@@ -19,6 +20,17 @@ def main():
         errors=sum(o['output_type']=='error' for c in cells for o in c.get('outputs',[]))
         assert cells and all(c.get('execution_count') is not None for c in cells),path.name
         assert not errors,path.name
+        assert nb.get('metadata',{}).get('inline_analysis_sources'),path.name
+        for cell in cells:
+            assert not set(cell.get('metadata',{}).get('tags',[])) & {'hide-input','remove-input','hide-cell'},path.name
+            code='\n'.join(line for line in ''.join(cell['source']).splitlines() if not line.startswith('%'))
+            for node in ast.walk(ast.parse(code)):
+                if isinstance(node,ast.ImportFrom):
+                    assert not node.level and not (node.module or '').startswith('colombia_energy'),path.name
+                if isinstance(node,ast.Import):
+                    assert not any(alias.name.startswith('colombia_energy') for alias in node.names),path.name
+                if isinstance(node,ast.Call) and isinstance(node.func,ast.Name):
+                    assert node.func.id not in {'exec','eval','__import__'},path.name
         notebooks.append(dict(notebook=path.name,code_cells=len(cells),errors=errors))
     # Sphinx also copies unrendered Jinja macros under _static; those are assets.
     pages=[p for p in (ROOT/'docs').rglob('*.html') if '_static' not in p.relative_to(ROOT/'docs').parts];assert pages
@@ -37,7 +49,7 @@ def main():
     assert not audit['raw_dataset_modified'] and not audit['numeric_or_price_data_read']
     report=dict(html_pages=len(pages),notebooks_executed=len(notebooks),
         code_cells=sum(r['code_cells'] for r in notebooks),cell_errors=0,
-        broken_local_references=broken,E1_numeric_only=True,
+        broken_local_references=broken,analysis_code_in_notebooks=True,analysis_inputs_visible=True,project_library_imports=0,E1_numeric_only=True,
         headline_topic_fit_split='train',headline_topic_test_documents_read=0)
     (ROOT/'results/all_notebooks_verified.json').write_text(json.dumps(notebooks,indent=2)+'\n',encoding='utf-8')
     (ROOT/'results/book_verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
