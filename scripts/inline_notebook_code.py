@@ -20,26 +20,28 @@ ROOT = next(
 '''
 
 
+def is_presentation_node(node):
+    if isinstance(node,ast.FunctionDef):
+        return node.name in {'decision','table','figure'}
+    if isinstance(node,ast.If):
+        return bool(node.body) and all(is_presentation_node(n) for n in node.body+node.orelse)
+    if not isinstance(node,ast.Expr) or not isinstance(node.value,ast.Call):
+        return False
+    call=node.value
+    if isinstance(call.func,ast.Name) and call.func.id=='decision':
+        return all(isinstance(arg,(ast.Constant,ast.JoinedStr)) for arg in call.args)
+    return (isinstance(call.func,ast.Name) and call.func.id=='display'
+        and len(call.args)==1 and isinstance(call.args[0],ast.Call)
+        and isinstance(call.args[0].func,ast.Name) and call.args[0].func.id=='Markdown')
+
+
 def is_presentation_cell(source):
     """Identifica celdas dedicadas únicamente a texto o formato de salidas."""
     try:
         body=ast.parse(source).body
     except SyntaxError:
         return False
-    if not body:
-        return False
-    def presentation(node):
-        if isinstance(node,ast.FunctionDef):
-            return node.name in {'decision','table','figure'}
-        if not isinstance(node,ast.Expr) or not isinstance(node.value,ast.Call):
-            return False
-        call=node.value
-        if isinstance(call.func,ast.Name) and call.func.id=='decision':
-            return all(isinstance(arg,(ast.Constant,ast.JoinedStr)) for arg in call.args)
-        return (isinstance(call.func,ast.Name) and call.func.id=='display'
-            and len(call.args)==1 and isinstance(call.args[0],ast.Call)
-            and isinstance(call.args[0].func,ast.Name) and call.args[0].func.id=='Markdown')
-    return all(presentation(node) for node in body)
+    return bool(body) and all(is_presentation_node(node) for node in body)
 
 
 def apply_presentation_visibility(nb):
@@ -85,6 +87,12 @@ def output_boundary(node):
 def analytical_cells(nodes):
     pending=[];cells=[]
     for node in nodes:
+        if is_presentation_node(node):
+            if pending:
+                cells.append(nbf.v4.new_code_cell(ast.unparse(ast.Module(body=pending,type_ignores=[]))))
+                pending=[]
+            cells.append(nbf.v4.new_code_cell(ast.unparse(node)))
+            continue
         pending.append(node)
         if output_boundary(node):
             cells.append(nbf.v4.new_code_cell(ast.unparse(ast.Module(body=pending,type_ignores=[]))))
@@ -121,6 +129,17 @@ class SourceCatalog:
 
     def support_cells(self,analysis):
         required=set().union(*(loaded_names(node) for node in analysis))
+        # Values computed in the chapter take precedence over similarly named functions.
+        class Bindings(ast.NodeVisitor):
+            def __init__(self):self.names=set()
+            def visit_Name(self,node):
+                if isinstance(node.ctx,ast.Store):self.names.add(node.id)
+            def visit_FunctionDef(self,node):self.names.add(node.name)
+            def visit_ClassDef(self,node):self.names.add(node.name)
+            def visit_Lambda(self,node):pass
+        bindings=Bindings()
+        for node in analysis:bindings.visit(node)
+        required-=bindings.names
         selected={};visiting=set()
         def include(name):
             if name in selected or name in visiting or name not in self.definitions:return

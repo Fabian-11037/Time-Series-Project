@@ -36,6 +36,7 @@ def main():
                     assert not any(alias.name.startswith('colombia_energy') for alias in node.names),path.name
                 if isinstance(node,ast.Call) and isinstance(node.func,ast.Name):
                     assert node.func.id not in {'exec','eval','__import__'},path.name
+                    if not presentation:assert node.func.id != 'Markdown',path.name
         notebooks.append(dict(notebook=path.name,code_cells=len(cells),presentation_inputs_removed=sum(is_presentation_cell(''.join(c['source'])) for c in cells),errors=errors))
     # Sphinx also copies unrendered Jinja macros under _static; those are assets.
     pages=[p for p in (ROOT/'docs').rglob('*.html') if '_static' not in p.relative_to(ROOT/'docs').parts];assert pages

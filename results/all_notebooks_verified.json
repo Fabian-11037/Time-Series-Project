@@ -7,7 +7,7 @@
   },
   {
     "notebook": "02_calidad.ipynb",
-    "code_cells": 12,
+    "code_cells": 11,
     "presentation_inputs_removed": 4,
     "errors": 0
   },
@@ -37,8 +37,8 @@
   },
   {
     "notebook": "07_texto.ipynb",
-    "code_cells": 44,
-    "presentation_inputs_removed": 9,
+    "code_cells": 47,
+    "presentation_inputs_removed": 12,
     "errors": 0
   },
   {
@@ -55,8 +55,8 @@
   },
   {
     "notebook": "10_conclusiones.ipynb",
-    "code_cells": 7,
-    "presentation_inputs_removed": 1,
+    "code_cells": 8,
+    "presentation_inputs_removed": 2,
     "errors": 0
   }
 ]
