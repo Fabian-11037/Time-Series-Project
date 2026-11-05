@@ -19,6 +19,44 @@ ROOT = next(
 )
 '''
 
+
+def is_presentation_cell(source):
+    """Identifica celdas dedicadas únicamente a texto o formato de salidas."""
+    try:
+        body=ast.parse(source).body
+    except SyntaxError:
+        return False
+    if not body:
+        return False
+    def presentation(node):
+        if isinstance(node,ast.FunctionDef):
+            return node.name in {'decision','table','figure'}
+        if not isinstance(node,ast.Expr) or not isinstance(node.value,ast.Call):
+            return False
+        call=node.value
+        if isinstance(call.func,ast.Name) and call.func.id=='decision':
+            return all(isinstance(arg,(ast.Constant,ast.JoinedStr)) for arg in call.args)
+        return (isinstance(call.func,ast.Name) and call.func.id=='display'
+            and len(call.args)==1 and isinstance(call.args[0],ast.Call)
+            and isinstance(call.args[0].func,ast.Name) and call.args[0].func.id=='Markdown')
+    return all(presentation(node) for node in body)
+
+
+def apply_presentation_visibility(nb):
+    for cell in nb.cells:
+        if cell.cell_type!='code':
+            continue
+        tags=[tag for tag in cell.metadata.get('tags',[]) if tag not in {'hide-input','remove-input','hide-cell'}]
+        presentation=is_presentation_cell(cell.source)
+        if presentation:
+            tags.append('hide-input')
+        cell.metadata['code_role']='presentation' if presentation else 'analysis'
+        if tags:
+            cell.metadata['tags']=tags
+        else:
+            cell.metadata.pop('tags',None)
+    return nb
+
 class NotebookNames(ast.NodeTransformer):
     def visit_ImportFrom(self,node):
         if node.level or (node.module or '').startswith('colombia_energy'):

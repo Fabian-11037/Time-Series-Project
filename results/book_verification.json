@@ -6,6 +6,7 @@
   "broken_local_references": [],
   "analysis_code_in_notebooks": true,
   "analysis_inputs_visible": true,
+  "presentation_cells_collapsed": 46,
   "project_library_imports": 0,
   "E1_numeric_only": true,
   "headline_topic_fit_split": "train",

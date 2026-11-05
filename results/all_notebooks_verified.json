@@ -2,51 +2,61 @@
   {
     "notebook": "01_datos.ipynb",
     "code_cells": 9,
+    "presentation_cells_collapsed": 4,
     "errors": 0
   },
   {
     "notebook": "02_calidad.ipynb",
     "code_cells": 12,
+    "presentation_cells_collapsed": 4,
     "errors": 0
   },
   {
     "notebook": "03_objetivo.ipynb",
     "code_cells": 17,
+    "presentation_cells_collapsed": 5,
     "errors": 0
   },
   {
     "notebook": "04_estacionalidad.ipynb",
     "code_cells": 13,
+    "presentation_cells_collapsed": 4,
     "errors": 0
   },
   {
     "notebook": "05_dependencia.ipynb",
     "code_cells": 12,
+    "presentation_cells_collapsed": 4,
     "errors": 0
   },
   {
     "notebook": "06_covariables.ipynb",
     "code_cells": 15,
+    "presentation_cells_collapsed": 5,
     "errors": 0
   },
   {
     "notebook": "07_texto.ipynb",
     "code_cells": 44,
+    "presentation_cells_collapsed": 9,
     "errors": 0
   },
   {
     "notebook": "08_validacion.ipynb",
     "code_cells": 20,
+    "presentation_cells_collapsed": 5,
     "errors": 0
   },
   {
     "notebook": "09_literatura.ipynb",
     "code_cells": 12,
+    "presentation_cells_collapsed": 5,
     "errors": 0
   },
   {
     "notebook": "10_conclusiones.ipynb",
     "code_cells": 7,
+    "presentation_cells_collapsed": 1,
     "errors": 0
   }
 ]

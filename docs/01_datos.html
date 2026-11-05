@@ -401,13 +401,19 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
     <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -417,7 +423,12 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -426,6 +437,7 @@
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,22 +659,34 @@
 </table>
 </div></div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'La variable objetivo es el **precio nacional de bolsa en COP/kWh**. La unidad de observación es el intervalo horario del SIN; las variables meteorológicas corresponden a puntos de rejilla ERA5. La dependencia serial se considera en el diseño de validación e inferencia.'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <p>La variable objetivo es el <strong>precio nacional de bolsa en COP/kWh</strong>. La unidad de observación es el intervalo horario del SIN; las variables meteorológicas corresponden a puntos de rejilla ERA5. La dependencia serial se considera en el diseño de validación e inferencia.</p>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'Conservar frecuencias y ubicaciones originales; no unir cada título duplicando una fila de precio.'</span><span class="p">,</span> <span class="s1">'Modelar una serie nacional con covariables multivariadas y un conjunto de textos por origen.'</span><span class="p">,</span> <span class="s1">'Partición por tiempo y etiquetas completas; la cobertura de fuentes es una auditoría estructural.'</span><span class="p">,</span> <span class="s1">'Fuentes con distinta disponibilidad, revisiones retrospectivas y fuerte desigualdad entre medios.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">

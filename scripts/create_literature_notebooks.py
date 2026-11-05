@@ -2,7 +2,7 @@
 from pathlib import Path
 import nbformat as nbf
 from create_notebooks import ROOT,BOOK,SETUP
-from inline_notebook_code import materialize_notebook
+from inline_notebook_code import apply_presentation_visibility,materialize_notebook
 
 def write(stem,cells):
     nb=nbf.v4.new_notebook(cells=[nbf.v4.new_markdown_cell(s) if kind=='md' else nbf.v4.new_code_cell(s) for kind,s in cells])
@@ -17,6 +17,7 @@ def write(stem,cells):
             if previous.cell_type==current.cell_type:current.id=previous.id
             if previous.cell_type==current.cell_type=='code' and previous.source==current.source:
                 current.outputs=previous.get('outputs',[]);current.execution_count=previous.get('execution_count');current.metadata=previous.metadata
+    apply_presentation_visibility(nb)
     with path.open('w',encoding='utf-8',newline='\n') as stream:nbf.write(nb,stream)
 
 def main():

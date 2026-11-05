@@ -1,6 +1,7 @@
 """Comprueba ejecución y enlaces locales del libro, sin abrir datos de prueba."""
 import json
 import ast
+from inline_notebook_code import is_presentation_cell
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
@@ -22,7 +23,11 @@ def main():
         assert not errors,path.name
         assert nb.get('metadata',{}).get('inline_analysis_sources'),path.name
         for cell in cells:
-            assert not set(cell.get('metadata',{}).get('tags',[])) & {'hide-input','remove-input','hide-cell'},path.name
+            tags=set(cell.get('metadata',{}).get('tags',[]))
+            presentation=is_presentation_cell(''.join(cell['source']))
+            assert not tags & {'remove-input','hide-cell'},path.name
+            assert ('hide-input' in tags)==presentation,path.name
+            assert cell.get('metadata',{}).get('code_role')==('presentation' if presentation else 'analysis'),path.name
             code='\n'.join(line for line in ''.join(cell['source']).splitlines() if not line.startswith('%'))
             for node in ast.walk(ast.parse(code)):
                 if isinstance(node,ast.ImportFrom):
@@ -31,7 +36,7 @@ def main():
                     assert not any(alias.name.startswith('colombia_energy') for alias in node.names),path.name
                 if isinstance(node,ast.Call) and isinstance(node.func,ast.Name):
                     assert node.func.id not in {'exec','eval','__import__'},path.name
-        notebooks.append(dict(notebook=path.name,code_cells=len(cells),errors=errors))
+        notebooks.append(dict(notebook=path.name,code_cells=len(cells),presentation_cells_collapsed=sum(is_presentation_cell(''.join(c['source'])) for c in cells),errors=errors))
     # Sphinx also copies unrendered Jinja macros under _static; those are assets.
     pages=[p for p in (ROOT/'docs').rglob('*.html') if '_static' not in p.relative_to(ROOT/'docs').parts];assert pages
     broken=[]
@@ -49,7 +54,7 @@ def main():
     assert not audit['raw_dataset_modified'] and not audit['numeric_or_price_data_read']
     report=dict(html_pages=len(pages),notebooks_executed=len(notebooks),
         code_cells=sum(r['code_cells'] for r in notebooks),cell_errors=0,
-        broken_local_references=broken,analysis_code_in_notebooks=True,analysis_inputs_visible=True,project_library_imports=0,E1_numeric_only=True,
+        broken_local_references=broken,analysis_code_in_notebooks=True,analysis_inputs_visible=True,presentation_cells_collapsed=sum(r['presentation_cells_collapsed'] for r in notebooks),project_library_imports=0,E1_numeric_only=True,
         headline_topic_fit_split='train',headline_topic_test_documents_read=0)
     (ROOT/'results/all_notebooks_verified.json').write_text(json.dumps(notebooks,indent=2)+'\n',encoding='utf-8')
     (ROOT/'results/book_verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

@@ -1,7 +1,7 @@
 """Genera las fuentes del Jupyter Book; los números se producen al ejecutarlas."""
 from pathlib import Path
 import nbformat as nbf
-from inline_notebook_code import materialize_notebook,notebook_setup
+from inline_notebook_code import apply_presentation_visibility,materialize_notebook,notebook_setup
 
 ROOT=Path(__file__).resolve().parents[1]
 BOOK=ROOT/'book'
@@ -70,6 +70,7 @@ def main():
                     new.id=old.id
                 if old.cell_type==new.cell_type=='code' and old.source==new.source:
                     new.outputs=old.get('outputs',[]);new.execution_count=old.get('execution_count');new.metadata=old.metadata
+        apply_presentation_visibility(nb)
         with path.open('w',encoding='utf-8',newline='\n') as stream:nbf.write(nb,stream)
 
 if __name__=='__main__':main()

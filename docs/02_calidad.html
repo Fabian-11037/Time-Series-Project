@@ -399,15 +399,26 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decision</span><span class="p">(</span><span class="n">preprocess</span><span class="p">,</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">validation</span><span class="p">,</span> <span class="n">risk</span><span class="p">):</span>
     <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">'### Implicaciones del análisis</span><span class="se">\n\n</span><span class="s1">'</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">'- **'</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s1">':** '</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Preprocesamiento'</span><span class="p">,</span> <span class="n">preprocess</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Arquitectura'</span><span class="p">,</span> <span class="n">architecture</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="n">validation</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Riesgos'</span><span class="p">,</span> <span class="n">risk</span><span class="p">)]))))</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span> <span class="o">/</span> <span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'.csv'</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -416,6 +427,7 @@
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1240,22 +1252,34 @@
 </table>
 </div></div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Se conservan **</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="si">}</span><span class="s1">** fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <p>Se conservan <strong>31</strong> fechas de llenado fuera de [0,1] en entrenamiento. Son banderas de definición/rango, no una corrección automática. La ausencia de nulos en la tabla numérica no acredita ausencia de error instrumental, sesgo de rejilla o revisiones.</p>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision</span><span class="p">(</span><span class="s1">'No imputar donde no hay huecos. Preservar las banderas de llenado y contrastar capacidad/volumen antes de corregir.'</span><span class="p">,</span> <span class="s1">'Máscaras separadas para falta de texto y anomalía numérica; pérdidas robustas candidatas.'</span><span class="p">,</span> <span class="s1">'La integridad completa del periodo se verifica mediante manifiesto, sin explorar el objetivo de prueba.'</span><span class="p">,</span> <span class="s1">'No es posible inferir MCAR/MAR/MNAR con una matriz numérica sin faltantes. La falta de texto es selección de archivo y fuente; no se presume MCAR.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">

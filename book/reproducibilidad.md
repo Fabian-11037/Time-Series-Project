@@ -14,7 +14,7 @@ python scripts/run_eda.py
 python scripts/verify_book.py
 ```
 
-`run_eda.py` ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en `docs/`. Cada cuaderno contiene las importaciones, las funciones de lectura, los controles temporales y el código que produce sus tablas y figuras. Los generadores de `scripts/` incorporan estas implementaciones como celdas ejecutables y visibles, con huellas de las fuentes utilizadas. Las tablas y figuras se guardan en `results/`.
+`run_eda.py` ejecuta los cuadernos, verifica sus salidas y construye el libro con Jupyter Book 1.0.4. El HTML se almacena en `docs/`. Cada cuaderno contiene las importaciones, las funciones de lectura, los controles temporales y el código que produce sus tablas y figuras. Los generadores de `scripts/` incorporan estas implementaciones como celdas ejecutables, con huellas de las fuentes utilizadas. El código analítico permanece visible; las celdas dedicadas a texto y formato se presentan contraídas y pueden desplegarse. Las tablas y figuras se guardan en `results/`.
 
 ## Partición y disponibilidad temporal
 
