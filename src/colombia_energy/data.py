@@ -5,7 +5,9 @@ from pathlib import Path
 import pandas as pd
 
 ROOT=Path(__file__).resolve().parents[2]
-SPLITS={'train':(2000,2017),'validation':(2018,2021),'test':(2022,2025)}
+# Cortes diagnósticos del EDA; el entrenamiento utiliza el pipeline forward chaining.
+EDA_SPLITS={'train':(2000,2017),'validation':(2018,2021),'test':(2022,2025)}
+SPLITS=EDA_SPLITS
 TIME='timestamp_start_colombia'
 TARGET='precio_bolsa_cop_kwh'
 

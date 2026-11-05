@@ -33,3 +33,5 @@ Las referencias centrales se verificaron en texto completo; sus revisiones y SHA
 
 El inventario de archivos aportados conserva sus huellas y señala que los documentos privados no se redistribuyen. La selección definitiva de tres baselines y la revisión sistemática exigida para el E1 completo permanecen pendientes.
 
+
+- Lopes, D. R. (2021). *timeseries-cv*, versión 0.1.5 [software]. Función `split_train_val_forwardChaining`. [PyPI](https://pypi.org/project/timeseries-cv/) · [Repositorio](https://github.com/DidierRLopes/timeseries-cv).

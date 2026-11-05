@@ -7,7 +7,7 @@ from pathlib import Path
 import nbformat as nbf
 
 ROOT=Path(__file__).resolve().parents[1]
-MODULES=['data','asof_text','eda','headline_eda']
+MODULES=['data','asof_text','model_policy','forward_chaining','pipeline','eda','headline_eda']
 
 def notebook_setup():
     return '''%matplotlib inline

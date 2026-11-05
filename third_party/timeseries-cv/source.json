@@ -1,0 +1,8 @@
+{
+  "distribution": "timeseries-cv",
+  "version": "0.1.5",
+  "wheel_sha256": "517ea012337410a266b1504165f5102478f4cbeadabb7f5b0c08fac4cd475ef7",
+  "source_file": "tsxv/splitTrainVal.py",
+  "function": "split_train_val_forwardChaining",
+  "original_module_sha256": "4532587db2289f01e5b7eab6388e88b9b774f17247c35b6231e74d2848c4a173"
+}

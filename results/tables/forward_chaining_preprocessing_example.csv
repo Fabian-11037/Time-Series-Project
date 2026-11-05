@@ -1,0 +1,2 @@
+fold,entradas_entrenamiento,etiquetas_entrenamiento,entradas_validacion,etiquetas_validacion,filas_ajuste_escalador,inicio_ajuste,fin_ajuste
+1,"(6566, 168, 37)","(6566, 24)","(293, 168, 37)","(293, 24)",157728,2000-01-03 00:00:00-05:00,2017-12-30 23:00:00-05:00

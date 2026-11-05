@@ -41,7 +41,11 @@ El escenario ampliado usa la hora declarada con zona, o las 00:00 del día sigui
 
 Las series actuales de XM y ERA5 son retrospectivas: no se han acreditado todos los horarios de publicación ni las ediciones numéricas originales. Las covariables se alinean de acuerdo con su disponibilidad al origen de pronóstico.
 
-Entrenamiento 2000–2017, validación 2018–2021 y prueba 2022–2025 constituyen la propuesta usada para este EDA. El libro explora entrenamiento y diagnostica validación. Prueba conserva sus [huellas congeladas](data/test_freeze.json); sólo se audita integridad, calendario y procedencia. El benchmark debe preregistrarse antes de entrenar.
+El pipeline de entrenamiento utiliza **cinco folds forward chaining sobre 2000–2021**, con entrenamiento expansivo y bloques de validación posteriores a partir de 2018. El periodo **2022–2025 permanece reservado para prueba**, con [huellas congeladas](data/test_freeze.json). Los contrastes entre 2000–2017 y 2018–2021 del EDA conservan su función diagnóstica. La configuración se registra en [configs/training_pipeline.json](configs/training_pipeline.json).
+
+## Continuidad y entrenamiento
+
+[Contexto del proyecto y pasos para continuar](CONTEXTO_PROYECTO.md). El pipeline se prepara con `python scripts/prepare_pipeline.py`; la integración de modelos se documenta en [PIPELINE.md](PIPELINE.md).
 
 ## Reproducir
 

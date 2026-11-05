@@ -1,14 +1,16 @@
 {
   "html_pages": 16,
   "notebooks_executed": 10,
-  "code_cells": 164,
+  "code_cells": 181,
   "cell_errors": 0,
   "broken_local_references": [],
   "analysis_code_in_notebooks": true,
   "analysis_inputs_visible": true,
-  "presentation_inputs_removed": 50,
+  "presentation_inputs_removed": 51,
   "project_library_imports": 0,
   "E1_numeric_only": true,
   "headline_topic_fit_split": "train",
-  "headline_topic_test_documents_read": 0
+  "headline_topic_test_documents_read": 0,
+  "validation_method": "split_train_val_forwardChaining",
+  "forward_chaining_folds": 5
 }

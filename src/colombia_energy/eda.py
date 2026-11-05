@@ -333,3 +333,32 @@ def validation_design():
        'Comparar capacidad de adaptación de modelos con el mismo presupuesto; no seleccionar una red con estas estadísticas de validación.',
        'Prueba congelada; sólo integridad/calendario/cobertura. Contexto pasado puede atravesar el corte, etiquetas futuras no. Origen es inicio del intervalo a pronosticar.',
        'El uso exploratorio de validación y la incertidumbre sobre disponibilidad y revisiones deben incorporarse a la interpretación de la evaluación predictiva.')
+
+
+def forward_chaining_analysis():
+    from .pipeline import build_training_pipeline,load_pipeline_config,pipeline_fold_summary,prepare_fold_arrays,run_forward_chaining
+    training_pipeline=build_training_pipeline(load_pipeline_config())
+    folds=pipeline_fold_summary(training_pipeline)
+    table(folds,'forward_chaining_folds')
+    fig,ax=plt.subplots(figsize=(12,4.5))
+    for i,(_,row) in enumerate(folds.iterrows()):
+        ax.plot([row['train_start'],row['train_end_exclusive']],[i,i],lw=10,
+            color='#245b8d',label='Entrenamiento' if i==0 else None,solid_capstyle='butt')
+        ax.plot([row['validation_start'],row['validation_end_exclusive']],[i,i],lw=10,
+            color='#d17a32',label='Validación' if i==0 else None,solid_capstyle='butt')
+    ax.set_yticks(range(len(folds)),['Fold '+str(f) for f in folds.index])
+    ax.invert_yaxis();ax.set(xlabel='Fecha de las etiquetas',title='Forward chaining: entrenamiento expansivo y validación posterior')
+    ax.legend();figure(fig,'forward_chaining_folds')
+    batch=prepare_fold_arrays(training_pipeline,training_pipeline['folds'][0])
+    preparation=pd.DataFrame([dict(fold=batch['fold'],entradas_entrenamiento=str(batch['X_train'].shape),
+        etiquetas_entrenamiento=str(batch['y_train'].shape),entradas_validacion=str(batch['X_validation'].shape),
+        etiquetas_validacion=str(batch['y_validation'].shape),filas_ajuste_escalador=batch['scaler_fit_rows'],
+        inicio_ajuste=batch['scaler_fit_start'],fin_ajuste=batch['scaler_fit_end'])])
+    table(preparation.set_index('fold'),'forward_chaining_preprocessing_example')
+    del batch
+    def train_reference_models(model_factory,fit_model,evaluate_model,seeds):
+        return run_forward_chaining(training_pipeline,model_factory,fit_model,evaluate_model,seeds)
+    decision('Alinear las covariables con sus fechas de disponibilidad supuestas y ajustar el escalado con las entradas de entrenamiento de cada fold.',
+        'Mantener una interfaz común de ventanas multivariadas y salida directa de 24 horas para los modelos de referencia.',
+        'Aplicar cinco folds forward chaining sobre desarrollo 2000–2021; reservar 2022–2025 para la evaluación final.',
+        'Los rezagos de publicación constituyen supuestos retrospectivos; su sensibilidad debe evaluarse antes de interpretar un desempeño operativo.')

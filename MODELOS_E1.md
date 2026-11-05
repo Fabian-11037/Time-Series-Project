@@ -11,3 +11,5 @@ Escalado, imputación y cualquier selección se ajustan sólo con entrenamiento.
 El EDA propuesto estudia una tarea numérica de salida directa de las siguientes 24 horas con contexto semanal. El benchmark requiere cerrar antes de entrenar su preregistro, tres baselines extraídos de la literatura, espacios/presupuestos, métricas, δ, piloto y repeticiones. Este trabajo no ejecuta ni inventa resultados de esos modelos.
 
 Esta decisión pertenece al candidato colombiano y no modifica el E1 ya existente de Time-MMD ni sus resultados congelados.
+
+Actualización del diseño de evaluación: se utiliza `split_train_val_forwardChaining` para planificar cinco folds expansivos sobre desarrollo 2000–2021. El periodo 2022–2025 continúa reservado para prueba. La configuración activa está en `configs/training_pipeline.json` y el contrato de entrenamiento en `PIPELINE.md`.

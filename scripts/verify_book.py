@@ -1,6 +1,8 @@
 """Comprueba ejecución y enlaces locales del libro, sin abrir datos de prueba."""
 import json
 import ast
+import hashlib
+import csv
 from inline_notebook_code import is_presentation_cell
 from html.parser import HTMLParser
 from pathlib import Path
@@ -53,10 +55,22 @@ def main():
     assert audit['fit_split']=='train' and audit['validation_fit_documents']==0 and audit['test_documents_read']==0
     assert audit['fit_max_available']<'2018' and audit['E1_numeric_only']
     assert not audit['raw_dataset_modified'] and not audit['numeric_or_price_data_read']
+    pipeline=json.loads((ROOT/'results/pipeline/manifest.json').read_text(encoding='utf-8'))
+    config=json.loads((ROOT/'configs/training_pipeline.json').read_text(encoding='utf-8'))
+    assert pipeline['config']==config and pipeline['folds']==config['n_splits']
+    assert config['method']=='split_train_val_forwardChaining' and not pipeline['test_values_read']
+    assert pipeline['fitted_preprocessors']==config['n_splits']
+    assert pipeline['test_manifest_sha256']==hashlib.sha256((ROOT/'data/test_freeze.json').read_bytes()).hexdigest()
+    with (ROOT/'results/pipeline/folds.csv').open(encoding='utf-8',newline='') as stream:
+        folds=list(csv.DictReader(stream))
+    assert len(folds)==config['n_splits']
+    for fold in folds:
+        assert fold['train_end_exclusive']<=fold['validation_start']
+        assert fold['validation_end_exclusive']<='2022-01-01 00:00:00-05:00'
     report=dict(html_pages=len(pages),notebooks_executed=len(notebooks),
         code_cells=sum(r['code_cells'] for r in notebooks),cell_errors=0,
         broken_local_references=broken,analysis_code_in_notebooks=True,analysis_inputs_visible=True,presentation_inputs_removed=sum(r['presentation_inputs_removed'] for r in notebooks),project_library_imports=0,E1_numeric_only=True,
-        headline_topic_fit_split='train',headline_topic_test_documents_read=0)
+        headline_topic_fit_split='train',headline_topic_test_documents_read=0,validation_method=config['method'],forward_chaining_folds=len(folds))
     (ROOT/'results/all_notebooks_verified.json').write_text(json.dumps(notebooks,indent=2)+'\n',encoding='utf-8')
     (ROOT/'results/book_verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))

@@ -28,7 +28,7 @@
   "second_convergence_warnings": [],
   "relative_frobenius_error": 0.9880154943509745,
   "stability_mean_cosine": 0.8328869731709787,
-  "seconds": 4.713924100040458,
+  "seconds": 4.240666400000919,
   "E1_numeric_only": true,
   "raw_dataset_modified": false,
   "lexical_JS_divergence_bits": 0.044750540377006605,

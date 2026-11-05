@@ -3,7 +3,10 @@
     "numeric_only": true,
     "text_allowed": false,
     "text_derived_numeric_features_allowed": false,
-    "models_trained": false
+    "models_trained": false,
+    "validation_method": "split_train_val_forwardChaining",
+    "n_splits": 5,
+    "pipeline_implemented": true
   },
   "E2_E3": {
     "text_corpus_preserved": true,

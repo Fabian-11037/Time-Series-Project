@@ -1,0 +1,17 @@
+{
+  "method": "split_train_val_forwardChaining",
+  "n_splits": 5,
+  "development_start": "2000-01-01T00:00:00-05:00",
+  "validation_start": "2018-01-01T00:00:00-05:00",
+  "development_end_exclusive": "2022-01-01T00:00:00-05:00",
+  "test_start": "2022-01-01T00:00:00-05:00",
+  "test_end_exclusive": "2026-01-01T00:00:00-05:00",
+  "lookback_hours": 168,
+  "horizon_hours": 24,
+  "stride_hours": 24,
+  "hourly_release_lag_hours": 24,
+  "hydrology_release_lag_days": 2,
+  "include_calendar": true,
+  "seed": 11037,
+  "availability_scenario": "retrospective_assumed_release_lags"
+}

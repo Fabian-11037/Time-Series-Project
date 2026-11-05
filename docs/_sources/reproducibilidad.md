@@ -18,6 +18,9 @@ python scripts/verify_book.py
 
 ## Partición y disponibilidad temporal
 
+El diseño de entrenamiento aplica cinco folds forward chaining al periodo de desarrollo 2000–2021. La validación comienza en 2018 y sus bloques consecutivos cubren hasta el cierre de 2021. La configuración y preparación se reproducen con `python scripts/prepare_pipeline.py`. Cada fold ajusta su propio escalador y preserva el periodo de prueba 2022–2025.
+
+
 El manifiesto `data/test_freeze.json` identifica los archivos de prueba. Los procedimientos analíticos utilizan entrenamiento y diagnósticos separados de validación; las verificaciones del periodo completo comprueban calendario, integridad y procedencia.
 
 El capítulo de validación incluye las funciones que implementan los escenarios `verified` y `declared_dates`. El primero utiliza capturas de versiones documentales verificadas; el segundo utiliza fechas de publicación declaradas y la regla de disponibilidad supuesta. Los informes sin fecha de publicación permanecen en el inventario sin asignación temporal.
