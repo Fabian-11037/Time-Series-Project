@@ -25,13 +25,13 @@
   },
   {
     "notebook": "09_literatura.ipynb",
-    "seconds": 3.31,
-    "code_cells": 13,
+    "seconds": 4.729,
+    "code_cells": 23,
     "errors": 0
   },
   {
     "notebook": "10_conclusiones.ipynb",
-    "seconds": 2.934,
+    "seconds": 2.952,
     "code_cells": 8,
     "errors": 0
   },
@@ -61,7 +61,7 @@
   },
   {
     "notebook": "10_modelos.ipynb",
-    "seconds": 12.751,
+    "seconds": 10.356,
     "code_cells": 42,
     "errors": 0
   }

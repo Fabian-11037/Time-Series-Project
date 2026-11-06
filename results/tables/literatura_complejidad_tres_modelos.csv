@@ -1,0 +1,4 @@
+,modelo,historia_horas,estructura,parametros_entrenables
+0,MLP M3,24,256–128,263576
+1,LSTM L2,72,1 capa × 64,27928
+2,CNN1D C3,24,2 capas × 64; kernel 5,43224

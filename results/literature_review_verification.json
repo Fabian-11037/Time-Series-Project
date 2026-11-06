@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-06",
+  "fulltexts_sha256_verified": 20,
+  "protected_files_unchanged": 348,
+  "protected_inventory_sha256": "6e0f2d5a3fda216d7b48561ab93cb333e46655fd1d9e1aa0c448519766d75826",
+  "selected_model_parameters_verified_against_actual_implementations": {
+    "M3": 263576,
+    "L2": 27928,
+    "C3": 43224
+  },
+  "raw_dataset_modified": false,
+  "training_repeated": false,
+  "test_values_read": false,
+  "frequency_calculation_in_notebook": true,
+  "frequency_csv_matches_notebook": true,
+  "book_html_pages": 17,
+  "notebooks": 11,
+  "cell_errors": 0,
+  "tests": "30 ejecutadas: 29 correctas, 1 omitida por ausencia de GPU"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "inherited_screened": 83,
+  "inherited_included": 0,
+  "fulltexts_reviewed": 20,
+  "empirical_reviewed": 19,
+  "point_forecast_studies": 16,
+  "related_market_studies": 1,
+  "probabilistic_studies": 2,
+  "reviews_excluded": 1,
+  "pending_fulltexts": 5,
+  "model_records": 90,
+  "single_reviewer": true,
+  "systematic_search_complete": false,
+  "selection_post_experiments": true
+}

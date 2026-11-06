@@ -1,0 +1,17 @@
+,referencia,modelo,metrica,valor,caso_y_unidad,localizador
+0,Lago et al. (2018),MLP,sMAPE (%),13.27,Bélgica; prueba; porcentaje,"§4.3, tabla 7 (PDF p.12), §5.7.3.2 (p.18)"
+5,Lago et al. (2021),DNN1–DNN4,MAE,1.712,"Nord Pool, DNN3; moneda/MWh del mercado","§4.3 (PDF pp.9–10), tabla 2 (p.14)"
+7,Ugurlu et al. (2018),ANN 1 y 3 capas,MAE,6.37,"Tabla 3, F1–4; EUR/MWh",§3.1 p.8; tablas 3–4 p.13; §4.5 p.16
+8,Ugurlu et al. (2018),LSTM 1 y 3 capas,MAE,5.91,"Tabla 3, F1–4; EUR/MWh",§3.3 pp.8–10; tablas 3–4 p.13; §4.5 p.16
+9,Ugurlu et al. (2018),CNN,MAE,8.57,"Tabla 3, F1–4; EUR/MWh",§3.2 p.8; tabla 3 p.13; §4.5 p.16
+16,Ghimire et al. (2024; online 2023),DNN,MAE,25.486,DS1; AUD/MWh,Tabla B.12 p.24; tabla C.13 p.31
+17,Ghimire et al. (2024; online 2023),LSTM,MAE,22.781,DS1; AUD/MWh,Tabla B.12 p.24; tabla C.13 p.31
+21,Ghimire et al. (2025),MLP,MAE,13.189,South Australia; AUD/MWh,Tabla 4 p.14; tabla 5 p.16
+22,Ghimire et al. (2025),DNN,MAE,14.164,South Australia; AUD/MWh,Tabla 4 p.14; tabla 5 p.16
+23,Ghimire et al. (2025),LSTM,MAE,13.330,South Australia; AUD/MWh,Tabla 4 p.14; tabla 5 p.16
+24,Ghimire et al. (2025),CNN,MAE,14.260,South Australia; AUD/MWh,§2.7 p.7; tabla 5 p.16
+34,Zhang et al. (2023),LSTM,RMSE,8.9455,España; MAPE adicional 8.3972%; unidad de RMSE según precio fuente,XML tabla 2 (tbl2); métodos de comparación
+42,"Elashhab et al. (2026), preprint v1",LSTM,MAE,24.88,DE-LU 2024; precio+calendario; EUR/MWh,§IV.B–D pp.5–6; tabla 3 p.8
+84,Khalid et al. (2020; online 2019),LSTM clásico,MAE,1.56,Sólo precio; escala/unidad no inequívoca,"XML §4, tabla 1"
+86,Zamee et al. (2024),ANN,MAPE horizonte (%),47.7467,Horizonte 24 h; media MAPE de pronóstico,§IV.A y tabla 3 p.12; tabla 4 p.14
+87,Zamee et al. (2024),LSTM,MAPE horizonte (%),11.4256,Horizonte 24 h; media MAPE de pronóstico,Tabla 3 p.12; tabla 4 p.14

@@ -30,6 +30,7 @@ El libro contiene once cuadernos ejecutados, referencias y reproducción. Incluy
 - [Tablas y figuras generadas](results/).
 - [Protocolo del EDA](PROTOCOLO_EDA.md).
 - [Síntesis bibliográfica y extracciones verificadas](literature/).
+- [Revisión de textos completos y frecuencia de baselines](literature/baseline_review/): LSTM 7/16, MLP/DNN 6/16 y CNN 2/16 en el corpus de pronóstico puntual; justificación, configuraciones y sensibilidad en capítulo 9.
 
 Esta versión presenta la construcción del dataset, el análisis exploratorio, la síntesis bibliográfica y la búsqueda de modelos numéricos de pronóstico.
 
@@ -41,7 +42,7 @@ El escenario ampliado usa la hora declarada con zona, o las 00:00 del día sigui
 
 Las series actuales de XM y ERA5 son retrospectivas: no se han acreditado todos los horarios de publicación ni las ediciones numéricas originales. Las covariables se alinean de acuerdo con su disponibilidad al origen de pronóstico.
 
-El pipeline de entrenamiento utiliza **cinco folds forward chaining sobre 2000–2021**, con entrenamiento expansivo y bloques de validación posteriores a partir de 2018. El periodo **2022–2025 permanece reservado para prueba**, con [huellas congeladas](data/test_freeze.json). Los contrastes entre 2000–2017 y 2018–2021 del EDA conservan su función diagnóstica. La configuración se registra en [configs/training_pipeline.json](configs/training_pipeline.json).
+El pipeline de entrenamiento utiliza **cinco folds forward chaining sobre 2000–2021**, con entrenamiento expansivo y bloques de validación posteriores a partir de 2018. El periodo **2022–2025 es prueba**, con [huellas congeladas](data/test_freeze.json). Se evaluó para las configuraciones iniciales el 5 de noviembre de 2026 y no debe tratarse como prueba intacta para decisiones posteriores. Los contrastes entre 2000–2017 y 2018–2021 del EDA conservan su función diagnóstica. La configuración se registra en [configs/training_pipeline.json](configs/training_pipeline.json).
 
 ## Continuidad y entrenamiento
 

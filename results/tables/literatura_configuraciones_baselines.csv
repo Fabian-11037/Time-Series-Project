@@ -1,0 +1,17 @@
+,referencia,modelo,arquitectura,regularizacion,entrenamiento,localizador
+0,Lago et al. (2018),MLP,1 capa oculta; 117 neuronas; salida horaria,NR,Optimización descrita con referencias al apéndice C; valores restantes NR en el PDF principal,"§4.3, tabla 7 (PDF p.12), §5.7.3.2 (p.18)"
+5,Lago et al. (2021),DNN1–DNN4,"2 capas ocultas; 24 salidas; ancho, activación y variables seleccionados por mercado",Dropout y L1 como hiperparámetros; valores por configuración,Adam; TPE 1500 iteraciones; early stopping; recalibración diaria,"§4.3 (PDF pp.9–10), tabla 2 (p.14)"
+7,Ugurlu et al. (2018),ANN 1 y 3 capas,1×10 o 3×10 unidades; salida densa,NR,Adam; lr 0.001; momentum reportado 0.90; MAE; parada tras 300 épocas sin mejora; batch descrito como tres años (§4.5),§3.1 p.8; tablas 3–4 p.13; §4.5 p.16
+8,Ugurlu et al. (2018),LSTM 1 y 3 capas,1 o 3 capas recurrentes y salida densa; ancho NR,NR,Adam; lr 0.001; momentum reportado 0.90; MAE; parada tras 300 épocas sin mejora; batch descrito como tres años (§4.5),§3.3 pp.8–10; tablas 3–4 p.13; §4.5 p.16
+9,Ugurlu et al. (2018),CNN,2 convoluciones unidimensionales con pooling y salida densa; filtros/kernel NR,NR,Adam; lr 0.001; momentum reportado 0.90; MAE; parada tras 300 épocas sin mejora; batch descrito como tres años (§4.5),§3.2 p.8; tabla 3 p.13; §4.5 p.16
+16,Ghimire et al. (2024; online 2023),DNN,"3 capas; rangos publicados 50:150:5,50:80:5 y 50:50:5 (vacío)",NR,"Adam; 1000 épocas; batch range(50,1500,200); HPO bayesiano",Tabla B.12 p.24; tabla C.13 p.31
+17,Ghimire et al. (2024; online 2023),LSTM,2 capas/celdas; rangos 50:100:5 y 50:80:5; ReLU,"Dropout 0–0.5, paso 0.1 reportado","1000 épocas; batch range(50,1500,200); HPO bayesiano; scheduler según validación",Tabla B.12 p.24; tabla C.13 p.31
+21,Ghimire et al. (2025),MLP,1 capa oculta; 50/60/70/80/90/100; ReLU/logistic/tanh,NR,Adam; lr 0.001/0.002/0.005/0.006; Optuna,Tabla 4 p.14; tabla 5 p.16
+22,Ghimire et al. (2025),DNN,"3 capas; rangos 50:120:5,50:100:5,50:80:5",NR,"Adam; 1000 épocas; batch range(50,1500,50); Optuna",Tabla 4 p.14; tabla 5 p.16
+23,Ghimire et al. (2025),LSTM,2 capas/celdas; rangos 50:100:5 y 50:80:5; ReLU,"Dropout 0–0.5, paso 0.1 reportado","1000 épocas; batch range(50,1500,200); Optuna",Tabla 4 p.14; tabla 5 p.16
+24,Ghimire et al. (2025),CNN,Convolución/pooling/densa; dimensión y configuración del comparador NR,NR,Optuna; parámetros finales NR,§2.7 p.7; tabla 5 p.16
+34,Zhang et al. (2023),LSTM,"NR: tabla 1 describe el propuesto, no estos comparadores",NR,NR,XML tabla 2 (tbl2); métodos de comparación
+42,"Elashhab et al. (2026), preprint v1",LSTM,Arquitectura de NeuralForecast; capas/anchos finales NR,NR,Adam; pérdida MAE; Optuna; hasta 30 o 10 trials según costo,§IV.B–D pp.5–6; tabla 3 p.8
+84,Khalid et al. (2020; online 2019),LSTM clásico,LSTM clásico; capas y ancho NR,NR,NR para el comparador; no transferir parámetros Jaya del propuesto,"XML §4, tabla 1"
+86,Zamee et al. (2024),ANN,Neurona oculta según regla 2/3 × entradas; profundidad NR; transferencia lineal positiva,NR,Levenberg–Marquardt; máximo 1000 épocas; MATLAB 2022a,§IV.A y tabla 3 p.12; tabla 4 p.14
+87,Zamee et al. (2024),LSTM,LSTM; profundidad NR; regla de ancho 2/3 × entradas,NR,Adam; máximo 1000 épocas; batch 128; lr 0.005,Tabla 3 p.12; tabla 4 p.14

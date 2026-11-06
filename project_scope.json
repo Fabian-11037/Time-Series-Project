@@ -41,6 +41,23 @@
       ],
       "new_run_output_suffix": "_portable",
       "historical_sources_preserved": true
+    },
+    "literature_baseline_review": {
+      "status": "focused_fulltext_review_completed",
+      "fulltexts_reviewed": 20,
+      "point_forecast_studies": 16,
+      "empirical_studies_including_sensitivity": 19,
+      "pending_fulltexts": 5,
+      "systematic_search_complete": false,
+      "independent_double_review": false,
+      "selection_post_experiments": true,
+      "evidence": "literature/baseline_review/",
+      "frequency_per_study": {
+        "LSTM": 7,
+        "MLP/DNN": 6,
+        "CNN": 2
+      },
+      "cnn_explicit_1d_studies": 1
     }
   },
   "E2_E3": {

@@ -1,0 +1,39 @@
+familia,estudios_puntuales,porcentaje_puntual,estudios_puntuales_sin_preprints,estudios_ampliados
+LSTM,7,43.75,6,9
+MLP/DNN,6,37.5,6,8
+CNN,2,12.5,2,4
+CNN-LSTM,2,12.5,2,2
+Transformer,2,12.5,1,3
+CNN-LSTM-Attention,1,6.25,1,1
+Chronos Bolt,1,6.25,0,1
+Chronos T5,1,6.25,0,1
+Ensamble DNN,1,6.25,1,2
+GRU,1,6.25,1,1
+LSTM-FFEC,1,6.25,1,1
+Mamba,1,6.25,0,1
+Moirai,1,6.25,0,1
+N-BEATSx,1,6.25,0,1
+N-HiTS,1,6.25,0,1
+RNN simple,1,6.25,1,1
+STL-CNN,1,6.25,1,1
+STL-CNN-LSTM,1,6.25,1,1
+STL-LSTM,1,6.25,1,1
+STL-MLP/DNN,1,6.25,1,1
+STL-TabNet,1,6.25,1,1
+TCN,1,6.25,1,1
+TCN-LSTM,1,6.25,1,1
+TFT,1,6.25,0,1
+TabNet,1,6.25,1,1
+TimeGPT,1,6.25,0,1
+TimeMoE,1,6.25,0,1
+TimesFM,1,6.25,0,1
+VMD-CNN-LSTM,1,6.25,1,1
+Chronos-2,0,0.0,0,1
+DDNN distribucional,0,0.0,0,1
+DLinear,0,0.0,0,1
+Informer,0,0.0,0,1
+Mitra+CP,0,0.0,0,1
+Moirai-2,0,0.0,0,1
+TabPFN,0,0.0,0,1
+TimesFM-2.5,0,0.0,0,1
+iTransformer,0,0.0,0,1

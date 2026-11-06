@@ -8,7 +8,7 @@ Documento normativo consultado: *Entregable1DeepLearningProject.pdf*, 34 página
 
 ## Dictamen
 
-**El Jupyter Book todavía no satisface íntegramente el Entregable 1.** Dispone de un EDA amplio, un conjunto de datos auditado, un pipeline temporal y tres familias implementadas y entrenadas. Los principales pendientes son la selección trazable de baselines desde la literatura y el benchmark con sustento inferencial: margen práctico, dimensionamiento, incertidumbre, contrastes y evaluación independiente del proceso de selección.
+**El Jupyter Book todavía no satisface íntegramente el Entregable 1.** Dispone de un EDA amplio, un conjunto de datos auditado, un pipeline temporal y tres familias implementadas y entrenadas. La actualización bibliográfica de cierre incorpora una selección focalizada trazable de baselines (véase apartado final). Permanecen la búsqueda sistemática exhaustiva y el benchmark con sustento inferencial: margen práctico, dimensionamiento, incertidumbre, contrastes y evaluación independiente del proceso de selección.
 
 La rúbrica asigna 30 % al EDA, 30 % a literatura y extracción, 20 % a implementación y 20 % a benchmark e inferencia (p. 34). Estos pesos permiten priorizar el trabajo; no constituyen una estimación de nota ni un porcentaje de cumplimiento.
 
@@ -80,3 +80,10 @@ Esta revisión registra el estado y las brechas; no altera modelos, hiperparáme
 ## Actualización posterior de ejecución
 
 La adaptación posterior a la versión examinada incorpora ejecución documental Windows/Linux, selección CPU/GPU y fuentes experimentales históricas preservadas. La guía vigente es `EJECUCION.md` y su evidencia está en `results/portability_verification.json`. La tabla anterior describe la versión auditada; sus limitaciones de portabilidad se sustituyen por el estado de esta actualización. Las brechas bibliográficas e inferenciales continúan sujetas al cierre descrito.
+
+
+## Actualización posterior: extracción bibliográfica y selección de tres familias
+
+El 6 de noviembre se revisaron 20 textos completos y se publicaron extracción de 90 registros de modelos, cribado individual de 83 títulos/resúmenes y tabla reproducible de frecuencia de comparadores. La comparación principal comprende 16 estudios puntuales: LSTM 7/16, MLP/DNN 6/16 y CNN 2/16. Se documentan sensibilidad a preprints, mercados y objetivos, taxonomía, roles y calidad. CNN tiene frecuencia empatada y se selecciona por su estructura independiente y contraste inductivo; únicamente una fuente confirma explícitamente CNN1D. El capítulo 9 justifica las tres familias, sus adaptaciones, número de parámetros, costo asintótico y una brecha delimitada al corpus. Capítulo 10 y contexto remiten a esta evidencia.
+
+La fila de extracción de la tabla auditada queda **atendida para el corpus focalizado recuperado, con limitaciones explícitas de especificación y acceso**. No se declara búsqueda sistemática exhaustiva, conciliación PRISMA ni doble revisión. Cinco candidatos carecen de texto íntegro verificado. Las configuraciones insuficientes mantienen la condición E1 §3.2/E2 §14; no se valida retrospectivamente la búsqueda de 192 configuraciones como cumplimiento de ese procedimiento. δ, dimensionamiento, inferencia y evaluación independiente permanecen pendientes. Esta actualización es documental y no reabre prueba ni modifica resultados experimentales.

@@ -1,0 +1,21 @@
+,study_id,referencia,estrato,identificador
+0,lago_2018,Lago et al. (2018),puntual,10.1016/j.apenergy.2018.02.069
+1,lago_2021,Lago et al. (2021),puntual,10.1016/j.apenergy.2021.116983
+2,ugurlu_2018,Ugurlu et al. (2018),puntual,10.3390/en11051255
+3,kuo_2018,Kuo y Huang (2018),mercado_relacionado,10.3390/su10041280
+4,ghimire_2024,Ghimire et al. (2024; online 2023),puntual,10.1016/j.apenergy.2023.122059
+5,d3net_2025,Ghimire et al. (2025),puntual,10.1016/j.egyai.2025.100492
+6,stl_tcn_2023,Zhang et al. (2023),puntual,10.1016/j.heliyon.2023.e13029
+7,rl_ensemble_2026,Wang et al. (2026),puntual,10.3390/en19030761
+8,crossborder_2026,"Elashhab et al. (2026), preprint v1",puntual,arXiv:2608.17091v1
+9,attention_2024,Laitsos et al. (2024),puntual,10.3390/en17071625
+10,less_more_2026,Michalakopoulos et al. (2026),puntual,10.3390/en19020376
+11,multibranch_2026,Radziukyniene et al. (2026),puntual,10.3390/app16083865
+12,mubarak_2024,Mubarak et al. (2024),puntual,10.1016/j.ijepes.2024.110206
+13,customloss_2024,Wang et al. (2024),puntual,10.3390/en17194885
+14,pretrained_2025,"Hornek et al. (2025), preprint v2",puntual,arXiv:2506.08113v2
+15,crossep_2026,Lu et al. (2026),probabilistico,10.3390/en19102438
+16,arbitrage_2026,"Lipiecki y Weron (2026), preprint v1",probabilistico,arXiv:2609.00089v1
+17,review_2025,Jasiński (2025),contexto_revision,10.3390/en18246422
+18,jaya_2020,Khalid et al. (2020; online 2019),puntual,10.3390/e22010010
+19,selfsupervised_2024,Zamee et al. (2024),puntual,10.1109/ACCESS.2024.3389039

@@ -1,17 +1,23 @@
-# Alcance de los modelos del Entregable 1
+# Modelos numéricos del Entregable 1
 
-Decisión expresa del autor: **sin NLP; únicamente variables numéricas**.
+La comparación utiliza MLP, LSTM y CNN1D para el precio nacional horario de bolsa de XM, con entradas numéricas y calendario. Las variables y su disponibilidad se documentan en `PIPELINE.md`; el horizonte es de 24 horas. El desarrollo 2000–2021 utiliza cinco folds expansivos `split_train_val_forwardChaining`. La prueba 2022–2025 fue consultada para configuraciones iniciales el 5 de noviembre; no constituye una prueba intacta para decisiones posteriores.
 
-Las entradas candidatas son rezagos del precio nacional de bolsa y observaciones históricas de demanda, temperatura, humedad, precipitación y las cuatro series hidrológicas. Se pueden representar ciclos conocidos del calendario. La disponibilidad temporal y la versión de cada entrada deben declararse: que una medida corresponda al pasado no acredita que su versión actual estuviera publicada entonces.
+## Justificación bibliográfica
 
-No se incorporan titulares, cuerpos, embeddings, sentimiento, tópicos, agrupamientos, relevancia ni conteos derivados de noticias. El texto y sus auditorías se conservan como material del dataset para E2/E3, sin alimentar los modelos del E1. La autorización de usar versiones de texto no verificadas se refiere a ese escenario contextual posterior y mantiene su advertencia de posible fuga.
+La revisión focalizada de 20 textos completos recuperó 16 estudios puntuales, tres empíricos complementarios y una revisión secundaria. LSTM aparece como comparador en 7/16, MLP/DNN en 6/16 y CNN en 2/16; sólo una de las dos referencias CNN especifica 1D. CNN empata con CNN-LSTM y Transformer. La elección combina frecuencia, estructura y contraste inductivo: interacciones densas, memoria recurrente y patrones locales compartidos. Las fuentes, roles, configuraciones, resultados, calidad y sensibilidad están en `literature/baseline_review/` y capítulo 9 del JBook. Las frecuencias describen el corpus recuperado; cinco candidatos siguen sin texto íntegro verificado y la búsqueda sistemática no es exhaustiva.
 
-Escalado, imputación y cualquier selección se ajustan sólo con entrenamiento. No se usan demanda o clima realizados del horizonte futuro. La hidrología diaria no se propaga desde las 00:00 de su propio día sin una regla de publicación explícita. Los datos numéricos actuales son retrospectivos; no se certifican todas sus versiones históricas.
+| Modelo seleccionado | Historia | Arquitectura | Parámetros |
+|---|---:|---|---:|
+| MLP M3 | 24 h | Capas densas 256–128 y 24 salidas | 263576 |
+| LSTM L2 | 72 h | Una capa de 64 unidades y 24 salidas | 27928 |
+| CNN1D C3 | 24 h | Dos convoluciones de 64 filtros, kernel 5; pooling a 7 y 24 salidas | 43224 |
 
-El EDA propuesto estudia una tarea numérica de salida directa de las siguientes 24 horas con contexto semanal. El benchmark requiere cerrar antes de entrenar su preregistro, tres baselines extraídos de la literatura, espacios/presupuestos, métricas, δ, piloto y repeticiones. Este trabajo no ejecuta ni inventa resultados de esos modelos.
+Los tamaños proceden de la búsqueda exploratoria colombiana; no son reproducciones exactas de las publicaciones. El capítulo 9 contiene fórmulas de parámetros/costo y el capítulo 10 contiene ecuaciones, diagramas, implementación y resultados. La revisión documental es posterior a esa búsqueda y no se presenta como selección a priori.
 
-Esta decisión pertenece al candidato colombiano y no modifica el E1 ya existente de Time-MMD ni sus resultados congelados.
+## Estado experimental
 
-Actualización del diseño de evaluación: se utiliza `split_train_val_forwardChaining` para planificar cinco folds expansivos sobre desarrollo 2000–2021. El periodo 2022–2025 continúa reservado para prueba. La configuración activa está en `configs/training_pipeline.json` y el contrato de entrenamiento en `PIPELINE.md`.
+Se completaron el piloto de 75 ajustes y la búsqueda de 192 configuraciones/4800 ajustes sobre desarrollo. Sus protocolos y fuentes históricas se conservan. Las métricas de selección comparten bloques con parada anticipada y HPO; no son una evaluación externa. Las entradas de entrenamiento excluyen texto y atributos derivados de noticias; sus representaciones permanecen en el EDA del corpus para la investigación posterior.
 
-El 5 de noviembre de 2026 se ejecutó un piloto exploratorio de las tres familias en PyTorch, documentado en `PROTOCOLO_PILOTO_2026-11-05.md`. Los 75 ajustes y sus resultados verificables están en `results/pilot_pytorch_gfx1030/RESUMEN_RESULTADOS.md`. Las limitaciones y condiciones del benchmark final descritas arriba siguen vigentes; no se evaluó prueba.
+La adaptación Windows/Linux permite CPU o GPU CUDA/ROCm según `EJECUCION.md`. La revisión bibliográfica no modifica datos, arquitecturas, métricas ni prueba. Los siguientes experimentos deben definir δ, potencia, inferencia temporal, presupuesto comparable y evaluación independiente antes de obtener nuevos resultados. La especificación insuficiente de algunos comparadores mantiene vigente la condición E1 §3.2 que remite a la búsqueda de arquitectura E2 §14; las 192 configuraciones ya ejecutadas no acreditan por sí solas su cumplimiento.
+
+Estado detallado e instrucciones de continuidad: `CONTEXTO_PROYECTO.md`, sección 19. El proyecto histórico Time-MMD conserva sus protocolos y resultados propios.

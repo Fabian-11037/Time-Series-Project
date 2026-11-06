@@ -54,5 +54,195 @@
     "sha256": "0bafba484d8d6a730b0d644949438e48ec0be77652f84372f582244140499dfa",
     "pages": 115,
     "checked_sections": "methods, central results and relevant evaluation/limitation appendices"
+  },
+  {
+    "name": "lago_2018",
+    "url": "https://jesuslago.com/wp-content/uploads/Lago2018b.pdf",
+    "bytes": 1151908,
+    "sha256": "da8cda75bf68cf90bb68e321fc258c0b6febf4636f61f8c33e897ce6fcff9c94",
+    "pages": "20",
+    "checked_sections": "§§4.3, 5.4–5.7; tablas 3–7; PDF pp. 8–18",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "ugurlu_2018",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-11-01255/article_deploy/energies-11-01255.pdf",
+    "bytes": 550005,
+    "sha256": "a1ae0058544eb272fc02001efb65820377f8f967bc0fbfa7d49d1733511c4c37",
+    "pages": "23",
+    "checked_sections": "§§3.1–3.3,4.3–4.5; tablas 2–4; PDF pp.8,12–16",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "kuo_2018",
+    "url": "https://mdpi-res.com/d_attachment/sustainability/sustainability-10-01280/article_deploy/sustainability-10-01280.pdf",
+    "bytes": 9233370,
+    "sha256": "faadb14d51b59927184fe372475d45f0a7c2f47f6c8eff978bc977b8f9839858",
+    "pages": "17",
+    "checked_sections": "§5, tablas 1–2; PDF pp.8–9,14",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "ghimire_2024",
+    "url": "https://burjcdigital.urjc.es/server/api/core/bitstreams/584ad847-68b7-4ef1-b8fb-08db68f8eeee/content",
+    "bytes": 10178783,
+    "sha256": "8e7a441c11df1f137127b6190b2c707ba762ff29090820a37810f0c05649a31a",
+    "pages": "33",
+    "checked_sections": "§§2–3, tabla B.12 p.24 y tabla C.13 pp.31–33",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "d3net_2025",
+    "url": "https://opus.lib.uts.edu.au/bitstream/10453/190017/2/1-s2.0-S2666546825000242-main.pdf",
+    "bytes": 13224003,
+    "sha256": "c0124d7731ab0a1915b5bb8a7131e23416c54c3937b9ddfd13964615f6484590",
+    "pages": "34",
+    "checked_sections": "§2.7 pp.7–8; tabla 4 p.14; tabla 5 p.16",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "stl_tcn_2023",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9938466/fullTextXML",
+    "bytes": 79344,
+    "sha256": "bedc2b686faa80d1eeddad913b5a302f3a1d3f8f8b2d90b9b54762c9d8753a42",
+    "pages": "XML",
+    "checked_sections": "XML: Construction of the STL-TCN-NBEATS model; tabla 1 (tbl1) y tabla 2 (tbl2)",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "rl_ensemble_2026",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-19-00761/article_deploy/energies-19-00761.pdf",
+    "bytes": 6639956,
+    "sha256": "4e4e3650f154b1fbdbab624740a77af0bc319fab99b0279430953955c087d67a",
+    "pages": "14",
+    "checked_sections": "§3; tabla 2 p.8",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "crossborder_2026",
+    "url": "https://arxiv.org/pdf/2608.17091v1",
+    "bytes": 2326007,
+    "sha256": "717b6d115bf1cecda554d3e3be27aa31834b10d459a8a0ef1223f4e1099bd634",
+    "pages": "13",
+    "checked_sections": "§IV pp.4–6; tablas 3–5 pp.8–10",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "attention_2024",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-17-01625/article_deploy/energies-17-01625.pdf",
+    "bytes": 2421273,
+    "sha256": "6a8347a20104d345e28510d11ef893c0ccd237fa9f566fe5b043b822e15ab686",
+    "pages": "27",
+    "checked_sections": "§4.6; tabla 2 p.21",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "less_more_2026",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-19-00376/article_deploy/energies-19-00376.pdf",
+    "bytes": 2513306,
+    "sha256": "808aeaa13e2fddc5264528b849e8f0379f881a2137e5a0ea64a12a4ff720dcd9",
+    "pages": "22",
+    "checked_sections": "§2.2; figura 6 p.11; tabla 2 p.16",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "multibranch_2026",
+    "url": "https://mdpi-res.com/d_attachment/applsci/applsci-16-03865/article_deploy/applsci-16-03865.pdf",
+    "bytes": 1466690,
+    "sha256": "aabcdc9ad9b44b1956c8bd408c99ca99ff29b6ef36757d72becf7f2509f45e83",
+    "pages": "20",
+    "checked_sections": "§3; tablas 5 y 7 pp.15,17",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "mubarak_2024",
+    "url": "https://research-repository.griffith.edu.au/server/api/core/bitstreams/f793f553-1e34-4690-ac7a-5822034e7878/content",
+    "bytes": 2566519,
+    "sha256": "5d959acfe8398dc0b1d95a5e01fbb31de97f7d2eb8397d6318218f5fba13a4e5",
+    "pages": "16",
+    "checked_sections": "Tablas 2–3,6; PDF pp.10–13 (incluye portada repositorio)",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "customloss_2024",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-17-04885/article_deploy/energies-17-04885.pdf",
+    "bytes": 981083,
+    "sha256": "6fda29afb605b3c7febd1cf683c6d2e253e5080777bd4f74efd146ef8dffc2f1",
+    "pages": "15",
+    "checked_sections": "§§2.5,3.1 pp.5–6; tabla 3 p.12",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "pretrained_2025",
+    "url": "https://arxiv.org/pdf/2506.08113v2",
+    "bytes": 302543,
+    "sha256": "01d6cb968526091405ceb699604c8b10ebdce398224fd41fc058efd3706ed513",
+    "pages": "12",
+    "checked_sections": "§III pp.3–4; tabla III p.5",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "crossep_2026",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-19-02438/article_deploy/energies-19-02438.pdf",
+    "bytes": 29594575,
+    "sha256": "4b937851f4f4b30762b0a4bd285c71d0b334f5a14a5a6d30b4a077544cc1f03c",
+    "pages": "29",
+    "checked_sections": "§4.1 pp.15–16; tablas 3–5",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "arbitrage_2026",
+    "url": "https://arxiv.org/pdf/2609.00089v1",
+    "bytes": 3160044,
+    "sha256": "b4853f64274288d1beb0190c95e6f985a6b69724f44f54862499c211139e73f4",
+    "pages": "24",
+    "checked_sections": "§5.2 pp.13–14; tablas 2–5",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "review_2025",
+    "url": "https://mdpi-res.com/d_attachment/energies/energies-18-06422/article_deploy/energies-18-06422.pdf",
+    "bytes": 1158715,
+    "sha256": "18380ec2372284b27f3ab77ea81ceb6ff397b77a1913009a2e3c627d9b8f7905",
+    "pages": "29",
+    "checked_sections": "Texto completo, 29 páginas; síntesis y referencias",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "jaya_2020",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7516403/fullTextXML",
+    "bytes": 140057,
+    "sha256": "509d32e1d0f0adff51669ff5a4098cc80f6fee6e37212b2921377db0eb0d83a6",
+    "pages": "XML",
+    "checked_sections": "XML: §§3–4; tabla 1",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
+  },
+  {
+    "name": "selfsupervised_2024",
+    "url": "https://opus.lib.uts.edu.au/bitstream/10453/181427/2/Self-Supervised_Adaptive_Learning_Algorithm_for_Multi-Horizon_Electricity_Price_Forecasting.pdf",
+    "bytes": 2455250,
+    "sha256": "dfae4295ae63412f2f027a07d5a7d9ab164ae80d044cc082d448cde2b3b66522",
+    "pages": "21",
+    "checked_sections": "§IV pp.12–14; tablas 3–4 (verificadas visualmente)",
+    "review_record": "literature/baseline_review/studies.csv",
+    "retrieved_date_colombia": "2026-11-06"
   }
 ]
