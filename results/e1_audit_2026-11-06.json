@@ -1,0 +1,199 @@
+{
+  "audit_date": "2026-11-06",
+  "timezone": "America/Bogota",
+  "audited_commit": "f67a377e225087437829ee0826be971886acdf29",
+  "scope": "Verificación de artefactos existentes; sin entrenamiento ni nueva evaluación de prueba",
+  "pdf_sha256": "56cffb2e0e23bbdfd28815b7c7515d2663bf501ed5d6e0656a37a76fc45e43eb",
+  "tests_passed": 17,
+  "book": {
+    "html_pages": 17,
+    "notebooks_executed": 11,
+    "code_cells": 216,
+    "cell_errors": 0,
+    "broken_local_references": [],
+    "analysis_code_in_notebooks": true,
+    "analysis_inputs_visible": true,
+    "presentation_inputs_removed": 52,
+    "project_library_imports": 0,
+    "E1_numeric_only": true,
+    "headline_topic_fit_split": "train",
+    "headline_topic_test_documents_read": 0,
+    "validation_method": "split_train_val_forwardChaining",
+    "forward_chaining_folds": 5
+  },
+  "dataset": {
+    "files_verified": 142,
+    "counts": {
+      "hourly": 227928,
+      "hydrology": 9497,
+      "text": 568701,
+      "text_IDEAM": 7223,
+      "expanded_dated_text": 568294,
+      "text_XM": 406,
+      "text_Dinero": 129,
+      "text_El Colombiano": 461461,
+      "text_El Espectador": 8550,
+      "verified_text": 62572,
+      "text_El Tiempo": 49350,
+      "text_La RepÃºblica": 10381,
+      "text_Portafolio": 1815,
+      "text_Semana": 29386
+    },
+    "duplicate_ids": 0,
+    "hourly_calendar_complete": true,
+    "daily_calendar_complete": true,
+    "test_hashes_unchanged": true,
+    "test_target_distribution_read": false,
+    "no_manual_topic_columns": true
+  },
+  "variant_runs": 4800,
+  "variant_configurations": 192,
+  "runs_per_family": {
+    "CNN1D": 1600,
+    "LSTM": 1600,
+    "MLP": 1600
+  },
+  "source_hashes_match": {
+    "source_sha256": true,
+    "protocol_sha256": true
+  },
+  "selected_prediction_files_verified": 75,
+  "selected_metrics_recalculated": [
+    {
+      "family": "CNN1D",
+      "candidate": "C3_h24_l2_0.0001",
+      "mae": 24.154756943417443,
+      "rmse": 37.60385737239123,
+      "r2": 0.8765719282493105
+    },
+    {
+      "family": "LSTM",
+      "candidate": "L2_h72_l2_0.001",
+      "mae": 24.624437937735426,
+      "rmse": 37.77261823824513,
+      "r2": 0.8754601178807786
+    },
+    {
+      "family": "MLP",
+      "candidate": "M3_h24_l2_0.001",
+      "mae": 24.99192680569509,
+      "rmse": 37.953403638415715,
+      "r2": 0.8742628593483424
+    }
+  ],
+  "selected_checkpoint_files_available_in_clone": 0,
+  "previous_test_prediction_files_available_in_clone": 0,
+  "public_pages": [
+    {
+      "page": "intro",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "9e73605ab152d24f813c67fd2651de05df97593d1c5a0ca4aa94a7294a479b66"
+    },
+    {
+      "page": "01_datos",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "b543870514c35143f605124c7e7f2961c75e831725d7823c8dae0fcd42e61a68"
+    },
+    {
+      "page": "02_calidad",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "bf22a70b0f2bb40ae952fee36dffd2720e5222e74121fbe86521464a25762754"
+    },
+    {
+      "page": "03_objetivo",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "515e97427eaa8f9d4a7fc8a9bfc9aa4ba6361d89dee8c13f7d45a248e4a93a38"
+    },
+    {
+      "page": "04_estacionalidad",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "fc16aa256d3828932bf72d35a7a38bdbc35bf4cf109e067a26cab372e347d6cd"
+    },
+    {
+      "page": "05_dependencia",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "49a72a586aff8d2e9db4315bee6590fd26210c72dd0530b92b1a130134b77c89"
+    },
+    {
+      "page": "06_covariables",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "af6fb37c133baae116bfeccb0b9e37fe2cb97913c3bf7fad8afe648f55204ae5"
+    },
+    {
+      "page": "07_texto",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "d961def8461948380567b3c9c6982ab408806ddb00162590a32af552ce3b2e46"
+    },
+    {
+      "page": "08_validacion",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "3075e498945345f4ce874ce075fd571d48fab87572f88c11f0814db32b836ffa"
+    },
+    {
+      "page": "09_literatura",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "352d36e2a32633cf28ebf17a6b28b280e48de3b5a93d6eb7dd0b059f51d3c922"
+    },
+    {
+      "page": "10_modelos",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "d8847f58e2b8e22527b9a373efc2f3a6bc60fe2654769ae41ef3a267da83bec8"
+    },
+    {
+      "page": "10_conclusiones",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "3377548944f644d8e347294cc90748f53314fb4b8aeb93f7c752a5b827abfbe0"
+    },
+    {
+      "page": "referencias",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "ce6d72e36e03de99096ae2436f9444506dec3e12d8472b204e1f1dae94b59c4f"
+    },
+    {
+      "page": "reproducibilidad",
+      "status": 200,
+      "exact_match": true,
+      "sha256": "ec6dfdf93340edf474c41ddccffd09008b892073dc7c5e3e1436acca2e409832"
+    }
+  ],
+  "actions": [
+    {
+      "id": 42229026292,
+      "name": "pages build and deployment",
+      "head_sha": "f67a377e225087437829ee0826be971886acdf29",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Fabian-11037/Time-Series-Project/actions/runs/42229026292"
+    },
+    {
+      "id": 42229025916,
+      "name": "Validar dataset y Jupyter Book",
+      "head_sha": "f67a377e225087437829ee0826be971886acdf29",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Fabian-11037/Time-Series-Project/actions/runs/42229025916"
+    },
+    {
+      "id": 42228395824,
+      "name": "Validar dataset y Jupyter Book",
+      "head_sha": "312d11865459e81e35d13cd7eed37b444eb704b8",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Fabian-11037/Time-Series-Project/actions/runs/42228395824"
+    }
+  ],
+  "E1_complete": false
+}

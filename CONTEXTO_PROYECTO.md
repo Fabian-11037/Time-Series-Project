@@ -1,6 +1,6 @@
 # Contexto para continuar el proyecto
 
-Actualización: 5 de noviembre de 2026. Idioma de trabajo: español.
+Actualización: 6 de noviembre de 2026. Idioma de trabajo: español.
 
 Autores: Fabian José Manrique Morelos y Gloria Bastida. Maestría en Estadística Aplicada, Universidad del Norte.
 
@@ -100,7 +100,7 @@ Los candidatos propuestos son:
 2. LSTM de una capa recurrente con salida densa.
 3. CNN1D poco profunda con salida densa.
 
-Son una recomendación de familias, no una selección sistemática cerrada ni configuraciones ya entrenadas. Antes del benchmark:
+Las tres familias ya se entrenaron en el piloto y la búsqueda exploratoria descritos en las secciones 8–16; su selección sistemática desde la literatura sigue pendiente. Para cerrar el benchmark del E1:
 
 1. Completar la extracción de modelos usados como baseline en los textos completos: arquitectura, profundidad, ancho, regularización, entrenamiento y resultados. Elaborar la tabla de frecuencia y justificar simplicidad y sesgos inductivos distintos.
 2. Escribir un preregistro específico del E1 colombiano antes de búsqueda/piloto: arquitectura, espacios, esfuerzo comparable, pérdida, métricas, margen práctico δ, semillas, inferencia y política temporal. MAE en COP/kWh es la propuesta previa; RMSE y una medida relativa/estacional son complementarias. El margen δ no está fijado. No importar el 3 % ni la MASE semanal del proyecto anterior.
@@ -229,3 +229,15 @@ Para distribución, las75predicciones seleccionadas se agrupan en `results/varia
 La actualización se publicó en main mediante el commit `312d11865459e81e35d13cd7eed37b444eb704b8`. GitHub Actions completó con éxito la validación del dataset,17pruebas,preparación de folds,generación/ejecución del libro y verificación de enlaces. El despliegue Pages finalizó correctamente; el capítulo público `https://fabian-11037.github.io/Time-Series-Project/10_modelos.html` respondióHTTP200 y se comprobaron las métricas24.155/40.157,los4800ajustes,losdiagramas y el archivo de predicciones.
 
 Se versionaron281archivos modificados/nuevos (aproximadamente6MB), incluyendo la distribución compacta de75predicciones seleccionadas con huellas. No se incluyeron checkpoints,los5.4GBdelarchivo completo,entornos virtuales,PID ni estados de procesos. El código y los resultados completos permanecen en el equipo. El libro público diferencia selección en validación y prueba previamente consultada.
+
+## 17. Revisión frente al Entregable 1, 6 de noviembre de 2026
+
+Se actualizó este clon desde main hasta `f67a377e225087437829ee0826be971886acdf29` y se contrastó el JBook con las 34 páginas del PDF original del E1. Informe completo: `REVISION_ENTREGABLE_1.md`; evidencia: `results/e1_audit_2026-11-06.json`.
+
+Estado vigente: EDA, datos y pipeline disponibles; piloto, evaluación inicial de prueba y búsqueda de variantes realizados. **El E1 no está completo:** faltan extracción/frecuencias de baselines, margen práctico, potencia, inferencia temporal con IC/tamaños de efecto/multiplicidad y evaluación independiente del proceso posterior de selección. Las 192 configuraciones no acreditan el protocolo condicional de arquitectura al que remite E1 §3.2; primero debe resolverse qué arquitecturas publicadas están suficientemente especificadas. No se ordenó repetir entrenamientos en esta revisión.
+
+Verificaciones nuevas: 17 pruebas correctas; 142 archivos de datos íntegros; 11 cuadernos ejecutados según sus salidas almacenadas, 216 celdas, 17 páginas y cero errores/enlaces locales rotos. Se comprobaron 4800 registros únicos, código/protocolo congelados y 75 predicciones de validación con SHA-256, recalculando MAE/RMSE/R². Las 14 páginas públicas coinciden con docs; CI y Pages de la versión auditada finalizaron correctamente. No se reentrenó, no se ejecutaron nuevamente todos los cuadernos y no se volvió a evaluar prueba.
+
+Las configuraciones seleccionadas son C3 con 24 h, L2 con 72 h y M3 con 24 h; sus errores son de selección en validación. La prueba previa corresponde a las configuraciones iniciales de 168 h. Para el estado actual prevalecen estas precisiones sobre las descripciones históricas de preparación anterior al entrenamiento. No presentar 2022–2025 como una prueba intacta del diseño posterior.
+
+Pendientes documentados adicionales: expresiones desactualizadas en el capítulo 8, uso de «ajustes independientes» en el capítulo 10 y portabilidad a Windows (`fcntl` en script/cuaderno; búsqueda con GPU). Este clon distribuye predicciones seleccionadas, curvas y métricas, pero no todos los checkpoints ni predicciones de la prueba inicial. La revisión registra estas brechas sin modificar los experimentos ni el HTML.
