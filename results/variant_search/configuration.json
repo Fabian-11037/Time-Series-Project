@@ -1,0 +1,143 @@
+{
+  "architectures": {
+    "M1": {
+      "family": "MLP",
+      "widths": [
+        64,
+        32
+      ]
+    },
+    "M2": {
+      "family": "MLP",
+      "widths": [
+        128,
+        64
+      ]
+    },
+    "M3": {
+      "family": "MLP",
+      "widths": [
+        256,
+        128
+      ]
+    },
+    "M4": {
+      "family": "MLP",
+      "widths": [
+        128,
+        64,
+        32
+      ]
+    },
+    "L1": {
+      "family": "LSTM",
+      "hidden": 32,
+      "layers": 1,
+      "dense": false
+    },
+    "L2": {
+      "family": "LSTM",
+      "hidden": 64,
+      "layers": 1,
+      "dense": false
+    },
+    "L3": {
+      "family": "LSTM",
+      "hidden": 32,
+      "layers": 2,
+      "dense": false
+    },
+    "L4": {
+      "family": "LSTM",
+      "hidden": 64,
+      "layers": 1,
+      "dense": true
+    },
+    "C1": {
+      "family": "CNN1D",
+      "channels": 32,
+      "kernel": 5,
+      "dilations": [
+        1,
+        1
+      ]
+    },
+    "C2": {
+      "family": "CNN1D",
+      "channels": 32,
+      "kernel": 3,
+      "dilations": [
+        1,
+        1
+      ]
+    },
+    "C3": {
+      "family": "CNN1D",
+      "channels": 64,
+      "kernel": 5,
+      "dilations": [
+        1,
+        1
+      ]
+    },
+    "C4": {
+      "family": "CNN1D",
+      "channels": 32,
+      "kernel": 3,
+      "dilations": [
+        1,
+        2,
+        4
+      ]
+    }
+  },
+  "lookbacks": [
+    24,
+    72,
+    168,
+    336
+  ],
+  "ridge": [
+    0.0,
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "dropout": 0.1,
+  "seeds": [
+    11037,
+    11038,
+    11039,
+    11040,
+    11041
+  ],
+  "n_folds": 5,
+  "max_epochs": 200,
+  "min_epochs": 20,
+  "patience": 15,
+  "relative_improvement": 0.002,
+  "batch_size": 256,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "target": "price / train standard deviation, no centering",
+  "output": "Softplus",
+  "pipeline": {
+    "method": "split_train_val_forwardChaining",
+    "n_splits": 5,
+    "development_start": "2000-01-01T00:00:00-05:00",
+    "validation_start": "2018-01-01T00:00:00-05:00",
+    "development_end_exclusive": "2022-01-01T00:00:00-05:00",
+    "test_start": "2022-01-01T00:00:00-05:00",
+    "test_end_exclusive": "2026-01-01T00:00:00-05:00",
+    "lookback_hours": 168,
+    "horizon_hours": 24,
+    "stride_hours": 24,
+    "hourly_release_lag_hours": 24,
+    "hydrology_release_lag_days": 2,
+    "include_calendar": true,
+    "seed": 11037,
+    "availability_scenario": "retrospective_assumed_release_lags"
+  },
+  "protocol_sha256": "19d23fe51b46af1751ae785f8476adce2c7453064357ab3de8a99bb821235ffb",
+  "source_sha256": "a42c95db87b1d990daa3ad1b65f0f1088c919cd38a6544e9d1b0b43e8679e1ff"
+}

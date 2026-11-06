@@ -1,0 +1,125 @@
+{
+  "fold": 5,
+  "validation_start": "2021-03-15 00:00:00-05:00",
+  "validation_last_origin": "2021-12-31 00:00:00-05:00",
+  "n_origins": 292,
+  "n_features": 37,
+  "groups": {
+    "precio_bolsa_cop_kwh": [
+      0
+    ],
+    "demanda_real_kwh": [
+      1
+    ],
+    "demanda_comercial_kwh": [
+      2
+    ],
+    "precipitation_preceding_hour_mm_barranquilla": [
+      3
+    ],
+    "precipitation_preceding_hour_mm_bogota": [
+      4
+    ],
+    "precipitation_preceding_hour_mm_bucaramanga": [
+      5
+    ],
+    "precipitation_preceding_hour_mm_cali": [
+      6
+    ],
+    "precipitation_preceding_hour_mm_cartagena": [
+      7
+    ],
+    "precipitation_preceding_hour_mm_cucuta": [
+      8
+    ],
+    "precipitation_preceding_hour_mm_medellin": [
+      9
+    ],
+    "precipitation_preceding_hour_mm_pereira": [
+      10
+    ],
+    "relative_humidity_2m_pct_barranquilla": [
+      11
+    ],
+    "relative_humidity_2m_pct_bogota": [
+      12
+    ],
+    "relative_humidity_2m_pct_bucaramanga": [
+      13
+    ],
+    "relative_humidity_2m_pct_cali": [
+      14
+    ],
+    "relative_humidity_2m_pct_cartagena": [
+      15
+    ],
+    "relative_humidity_2m_pct_cucuta": [
+      16
+    ],
+    "relative_humidity_2m_pct_medellin": [
+      17
+    ],
+    "relative_humidity_2m_pct_pereira": [
+      18
+    ],
+    "temperature_2m_c_barranquilla": [
+      19
+    ],
+    "temperature_2m_c_bogota": [
+      20
+    ],
+    "temperature_2m_c_bucaramanga": [
+      21
+    ],
+    "temperature_2m_c_cali": [
+      22
+    ],
+    "temperature_2m_c_cartagena": [
+      23
+    ],
+    "temperature_2m_c_cucuta": [
+      24
+    ],
+    "temperature_2m_c_medellin": [
+      25
+    ],
+    "temperature_2m_c_pereira": [
+      26
+    ],
+    "llenado_valor_original": [
+      27
+    ],
+    "reserva_util_kwh": [
+      28
+    ],
+    "capacidad_util_kwh": [
+      29
+    ],
+    "aportes_kwh_dia": [
+      30
+    ],
+    "calendar_hour": [
+      31,
+      32
+    ],
+    "calendar_week": [
+      33,
+      34
+    ],
+    "calendar_year": [
+      35,
+      36
+    ]
+  },
+  "seeds": [
+    11037,
+    11038,
+    11039,
+    11040,
+    11041
+  ],
+  "repetitions": 3,
+  "permutation": "Trayectoria completa de 168 horas intercambiada entre or\u00edgenes; seno/coseno permutados juntos",
+  "test_consulted": false,
+  "models_refitted": false
+}

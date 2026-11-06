@@ -1,0 +1,8 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "torch": "2.9.1+rocm6.4",
+  "numpy": "2.4.6",
+  "hip": "6.4.43484-123eb5128",
+  "gpu": "AMD Radeon Graphics",
+  "hip_override": "10.3.0"
+}

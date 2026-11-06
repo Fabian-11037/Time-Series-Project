@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>10. Síntesis e implicaciones metodológicas &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
+    <title>11. Síntesis e implicaciones metodológicas &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
   
   
   
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -67,7 +67,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Reproducibilidad" href="reproducibilidad.html" />
-    <link rel="prev" title="9. Literatura consultada e implicaciones metodológicas" href="09_literatura.html" />
+    <link rel="prev" title="10. Modelos numéricos y búsqueda de configuraciones" href="10_modelos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -195,7 +195,7 @@
   
   
   
-    <p class="title logo__title">Precio eléctrico colombiano: datos y análisis exploratorio</p>
+    <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -217,7 +217,8 @@
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
@@ -355,7 +356,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>10. Síntesis e implicaciones metodológicas</h1>
+    <h1>11. Síntesis e implicaciones metodológicas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,7 +379,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sintesis-e-implicaciones-metodologicas">
-<h1>10. Síntesis e implicaciones metodológicas<a class="headerlink" href="#sintesis-e-implicaciones-metodologicas" title="Link to this heading">#</a></h1>
+<h1>11. Síntesis e implicaciones metodológicas<a class="headerlink" href="#sintesis-e-implicaciones-metodologicas" title="Link to this heading">#</a></h1>
 <p>Los resultados del análisis exploratorio se integran para orientar el preprocesamiento, la representación temporal y el diseño de evaluación del pronóstico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -559,7 +560,7 @@
 <h2>Limitaciones y desarrollo del estudio<a class="headerlink" href="#limitaciones-y-desarrollo-del-estudio" title="Link to this heading">#</a></h2>
 <p>El análisis caracteriza la distribución, calidad, dependencia temporal, estacionalidad, cambios de régimen, heterocedasticidad y asociaciones entre variables. El estudio documental complementa estos resultados mediante la cobertura de fuentes, las características léxicas y la representación de tópicos.</p>
 <p>Las limitaciones principales corresponden a la representación meteorológica mediante rejillas de reanálisis, la disponibilidad histórica de las versiones numéricas y textuales y la desigual cobertura editorial. La evaluación de duplicados semánticos y la conciliación del inventario bibliográfico constituyen extensiones del análisis.</p>
-<p>La etapa experimental comprende la especificación de los modelos de referencia, el preregistro del diseño, el estudio piloto y el benchmark. La evaluación deberá definir el horizonte, el contexto, las métricas, el margen de relevancia práctica y el número de repeticiones, manteniendo la separación temporal y un presupuesto de ajuste comparable.</p>
+<p>La evaluación numérica comprende una búsqueda de 192 configuraciones de MLP, LSTM y CNN1D, con 4800 ajustes sobre desarrollo. El capítulo de modelos presenta las arquitecturas seleccionadas, sus fundamentos y resultados frente a la referencia semanal. Las métricas de validación también intervienen en la parada y selección, por lo que no constituyen una evaluación externa imparcial. La definición de un margen de relevancia práctica, el análisis de potencia y la inferencia con dependencia temporal permanecen pendientes.</p>
 </section>
 </section>
 
@@ -594,12 +595,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="09_literatura.html"
+       href="10_modelos.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">9. Literatura consultada e implicaciones metodológicas</p>
+        <p class="prev-next-title">10. Modelos numéricos y búsqueda de configuraciones</p>
       </div>
     </a>
     <a class="right-next"

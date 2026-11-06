@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Precio eléctrico colombiano: datos y análisis exploratorio &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
+    <title>Precio eléctrico colombiano: datos, análisis y modelos de pronóstico &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
   
   
   
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -194,7 +194,7 @@
   
   
   
-    <p class="title logo__title">Precio eléctrico colombiano: datos y análisis exploratorio</p>
+    <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -216,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
@@ -352,7 +353,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Precio eléctrico colombiano: datos y análisis exploratorio</h1>
+    <h1>Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,12 +367,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="precio-electrico-colombiano-datos-y-analisis-exploratorio">
-<h1>Precio eléctrico colombiano: datos y análisis exploratorio<a class="headerlink" href="#precio-electrico-colombiano-datos-y-analisis-exploratorio" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="precio-electrico-colombiano-datos-analisis-y-modelos-de-pronostico">
+<h1>Precio eléctrico colombiano: datos, análisis y modelos de pronóstico<a class="headerlink" href="#precio-electrico-colombiano-datos-analisis-y-modelos-de-pronostico" title="Link to this heading">#</a></h1>
 <p><strong>Fabian José Manrique Morelos y Gloria Bastida</strong><br />
 Maestría en Estadística Aplicada · Universidad del Norte</p>
 <p>Este estudio examina las características temporales del precio nacional de bolsa de energía eléctrica en Colombia y su relación con la demanda, las condiciones meteorológicas y la disponibilidad hídrica. El conjunto de datos reúne series de XM, variables meteorológicas de ocho ciudades y un corpus de titulares de prensa e informes de IDEAM y XM para el periodo 2000–2025.</p>
-<p>El análisis comprende la calidad e integridad de los registros, la distribución del precio, los ciclos temporales, los cambios de régimen, la dependencia serial y las asociaciones entre variables. El componente documental examina la cobertura de las fuentes, las características léxicas, los tópicos y su evolución temporal. La revisión bibliográfica proporciona el fundamento para la formulación de modelos de pronóstico y su evaluación.</p>
+<p>El análisis comprende la calidad e integridad de los registros, la distribución del precio, los ciclos temporales, los cambios de régimen, la dependencia serial y las asociaciones entre variables. El componente documental examina la cobertura de las fuentes, las características léxicas, los tópicos y su evolución temporal. La revisión bibliográfica proporciona el fundamento para la formulación de modelos de pronóstico y su evaluación. El capítulo de modelos numéricos presenta una búsqueda de 192 configuraciones MLP, LSTM y CNN1D, con 4800 ajustes y comparación frente a una referencia semanal.</p>
 <p>Las tablas y figuras se obtienen mediante cuadernos ejecutables. Los capítulos presentan los procedimientos empleados, los resultados y sus implicaciones para el preprocesamiento, la arquitectura y la validación de los modelos.</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -384,7 +385,8 @@ Maestría en Estadística Aplicada · Universidad del Norte</p>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>

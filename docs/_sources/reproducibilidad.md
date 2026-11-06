@@ -6,10 +6,12 @@ El conjunto de datos se distribuye en `data/` mediante archivos CSV comprimidos 
 python -m venv .venv
 # Activar .venv según el sistema operativo
 python -m pip install -r requirements.lock.txt
+python -m pip install -r requirements-pytorch-cpu.txt
 python scripts/verify_dataset.py
 python -m unittest discover -s tests
 python scripts/create_notebooks.py
 python scripts/create_literature_notebooks.py
+python scripts/create_model_notebook.py
 python scripts/run_eda.py
 python scripts/verify_book.py
 ```
@@ -30,3 +32,9 @@ Las series numéricas y parte del corpus documental proceden de fuentes retrospe
 ## Procedencia
 
 Los scripts de adquisición se conservan en `scripts/acquisition/`. La conversión de la instantánea analizada se documenta en `scripts/import_local_downloads.py`. Las huellas permiten identificar los archivos utilizados y contrastar futuras actualizaciones de las fuentes. El directorio `literature/` contiene los registros de las extracciones bibliográficas verificadas.
+
+## Modelos numéricos
+
+El capítulo de modelos se genera con `scripts/create_model_notebook.py` y se ejecuta con `python scripts/run_eda.py --chapters 10_modelos --no-build`. Sus celdas incluyen el código de preparación temporal, arquitectura y entrenamiento, y verifican las métricas desde artefactos existentes sin repetir la búsqueda. El entrenamiento exige el entorno PyTorch registrado en `results/variant_search/environment.json`; Jupyter Book permanece en la versión 1.0.4. Las fuentes y el registro experimental se identifican mediante huellas en `configuration.json`.
+
+La búsqueda compara 192 configuraciones mediante 4800 ajustes en desarrollo 2000–2021. Los orígenes se comparten entre contextos y cada fold ajusta sus escaladores sólo con entrenamiento. El periodo 2022–2025 se evaluó previamente para configuraciones iniciales y no se reevalúa en esta búsqueda. Las métricas de selección no equivalen a errores de prueba de los candidatos seleccionados.

@@ -1,0 +1,17 @@
+{
+  "candidate": "L2_h72_l2_0.001",
+  "architecture": "L2",
+  "family": "LSTM",
+  "lookback": 72,
+  "ridge": 0.001,
+  "seed": 11037,
+  "fold": 4,
+  "epochs": 26,
+  "best_epoch": 13,
+  "mae": 23.496404609723722,
+  "rmse": 35.56760032881848,
+  "n_values": 7008,
+  "parameters": 27928,
+  "seconds": 5.10500431060791,
+  "stop_reason": "patience"
+}

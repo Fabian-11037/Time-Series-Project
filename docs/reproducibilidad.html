@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Reproducibilidad &#8212; Precio eléctrico colombiano: datos y análisis exploratorio</title>
+    <title>Reproducibilidad &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
   
   
   
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -67,7 +67,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Referencias y fuentes" href="referencias.html" />
-    <link rel="prev" title="10. Síntesis e implicaciones metodológicas" href="10_conclusiones.html" />
+    <link rel="prev" title="11. Síntesis e implicaciones metodológicas" href="10_conclusiones.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
@@ -195,7 +195,7 @@
   
   
   
-    <p class="title logo__title">Precio eléctrico colombiano: datos y análisis exploratorio</p>
+    <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -217,7 +217,8 @@
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
@@ -367,6 +368,7 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-numericos">Modelos numéricos</a></li>
 </ul>
             </nav>
         </div>
@@ -384,10 +386,12 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 <span class="c1"># Activar .venv según el sistema operativo</span>
 python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.lock.txt
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-pytorch-cpu.txt
 python<span class="w"> </span>scripts/verify_dataset.py
 python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>-s<span class="w"> </span>tests
 python<span class="w"> </span>scripts/create_notebooks.py
 python<span class="w"> </span>scripts/create_literature_notebooks.py
+python<span class="w"> </span>scripts/create_model_notebook.py
 python<span class="w"> </span>scripts/run_eda.py
 python<span class="w"> </span>scripts/verify_book.py
 </pre></div>
@@ -403,6 +407,11 @@ python<span class="w"> </span>scripts/verify_book.py
 <section id="procedencia">
 <h2>Procedencia<a class="headerlink" href="#procedencia" title="Link to this heading">#</a></h2>
 <p>Los scripts de adquisición se conservan en <code class="docutils literal notranslate"><span class="pre">scripts/acquisition/</span></code>. La conversión de la instantánea analizada se documenta en <code class="docutils literal notranslate"><span class="pre">scripts/import_local_downloads.py</span></code>. Las huellas permiten identificar los archivos utilizados y contrastar futuras actualizaciones de las fuentes. El directorio <code class="docutils literal notranslate"><span class="pre">literature/</span></code> contiene los registros de las extracciones bibliográficas verificadas.</p>
+</section>
+<section id="modelos-numericos">
+<h2>Modelos numéricos<a class="headerlink" href="#modelos-numericos" title="Link to this heading">#</a></h2>
+<p>El capítulo de modelos se genera con <code class="docutils literal notranslate"><span class="pre">scripts/create_model_notebook.py</span></code> y se ejecuta con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">scripts/run_eda.py</span> <span class="pre">--chapters</span> <span class="pre">10_modelos</span> <span class="pre">--no-build</span></code>. Sus celdas incluyen el código de preparación temporal, arquitectura y entrenamiento, y verifican las métricas desde artefactos existentes sin repetir la búsqueda. El entrenamiento exige el entorno PyTorch registrado en <code class="docutils literal notranslate"><span class="pre">results/variant_search/environment.json</span></code>; Jupyter Book permanece en la versión 1.0.4. Las fuentes y el registro experimental se identifican mediante huellas en <code class="docutils literal notranslate"><span class="pre">configuration.json</span></code>.</p>
+<p>La búsqueda compara 192 configuraciones mediante 4800 ajustes en desarrollo 2000–2021. Los orígenes se comparten entre contextos y cada fold ajusta sus escaladores sólo con entrenamiento. El periodo 2022–2025 se evaluó previamente para configuraciones iniciales y no se reevalúa en esta búsqueda. Las métricas de selección no equivalen a errores de prueba de los candidatos seleccionados.</p>
 </section>
 </section>
 
@@ -442,7 +451,7 @@ python<span class="w"> </span>scripts/verify_book.py
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">10. Síntesis e implicaciones metodológicas</p>
+        <p class="prev-next-title">11. Síntesis e implicaciones metodológicas</p>
       </div>
     </a>
     <a class="right-next"
@@ -474,6 +483,7 @@ python<span class="w"> </span>scripts/verify_book.py
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-numericos">Modelos numéricos</a></li>
 </ul>
   </nav></div>
 

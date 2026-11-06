@@ -1,0 +1,8 @@
+{
+  "verified_runs": 75,
+  "verified_artifacts": 300,
+  "predictions_recomputed": true,
+  "epochs_per_run": 30,
+  "test_evaluated": false,
+  "protocol_hash_unchanged": true
+}

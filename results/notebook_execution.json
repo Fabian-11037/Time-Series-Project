@@ -58,5 +58,11 @@
     "seconds": 54.907,
     "code_cells": 13,
     "errors": 0
+  },
+  {
+    "notebook": "10_modelos.ipynb",
+    "seconds": 5.145,
+    "code_cells": 35,
+    "errors": 0
   }
 ]

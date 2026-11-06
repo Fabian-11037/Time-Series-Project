@@ -1,0 +1,17 @@
+{
+  "candidate": "M3_h24_l2_0.001",
+  "architecture": "M3",
+  "family": "MLP",
+  "lookback": 24,
+  "ridge": 0.001,
+  "seed": 11038,
+  "fold": 2,
+  "epochs": 25,
+  "best_epoch": 14,
+  "mae": 26.5437157731078,
+  "rmse": 35.84583222303442,
+  "n_values": 7008,
+  "parameters": 263576,
+  "seconds": 0.9689054489135742,
+  "stop_reason": "patience"
+}

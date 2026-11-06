@@ -1,0 +1,9 @@
+{
+  "scripts/train_pytorch.py": "28c110c120280aba964531c703dcfb42bb9d666810515a42b61002a77c8e70ed",
+  "PROTOCOLO_PILOTO_2026-11-05.md": "e38fef2d6e24677bfc985987809e4ce307eaa4e56873607c1442e79cac76a780",
+  "configs/training_pipeline.json": "154d4dfe6d3b7283695b3f3b4f29ee2554ffb1419008ea958fe2ad14ad98fd0a",
+  "src/colombia_energy/pipeline.py": "f3ad15ab2a9c4414e97977c421fd6116781c099c813ec58ede257acb3e5cee48",
+  "src/colombia_energy/data.py": "6306693aa7fe9d08b267ab14d26027fc3d6f210dcdc1ee43b661ca4d3d01fd1d",
+  "src/colombia_energy/model_policy.py": "d704da88041a4a795e61539442ba6d64f4b35de32101aadeb1e5ffaa2db476f6",
+  "src/colombia_energy/forward_chaining.py": "9f8ffcabf29742092bd0a5c963dafc6349b8573fe554b2d1ed830fb9e84d2eaa"
+}

@@ -1,4 +1,4 @@
-title: "Precio eléctrico colombiano: datos y análisis exploratorio"
+title: "Precio eléctrico colombiano: datos, análisis y modelos de pronóstico"
 author: "Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte"
 copyright: "2026"
 language: es
@@ -12,7 +12,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   home_page_in_navbar: true
-  extra_footer: "Análisis exploratorio del precio eléctrico colombiano."
+  extra_footer: "Datos, análisis y modelos numéricos del precio eléctrico colombiano."
 parse:
   myst_enable_extensions:
     - dollarmath

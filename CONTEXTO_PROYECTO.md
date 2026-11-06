@@ -1,6 +1,6 @@
 # Contexto para continuar el proyecto
 
-Actualización: 4 de noviembre de 2026. Idioma de trabajo: español.
+Actualización: 5 de noviembre de 2026. Idioma de trabajo: español.
 
 Autores: Fabian José Manrique Morelos y Gloria Bastida. Maestría en Estadística Aplicada, Universidad del Norte.
 
@@ -14,9 +14,10 @@ El objetivo general es desarrollar un modelo de pronóstico que integre series t
 Estado al actualizar este archivo:
 
 - Dataset consolidado, versionado y auditado; EDA y revisión bibliográfica publicados.
+- **Prueba 2022–2025 evaluada el 5 de noviembre de 2026 por solicitud explícita del usuario para las tres familias.** Ya no es un periodo sin consultar; véase sección 9. Los bloqueos de EDA y piloto continúan activos.
 - Pipeline de validación **`split_train_val_forwardChaining`** implementado y configurado con cinco folds.
 - Preparación de ventanas y escaladores independiente por fold; interfaz disponible para incorporar modelos.
-- **No se han entrenado MLP, LSTM ni CNN1D ni se ha ejecutado su benchmark colombiano.** `project_scope.json` registra este estado.
+- **Se completó un piloto colombiano de MLP, LSTM y CNN1D en PyTorch/ROCm:** 75 ajustes (cinco folds × cinco semillas × tres familias), 30 épocas fijas. El benchmark confirmatorio final sigue pendiente. `project_scope.json` distingue ambos estados.
 - Las implementaciones y resultados previos de Time-MMD pertenecen a otro proyecto; sus métricas, ventana semanal y margen de mejora no deben trasladarse a este dataset.
 
 La solicitud vigente sustituye la propuesta de `split_train_val_kFold` por **forward chaining**. El antiguo corte 2000–2017 / 2018–2021 se conserva únicamente para interpretar los diagnósticos del EDA; no constituye una única partición fija de entrenamiento/validación del nuevo pipeline.
@@ -83,7 +84,7 @@ python scripts/run_eda.py
 python scripts/verify_book.py
 ```
 
-En Windows también puede utilizarse `.venv\Scripts\python.exe` sin activar el entorno. Jupyter Book debe permanecer en la versión 1.0.4. El archivo de dependencias actual cubre EDA y pipeline; el framework de Deep Learning y sus versiones deberán incorporarse antes del entrenamiento.
+En Windows también puede utilizarse `.venv\Scripts\python.exe` sin activar el entorno. Jupyter Book debe permanecer en la versión 1.0.4. El bloqueo original cubre EDA y pipeline. El piloto utilizó PyTorch 2.9.1+rocm6.4; sus versiones efectivas se registran en `results/pilot_pytorch_gfx1030/environment_freeze.txt`, sin modificar el entorno ni el bloqueo del EDA.
 
 `scripts/prepare_pipeline.py --plan-only` calcula sólo el plan temporal. Sin esa opción prepara y audita los escaladores de los cinco folds, sin entrenar modelos. Sus artefactos están en `results/pipeline/`: `folds.csv`, `fold_indices.npz`, `preprocessors.json` y `manifest.json`.
 
@@ -130,3 +131,95 @@ El corpus se conserva para E2/E3. El escenario `declared_dates` incluye versione
 - No sobrescribir los protocolos fechados ni las huellas de prueba. Documentar las nuevas decisiones en registros posteriores.
 
 Al cerrar una sesión, actualizar este archivo con el estado real de implementaciones, experimentos, comprobaciones y pendientes, sin incorporar credenciales ni rutas propias del equipo.
+
+## 8. Piloto ejecutado el 5 de noviembre de 2026
+
+Se descargó el repositorio en un clon nuevo y se leyó este contexto antes de modificar entrenamientos. El usuario confirmó el entorno existente `mlenv`. Hardware: AMD Radeon RX 6700 XT de 12 GB (gfx1031), PyTorch 2.9.1+rocm6.4, Python 3.12.3. El primer intento sin override falló por `HIP invalid device function`; no produjo ajustes completos. El proceso con `HSA_OVERRIDE_GFX_VERSION=10.3.0` superó operaciones GPU y completó los entrenamientos. No se modificaron controladores, paquetes ni variables globales.
+
+Prerregistro exploratorio: `PROTOCOLO_PILOTO_2026-11-05.md`, congelado antes del primer ajuste. Scripts: `scripts/train_pytorch.py` (callbacks de `run_forward_chaining`) y `scripts/summarize_pytorch.py`. Arquitecturas simples adaptadas de las familias propuestas; no se afirma haber completado la extracción bibliográfica previa al benchmark final. Cinco semillas 11037–11041; mismos folds, 30 épocas y Adam para las tres familias, sin búsqueda ni selección por validación. Se añadió una normalización auxiliar del objetivo con estadísticas exclusivas de entrenamiento, invertida para calcular errores en COP/kWh.
+
+Resultados agrupados sobre todas las horas de validación de los cinco folds y luego promediados entre semillas:
+
+| Familia | MAE medio ± DE entre semillas (COP/kWh) | RMSE medio (COP/kWh) |
+|---|---:|---:|
+| CNN1D | 25.307 ± 0.189 | 38.529 |
+| LSTM | 26.382 ± 0.453 | 40.155 |
+| MLP | 32.024 ± 0.991 | 46.789 |
+
+Referencia de repetición semanal: MAE 40.157 COP/kWh. CNN1D obtuvo aproximadamente 37.0 % menos MAE que esa referencia en este piloto. Este porcentaje es un resultado descriptivo, no un margen δ preregistrado ni una prueba de significancia. La variación entre semillas no mide incertidumbre temporal. Duración del bucle experimental: 330.84 s, excluyendo inicialización y carga previa.
+
+Artefactos en `results/pilot_pytorch_gfx1030/`: informe `RESUMEN_RESULTADOS.md`, `summary.csv`, métricas por fold y semilla, curva de cada ajuste, checkpoints con pesos y escaladores, predicciones por origen, configuración, versiones y huellas de fuentes/artefactos. Se verificaron 75 ajustes y 300 artefactos; MAE/RMSE se recalcularon desde predicciones. Figura: `comparacion_modelos.png`. El intento fallido conserva sólo su configuración en `results/pilot_pytorch/`.
+
+Verificaciones: 17 pruebas existentes superadas; 142 archivos del dataset comprobados, calendarios completos y huellas de prueba intactas. No se cargaron valores de prueba para el entrenamiento ni se evaluó 2022–2025. El libro y `docs/` no se regeneraron; sus textos anteriores describen la etapa previa. No se publicó ni se subió a GitHub.
+
+Pendientes para el benchmark confirmatorio E1: completar extracción/frecuencias de baselines de textos completos, justificar arquitecturas, fijar δ e inferencia temporal/multiplicidad, dimensionar las repeticiones finales con potencia >=0.80 y alfa=0.05, congelar el diseño y disponer una evaluación final explícita de prueba. El piloto no sustituye esos requisitos.
+
+## 9. Prueba evaluada por autorización explícita
+
+El 5 de noviembre de 2026, después de conocer la validación, el usuario solicitó evaluar prueba con los tres modelos. Registro previo a consultar sus valores: `PROTOCOLO_PRUEBA_2026-11-05.md`. Se mantuvieron las arquitecturas del piloto y sus hiperparámetros, cinco semillas 11037–11041 y 30 épocas fijas. Se reentrenaron desde cero 15 modelos con todos los ejemplos admisibles de desarrollo 2000–2021. Se guardaron los 15 checkpoints antes de abrir prueba; escaladores de entradas y objetivo se estimaron sólo con desarrollo. No se optimizó ni seleccionó época o semilla por prueba.
+
+Entrada explícita y separada: `scripts/evaluate_test_pytorch.py --evaluate-test`, que usa `allow_test=True` únicamente después del ajuste. La extensión de calendario para construir covariables de prueba es local; no altera los límites ni bloqueos del pipeline de desarrollo. El script impide una segunda apertura automática de prueba. `scripts/summarize_test_pytorch.py` audita y resume predicciones existentes sin reentrenar ni volver a inferir.
+
+Prueba cubre 1461 orígenes diarios y 35064 horas, del 1 de enero de 2022 al 31 de diciembre de 2025. Pronóstico secuencial diario con pesos fijos, contexto 168 horas y horizonte 24 horas. Orígenes posteriores pueden usar observaciones pasadas de prueba ya disponibles con los rezagos declarados (24 horas y dos días); no equivale a un único pronóstico a cuatro años ni a reentrenar con prueba.
+
+| Familia | R² medio ± DE | MAE medio (COP/kWh) | RMSE medio (COP/kWh) |
+|---|---:|---:|---:|
+| CNN1D | 0.8151 ± 0.0033 | 81.618 | 155.206 |
+| MLP | 0.7925 ± 0.0167 | 96.453 | 164.332 |
+| LSTM | 0.6726 ± 0.0066 | 101.644 | 206.538 |
+
+Media y DE entre cinco semillas; R² global calculado sobre todas las horas de prueba. Referencia semanal: MAE 133.636 COP/kWh, RMSE 235.198 COP/kWh y R² 0.5754. CNN1D obtuvo el menor error descriptivo entre las redes; no se afirma significancia estadística. No se efectuaron cambios de hiperparámetros ni nuevas evaluaciones a partir de estos resultados.
+
+Artefactos: `results/test_pytorch/RESUMEN_PRUEBA.md`, configuración congelada, estadísticas de desarrollo, métricas por semilla, resumen, curvas, pesos, predicciones, referencia semanal y huellas. Se verificaron 15 ejecuciones y 60 artefactos, recalculando MAE, RMSE y R² desde predicciones. Se superaron las 17 pruebas existentes. Las huellas del dataset se preservan; sus valores de prueba sí fueron consultados en esta evaluación. Libro y HTML sin regenerar; no se publicó en GitHub.
+
+La descripción de prueba sin consultar en apartados anteriores corresponde al estado previo a esta autorización. Para trabajos futuros no tratar 2022–2025 como prueba intacta si se ajustan decisiones con sus resultados. Los requisitos confirmatorios bibliográficos, δ, potencia y dependencia temporal siguen pendientes; esta evaluación autorizada no equivale a completarlos.
+
+## 10. Interpretación de variables, 5 de noviembre de 2026
+
+Se calculó importancia por permutación de los checkpoints del piloto en el último fold de validación (2021-03-15 a 2021-12-31, 292 orígenes), cinco semillas y tres permutaciones por variable/semilla. Se intercambian trayectorias de 168 horas entre orígenes, preservando su orden interno; los pares seno/coseno se permutan conjuntamente. No se reentrenó ni se consultó prueba para este diagnóstico. Se comprobó que las predicciones originales reproducen las guardadas.
+
+Las 37 entradas son: precio, dos demandas, 24 variables meteorológicas (tres por ocho ciudades), cuatro hidrológicas y seis columnas de calendario. El precio histórico fue la principal variable: incremento medio del MAE al permutar de 35.328 (MLP), 38.494 (LSTM) y 41.691 (CNN1D) COP/kWh. Le siguen aportes, reserva útil y calendario anual/semanal. Son dependencias predictivas descriptivas del último fold, no causalidad ni importancias de los modelos finales de prueba. La correlación entre variables limita la interpretación y el calendario horario, idéntico entre ventanas diarias, no puede evaluarse mediante esta permutación.
+
+Script: `scripts/feature_importance_pytorch.py`. Resultados: `results/feature_importance_pytorch/IMPORTANCIA.md`, tablas completas y método. Las variantes de arquitectura y contextos de 24/72/168/336 horas discutidas después del piloto todavía no se han entrenado; los modelos existentes usan 168 horas.
+
+## 11. Búsqueda de variantes iniciada, 5 de noviembre de 2026
+
+El usuario autorizó iniciar el entrenamiento de variantes con Dropout fijo. Se fijó p=0.1 para todas las familias. Registro previo: `PROTOCOLO_VARIANTES_2026-11-05.md`. Doce arquitecturas (cuatro por familia), contextos24/72/168/336horas y Ridge0/1e-5/1e-4/1e-3:192configuraciones, cinco folds y cinco semillas11037–11041, total4800ajustes. Se inició en GPU con el entorno confirmado `mlenv` y el mismo override ROCm10.3.0. No se consulta ni reevalúa prueba.
+
+Todas las variantes nuevas usan salida Softplus positiva y objetivo dividido por la DE de etiquetas de entrenamiento, sin centrar, de acuerdo con la restricción de precios no negativos discutida. Por tanto las variantes de ancho equivalente al piloto ya no son réplicas exactas del piloto con salida lineal. Ridge es una suma L2 explícita sobre matrices de pesos, excluye sesgos, y Adam usa weight_decay=0. Presupuesto máximo200épocas; mínimo20; parada tras15épocas sin reducción relativa de0.2% en MAE de validación respecto a la referencia de mejora acumulada. Se restauran los pesos de menor MAE absoluto y se registran época óptima y de parada. No es significancia estadística; el mismo bloque usado para parada también sirve para selección y puede producir métricas optimistas.
+
+Los orígenes se fijan con contexto336 para las cuatro longitudes y se comparten entre candidatos. Escaladores nuevos por contexto/fold, exclusivamente con entrenamiento. Comprobaciones previas superadas:48combinaciones de arquitectura/longitud, salidas positivas, gradientes finitos, exclusión de sesgos en Ridge y comportamiento de parada; además17pruebas existentes. Los primeros ajustes reales finalizaron y la recuperación del mejor checkpoint reprodujo su MAE.
+
+Script: `scripts/train_variants.py`; se ejecuta en segundo plano y continúa al finalizar la respuesta, mientras el equipo siga encendido. No se registra arranque automático. Resultados y estado vivo en `results/variant_search/`: `status.json`, `progress.html`, `metrics.csv`, `runs/`, configuraciones, entorno y auditoría de folds. La ejecución completa aún NO se ha verificado: consultar `status.json` y sólo considerar terminada si existe `completed.json` con4800ajustes. Los PID y URL local del panel están en `processes.json`; el panel local se refresca cada5segundos. Barra en consola: `python scripts/show_training_progress.py --watch`.
+
+Para reanudar, con GPU accesible y mlenv activo: `HSA_OVERRIDE_GFX_VERSION=10.3.0 python scripts/train_variants.py`. El proceso rechaza configuraciones/fuentes distintas y usa bloqueo para impedir duplicados. Reanuda ajustes completos; uno interrumpido se repite desde cero. No ejecutar una segunda copia mientras el PID siga activo. La búsqueda no constituye aún benchmark confirmatorio ni repone prueba independiente.
+
+## 12. Apagado al finalizar, autorizado por el usuario
+
+El usuario solicitó apagar el PC al finalizar el entrenamiento. Se activó un proceso separado `scripts/shutdown_after_training.py`, sin modificar las fuentes congeladas de entrenamiento. Estado en `results/variant_search/shutdown_status.json`; registro en `shutdown_watcher.log`. Sólo solicita `systemctl poweroff --no-ask-password` después de existir `completed.json`, estado Completado,4800métricas únicas,192filas de resumen,960resultados por semilla y los checkpoints/predicciones/curvas/métricas de los4800ajustes. Espera60segundos adicionales y sincroniza escrituras antes del apagado. Si falla o se interrumpe el entrenamiento, no apaga. Se verificó permiso de logind CanPowerOff=yes.
+
+Para cancelar el apagado pendiente, crear el archivo `results/variant_search/cancel_shutdown` (por ejemplo `touch results/variant_search/cancel_shutdown`). El vigilante comprueba la cancelación también durante la espera final. No es un apagado a hora fija ni persiste tras reiniciar el equipo.
+
+## 13. Búsqueda de variantes finalizada, 6 de noviembre de 2026
+
+Se completaron4800ajustes y192configuraciones a las00:10(hora de Colombia), en40774.75segundos (11h20min). Estado Completado y completed.json verificados;4800claves únicas y192filas de resumen. Resultados: `results/variant_search/summary.csv`, `best_by_family.csv` y `RESUMEN_VARIANTES.md`.
+
+- CNN1D: `C3_h24_l2_0.0001`, MAE=24.155 ± 0.144, RMSE=37.604 COP/kWh; R²=0.8766; mejor época mediana=23.
+- LSTM: `L2_h72_l2_0.001`, MAE=24.624 ± 0.101, RMSE=37.773 COP/kWh; R²=0.8755; mejor época mediana=22.
+- MLP: `M3_h24_l2_0.001`, MAE=24.992 ± 0.095, RMSE=37.953 COP/kWh; R²=0.8743; mejor época mediana=18.
+
+Métricas de selección en validación, potencialmente optimistas por parada y búsqueda sobre el mismo bloque; no son evaluación externa ni prueba. Se recalcularon R² y MAE de los75checkpoints ganadores desde sus predicciones. Prueba NO reevaluada. La orden de apagado registró poweroff_requested tras finalizar; no inferir apagado físico exclusivamente de ese registro. La barra anterior puede requerir reiniciar su servidor local si el equipo fue reiniciado.
+
+## 14. Integración de modelos en el Jupyter Book, 6 de noviembre de 2026
+
+Se añadió `book/10_modelos.ipynb`, generado por `scripts/create_model_notebook.py`. Incluye estructura de las37entradas, alineación temporal, escalado, salida Softplus, diagramas SVG de la entrada y de las mejores arquitecturas M3/L2/C3, fundamentos matemáticos, búsqueda192/4800, regularización y parada, tablas generadas desde artefactos, comparación semanal, curvas y limitaciones de selección. Las celdas incorporan las funciones de preparación y las definiciones del pipeline de entrenamiento; no importan módulos privados del proyecto ni reinician la búsqueda al ejecutar la documentación. Las fuentes matemáticas y de API se enlazan en el capítulo y referencias.
+
+Se ejecutó el capítulo sin errores con mlenv y se reconstruyó HTML con Jupyter Book1.0.4, instalado en `.bookenv` dentro del proyecto para no modificar el entorno experimental. La ejecución documental recalculó la referencia semanal y verificó R² de los75checkpoints seleccionados desde predicciones de validación, sin consultar prueba. `verify_book.py` comprobó11cuadernos ejecutados,17páginas HTML, cero errores y cero enlaces locales rotos. Fuentes y HTML en `book/` y `docs/`; no se publicó en GitHub.
+
+Se actualizaron título/introducción, índice, reproducibilidad y fuentes de conclusiones; la síntesis pasa al capítulo11. Las etiquetas de diagramas se ampliaron y los encabezados se adaptaron a modo oscuro. El libro se abrió en navegador local; PID/URL del servidor actual en `results/jbook_local_server.json`. Para regenerar el capítulo: `python scripts/create_model_notebook.py`; para ejecutar sólo sus cálculos: `python scripts/run_eda.py --chapters 10_modelos --no-build`; construir con Jupyter Book1.0.4 y verificar con `python scripts/verify_book.py`. Las definiciones de entrenamiento quedan visibles pero no se invocan automáticamente.
+
+## 15. Preparación de publicación, 6 de noviembre de 2026
+
+Se prepara la actualización de main y GitHub Pages a partir del HTML verificado en docs. El paquete versionado contiene fuentes del libro y scripts, resúmenes del piloto/prueba, métricas agregadas de4800ajustes y predicciones/curvas/métricas de los75ajustes de las configuraciones ganadoras. Los checkpoints y el resto de resultados completos permanecen en local, excluidos por `.gitignore`, sin borrarlos. El capítulo puede regenerar sus tablas/figuras con este subconjunto sin pesos. El workflow incorpora PyTorch CPU2.9.1 para ejecutar definiciones del capítulo y el generador `create_model_notebook.py`; no entrena redes en CI. El estado final de publicación debe verificarse en la URL pública del capítulo.
+
+Para distribución, las75predicciones seleccionadas se agrupan en `results/variant_search/selected_predictions.zip` con huellas en `selected_predictions_manifest.json`. El capítulo lee ese archivo directamente; las curvas y métricas seleccionadas conservan su estructura de carpetas. Las predicciones originales permanecen en local.

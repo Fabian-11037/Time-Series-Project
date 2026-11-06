@@ -13,3 +13,5 @@ El EDA propuesto estudia una tarea numérica de salida directa de las siguientes
 Esta decisión pertenece al candidato colombiano y no modifica el E1 ya existente de Time-MMD ni sus resultados congelados.
 
 Actualización del diseño de evaluación: se utiliza `split_train_val_forwardChaining` para planificar cinco folds expansivos sobre desarrollo 2000–2021. El periodo 2022–2025 continúa reservado para prueba. La configuración activa está en `configs/training_pipeline.json` y el contrato de entrenamiento en `PIPELINE.md`.
+
+El 5 de noviembre de 2026 se ejecutó un piloto exploratorio de las tres familias en PyTorch, documentado en `PROTOCOLO_PILOTO_2026-11-05.md`. Los 75 ajustes y sus resultados verificables están en `results/pilot_pytorch_gfx1030/RESUMEN_RESULTADOS.md`. Las limitaciones y condiciones del benchmark final descritas arriba siguen vigentes; no se evaluó prueba.

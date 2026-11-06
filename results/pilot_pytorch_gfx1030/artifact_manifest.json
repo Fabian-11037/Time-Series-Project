@@ -1,0 +1,1502 @@
+[
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11037/predictions.npz",
+    "bytes": 47073,
+    "sha256": "64c8a7717d4513a61176a7c6125d192b552a61bf2c0a3ae1d4aa1a4b48be2673"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11037/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "7216096dd0755d2d9443b291c418c26d417343b2bf52d094efb8894e7f92a263"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11037/curves.csv",
+    "bytes": 1248,
+    "sha256": "e563ee177f55f0d85e367a9246536568b5a7e74066bfccb1f9dd9320e60503df"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11037/metrics.json",
+    "bytes": 278,
+    "sha256": "ce6a69f75e79f0031364b811c30933ffc305ee0e521f26f190adfef8b65c65e6"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11038/predictions.npz",
+    "bytes": 47160,
+    "sha256": "fd6bb6985276d6f797240850d8070c4d6152f68df49a9d493f595bda82397f3b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11038/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "84f1247a4a8d4cfc2520996c62809250feb2c1d7b75e96156354575bf74dfad0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11038/curves.csv",
+    "bytes": 1255,
+    "sha256": "c8f249d640a455c490e62246eb9c0229e2412a6ddfd93dea430e5f3b5a811b34"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11038/metrics.json",
+    "bytes": 277,
+    "sha256": "c997e92783fafe548401d8afeb9903f696d01259e82e1e03b0de1bbd2bd6953e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11039/predictions.npz",
+    "bytes": 47152,
+    "sha256": "1997d6f02c8c06a73d63cb56a761ff1750a2565e6e1d613ea20e75618c1c025a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11039/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "4fe37db966f04a8c77b7e01261a770f5846e9c9d9dd4c724708f65b4f260556f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11039/curves.csv",
+    "bytes": 1246,
+    "sha256": "3be10424c916e523dca4503cf9955461bd9fa8646dc5857a5344075c92bc0973"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "6f5934f776926b4ea1f14dec194995c691ddf884a7e9719b3eb4125df7da0da8"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11040/predictions.npz",
+    "bytes": 47135,
+    "sha256": "b9153ccf8566271827da70e14fc36ba8a33291fbdba9c21096dc85389070b90d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11040/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "08e44e8b2a63e04503950ab452d7604d7b3c9b30d493671e2b0cc3801fe0e1f4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11040/curves.csv",
+    "bytes": 1251,
+    "sha256": "73568c48da183388c119ec2c4fd940ff7c61e49673bcd9833d937bedf35c8659"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11040/metrics.json",
+    "bytes": 279,
+    "sha256": "68842061db5c207f735c345f5f3db11cf5104f93e368e809685f78d9048d500f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11041/predictions.npz",
+    "bytes": 47121,
+    "sha256": "96681a3bdb5363601e6b53af6340bb1df558b69289f207fd57c5ba8bfc900bd2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11041/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "bcb168999f93f6cfb9dbb368102ebbdbe63023e4e59112dc5684950a8462a8fa"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11041/curves.csv",
+    "bytes": 1254,
+    "sha256": "a353902ce47fee049445ed773dc1c7d8735eb3a663cc4c771562ee233a29acb5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_1_seed_11041/metrics.json",
+    "bytes": 279,
+    "sha256": "320a67bfabe950417926e35b03e790f8a37e720bb3cae3ba7bb52d6c5fccda3f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11037/predictions.npz",
+    "bytes": 47205,
+    "sha256": "8494fe83694111a4772d952e6e5a1c48233ba19faff765b13aaad81fb8ca4dfd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11037/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "465b6ddca2670bf28499e055013411a82be43014bd4a0abfafa1bbcb5e657af9"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11037/curves.csv",
+    "bytes": 1244,
+    "sha256": "ddb885f05e348d81871c9af5ff9de630063aa5b6acef93285c35a8ad2c28d4c2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11037/metrics.json",
+    "bytes": 274,
+    "sha256": "651b65eb65005ecfa6bcbb20bf5c56cf79268ad0ae2c457fcafcfb832d8a3c52"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11038/predictions.npz",
+    "bytes": 47172,
+    "sha256": "a9f52a547320b077a307183494bdd0367f7e326d671bd9abb39524d28f37da02"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11038/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "83485e40b82f3b7acd8ab4dcac395515d9f96495ff5ba5a8a50f3c2a6b35a133"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11038/curves.csv",
+    "bytes": 1234,
+    "sha256": "1932e8fca9132d04c15d88c57a3e789c5b243c5f701beac9f37665ee5c1dfb48"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11038/metrics.json",
+    "bytes": 278,
+    "sha256": "e21dcb2bfeb24f0bfc2d6ceeddd6b38837058be3c62dcb8630082679d11b3442"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11039/predictions.npz",
+    "bytes": 47188,
+    "sha256": "326682110c9041a9b1ecd4820d425ab1a55cb440234b44fc3c877c20ca3744d3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11039/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "6aecccf079d2e09682bea28d766ab309ebd2c185d16b781a2543171f360596ab"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11039/curves.csv",
+    "bytes": 1240,
+    "sha256": "383147368adb7af796880f2f00ec970fa70082dd57d201e53954d5677eca2f71"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11039/metrics.json",
+    "bytes": 275,
+    "sha256": "252ce743e1e1c9517f8fc8c6a38fb6e5534fbcc163f678ead9979ea9aa5e7bb8"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11040/predictions.npz",
+    "bytes": 47228,
+    "sha256": "c11df3e77f79b91d5df7623c6231ff7494a48ff3563e49d93e6b23f98a9d815c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11040/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "bcbfe6743da0712e5da8f2e23ec9fcfeab1eff38054da54305a5953464b0fdbd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11040/curves.csv",
+    "bytes": 1228,
+    "sha256": "cc645206af1595f25d9c34833ec890136bf17093f93eb6355df87ed5a1199290"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11040/metrics.json",
+    "bytes": 278,
+    "sha256": "2f848c56f55ad2cd02f4ea27e60f8c6a2ca56f89995a9887da3ebe411aa4882c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11041/predictions.npz",
+    "bytes": 47201,
+    "sha256": "9db7730aa367ccae4c0b43e4cbdd6ec8ee184be261c3c3ac05fcde9b746c49f1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11041/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "3440c98e57b4277c23f67517cf38653ab0acc426f12d25595e33b4905fcdd51c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11041/curves.csv",
+    "bytes": 1231,
+    "sha256": "964cb138e4aba8e553b3e8f3a3d35348d953c01ec82d8f30486aea46a3d38bc5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_2_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "8d2d379df0658f0601a265003a6e863164900309ce4cec5ba5fd2c828ae74292"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11037/predictions.npz",
+    "bytes": 46817,
+    "sha256": "3c93a460cd20c2c8299615fddf138fdd97e025b7c2b9f61e75021dab020e50ee"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11037/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "f70a4a756cbee5e879d40ba17cd72c66c554bc6546ae38252bbdc6cf4f31fca8"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11037/curves.csv",
+    "bytes": 1238,
+    "sha256": "06698011f1cb2501384191495ae1de445203e1188349f6d3561248d4bcc7de59"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11037/metrics.json",
+    "bytes": 276,
+    "sha256": "fcc9240217a35646a8a49da016fc207324023e7f5c74ea9b63bf2c15e46bf6af"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11038/predictions.npz",
+    "bytes": 46838,
+    "sha256": "c59f27da4912fb160bb01ad4878665537dfadbb8bac6f918cb54fa1caebdf748"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11038/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "858e54e3cf591fcc3460f2749ebf56b5f2f573d5987e7a85feb5d929aba2b95b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11038/curves.csv",
+    "bytes": 1236,
+    "sha256": "33bc6df3651c1be57197e2d1483edf37d38bec5d61a948fc5fc4e2f5cdbc02ba"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11038/metrics.json",
+    "bytes": 271,
+    "sha256": "f3f17ee11715a5e7ca6ffc3888acfb4932e4bad1178cbfde9d0ebbdf1b2a2e5d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11039/predictions.npz",
+    "bytes": 46756,
+    "sha256": "39d6c02d91cc11096ad0620d596b9c151a163a27f9bcaa353b9a8981d80e4a09"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11039/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "222f7e6ad8e2e383d0d7e9e1a03a75a3cdd411baa3713a18064109c1a20e997b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11039/curves.csv",
+    "bytes": 1243,
+    "sha256": "076415143da81f69a74f3411d3f11f85732d46259f0c69b176d5852756fb46f0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11039/metrics.json",
+    "bytes": 276,
+    "sha256": "5be313416b9270985dcd1fa2cadfee1fe3407afd9289cc9caf254604e6c91377"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11040/predictions.npz",
+    "bytes": 46853,
+    "sha256": "2e5f085af8573dae21aa8b4b563a90862957d0664fbf564c531d484fca28e732"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11040/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "e3df26e96db3df642b214c72e77b629a97f221804552a291c95e8917a180de72"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11040/curves.csv",
+    "bytes": 1237,
+    "sha256": "965a58c46ebe394803d2149227aee354e1ae3d93b87725e7e82185c90495a7bd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "ea43a5d7c0b90357d522ef0ea006808770c2232f382a1fd805158b33aa75bc80"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11041/predictions.npz",
+    "bytes": 46752,
+    "sha256": "a9c58422e80cb9676e9317470cd3e401604bb389979a97e7c9a5b30df85142dc"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11041/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "0d175fc37bdf05087c6e20820be340ea535e52cfe2f47f46570e63f355be974b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11041/curves.csv",
+    "bytes": 1236,
+    "sha256": "262084dc0aa189e82a3f1e1b84d9629cea0ec2c435eb3576b6947972685eea4e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_3_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "c51b341ebdddad4c4577e6a61d9bb04a62dcf604c0678b10d45385d37cad9b6a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11037/predictions.npz",
+    "bytes": 46265,
+    "sha256": "6d32a35646f1432c2f9f03501977e5b1f0e6235bfe232bbe4035adb8777446ff"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11037/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "4db9d37ff2dbef7f0bf20cfeb7e6b1b1b09391a9fb483d9e60d667f3d61f8eca"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11037/curves.csv",
+    "bytes": 1241,
+    "sha256": "c1fc441c29cc17e686f7e8a101d1db859842b73a62378fc27c44f7460ea4e290"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11037/metrics.json",
+    "bytes": 276,
+    "sha256": "18c06a7b6150b40ee800e93a8f666b7bb6ebf22a1d5364108764fbc13095c98f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11038/predictions.npz",
+    "bytes": 46279,
+    "sha256": "e697c68206633a8d17796212a5a440e7d47987e30e3a790b6173939bd9c5e747"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11038/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "6b49c1990932836d977f991e2f725b23411b6b3b1f9c011053fd3c58689e6ca1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11038/curves.csv",
+    "bytes": 1242,
+    "sha256": "25a99be95744aae57df9baa0ce2af2d8180b933a1798c0b0d621479a8e3733a2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11038/metrics.json",
+    "bytes": 277,
+    "sha256": "acf75d24c3dbb195140ef2f8341d7b3659b23764b1693ee61756ce5a592c300a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11039/predictions.npz",
+    "bytes": 46257,
+    "sha256": "c91187dac45f0bbac17115aeba23d6ffa0c627b6f55b69eaa412e945e5e13360"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11039/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "d6096c94c1305cd330839ce979f9df72a21cfacf7656be45ded59a3c516e87bc"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11039/curves.csv",
+    "bytes": 1246,
+    "sha256": "e97177e7dbe2162acad3ce174f93737500867cfd30933ff23eacd98447726d4e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "ccf612077cb9c4bb7dc77564ccc2077d6d924fb5cd306168b91f27357b621295"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11040/predictions.npz",
+    "bytes": 46458,
+    "sha256": "034c88358faf8180ac4c21d358344587f238b9d56eea428c62c8b12f69c88d9b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11040/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "1abfe377c19e10cc468c3b4c62fb064f2126f66a88930f7cfa4edcb76135d515"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11040/curves.csv",
+    "bytes": 1249,
+    "sha256": "e97dd01209733225bb7389b80fc20fa09e70768b0d64658c8e0fcf9db314c86b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11040/metrics.json",
+    "bytes": 278,
+    "sha256": "f323a07129b7bda6261f5fc881626ea07521410f091ff0dc575a6dad1e1d2f5a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11041/predictions.npz",
+    "bytes": 46343,
+    "sha256": "841ff978aa05cf48173e5e1c55d9d54a3e3e3f71c2be869ed46cd5aa9653268c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11041/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "de4338bde049823d8bca5047088edbdcabdf47c3bf4afc4c15779ebfc3ff94f2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11041/curves.csv",
+    "bytes": 1248,
+    "sha256": "3a46784a562b2f9f31cf5d8597c2f7dd90724a5a5aa995c0bdafa5025d54f902"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_4_seed_11041/metrics.json",
+    "bytes": 278,
+    "sha256": "79b3889ef481fd955bec0064b09efcb7a0b665ff7f78b86662902b7e3d4588ef"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11037/predictions.npz",
+    "bytes": 46488,
+    "sha256": "fdb07e1137a3ec5301b506cda4d27db3d220d5fd42f2a7c5a2b42ae5d8e15296"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11037/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "6f335fb9a555bd3c1355a6ad4ec1ed54fcc986019dc6138087d1632d77dad48e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11037/curves.csv",
+    "bytes": 1252,
+    "sha256": "06d20a1cea38c4d0892d50a77a0e83bbca32e42e609ed72fd36f803cf64605ab"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11037/metrics.json",
+    "bytes": 277,
+    "sha256": "30abbab2b6592330ce6ad78a5f14431755f7669f85b59635f45df6d16c2b4fd0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11038/predictions.npz",
+    "bytes": 46561,
+    "sha256": "710ea5b032b32354f3c1fa2851467fbe3196d55bca3fbe11c42845cea08f8c4d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11038/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "d1579326c5e7b1278cd4d22201196107ea32cac191ca39d22e744e33c69013fa"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11038/curves.csv",
+    "bytes": 1244,
+    "sha256": "dbdef11ee06e6b693c369c13aefb89b3f2280f3ddfe92d0722db8ce4ed7c2f00"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11038/metrics.json",
+    "bytes": 276,
+    "sha256": "6c62e7e59ef54e556ae8c278085d634097884aa8fb65737daf55df667384c986"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11039/predictions.npz",
+    "bytes": 46580,
+    "sha256": "58dc4f157f3c84ce5600410888deb1d5b50f32d990931db790cba9b46ab90c97"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11039/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "b3f93cc7ac0e327e2b35f43b7a26d3174bd9ba3025211e570cd137273deb1ff3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11039/curves.csv",
+    "bytes": 1249,
+    "sha256": "a5430c69b4c74907df273a5902c8f7a3903d6eeff1e4b825c0e5dd32ad3247e4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "3cc2d5dfe0e8f027da11405cfe5696637728a15d18893baceaa1c985bb2f703a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11040/predictions.npz",
+    "bytes": 46647,
+    "sha256": "897dde511c7e4c9aa8f83325a7c90f2442bb58aa9bed96aa774af715f3cfc139"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11040/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "3cefedaae67925f31916305627a12b8acb3093e77f812225db7e4e03293a8b9c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11040/curves.csv",
+    "bytes": 1247,
+    "sha256": "bffcd9fbfd15400f53e41538bc4b6328e2bc4422d260773fc5d932cba9ae4eec"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "77bc29a4c0ecd3bf510f28dbb760f3a58bb4774626bd35d0cc62b73135e4b45f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11041/predictions.npz",
+    "bytes": 46547,
+    "sha256": "bf93768d2ec8ad001b898818ab1031a72c249e54c5fee615089c793d3537499a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11041/checkpoint.pt",
+    "bytes": 3227769,
+    "sha256": "132d650e1d71955bb3eaa75588b92fed5cbe1fb521ff81b21a7e900cb854b018"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11041/curves.csv",
+    "bytes": 1254,
+    "sha256": "cc365c3e7092212dce8df6457698340abe94be969fe48e3577202eab7dd8ea74"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/MLP/fold_5_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "c797ca634a5d5d931a07691130b6865bd31a8a812ff594daef2b872deebd93d3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11037/predictions.npz",
+    "bytes": 47036,
+    "sha256": "1ec60469de728d7fb7c38473e34abbf622494dd226a0a937753b9498a6fefb4a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11037/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "4aa11d2dc91a85eaafea5ef9a28591493a3d3aa08a253a07cbdc369b2ec6ca04"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11037/curves.csv",
+    "bytes": 1239,
+    "sha256": "2b6758307b586306065fd9026936a3f2c4a229ca8d37e4811b1cba6d89a53912"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11037/metrics.json",
+    "bytes": 278,
+    "sha256": "7df9cc3ff0b395d36eba703dd17ee6f84a96c11162c547283f2c9524f8ae1797"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11038/predictions.npz",
+    "bytes": 47082,
+    "sha256": "539130b9582dba4a4465a7b6d16421cfebfa02a00ea03f17a2d78e4758fecd31"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11038/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "2c3cb0ff88e4a29861ba561860e87d7327cf140ca48a45d46678e1d6fe5a8e4a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11038/curves.csv",
+    "bytes": 1252,
+    "sha256": "bbf24e724bb48d40a1c2ed90fc656f95231c2f5f923eb8cfbf9e0e52af1e4560"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11038/metrics.json",
+    "bytes": 276,
+    "sha256": "f436867d609d0e8f52cc67c23499b058546907d3532bd20e2b9f43998536dae0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11039/predictions.npz",
+    "bytes": 47052,
+    "sha256": "910d1a6a0c476afe5ee6e9918a2adfe85a36016811c9bd20c6e44a3dd8977b1c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11039/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "728d787701ba33df8c47745ad8eef1fa37e244e096b5843b895f3aa0f4765a08"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11039/curves.csv",
+    "bytes": 1249,
+    "sha256": "55b8833f73c01f0ad84a0a32ae3588b28882ff94289abeffe51de220cbf6c076"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "5a8cac42843a8d2bd7768ee783ab8434ee2ea115ce0f988ead7cb752ec6669ef"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11040/predictions.npz",
+    "bytes": 47065,
+    "sha256": "db1d623db36d9aa8b53f9b01aa29907e1bdb29a0ac57c2c277ad3b76f622141d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11040/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "72e7fc6146a113598748f151799a3598e550a727687eaaec27fcb025504a383e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11040/curves.csv",
+    "bytes": 1242,
+    "sha256": "1cfcd27486ff98676f1adaa271caafaf45f6c77cb58ec6e7c3470b966489ff54"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "369ec489fbacf5f6465d5f3724ab5bf28e5281f4742cb0a27ec45cb1827561e4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11041/predictions.npz",
+    "bytes": 47066,
+    "sha256": "8e0c03d7988fe971bc8ebfc89b0be822f40230cff9c6e05db970a1cd07beb072"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11041/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "cd2d76d0d56ab89529f6349cd4554f21ba093e38902ecb10b535d18c0b5afb95"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11041/curves.csv",
+    "bytes": 1248,
+    "sha256": "6ba9664daedba70b3cc61c30fd9ece58efb59ddbfa6c94089731c087b3839949"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_1_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "462bfd260ccd55423d69f11643d1ceb1d26f31c5000afda99ea88fa5cc5c76d4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11037/predictions.npz",
+    "bytes": 47204,
+    "sha256": "869058ef35d3a18def87c2212a6cddaee5247570df7ccd320a9ae0f54e62d7e3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11037/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "a593375ce20f155a369b85964134bf6b9915277b996dec22f642270925f067fe"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11037/curves.csv",
+    "bytes": 1232,
+    "sha256": "e002bbcd2cc5decb326061292b1bb327f81ee03c90c73633f0607acb997385f1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11037/metrics.json",
+    "bytes": 275,
+    "sha256": "9e2e0d679b35c39d0ba0f203b3b35153126076ff3bf20a0a53eb4d5daf8da181"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11038/predictions.npz",
+    "bytes": 47182,
+    "sha256": "170332114f407c9f1d18a6507b162b831270c43f2ba25ae1694ffd2e6241f1c2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11038/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "172f8f46e07581f9a3466e1e962ae2b419a47785cd89a2072a27e092a7fdd531"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11038/curves.csv",
+    "bytes": 1243,
+    "sha256": "6abb96ed0442dcbe6fed03360b8a5f6f2f26f9d61728e49c2a43bdcc703af63e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11038/metrics.json",
+    "bytes": 271,
+    "sha256": "5369706548456dbe5cbb157a32eaf3d030a4a28dd0e062ed631fb862fe07f8d3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11039/predictions.npz",
+    "bytes": 47223,
+    "sha256": "bfe936a2c1516d9e05e8a4ad205d3eed3d28962d0c35202a978bea97a0c123f9"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11039/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "bb813f36ba5dded412f56a814134619b7e298f501ba39de660715b2b7fc8b83e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11039/curves.csv",
+    "bytes": 1238,
+    "sha256": "b218d82abed59416c73ed7e3081821c1d7c0b3fe8f94585d67a956fc1a583767"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11039/metrics.json",
+    "bytes": 275,
+    "sha256": "90eaa1b20987982242bd151d15bbb94eb0eba7ec35588626946e68a9c7eeafe7"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11040/predictions.npz",
+    "bytes": 47219,
+    "sha256": "5b5dbd9c4d3d9cba8180efe0c346e63e5512fb2b44edd60267effe590e530c53"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11040/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "3ba1d5fe0bfc7f73332964d2864180d4eb96542370f6246bbd03ab68deb9c6b0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11040/curves.csv",
+    "bytes": 1243,
+    "sha256": "194ac27c3caffcc9578298530d5bddd17679edf2b20eb9c14e03083586e00abf"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11040/metrics.json",
+    "bytes": 275,
+    "sha256": "3e4c9a15fc17f2ac80e97ef785413c7ac94c02e6d9c12af6ed057bcf1a8506d6"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11041/predictions.npz",
+    "bytes": 47218,
+    "sha256": "2e1b7cfe3d98ab18a8b0d791a8fd16fd73842930da3861f13f7ab6316230c7cb"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11041/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "33ed51ed50a4b4a20d30345ef4084a40102af7a5533a13af59d5e3d2111150c3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11041/curves.csv",
+    "bytes": 1247,
+    "sha256": "dae12f74e3e7aa469d26a387fcbcd1f1ba753af432aca487c64c387a56491840"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_2_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "e215632e25a228991c8c8c2ca515a0ab73aecf25cdc611e8ae6cb971026b8222"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11037/predictions.npz",
+    "bytes": 46778,
+    "sha256": "1973b881b3657c6f36c6b7b7d81cef903e7de8f1a0460df9f5cb1c0204331ace"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11037/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "3096d591f6b78c12c98ff7a93ace59fb06a3ed86c2e9209a0f3bf6485149701b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11037/curves.csv",
+    "bytes": 1233,
+    "sha256": "5167bc0f0dbb6388fd680d7adea6bf99027bce7782f33058d8561af8631a5723"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11037/metrics.json",
+    "bytes": 275,
+    "sha256": "0f14405bd1e44cbad4b11a3caff12dbf4db9d077d36a793c5aad95b7ec93834c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11038/predictions.npz",
+    "bytes": 46819,
+    "sha256": "fc7466a5f4ed35d241c9b1460fc6175c7b5124041bda7577f0141a044161b0ef"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11038/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "d1acd46c55a8a491cdbe9be53694d8a775fb58c44f9cb58e68b3689d359d5c82"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11038/curves.csv",
+    "bytes": 1232,
+    "sha256": "a2c25188c65e46a0dd24893753ee9baa09c0127ec6b774e189981e1f3cddeb89"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11038/metrics.json",
+    "bytes": 274,
+    "sha256": "28476169fe9b00239e235a6e6ee0ba3896cc03fc3a9327591b47d8691f6e31c5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11039/predictions.npz",
+    "bytes": 46780,
+    "sha256": "9b62f589ce93db6bb6efb30cfb5c875bcbe68debb50ec8965ef750c2b4f76c81"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11039/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "63ff79563931a1a447d1ad316b25697c7ab6f011c75d24fa90c59d00f3da1a5a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11039/curves.csv",
+    "bytes": 1232,
+    "sha256": "1cc6a10969ffc2d1b043e0e034485ceea9e0c07e6d7b1bba7161a9cbf9b75a46"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11039/metrics.json",
+    "bytes": 276,
+    "sha256": "6b184b79b23339f356f6cd6dc8a5f0ca32b162077519fc913cbe7cb80fc0ddf3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11040/predictions.npz",
+    "bytes": 46758,
+    "sha256": "aff0f06499e48f46a05588cc1a668075e1cc13fea6c25e9348bc9e2a3cb9acc4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11040/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "c67cee27cf9d64d53983d5ec51fac445e1fb0d1b9d005c98ff6a576be25eaa30"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11040/curves.csv",
+    "bytes": 1224,
+    "sha256": "19e27a0e06802dd8ae3354d6107a170c5281665adf8115f76d2c2ce5efcd4adc"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11040/metrics.json",
+    "bytes": 275,
+    "sha256": "1e9d4948e79073050043d34b845c467e15cc027170369ceeafb12ac350d583fb"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11041/predictions.npz",
+    "bytes": 46766,
+    "sha256": "8ac34c6e69e0bf0784c064de053baed99f9a145887e1187655bb3186edb53a8b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11041/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "ad1e086c07436904be28c6d7ff60598b712e7cff18bda696c8a2ec026a5c06b3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11041/curves.csv",
+    "bytes": 1231,
+    "sha256": "798e378a391adc166332299422a6b183cc7fcedc111a72d21820209cbd22f92e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_3_seed_11041/metrics.json",
+    "bytes": 267,
+    "sha256": "81a0c45dfa3eb5d07d40f927066f6a05f60ff1f3ea6066777f5388769de74b33"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11037/predictions.npz",
+    "bytes": 46297,
+    "sha256": "1f388ae57c38b1f3844a28744e01ca623b5be65d80c25f6f7946a3a25a59c715"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11037/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "b7afcebf8672c69a941e3e85f1029578cf87fb8dc3ea52fbba763ad3b190755a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11037/curves.csv",
+    "bytes": 1239,
+    "sha256": "20c67e6dcb61efa6ffe55fa27a52238d8d56b969e48d5dc0759be3cb877070e7"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11037/metrics.json",
+    "bytes": 276,
+    "sha256": "3aa140bbf864e60221b9a44511d8a712eb2dbba6befdf5110d13e6a0278df2b2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11038/predictions.npz",
+    "bytes": 46235,
+    "sha256": "5164226e7309146cc63c66d629c504989b12808baa61f64afdb9a5aeba77ad13"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11038/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "f4ca646b140d318bed698ffdf64385a0e685192a25bf3fdca6cc9d1e63b98948"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11038/curves.csv",
+    "bytes": 1250,
+    "sha256": "fa3fd2c0fdf1d87a50d8e665d8b1c6e18e6821fb9e9e6718080f5faac77751a9"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11038/metrics.json",
+    "bytes": 274,
+    "sha256": "c955fbd5632780099cd737c3fa4d6423fb4c05c119a23e298243d7ca62ea8579"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11039/predictions.npz",
+    "bytes": 46233,
+    "sha256": "6f6d9797e6852def29a1a99d9dd75ec82029f248d29fda1892a3a6a57cae70bb"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11039/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "766dba2979f68723599a91a8c8b07fda267b7ad817cdb4a016739ab44969ab75"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11039/curves.csv",
+    "bytes": 1229,
+    "sha256": "c2f0d85b0587a98cac4fb59279cfd91e4afff0d72dbc108280298eedd8daa0f3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11039/metrics.json",
+    "bytes": 275,
+    "sha256": "7c06245e7065c6b00dba251891056dd61644bc9270333b7c3c2803340d250aab"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11040/predictions.npz",
+    "bytes": 46184,
+    "sha256": "99d0b02b12cdafba65409027ec643d4871b9e58335d613f391e1d24d4620fcf4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11040/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "ca8944bf5017db1d8ceec387c850c99b4a320ba2f98ff20ca4da178c57cf7662"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11040/curves.csv",
+    "bytes": 1241,
+    "sha256": "e8b92a1080bd1f07d72ef1040a6e622b0cd4e4defe51f82639b1eebf07ac4831"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11040/metrics.json",
+    "bytes": 274,
+    "sha256": "31a73f93407668ddcdada9c8cfb28d1140ba66ecc4e11a7bdaf6748d7c18dd2a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11041/predictions.npz",
+    "bytes": 46283,
+    "sha256": "e394502f10b366118bdd917123974dc92103fd5da1a171640e8eaf7a18f6e2fd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11041/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "f114ef430c6ef700541c28bd37b0e69c378c06a16d9486abf9f76761c81b7d70"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11041/curves.csv",
+    "bytes": 1248,
+    "sha256": "b1628e4de1485276582a657ba13499b3be9311e741232f397f6a8397796f8f24"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_4_seed_11041/metrics.json",
+    "bytes": 274,
+    "sha256": "aa8e2629ec605c245d5c9ccbe6cc40b83d87e5f030266395556161fb9764d296"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11037/predictions.npz",
+    "bytes": 46611,
+    "sha256": "707a96a5901ced7e1eba8903561ccb71e71d72a03581fbd0389bd84b42a69d99"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11037/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "fc08ec95290ddfd5a0831d58e2450492ed0e570df16f767212477188a1a66ce3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11037/curves.csv",
+    "bytes": 1241,
+    "sha256": "7dc3cc16f4131d774f7b7a585b0dfcc872a1d42c55491236a0bdd62183c17809"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11037/metrics.json",
+    "bytes": 276,
+    "sha256": "6ef1db33f95bed7e8bff8a68f8f38b1ab9d78e57018632cf1752faaca8f7e2f1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11038/predictions.npz",
+    "bytes": 46556,
+    "sha256": "a3b5cf5bb126f05da59ee0ecfc251e33d40033d8bb5ee5a1849668ca33806b7e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11038/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "b023b702f6768a63c042f338bc8f4131b827ce91ce5c01d7bfb824fcbc4bece6"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11038/curves.csv",
+    "bytes": 1244,
+    "sha256": "348c7ca6b4cc78db111ceff865afd0d15975275fc263b2fc0f1ad1f3e9f4c677"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11038/metrics.json",
+    "bytes": 275,
+    "sha256": "c522a7e95b91f2add0af8d24c9b601aed9d9eaebb76fa227f53b859b2d96dc91"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11039/predictions.npz",
+    "bytes": 46575,
+    "sha256": "692461838306af952e116415be3a93ff1b9dafacf78e3b85c1fae75935b83f25"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11039/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "6984d2d128037adf6edf57e8ea0730e0592b3917d46616e96245fce824c0de01"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11039/curves.csv",
+    "bytes": 1244,
+    "sha256": "aca1cbc3479849ed6862abb1b3c29cfbe2dd2198dd88215a59898961b5e03c58"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11039/metrics.json",
+    "bytes": 273,
+    "sha256": "e73772ab57b80fe32f89202526177bf108263605f78c7198ba67c0ba39ac3584"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11040/predictions.npz",
+    "bytes": 46523,
+    "sha256": "f7a823505f3a7ea50ea1257548d78e6f4c4849be7154a8c1fc1e0500780b6922"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11040/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "4d0453e800957f57a6e7742169f9e0839bbc201d17c517798a467c2d7c765a73"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11040/curves.csv",
+    "bytes": 1243,
+    "sha256": "85e6451258f91098fc6598f54156cf7585e0c8ec44f054629fba3cb75f554828"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11040/metrics.json",
+    "bytes": 275,
+    "sha256": "04db0e19ecce927328221988404a96837d2c60ae2269528b21974d6e7c3a3501"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11041/predictions.npz",
+    "bytes": 46560,
+    "sha256": "97fa87d4e9a4f1a74c0550edfc9e0e3900f1369cd45c0a1376ec56d719f69636"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11041/checkpoint.pt",
+    "bytes": 44793,
+    "sha256": "2addfbf887137a5ef928f03d43676507cf932ce02da0708edcabaf8d522df590"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11041/curves.csv",
+    "bytes": 1247,
+    "sha256": "5d5d1b132d71482ce0fc3d9adef2b06c6d725f2cf78fc3f563f97dd17ba9d201"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/LSTM/fold_5_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "aa3830086f5897be9cb4e53d2338a604879ef4fa9dfaff1f5a02bf4d5c5942b2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11037/predictions.npz",
+    "bytes": 47069,
+    "sha256": "f4fe55b6155170ced9f9bb07c9d744c1e8ffc1bbccacd4288d2c6330c753d303"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11037/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "622dd8a139c0f875a231f99c4ce89767bacd1f9dfef77ef998e5417710e8446c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11037/curves.csv",
+    "bytes": 1239,
+    "sha256": "da1dea3edcc0fff5b588f7fd1d6c7b764f3f8180f803d743ebbb01ed9e7c423e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11037/metrics.json",
+    "bytes": 277,
+    "sha256": "0934d4f5b9caa5f31f974204ee66558d247712a610ecf75ebb6a9fc95e36dabe"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11038/predictions.npz",
+    "bytes": 47024,
+    "sha256": "47d9c3c505959e09988e326c155fa9fcbd1053599070dcdb971f28fe24b0864d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11038/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "13145ddc9c3c9f700ab5525cd1c75f98709ed9f7bece26e764c3cd1a803a9c28"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11038/curves.csv",
+    "bytes": 1252,
+    "sha256": "2eb45263afa327a1bac43eb62a6d08a3d37f96ba7bfd15c27c0769e34a958427"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11038/metrics.json",
+    "bytes": 279,
+    "sha256": "b7ab9825f92f36018a8300076d92eb57a6ffcb20c2c49fdbfc439696a9554435"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11039/predictions.npz",
+    "bytes": 46982,
+    "sha256": "a9c059bbec29fbf196c84e832a4ed7e8b8dbc49fb6f51f876181f6b4d97aff42"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11039/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "af1f01129340fa2abc771d84532e7b2ca5a142832416de9491d5472001d3aa3a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11039/curves.csv",
+    "bytes": 1238,
+    "sha256": "11aff92569c8dc57bea9f38d3194e1640f83ec0c96e5495778311babaffe0c7f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11039/metrics.json",
+    "bytes": 278,
+    "sha256": "4c3fddc9062c8bc816957fc6165008c11f831523b5fd466dc8199aa0c9397d69"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11040/predictions.npz",
+    "bytes": 47045,
+    "sha256": "1977aecc52692ab20cd0ad68b06c253b442af16c2dc88ab483ac398efe71bcc9"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11040/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "c4e1031809190c59c55837d0df68da2c47607a8528b35b73112d80546bc49a50"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11040/curves.csv",
+    "bytes": 1254,
+    "sha256": "3881f018f66f80064554c22f7dd0ea0a3bab136f98643dab2a6195a3b3b0605a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11040/metrics.json",
+    "bytes": 279,
+    "sha256": "97516a1d5ed51344cca397958cafcfbf96e2049573f101f470ce964a9ad84c92"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11041/predictions.npz",
+    "bytes": 46945,
+    "sha256": "a10403cbc787b37942928fd714bfb968f7bd5f61059253723c13ed018bc6001f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11041/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "0c5b15f395b3b5c8af18959cdce4314d637b078985414235206b9938cab329b2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11041/curves.csv",
+    "bytes": 1247,
+    "sha256": "85b6d6a49650771e46577edf2da28ed78ff45e53e7d7a793d26932da6f56a27a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_1_seed_11041/metrics.json",
+    "bytes": 280,
+    "sha256": "2e6c8484793782559b7b6747a7e3101f9123ae66a3227aab8ad93a67089b4263"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11037/predictions.npz",
+    "bytes": 47218,
+    "sha256": "2aa50c433e252de47a9ce67e681c4a87b1beaa4e700da53b53c7a7e7c1c05a33"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11037/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "e8540bfd296fdbbd0bc3907218e16533a008b20a10e1dc0a45b3108fd1b24f1f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11037/curves.csv",
+    "bytes": 1254,
+    "sha256": "95d04b231ea05c63ac1c57564da9311f85bd442fd60d9fbeadaa8d666b04bd1a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11037/metrics.json",
+    "bytes": 277,
+    "sha256": "eff4ca10948622e7ca0a333ddcf95eea2ca27f2b4d3964a9f203358db471f58b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11038/predictions.npz",
+    "bytes": 47211,
+    "sha256": "ec232bacb8a4225ab837b206f212ca767a4dce05c6b4e17feb4760b0675a77bd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11038/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "77b9fddd06f406c1a5ccacbefc95d6b688da702c29ac89be41b0942425dd7b9f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11038/curves.csv",
+    "bytes": 1251,
+    "sha256": "4f31282e123da7d2b4e30e4dee9dd31f2f4cb3ee0e963dacd13807023280c84b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11038/metrics.json",
+    "bytes": 277,
+    "sha256": "5316b429f3fa040f41399e6c8df056f54db3b88a29dff39ee2d78bc82a943cd0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11039/predictions.npz",
+    "bytes": 47185,
+    "sha256": "7e09afb374a024568b41b2545eb7a353cfacbce303a6cc4b2e8ed0601dfe7233"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11039/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "3ea338eeaddf8534abc74587048b3c659558292da5f5d96e3122690306afa409"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11039/curves.csv",
+    "bytes": 1244,
+    "sha256": "7d9b8503fbd32290b950bd6fbac9d7094e6ba8db1dbe93a3d83dece5d4596dc9"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11039/metrics.json",
+    "bytes": 278,
+    "sha256": "0fdd10142e5b47d1522825ec531597445899e56cac9d6ef785f0eac6fc808b1b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11040/predictions.npz",
+    "bytes": 47234,
+    "sha256": "0f6c802290525a54b4a5aef2d5fb6ea8521e9746511968d92a04a6b21a9ab6eb"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11040/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "78f90f8ffa631977df9f3fe1d811921cf03b03e87f34f527f11a35ba62aa0eab"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11040/curves.csv",
+    "bytes": 1240,
+    "sha256": "3d2154eb59da15011e8dd53b494e51edb093491eef78b2ca3fe63e60fcef5e49"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "af8f7df19cd706784b586e96e038ddf45b97f6371982718901801a9a8b5db321"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11041/predictions.npz",
+    "bytes": 47213,
+    "sha256": "3c6e7cd2b5be9f6c00bf506cde26be97500161c761d93602b42363501b00a77a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11041/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "936dec308cc2ecf66da736fa6dcecdb82bb172b20e3b79846a6578103b6ceb46"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11041/curves.csv",
+    "bytes": 1240,
+    "sha256": "26b37abbe003fa546fd3be1860e86bd0d3e4055cb82e4b4bbdb025757ef21698"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_2_seed_11041/metrics.json",
+    "bytes": 277,
+    "sha256": "082634ba45147f978caf5506f2b865f56a7e904afe100185f0b159965a8f1899"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11037/predictions.npz",
+    "bytes": 46832,
+    "sha256": "0ff446a0f0dbbfe0d8c03ed2189800dfaeaa4788d1aee0ab88f18eaebf375da4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11037/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "451d0e03c51bafbc117b47559653debb0a3894afe14462ff8ec65ef80e583d10"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11037/curves.csv",
+    "bytes": 1236,
+    "sha256": "d266ab18a828834f125dd8146ffac04c8238491adb5e7c05968f7d086021984a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11037/metrics.json",
+    "bytes": 279,
+    "sha256": "85056ba01052e5903f46cb3475b59f4975ee7b07534bba7146f2ab7a5ccfcc76"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11038/predictions.npz",
+    "bytes": 46820,
+    "sha256": "6e9e49c6cca1e3253efdc0197ca81b681db814d333a6010bbf7daf11490b7e67"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11038/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "e5e4600b905978a8fb5c0b9fb4a0fa43852a496f822168b31c10d051f0f920b2"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11038/curves.csv",
+    "bytes": 1235,
+    "sha256": "a0232d84719647e587ddab337bd40157481fe5d8d3fdc1360f14c1ee273e4d5d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11038/metrics.json",
+    "bytes": 277,
+    "sha256": "c9ec16144899e03eadd7e56a10866f9f980ea94065e18f001e747193ff65e43d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11039/predictions.npz",
+    "bytes": 46849,
+    "sha256": "de0331f9d5616a2f414963b79ebbbd8eecd33cdafc5d5656ebfef0c29e549497"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11039/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "e1e84648840bf800cbab9f1c592178c8b35fc9d97eb871e02a50cd12278a0c20"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11039/curves.csv",
+    "bytes": 1233,
+    "sha256": "2ff3d8abe4507acce375b7079950318bd3208f0785ab5d2286c30a52956ae063"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "ad522ca35fb6203e3ab6e7b9a71a3f72d62a635c73d0daa5f2d9435f9cc9971f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11040/predictions.npz",
+    "bytes": 46794,
+    "sha256": "fdc0197c64c562d57ea6dd451c773822e9e79392d62a48f3886d9f4bc2ebacff"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11040/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "a7968e4ca96fb8858b07ba61dd51a20a284816094f9a10cc381a5ae86907ff64"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11040/curves.csv",
+    "bytes": 1235,
+    "sha256": "171886ade1c024a26290d747d6301d0ca9af32ec1a13e6ec6e4eb146c1ab33d5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "86d52fafae2d87b3b3cdb8473bfe7f73e7eb64ea31f37eb3eab06ee875e262dd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11041/predictions.npz",
+    "bytes": 46870,
+    "sha256": "6b09219ff9f0f611d65fba4d3cbd7c55cab1ea338378aedbe7a4efe967e916d0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11041/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "653c8811c11b907e377ab494d408d930862ca25b7108ed7e92b973e1f71b8423"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11041/curves.csv",
+    "bytes": 1234,
+    "sha256": "b94792df092e5c2d34653ac64073b37e2b35d23e98c6294dbcd8bbe7c4cb9be0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_3_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "0d2959732a792826ca4b43334c6d325320167e40d9dcecf6abd5c8a6af6c021f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11037/predictions.npz",
+    "bytes": 46357,
+    "sha256": "0ce38f71175243f315b3ab19c90b2baa005c2ef303ffa5e159b83dcc293304aa"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11037/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "983915424f60e2df0eefe3d3a2a8dee0d1c10535c443ba5fd2448f4dbb0803ae"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11037/curves.csv",
+    "bytes": 1245,
+    "sha256": "5359e6721a120bfddeb22c612922f509cc5d74309f70c7bf7b96d51e915e7c76"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11037/metrics.json",
+    "bytes": 277,
+    "sha256": "5cc10d22088b7f6fc70491171722d06a3a0461818acbf4711a95516767e987b5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11038/predictions.npz",
+    "bytes": 46298,
+    "sha256": "cee5099018be0a60d9c66692a90f0fcc8c789c92a22acd9f2959e0841495361a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11038/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "0a84e50e69bfc3b61efa55aa1b03cd4bc3ecdc3b14f9c10c5e890c508b0e156d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11038/curves.csv",
+    "bytes": 1238,
+    "sha256": "a145840beb7bb284153c98acfe0b69735d27e029cd7d91dd86a799e18bc6e2cd"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11038/metrics.json",
+    "bytes": 276,
+    "sha256": "be048642ab384d8e9c95781fec33d39bfd3a1e7a3c5172bb129274443caee6ef"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11039/predictions.npz",
+    "bytes": 46311,
+    "sha256": "fe49eb2720cef5316fd5a3809bff6fa8fd739375034c9633df47525e49e6ab47"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11039/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "1530ca408b833ddd60f2556960a4b023b9c2d2a010667f955343c970ee56911b"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11039/curves.csv",
+    "bytes": 1240,
+    "sha256": "a947547a297e5479e1446c67dd44dca44ba47ded539b1d6cb7ec5d536fcd3ee7"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11039/metrics.json",
+    "bytes": 278,
+    "sha256": "be75c4656c531d424f3a8f7c5fa83b211030d59f8d531fb09c034d835f181a48"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11040/predictions.npz",
+    "bytes": 46251,
+    "sha256": "31521b9ebc7824433c287de117de274b7f0a7d9f2ced87d0a6965a74d90f1d7e"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11040/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "1f90786cb5e92896634bffd29cb9743bf764fbaa6595735b102f78367a04b031"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11040/curves.csv",
+    "bytes": 1238,
+    "sha256": "4f8e2ea3a5d452bbe985ff46e5ddec51f6d7f53536dc71481228775784bb412c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "d1386a175023f3d468eeca3b13b475cbfcf54f47d6dbd97e013fde1005e3fb46"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11041/predictions.npz",
+    "bytes": 46302,
+    "sha256": "ff1a0eff495457c2a2928713e075ca97fa39672c97030906e377fd41cfad6f9a"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11041/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "d12349a531b6b832883827bd3844c3c46b8331eefc36a4f4b0a14ceb87b773c6"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11041/curves.csv",
+    "bytes": 1243,
+    "sha256": "b528be8834e5374763831038d4a2df1f7f66714b1f63678e05629f6eb4441ac1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_4_seed_11041/metrics.json",
+    "bytes": 276,
+    "sha256": "8f333397bf18d11ee5b3c932bd1fa5034b05619e08d1f055ec157268378ead2f"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11037/predictions.npz",
+    "bytes": 46562,
+    "sha256": "9920dc882fa540ff628c8fed4b5bfaf9de931348480e690e550937473d56e596"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11037/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "58823caa502c45efc81e6adc6832091299fd25cebeceeff4f8898d8fdbea711d"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11037/curves.csv",
+    "bytes": 1240,
+    "sha256": "8a7d603397f17d4e2e236020db6fab350e0e86dabcdeb7c66745369602dce890"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11037/metrics.json",
+    "bytes": 278,
+    "sha256": "7f3e74269136969cd2caadd725facf6d223530c0fd52c9840aee7497fe3d34a5"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11038/predictions.npz",
+    "bytes": 46541,
+    "sha256": "dbe264b15f997f8edd1ad2931de4b1e99be12c2081e45056ad516da827b92170"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11038/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "9b7ffb19101bed851b1df6a95b0707cc255486b0fc024718a51bf594fdcce941"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11038/curves.csv",
+    "bytes": 1241,
+    "sha256": "fce9730f21548e464467aedd112671e039284d2a68748dd7eea5c0cba7859416"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11038/metrics.json",
+    "bytes": 277,
+    "sha256": "b58159a30ccb158d788f753977955a7697c823c1001c35cfcdfbd7cf8ec0b083"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11039/predictions.npz",
+    "bytes": 46539,
+    "sha256": "210869eaa7a899e155ba38b271585e8f367d51b857ae1d577d62f4a571ec4966"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11039/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "65654393501adff195fcf7f35cd1c626fabf8e817d823f814151acdf7ce22e77"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11039/curves.csv",
+    "bytes": 1247,
+    "sha256": "e2f02155c51dab238a7f0c01759b84008115eb83ed953009bd16ffb7956d55b0"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11039/metrics.json",
+    "bytes": 277,
+    "sha256": "0d5ac807c6296c41b7512dc71bbf5a29c217d4acc1c60b4c819eff8eeebaab9c"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11040/predictions.npz",
+    "bytes": 46593,
+    "sha256": "c8aea5aa6214f645b7b71971ddb3f11efa85bb1fffb9eb64a3913f2dd4b89052"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11040/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "f765da6a13e903f1d061dccc79df22345940323b93ea66eef5dd84b2ff076d10"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11040/curves.csv",
+    "bytes": 1243,
+    "sha256": "14707d4df61c2ab6d87fb463b306fd7849e899f0349938cb22295b8a4c1ce6e4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11040/metrics.json",
+    "bytes": 277,
+    "sha256": "81e1ee40573826fdfde8dbe09a0e8aa77aa3bc73d75fc93f632adb4624b1d544"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11041/predictions.npz",
+    "bytes": 46581,
+    "sha256": "4283175a72a410372c609e42f41b2ab49889941d37a7cc5944a1dd293cba43b3"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11041/checkpoint.pt",
+    "bytes": 71417,
+    "sha256": "a623379425fd516575b2074d2ef681ebcf1a6b19cf26f372aee2bba8118104b4"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11041/curves.csv",
+    "bytes": 1243,
+    "sha256": "e39d01253bbd4de9fea92968b1d673e5ae2b04a22fcc54654a80fe7d69beafc1"
+  },
+  {
+    "path": "results/pilot_pytorch_gfx1030/CNN1D/fold_5_seed_11041/metrics.json",
+    "bytes": 278,
+    "sha256": "dcd302996ad5e4f77bd65682f1d5145abec7399e2ae31a6987f5b24d477b280e"
+  }
+]

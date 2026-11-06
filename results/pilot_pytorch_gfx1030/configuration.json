@@ -1,0 +1,48 @@
+{
+  "epochs": 30,
+  "batch_size": 256,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "seeds": [
+    11037,
+    11038,
+    11039,
+    11040,
+    11041
+  ],
+  "families": [
+    "MLP",
+    "LSTM",
+    "CNN1D"
+  ],
+  "pipeline": {
+    "method": "split_train_val_forwardChaining",
+    "n_splits": 5,
+    "development_start": "2000-01-01T00:00:00-05:00",
+    "validation_start": "2018-01-01T00:00:00-05:00",
+    "development_end_exclusive": "2022-01-01T00:00:00-05:00",
+    "test_start": "2022-01-01T00:00:00-05:00",
+    "test_end_exclusive": "2026-01-01T00:00:00-05:00",
+    "lookback_hours": 168,
+    "horizon_hours": 24,
+    "stride_hours": 24,
+    "hourly_release_lag_hours": 24,
+    "hydrology_release_lag_days": 2,
+    "include_calendar": true,
+    "seed": 11037,
+    "availability_scenario": "retrospective_assumed_release_lags"
+  },
+  "protocol": "PROTOCOLO_PILOTO_2026-11-05.md",
+  "protocol_sha256": "e38fef2d6e24677bfc985987809e4ce307eaa4e56873607c1442e79cac76a780",
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "executable": "/home/fabian/Documents/Machine Learning/mlenv/bin/python",
+    "torch": "2.9.1+rocm6.4",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "hip": "6.4.43484-123eb5128",
+    "gpu": "AMD Radeon Graphics",
+    "gpu_memory_bytes": 12868124672,
+    "hip_override": "10.3.0"
+  }
+}

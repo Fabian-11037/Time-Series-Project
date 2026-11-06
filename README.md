@@ -1,6 +1,6 @@
 # Time-Series-Project
 
-Dataset y análisis exploratorio del precio eléctrico colombiano. Autores: **Fabian José Manrique Morelos y Gloria Bastida**, Maestría en Estadística Aplicada, Universidad del Norte.
+Dataset, análisis exploratorio y modelos numéricos de pronóstico del precio eléctrico colombiano. Autores: **Fabian José Manrique Morelos y Gloria Bastida**, Maestría en Estadística Aplicada, Universidad del Norte.
 
 ## Datos disponibles
 
@@ -23,7 +23,7 @@ El histórico editorial es **parcial**. La [cobertura mensual](data/metadata/cov
 
 ## Jupyter Book
 
-El libro contiene diez cuadernos ejecutados, referencias y reproducción. Incluye calidad, distribución y anomalías, cambios de régimen, STL/MSTL, ADF/KPSS conjuntos, ACF/PACF, espectro, ARCH/BDS, covariables, cobertura textual y controles temporales. Cada análisis termina en decisiones de preprocesamiento, arquitectura, validación y riesgos.
+El libro contiene once cuadernos ejecutados, referencias y reproducción. Incluye calidad, distribución y anomalías, cambios de régimen, STL/MSTL, ADF/KPSS conjuntos, ACF/PACF, espectro, ARCH/BDS, covariables, cobertura textual y controles temporales. Cada análisis termina en decisiones de preprocesamiento, arquitectura, validación y riesgos.
 
 - [Cuadernos y fuentes del libro](book/), con código analítico completo en celdas ejecutables y visibles.
 - [HTML construido](docs/): abrir `docs/index.html` tras descargar/clonar el repositorio.
@@ -31,7 +31,7 @@ El libro contiene diez cuadernos ejecutados, referencias y reproducción. Incluy
 - [Protocolo del EDA](PROTOCOLO_EDA.md).
 - [Síntesis bibliográfica y extracciones verificadas](literature/).
 
-Esta versión presenta la construcción del dataset, el análisis exploratorio y la síntesis bibliográfica para el diseño del pronóstico.
+Esta versión presenta la construcción del dataset, el análisis exploratorio, la síntesis bibliográfica y la búsqueda de modelos numéricos de pronóstico.
 
 ## Disponibilidad y fuga temporal
 
@@ -69,3 +69,19 @@ Los scripts de adquisición se conservan en `scripts/acquisition/`. La conversi�
 Se verificaron en texto completo Time-MMD, Tan et al., NSW-EPNews, Lago et al., REST-TS, TeR-TSF y TimesX. El inventario previo de Scopus/WoS y la lista aportada se distinguen de esos resultados verificados. La conciliación entre el inventario anterior y la exportación actual de Scopus se documenta como una limitación de trazabilidad.
 
 [Referencias del libro](book/referencias.md) · [Fuentes, atribuciones y condiciones](DATA_SOURCES.md).
+
+## Modelos numéricos
+
+Se completaron 4800 ajustes de 192 configuraciones MLP, LSTM y CNN1D con cinco folds temporales y cinco semillas. El capítulo incluye predictores, diagramas, fundamentos matemáticos, código del pipeline y comparación con repetición semanal. [Libro público](https://fabian-11037.github.io/Time-Series-Project/10_modelos.html).
+
+| Mejor configuración por familia | Contexto | Ridge | MAE de validación (COP/kWh) |
+|---|---:|---:|---:|
+| CNN1D: dos capas, 64 filtros, kernel 5 | 24 h | 1e-4 | 24.155 |
+| LSTM: una capa, 64 unidades | 72 h | 1e-3 | 24.624 |
+| MLP: densas 256 y 128 | 24 h | 1e-3 | 24.992 |
+
+Dropout fijo 0.1, salida Softplus positiva y parada anticipada por MAE. Referencia semanal: MAE 40.157 COP/kWh. Las métricas se utilizan para seleccionar arquitectura y época; no son una evaluación externa imparcial. Prueba 2022–2025 fue consultada previamente para configuraciones iniciales y no se reevalúa en esta búsqueda.
+
+Se versionan las métricas de los 4800 ajustes y las predicciones/curvas de las tres configuraciones seleccionadas (75 ejecuciones). Las predicciones se distribuyen en `results/variant_search/selected_predictions.zip`, con huellas individuales en `selected_predictions_manifest.json`. Los checkpoints y el resto de artefactos de entrenamiento permanecen en el archivo local; no se incluyen los 5.4 GB completos en Git. Los scripts permiten regenerarlos. El libro se reconstruye con las predicciones seleccionadas, sin necesidad de pesos ni GPU.
+
+Para reconstrucción documental, instalar `requirements.lock.txt` y después `requirements-pytorch-cpu.txt`, generar los cuadernos con los tres generadores de `scripts/` y ejecutar `scripts/run_eda.py`. El generador nuevo es `scripts/create_model_notebook.py`. Para entrenamiento AMD, usar el entorno PyTorch/ROCm registrado en los artefactos, no el paquete CPU documental.

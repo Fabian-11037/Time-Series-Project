@@ -1,0 +1,17 @@
+{
+  "candidate": "C3_h24_l2_0.0001",
+  "architecture": "C3",
+  "family": "CNN1D",
+  "lookback": 24,
+  "ridge": 0.0001,
+  "seed": 11040,
+  "fold": 1,
+  "epochs": 51,
+  "best_epoch": 36,
+  "mae": 14.634271056985693,
+  "rmse": 23.437829428139725,
+  "n_values": 7032,
+  "parameters": 43224,
+  "seconds": 2.772852659225464,
+  "stop_reason": "patience"
+}
