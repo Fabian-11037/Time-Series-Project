@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. Distribución, anomalías y cambios de régimen &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-  
-  
-  
+
+
+
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-  
+
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-  
+
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -73,29 +73,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-  
-    
+
+
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-  
+
   </head>
   <body data-default-mode="">
-  
-  
+
+
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
+
   <div id="pst-scroll-pixel-helper"></div>
-  
+
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-  
-  
-  
-  
+
+
+
+
   <dialog id="pst-search-dialog">
-    
+
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -117,21 +117,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-  
+
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-  
-  
+
+
   <div class="col-lg-9 navbar-header-items">
-    
-    
+
+
     <div class="navbar-header-items__end">
-      
+
         <div class="navbar-item navbar-persistent--container">
-          
+
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -139,13 +139,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-      
-      
+
+
     </div>
-    
+
   </div>
-  
-  
+
+
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -154,47 +154,47 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
-  
 
-  
+
+
 </div>
 
     </header>
-  
+
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
+
+
+
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
-        
 
-  
+
+
   <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-  
-    
-  
+
+
+
 
 <a class="navbar-brand logo" href="intro.html">
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-  
+
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -224,8 +224,8 @@
     </div>
 </nav></div>
     </div>
-  
-  
+
+
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -238,30 +238,30 @@
 
 
       </div>
-      
+
       <main id="main-content" class="bd-main" role="main">
-        
-        
+
+
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-              
+
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-  
+
     <div class="header-article-items__start">
-      
+
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-      
+
     </div>
-  
-  
+
+
     <div class="header-article-items__end">
-      
+
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -275,15 +275,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      
-      
-      
+
+
+
       <li><a href="_sources/03_objetivo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -291,17 +291,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-      
-      
-      
-      
+
+
+
+
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -309,7 +309,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-      
+
   </ul>
 </div>
 
@@ -321,7 +321,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -343,33 +343,34 @@
 </button>
 
 </div></div>
-      
+
     </div>
-  
+
 </div>
 </div>
-              
-              
+
+
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>3. Distribución, anomalías y cambios de régimen</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-            
+
         </div>
     </div>
 </div>
 
-              
-                
+
+
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
+
   <section class="tex2jax_ignore mathjax_ignore" id="distribucion-anomalias-y-cambios-de-regimen">
 <h1>3. Distribución, anomalías y cambios de régimen<a class="headerlink" href="#distribucion-anomalias-y-cambios-de-regimen" title="Link to this heading">#</a></h1>
-<p>Los precios están en COP nominales por kWh. Se comparan escala original y log1p, sin ajustar una transformación usando validación o prueba. Los umbrales IQR/MAD son diagnósticos explícitos y no reglas de eliminación.</p>
-<p>Las rupturas se buscan sobre la media diaria en log1p estandarizada con entrenamiento: segmentación binaria determinista, segmentos de al menos 90 días, candidatos cada 7 días, umbral de ganancia SSE de <span class="math notranslate nohighlight">\(3\log n\)</span> y un máximo de ocho rupturas. El procedimiento identifica cambios exploratorios de media para el análisis de regímenes.</p>
+<p>El análisis numérico utiliza el periodo completo de desarrollo <strong>2000–2021</strong>. Los ajustes de escaladores y modelos se realizan dentro de cada fold.</p>
+<p>Los precios están en COP nominales por kWh. Se comparan escala original y log1p, como diagnóstico retrospectivo de desarrollo; los parámetros de una transformación predictiva se estiman sólo con el entrenamiento de cada fold. Los umbrales IQR/MAD son diagnósticos explícitos y no reglas de eliminación.</p>
+<p>Las rupturas se buscan sobre la media diaria en log1p estandarizada con desarrollo: segmentación binaria determinista, segmentos de al menos 90 días, candidatos cada 7 días, umbral de ganancia SSE de <span class="math notranslate nohighlight">\(3\log n\)</span> y un máximo de ocho rupturas. El procedimiento identifica cambios exploratorios de media para el análisis de regímenes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -381,6 +382,7 @@
 <span class="p">)</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -392,10 +394,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TARGET</span> <span class="o">=</span> <span class="s1">'precio_bolsa_cop_kwh'</span>
-<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
 <span class="n">EDA_SPLITS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'train'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">),</span> <span class="s1">'validation'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="s1">'test'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)}</span>
 <span class="n">SPLITS</span> <span class="o">=</span> <span class="n">EDA_SPLITS</span>
 <span class="n">TIME</span> <span class="o">=</span> <span class="s1">'timestamp_start_colombia'</span>
+<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">PIPELINE_DEFAULTS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'method'</span><span class="p">:</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">,</span> <span class="s1">'n_splits'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'development_start'</span><span class="p">:</span> <span class="s1">'2000-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">:</span> <span class="s1">'2018-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">:</span> <span class="s1">'2026-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">:</span> <span class="mi">168</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hourly_release_lag_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'include_calendar'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'seed'</span><span class="p">:</span> <span class="mi">11037</span><span class="p">,</span> <span class="s1">'availability_scenario'</span><span class="p">:</span> <span class="s1">'retrospective_assumed_release_lags'</span><span class="p">}</span>
 <span class="n">RESULTS</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -406,8 +409,6 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -435,21 +436,91 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_daily</span><span class="p">():</span>
-    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">load_numeric</span><span class="p">(</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">),</span> <span class="n">load_numeric</span><span class="p">(</span><span class="s1">'validation'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">)])</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="p">,</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">train_daily</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pipeline_config</span><span class="p">(</span><span class="n">overrides</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">overrides</span><span class="p">:</span>
+        <span class="n">unknown</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unknown</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Opciones desconocidas: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">unknown</span><span class="p">)))</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'n_splits'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere un entero positivo: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'hourly_release_lag_hours'</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Rezago inválido: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'hydrology_release_lag_days'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'La hidrología diaria requiere al menos el cierre del día.'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'development_start'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">])</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere zona horaria: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'method'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Método no autorizado'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="o">!=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]</span> <span class="o">!=</span> <span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'El periodo de prueba está congelado.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Cortes temporales inválidos'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'stride_hours'</span><span class="p">]</span> <span class="o">%</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Los orígenes deben conservar el paso diario.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_pipeline_config</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'configs/training_pipeline.json'</span> <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">path</span>
+    <span class="k">return</span> <span class="n">pipeline_config</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_eda_development</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Desarrollo completo; no cambia las particiones que usa el entrenamiento."""</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">load_pipeline_config</span><span class="p">()</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'La fuente contiene fechas de prueba.'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">frame</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'El EDA sólo admite desarrollo anterior a prueba.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">development_daily</span><span class="p">():</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_eda_development</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="p">,</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">development_daily</span><span class="p">()</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span>
 <span class="n">desc</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">percentiles</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">])</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">'COP/kWh'</span><span class="p">)</span>
 <span class="n">desc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'asimetría'</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">skew</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="n">desc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'curtosis_exceso'</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="n">table</span><span class="p">(</span><span class="n">desc</span><span class="p">,</span> <span class="s1">'distribucion_precio_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">desc</span><span class="p">,</span> <span class="s1">'distribucion_precio_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -478,15 +549,15 @@
   <tbody>
     <tr>
       <th>count</th>
-      <td>1.578e+05</td>
+      <td>1.9286e+05</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>124.56</td>
+      <td>135.82</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>140.41</td>
+      <td>137.05</td>
     </tr>
     <tr>
       <th>min</th>
@@ -494,35 +565,35 @@
     </tr>
     <tr>
       <th>1%</th>
-      <td>28.794</td>
+      <td>29.318</td>
     </tr>
     <tr>
       <th>5%</th>
-      <td>36.107</td>
+      <td>37.321</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>60.25</td>
+      <td>65.316</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>84.405</td>
+      <td>93.246</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>144.19</td>
+      <td>160.46</td>
     </tr>
     <tr>
       <th>95%</th>
-      <td>304.45</td>
+      <td>362.01</td>
     </tr>
     <tr>
       <th>99%</th>
-      <td>822.44</td>
+      <td>810.01</td>
     </tr>
     <tr>
       <th>99.9%</th>
-      <td>1621.2</td>
+      <td>1492</td>
     </tr>
     <tr>
       <th>max</th>
@@ -530,11 +601,11 @@
     </tr>
     <tr>
       <th>asimetría</th>
-      <td>5.2232</td>
+      <td>4.618</td>
     </tr>
     <tr>
       <th>curtosis_exceso</th>
-      <td>41.298</td>
+      <td>35.972</td>
     </tr>
   </tbody>
 </table>
@@ -544,7 +615,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">))</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#245b8d'</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'COP/kWh'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Horas'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Precio nominal: entrenamiento'</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'COP/kWh'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Horas'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Precio nominal: desarrollo'</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#2b8c77'</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'log(1 + precio)'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Transformación candidata'</span><span class="p">)</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -555,7 +626,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/99546258f75f0fc083936be6460c4dc2ac8f674c265bc271ee908d85078f62f0.png" src="_images/99546258f75f0fc083936be6460c4dc2ac8f674c265bc271ee908d85078f62f0.png" />
+<img alt="_images/1f6b7b008d2127255b667c5fc2e5f510b07617caae47991eda9a48a146971597.png" src="_images/1f6b7b008d2127255b667c5fc2e5f510b07617caae47991eda9a48a146971597.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -567,7 +638,7 @@
 <span class="n">upper</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
 <span class="n">robust</span> <span class="o">=</span> <span class="n">med</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">*</span> <span class="mf">1.4826</span> <span class="o">*</span> <span class="n">mad</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'umbral_superior'</span><span class="p">:</span> <span class="p">[</span><span class="n">upper</span><span class="p">,</span> <span class="n">robust</span><span class="p">],</span> <span class="s1">'horas_mayores'</span><span class="p">:</span> <span class="p">[(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">robust</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'IQR 1,5'</span><span class="p">,</span> <span class="s1">'MAD 6'</span><span class="p">])</span>
-<span class="n">table</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">'umbrales_anomalias_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s1">'umbrales_anomalias_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -597,13 +668,13 @@
   <tbody>
     <tr>
       <th>IQR 1,5</th>
-      <td>270.09</td>
-      <td>9119</td>
+      <td>303.18</td>
+      <td>13407</td>
     </tr>
     <tr>
       <th>MAD 6</th>
-      <td>394.72</td>
-      <td>6031</td>
+      <td>446.92</td>
+      <td>6158</td>
     </tr>
   </tbody>
 </table>
@@ -615,7 +686,7 @@
 <span class="n">influence</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">mask</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'Mayor que Q99'</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)),</span> <span class="p">(</span><span class="s1">'Mayor que umbral IQR'</span><span class="p">,</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">)]:</span>
     <span class="n">influence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">grupo</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">fraccion_horas</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span> <span class="n">fraccion_error_absoluto</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">diagnostic</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">diagnostic</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="n">fraccion_error_cuadratico</span><span class="o">=</span><span class="nb">float</span><span class="p">((</span><span class="n">diagnostic</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="n">diagnostic</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())))</span>
-<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">influence</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'grupo'</span><span class="p">),</span> <span class="s1">'influencia_anomalias_perdida_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">influence</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'grupo'</span><span class="p">),</span> <span class="s1">'influencia_anomalias_perdida_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -652,15 +723,15 @@
   <tbody>
     <tr>
       <th>Mayor que Q99</th>
-      <td>0.009981</td>
-      <td>0.13918</td>
-      <td>0.45589</td>
+      <td>0.0099863</td>
+      <td>0.12128</td>
+      <td>0.42609</td>
     </tr>
     <tr>
       <th>Mayor que umbral IQR</th>
-      <td>0.057788</td>
-      <td>0.42056</td>
-      <td>0.87018</td>
+      <td>0.069515</td>
+      <td>0.40637</td>
+      <td>0.83037</td>
     </tr>
   </tbody>
 </table>
@@ -668,7 +739,7 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<p>La influencia se mide respecto de la mediana de entrenamiento como centro diagnóstico, no como pronóstico evaluado. Cuantifica cuánto pesan los extremos en errores absolutos y cuadrados sin consultar prueba ni eliminar esos episodios.</p>
+<p>La influencia se mide respecto de la mediana de desarrollo como centro diagnóstico, no como pronóstico evaluado. Cuantifica cuánto pesan los extremos en errores absolutos y cuadrados sin consultar prueba ni eliminar esos episodios.</p>
 </div>
 </div>
 <div class="cell docutils container">
@@ -676,7 +747,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
 <span class="n">daily</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">daily</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Mediana móvil pasada 90 días'</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">'COP/kWh'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Precio medio diario de entrenamiento'</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">'COP/kWh'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Precio medio diario de desarrollo'</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">yearly</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">anio</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'anio'</span><span class="p">)[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">'mean'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'std'</span><span class="p">,</span> <span class="s1">'max'</span><span class="p">])</span>
 <span class="n">yearly</span><span class="p">[[</span><span class="s1">'mean'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
@@ -689,12 +760,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9ae336c4ee33bfd4bacc3cffc2879db0929ff20aaefd68fec83bc12a5ca4c63a.png" src="_images/9ae336c4ee33bfd4bacc3cffc2879db0929ff20aaefd68fec83bc12a5ca4c63a.png" />
+<img alt="_images/bfde6518b088fa0a2d09d871d1d0b1a112d7b8c3c01188eb838cfdf01803723c.png" src="_images/bfde6518b088fa0a2d09d871d1d0b1a112d7b8c3c01188eb838cfdf01803723c.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">yearly</span><span class="p">,</span> <span class="s1">'precio_anual_train'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">yearly</span><span class="p">,</span> <span class="s1">'precio_anual_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -857,6 +928,34 @@
       <td>37.888</td>
       <td>383.45</td>
     </tr>
+    <tr>
+      <th>2018</th>
+      <td>116.25</td>
+      <td>102.66</td>
+      <td>49.624</td>
+      <td>555.12</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>228.31</td>
+      <td>220.78</td>
+      <td>97.183</td>
+      <td>910.47</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>251.1</td>
+      <td>217.14</td>
+      <td>113.44</td>
+      <td>745.5</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>150.07</td>
+      <td>107.95</td>
+      <td>94.112</td>
+      <td>592.91</td>
+    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -882,7 +981,7 @@
         <span class="n">cuts</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">cut</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">gain</span><span class="p">[</span><span class="n">best</span><span class="p">])))</span>
         <span class="n">pending</span><span class="o">.</span><span class="n">extend</span><span class="p">([(</span><span class="n">left</span><span class="p">,</span> <span class="n">cut</span><span class="p">),</span> <span class="p">(</span><span class="n">cut</span><span class="p">,</span> <span class="n">right</span><span class="p">)])</span>
 <span class="n">breaks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="n">fecha</span><span class="o">=</span><span class="n">daily</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="n">ganancia_sse</span><span class="o">=</span><span class="n">g</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cuts</span><span class="p">)])</span>
-<span class="n">table</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="s1">'rupturas_exploratorias_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">breaks</span><span class="p">,</span> <span class="s1">'rupturas_exploratorias_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -913,42 +1012,42 @@
     <tr>
       <th>0</th>
       <td>2002-10-04</td>
-      <td>176.82</td>
+      <td>170.89</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2006-09-01</td>
-      <td>633.61</td>
+      <td>612.36</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2008-12-18</td>
-      <td>184.71</td>
+      <td>178.51</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2010-11-18</td>
-      <td>152.98</td>
+      <td>147.85</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2012-07-27</td>
-      <td>3048.2</td>
+      <td>3702.3</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>2014-04-03</td>
-      <td>29.665</td>
+      <td>2015-09-17</td>
+      <td>666.44</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2015-09-03</td>
-      <td>228.96</td>
+      <td>2016-04-28</td>
+      <td>356.92</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>2016-12-01</td>
-      <td>442.11</td>
+      <td>2018-12-12</td>
+      <td>300.35</td>
     </tr>
   </tbody>
 </table>
@@ -961,19 +1060,19 @@
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">cuts</span><span class="p">:</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#d17a32'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Rupturas exploratorias de media (log1p diario)'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'log(1 + COP/kWh)'</span><span class="p">)</span>
-<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'rupturas_train'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'rupturas_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6233600e6b5a136941fb8bc2648c8bfdf3ac7e61f47cbcb2b46e8547da19bc69.png" src="_images/6233600e6b5a136941fb8bc2648c8bfdf3ac7e61f47cbcb2b46e8547da19bc69.png" />
+<img alt="_images/525fdee63c086e468f5f6c4a0163a5976f990703d240589d541639e032b07b84.png" src="_images/525fdee63c086e468f5f6c4a0163a5976f990703d240589d541639e032b07b84.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
 <ul class="simple">
-<li><p><strong>Preprocesamiento:</strong> Comparar escala robusta/log1p con escala en COP, ajustadas sólo con train. IQR superior=270.09; no eliminar picos por ser extremos.</p></li>
+<li><p><strong>Preprocesamiento:</strong> Comparar escala robusta/log1p con escala en COP, ajustadas sólo con train. IQR superior=303.18; no eliminar picos por ser extremos.</p></li>
 <li><p><strong>Arquitectura:</strong> Capacidad para cambios de nivel y colas; considerar salida robusta o probabilística, sin inferir que NLP ya ayuda.</p></li>
 <li><p><strong>Validación:</strong> Mantener episodios extremos en evaluación futura y reportar error por régimen; evitar métricas porcentuales cerca de cero.</p></li>
 <li><p><strong>Riesgos:</strong> Precios nominales de años distintos no son poder adquisitivo constante. Una ruptura estadística no identifica su causa; STL centrada y segmentación usan futuro dentro de train y no son atributos operativos.</p></li>
@@ -1003,14 +1102,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
-              
 
-              
-              
-              
-              
+
+
+
+
+
                 <footer class="prev-next-footer d-print-none">
-                  
+
 <div class="prev-next-area">
     <a class="left-prev"
        href="02_calidad.html"
@@ -1032,53 +1131,53 @@
     </a>
 </div>
                 </footer>
-              
+
             </div>
-            
-            
-              
-            
+
+
+
+
           </div>
           <footer class="bd-footer-content">
-            
+
 <div class="bd-footer-content__inner container">
-  
+
   <div class="footer-item">
-    
+
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
 
   <p class="copyright">
-    
+
       © Copyright 2026.
       <br/>
-    
+
   </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
 </div>
           </footer>
-        
+
 
       </main>
     </div>
   </div>
-  
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>

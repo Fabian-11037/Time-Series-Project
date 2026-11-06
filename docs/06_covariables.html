@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6. Demanda, clima e hidrología &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-  
-  
-  
+
+
+
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-  
+
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-  
+
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -71,29 +71,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-  
-    
+
+
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-  
+
   </head>
   <body data-default-mode="">
-  
-  
+
+
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
+
   <div id="pst-scroll-pixel-helper"></div>
-  
+
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-  
-  
-  
-  
+
+
+
+
   <dialog id="pst-search-dialog">
-    
+
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,21 +115,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-  
+
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-  
-  
+
+
   <div class="col-lg-9 navbar-header-items">
-    
-    
+
+
     <div class="navbar-header-items__end">
-      
+
         <div class="navbar-item navbar-persistent--container">
-          
+
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,13 +137,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-      
-      
+
+
     </div>
-    
+
   </div>
-  
-  
+
+
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -152,47 +152,51 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
-  
 
-  
+
+
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+
 </div>
 
     </header>
-  
+
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
+
+
+
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
-        
 
-  
+
+
   <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-  
-    
-  
+
+
+
 
 <a class="navbar-brand logo" href="intro.html">
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-  
+
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -222,8 +226,8 @@
     </div>
 </nav></div>
     </div>
-  
-  
+
+
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -236,30 +240,30 @@
 
 
       </div>
-      
+
       <main id="main-content" class="bd-main" role="main">
-        
-        
+
+
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-              
+
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-  
+
     <div class="header-article-items__start">
-      
+
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-      
+
     </div>
-  
-  
+
+
     <div class="header-article-items__end">
-      
+
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -273,15 +277,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      
-      
-      
+
+
+
       <li><a href="_sources/06_covariables.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -289,17 +293,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-      
-      
-      
-      
+
+
+
+
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -307,7 +311,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-      
+
   </ul>
 </div>
 
@@ -319,7 +323,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -339,34 +343,45 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
-      
+
     </div>
-  
+
 </div>
 </div>
-              
-              
+
+
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>6. Demanda, clima e hidrología</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-            
+
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-efectivos-de-entrenamiento">6.1 Datos efectivos de entrenamiento</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
 
-              
-                
+
+
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
+
   <section class="tex2jax_ignore mathjax_ignore" id="demanda-clima-e-hidrologia">
 <h1>6. Demanda, clima e hidrología<a class="headerlink" href="#demanda-clima-e-hidrologia" title="Link to this heading">#</a></h1>
-<p>Se estiman asociaciones contemporáneas, asociaciones con covariables rezagadas 24 horas y acumulados hidrológicos retrospectivos. La información mutua se calcula sobre una muestra determinista de entrenamiento. Estas medidas describen dependencias estadísticas y orientan la representación multivariada.</p>
+<p>El análisis numérico utiliza el periodo completo de desarrollo <strong>2000–2021</strong>. Los ajustes de escaladores y modelos se realizan dentro de cada fold.</p>
+<p>Se estiman asociaciones contemporáneas, asociaciones con covariables rezagadas 24 horas y acumulados hidrológicos retrospectivos. La información mutua se calcula sobre una muestra determinista de 12.000 horas de desarrollo; las correlaciones y los resúmenes utilizan todas las observaciones disponibles de 2000–2021. Estas medidas describen dependencias estadísticas y orientan la representación multivariada.</p>
 <p>Las ocho ciudades se conservan por separado para representar la heterogeneidad meteorológica. El objetivo de pronóstico es una serie nacional. La precipitación urbana caracteriza las ubicaciones seleccionadas; representar la oferta hidroeléctrica mediante lluvia requiere observaciones adicionales en las cuencas aportantes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -379,22 +394,31 @@
 <span class="p">)</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">mutual_info_regression</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SEED</span> <span class="o">=</span> <span class="mi">11037</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">11037</span>
 <span class="n">TARGET</span> <span class="o">=</span> <span class="s1">'precio_bolsa_cop_kwh'</span>
-<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">ALLOWED_SOURCES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'El Tiempo'</span><span class="p">,</span> <span class="s1">'El Espectador'</span><span class="p">,</span> <span class="s1">'Semana'</span><span class="p">,</span> <span class="s1">'Portafolio'</span><span class="p">,</span> <span class="s1">'La República'</span><span class="p">,</span> <span class="s1">'El Colombiano'</span><span class="p">,</span> <span class="s1">'Dinero'</span><span class="p">,</span> <span class="s1">'IDEAM'</span><span class="p">,</span> <span class="s1">'XM'</span><span class="p">}</span>
 <span class="n">EDA_SPLITS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'train'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">),</span> <span class="s1">'validation'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="s1">'test'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)}</span>
 <span class="n">SPLITS</span> <span class="o">=</span> <span class="n">EDA_SPLITS</span>
 <span class="n">TIME</span> <span class="o">=</span> <span class="s1">'timestamp_start_colombia'</span>
+<span class="n">WEATHER_PREFIXES</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'temperature_2m_c_'</span><span class="p">,</span> <span class="s1">'relative_humidity_2m_pct_'</span><span class="p">,</span> <span class="s1">'precipitation_preceding_hour_mm_'</span><span class="p">)</span>
+<span class="n">CITIES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'bogota'</span><span class="p">,</span> <span class="s1">'medellin'</span><span class="p">,</span> <span class="s1">'cali'</span><span class="p">,</span> <span class="s1">'barranquilla'</span><span class="p">,</span> <span class="s1">'cartagena'</span><span class="p">,</span> <span class="s1">'bucaramanga'</span><span class="p">,</span> <span class="s1">'pereira'</span><span class="p">,</span> <span class="s1">'cucuta'</span><span class="p">}</span>
+<span class="n">NUMERIC_E1</span> <span class="o">=</span> <span class="p">{</span><span class="n">TARGET</span><span class="p">,</span> <span class="s1">'demanda_real_kwh'</span><span class="p">,</span> <span class="s1">'demanda_comercial_kwh'</span><span class="p">,</span> <span class="s1">'llenado_valor_original'</span><span class="p">,</span> <span class="s1">'reserva_util_kwh'</span><span class="p">,</span> <span class="s1">'capacidad_util_kwh'</span><span class="p">,</span> <span class="s1">'aportes_kwh_dia'</span><span class="p">}</span>
+<span class="n">PIPELINE_DEFAULTS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'method'</span><span class="p">:</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">,</span> <span class="s1">'n_splits'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'development_start'</span><span class="p">:</span> <span class="s1">'2000-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">:</span> <span class="s1">'2018-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">:</span> <span class="s1">'2026-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">:</span> <span class="mi">168</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hourly_release_lag_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'include_calendar'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'seed'</span><span class="p">:</span> <span class="mi">11037</span><span class="p">,</span> <span class="s1">'availability_scenario'</span><span class="p">:</span> <span class="s1">'retrospective_assumed_release_lags'</span><span class="p">}</span>
 <span class="n">RESULTS</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -406,9 +430,209 @@
 </div>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">aware</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">parsed</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">,</span> <span class="s1">'+00:00'</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Timestamp must have an explicit timezone'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parsed</span>
+</pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">eligible</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">origin</span><span class="p">):</span>
+    <span class="n">cutoff</span> <span class="o">=</span> <span class="n">aware</span><span class="p">(</span><span class="n">origin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'source'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'medium'</span><span class="p">))</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ALLOWED_SOURCES</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'availability_status'</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">'verified_archived_version'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'availability_proof'</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">'wayback_payload_digest_and_capture'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">clean_flag</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'quarantined'</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'0'</span><span class="p">,</span> <span class="s1">'false'</span><span class="p">,</span> <span class="s1">'False'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s1">'[0-9a-f]</span><span class="si">{64}</span><span class="s1">'</span><span class="p">,</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'version_sha256'</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">''</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">clean_flag</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">available</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'available_at_verified'</span><span class="p">)</span>
+    <span class="n">captured</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'capture_at_verified'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">available</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">captured</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">aware</span><span class="p">(</span><span class="n">captured</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">aware</span><span class="p">(</span><span class="n">available</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">cutoff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">split_train_val_forwardChaining</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">numInputs</span><span class="p">,</span> <span class="n">numOutputs</span><span class="p">,</span> <span class="n">numJumps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">""" Returns sets to train and cross-validate a model using forward chaining technique</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">        sequence (array)  : Full training dataset</span>
+<span class="sd">        numInputs (int)   : Number of inputs X and Xcv used at each training and validation</span>
+<span class="sd">        numOutputs (int)  : Number of outputs y and ycv used at each training and validation</span>
+<span class="sd">        numJumps (int)    : Number of sequence samples to be ignored between (X,y) sets</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        X (2D array)    : Array of numInputs arrays used for training</span>
+<span class="sd">        y (2D array)    : Array of numOutputs arrays used for training</span>
+<span class="sd">        Xcv (2D array)  : Array of numInputs arrays used for cross-validation</span>
+<span class="sd">        ycv (2D array)  : Array of numOutputs arrays used for cross-validation</span>
+<span class="sd">        </span>
+<span class="sd">    </span>
+
+<span class="sd">Fuente: timeseries-cv 0.1.5; licencia original:</span>
+<span class="sd">MIT License</span>
+
+<span class="sd">Copyright (c) 2021 DidierRLopes</span>
+
+<span class="sd">Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="sd">of this software and associated documentation files (the "Software"), to deal</span>
+<span class="sd">in the Software without restriction, including without limitation the rights</span>
+<span class="sd">to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="sd">copies of the Software, and to permit persons to whom the Software is</span>
+<span class="sd">furnished to do so, subject to the following conditions:</span>
+
+<span class="sd">The above copyright notice and this permission notice shall be included in all</span>
+<span class="sd">copies or substantial portions of the Software.</span>
+
+<span class="sd">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="sd">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="sd">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="sd">AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="sd">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="sd">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="sd">SOFTWARE.</span>
+
+<span class="sd">The MIT License (MIT)</span>
+
+<span class="sd">Copyright (c) 2019 Didier Rodrigues Lopes</span>
+
+<span class="sd">Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="sd">of this software and associated documentation files (the "Software"), to deal</span>
+<span class="sd">in the Software without restriction, including without limitation the rights</span>
+<span class="sd">to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="sd">copies of the Software, and to permit persons to whom the Software is</span>
+<span class="sd">furnished to do so, subject to the following conditions:</span>
+
+<span class="sd">The above copyright notice and this permission notice shall be included in all</span>
+<span class="sd">copies or substantial portions of the Software.</span>
+
+<span class="sd">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="sd">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="sd">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="sd">AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="sd">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="sd">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="sd">SOFTWARE.</span>
+<span class="sd">"""</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Xcv</span><span class="p">,</span> <span class="n">ycv</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">(),</span> <span class="nb">dict</span><span class="p">())</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">start_ix</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">end_ix</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">startCv_ix</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">endCv_ix</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">X_it</span><span class="p">,</span> <span class="n">y_it</span><span class="p">,</span> <span class="n">Xcv_it</span><span class="p">,</span> <span class="n">ycv_it</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">())</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">:</span>
+            <span class="n">start_ix</span> <span class="o">=</span> <span class="n">numJumps</span> <span class="o">*</span> <span class="n">i</span>
+            <span class="n">end_ix</span> <span class="o">=</span> <span class="n">start_ix</span> <span class="o">+</span> <span class="n">numInputs</span>
+            <span class="n">seq_x</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">start_ix</span><span class="p">:</span><span class="n">end_ix</span><span class="p">]</span>
+            <span class="n">X_it</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_x</span><span class="p">)</span>
+            <span class="n">seq_y</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">end_ix</span><span class="p">:</span><span class="n">end_ix</span> <span class="o">+</span> <span class="n">numOutputs</span><span class="p">]</span>
+            <span class="n">y_it</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_y</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">end_ix</span> <span class="o">+</span> <span class="n">numInputs</span> <span class="o">+</span> <span class="n">numOutputs</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+            <span class="k">break</span>
+        <span class="n">startCv_ix</span> <span class="o">=</span> <span class="n">end_ix</span>
+        <span class="n">endCv_ix</span> <span class="o">=</span> <span class="n">end_ix</span> <span class="o">+</span> <span class="n">numInputs</span>
+        <span class="n">seq_xcv</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">startCv_ix</span><span class="p">:</span><span class="n">endCv_ix</span><span class="p">]</span>
+        <span class="n">Xcv_it</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_xcv</span><span class="p">)</span>
+        <span class="n">seq_ycv</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">[</span><span class="n">endCv_ix</span><span class="p">:</span><span class="n">endCv_ix</span> <span class="o">+</span> <span class="n">numOutputs</span><span class="p">]</span>
+        <span class="n">ycv_it</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq_ycv</span><span class="p">)</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X_it</span><span class="p">)</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_it</span><span class="p">)</span>
+        <span class="n">Xcv</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Xcv_it</span><span class="p">)</span>
+        <span class="n">ycv</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ycv_it</span><span class="p">)</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">Xcv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'The sequence provided does not has size enough to populate the return arrays'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Xcv</span><span class="p">,</span> <span class="n">ycv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">validate_development_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">index</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'El índice debe tener zona horaria.'</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="s1">'America/Bogota'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">index</span><span class="o">.</span><span class="n">is_monotonic_increasing</span> <span class="ow">or</span> <span class="n">index</span><span class="o">.</span><span class="n">has_duplicates</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Índice temporal desordenado, duplicado o insuficiente.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">as_unit</span><span class="p">(</span><span class="s1">'ns'</span><span class="p">)</span><span class="o">.</span><span class="n">asi8</span><span class="p">)</span> <span class="o">==</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'El calendario horario contiene huecos.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span> <span class="ow">or</span> <span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'La preparación sólo admite el periodo de desarrollo.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">forward_chaining_folds</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">input_usable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_usable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Plan temporal por bloques; ventanas supervisadas completas y sin etiquetas compartidas."""</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">validate_development_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">lookback</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'lookback_hours'</span><span class="p">]</span>
+    <span class="n">horizon</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'horizon_hours'</span><span class="p">]</span>
+    <span class="n">origins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">lookback</span><span class="p">,</span> <span class="n">length</span> <span class="o">-</span> <span class="n">horizon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">'stride_hours'</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+    <span class="n">origins</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="n">origins</span><span class="p">]</span><span class="o">.</span><span class="n">hour</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">input_usable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">input_usable</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">length</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Máscara de entradas incompatible'</span><span class="p">)</span>
+        <span class="n">bad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="o">~</span><span class="n">flags</span><span class="p">)]</span>
+        <span class="n">origins</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">bad</span><span class="p">[</span><span class="n">origins</span><span class="p">]</span> <span class="o">-</span> <span class="n">bad</span><span class="p">[</span><span class="n">origins</span> <span class="o">-</span> <span class="n">lookback</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">target_usable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">flags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">target_usable</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="n">length</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Máscara de etiquetas incompatible'</span><span class="p">)</span>
+        <span class="n">bad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="o">~</span><span class="n">flags</span><span class="p">)]</span>
+        <span class="n">origins</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">bad</span><span class="p">[</span><span class="n">origins</span> <span class="o">+</span> <span class="n">horizon</span><span class="p">]</span> <span class="o">-</span> <span class="n">bad</span><span class="p">[</span><span class="n">origins</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">initial</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="n">origins</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])]</span>
+    <span class="n">eligible</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="n">origins</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">initial</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">eligible</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">config</span><span class="p">[</span><span class="s1">'n_splits'</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Datos insuficientes para los folds.'</span><span class="p">)</span>
+    <span class="n">validation_blocks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">eligible</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">'n_splits'</span><span class="p">])</span>
+    <span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">val_x</span><span class="p">,</span> <span class="n">val_y</span> <span class="o">=</span> <span class="n">split_train_val_forwardChaining</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'n_splits'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val_y</span><span class="p">)</span> <span class="o">!=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'n_splits'</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s1">'Número inesperado de folds del backend'</span><span class="p">)</span>
+    <span class="n">folds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">val_y</span><span class="p">):</span>
+        <span class="n">block</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">val_y</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">block_id</span> <span class="o">=</span> <span class="n">block</span> <span class="o">-</span> <span class="mi">3</span>
+        <span class="n">past_blocks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="n">train_x</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">train_y</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
+        <span class="k">if</span> <span class="n">past_blocks</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">block</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s1">'El backend incluyó bloques futuros'</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">validation_blocks</span><span class="p">[</span><span class="n">block_id</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">validation_blocks</span><span class="p">[</span><span class="n">block_id</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">block_id</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">validation_blocks</span><span class="p">)</span> <span class="k">else</span> <span class="n">length</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="n">origins</span><span class="p">[</span><span class="n">origins</span> <span class="o">+</span> <span class="n">horizon</span> <span class="o">&lt;=</span> <span class="n">start</span><span class="p">]</span>
+        <span class="n">validation</span> <span class="o">=</span> <span class="n">validation_blocks</span><span class="p">[</span><span class="n">block_id</span><span class="p">]</span>
+        <span class="n">validation</span> <span class="o">=</span> <span class="n">validation</span><span class="p">[</span><span class="n">validation</span> <span class="o">+</span> <span class="n">horizon</span> <span class="o">&lt;=</span> <span class="n">stop</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">validation</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Fold vacío tras la purga de etiquetas'</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">train</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">horizon</span> <span class="o">&lt;=</span> <span class="n">validation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'&lt;i8'</span><span class="p">)</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()</span> <span class="o">+</span> <span class="n">validation</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'&lt;i8'</span><span class="p">)</span><span class="o">.</span><span class="n">tobytes</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+        <span class="n">folds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">fold</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">folds</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">train_origins</span><span class="o">=</span><span class="n">train</span><span class="p">,</span> <span class="n">validation_origins</span><span class="o">=</span><span class="n">validation</span><span class="p">,</span> <span class="n">validation_block</span><span class="o">=</span><span class="n">block</span><span class="p">,</span> <span class="n">indices_sha256</span><span class="o">=</span><span class="n">digest</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">folds</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -434,8 +658,159 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
-<span class="n">hydro</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hydrology'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">load_numeric</span><span class="p">(</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">),</span> <span class="n">load_numeric</span><span class="p">(</span><span class="s1">'validation'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">)])</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">assert_e1_features</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">NUMERIC_E1</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">((</span><span class="n">name</span> <span class="o">==</span> <span class="n">prefix</span> <span class="o">+</span> <span class="n">city</span> <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">WEATHER_PREFIXES</span> <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">CITIES</span><span class="p">)):</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">'hour_sin'</span><span class="p">,</span> <span class="s1">'hour_cos'</span><span class="p">,</span> <span class="s1">'week_sin'</span><span class="p">,</span> <span class="s1">'week_cos'</span><span class="p">,</span> <span class="s1">'year_sin'</span><span class="p">,</span> <span class="s1">'year_cos'</span><span class="p">}:</span>
+            <span class="k">continue</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'E1 sólo admite las variables numéricas declaradas: '</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">numeric_feature_frame</span><span class="p">(</span><span class="n">hourly</span><span class="p">,</span> <span class="n">hydrology</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">validate_development_index</span><span class="p">(</span><span class="n">hourly</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">hydrology</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">is_monotonic_increasing</span> <span class="ow">or</span> <span class="n">hydrology</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">has_duplicates</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Índice hidrológico no válido.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">hydrology</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hydrology</span><span class="p">)</span> <span class="ow">and</span> <span class="n">hydrology</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'Hidrología fuera del periodo de desarrollo o sin zona horaria.'</span><span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">TARGET</span><span class="p">,</span> <span class="s1">'demanda_real_kwh'</span><span class="p">,</span> <span class="s1">'demanda_comercial_kwh'</span><span class="p">]</span>
+    <span class="n">columns</span> <span class="o">+=</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">hourly</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">WEATHER_PREFIXES</span><span class="p">)))</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">hourly</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'hourly_release_lag_hours'</span><span class="p">])</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">hydro_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">,</span> <span class="s1">'reserva_util_kwh'</span><span class="p">,</span> <span class="s1">'capacidad_util_kwh'</span><span class="p">,</span> <span class="s1">'aportes_kwh_dia'</span><span class="p">]</span>
+    <span class="n">released</span> <span class="o">=</span> <span class="n">hydrology</span><span class="p">[</span><span class="n">hydro_columns</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">released</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">released</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">'hydrology_release_lag_days'</span><span class="p">])</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">released</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'ffill'</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'include_calendar'</span><span class="p">]:</span>
+        <span class="n">phases</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'hour'</span><span class="p">:</span> <span class="n">index</span><span class="o">.</span><span class="n">hour</span> <span class="o">/</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'week'</span><span class="p">:</span> <span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">day_of_week</span> <span class="o">+</span> <span class="n">index</span><span class="o">.</span><span class="n">hour</span> <span class="o">/</span> <span class="mi">24</span><span class="p">)</span> <span class="o">/</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">:</span> <span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">day_of_year</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">index</span><span class="o">.</span><span class="n">hour</span> <span class="o">/</span> <span class="mi">24</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">index</span><span class="o">.</span><span class="n">is_leap_year</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">365</span><span class="p">)}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phase</span> <span class="ow">in</span> <span class="n">phases</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">features</span><span class="p">[</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'_sin'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">phase</span><span class="p">)</span>
+            <span class="n">features</span><span class="p">[</span><span class="n">name</span> <span class="o">+</span> <span class="s1">'_cos'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">phase</span><span class="p">)</span>
+    <span class="n">assert_e1_features</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">features</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pipeline_config</span><span class="p">(</span><span class="n">overrides</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">overrides</span><span class="p">:</span>
+        <span class="n">unknown</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unknown</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Opciones desconocidas: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">unknown</span><span class="p">)))</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'n_splits'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere un entero positivo: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'hourly_release_lag_hours'</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Rezago inválido: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'hydrology_release_lag_days'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'La hidrología diaria requiere al menos el cierre del día.'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'development_start'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">])</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere zona horaria: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'method'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Método no autorizado'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="o">!=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]</span> <span class="o">!=</span> <span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'El periodo de prueba está congelado.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Cortes temporales inválidos'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'stride_hours'</span><span class="p">]</span> <span class="o">%</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Los orígenes deben conservar el paso diario.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_training_pipeline</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hourly</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hydrology</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">pipeline_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">hourly</span> <span class="o">=</span> <span class="n">load_development_data</span><span class="p">()</span> <span class="k">if</span> <span class="n">hourly</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">hourly</span>
+    <span class="n">hydrology</span> <span class="o">=</span> <span class="n">load_development_data</span><span class="p">(</span><span class="s1">'hydrology'</span><span class="p">)</span> <span class="k">if</span> <span class="n">hydrology</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">hydrology</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">numeric_feature_frame</span><span class="p">(</span><span class="n">hourly</span><span class="p">,</span> <span class="n">hydrology</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">hourly</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">usable</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">folds</span> <span class="o">=</span> <span class="n">forward_chaining_folds</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">usable</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span> <span class="n">folds</span><span class="o">=</span><span class="n">folds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_pipeline_config</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'configs/training_pipeline.json'</span> <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">path</span>
+    <span class="k">return</span> <span class="n">pipeline_config</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_eda_development</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Desarrollo completo; no cambia las particiones que usa el entrenamiento."""</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">load_pipeline_config</span><span class="p">()</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'La fuente contiene fechas de prueba.'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">frame</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'El EDA sólo admite desarrollo anterior a prueba.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">used_window_rows</span><span class="p">(</span><span class="n">origins</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">lookback</span><span class="p">,</span> <span class="n">horizon</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Filas únicas y multiplicidad de entradas/etiquetas sin materializar ventanas."""</span>
+    <span class="n">origins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">origins</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">origins</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">origins</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requieren orígenes unidimensionales no vacíos.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lookback</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">horizon</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">origins</span> <span class="o">&lt;</span> <span class="n">lookback</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">origins</span> <span class="o">+</span> <span class="n">horizon</span> <span class="o">&gt;</span> <span class="n">length</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Una ventana atraviesa los límites del calendario.'</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">counts</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">delta</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">counts</span><span class="p">(</span><span class="n">origins</span> <span class="o">-</span> <span class="n">lookback</span><span class="p">,</span> <span class="n">origins</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">counts</span><span class="p">(</span><span class="n">origins</span><span class="p">,</span> <span class="n">origins</span> <span class="o">+</span> <span class="n">horizon</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">load_eda_development</span><span class="p">()</span>
+<span class="n">hydro</span> <span class="o">=</span> <span class="n">load_eda_development</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hydrology'</span><span class="p">)</span>
 <span class="n">numeric</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="s1">'number'</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'xm_hour'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
 <span class="n">corr</span> <span class="o">=</span> <span class="n">numeric</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -444,18 +819,18 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)),</span> <span class="n">labels</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)),</span> <span class="n">labels</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Spearman'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Asociaciones contemporáneas descriptivas (train)'</span><span class="p">)</span>
-<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'correlaciones_train'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Asociaciones contemporáneas descriptivas (desarrollo)'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'correlaciones_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3a77d9d1b96dea70951bae69706089afad73335427723d29604934518e9635c8.png" src="_images/3a77d9d1b96dea70951bae69706089afad73335427723d29604934518e9635c8.png" />
+<img alt="_images/d2a0c80af75b6debcceb3c04ae0c6cd2d321551445cdbf4f32f3fdad36c6383c.png" src="_images/d2a0c80af75b6debcceb3c04ae0c6cd2d321551445cdbf4f32f3fdad36c6383c.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">corr</span><span class="p">[[</span><span class="n">TARGET</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">TARGET</span><span class="p">),</span> <span class="s1">'correlacion_contemporanea_train'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">corr</span><span class="p">[[</span><span class="n">TARGET</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">TARGET</span><span class="p">),</span> <span class="s1">'correlacion_contemporanea_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -484,107 +859,107 @@
   <tbody>
     <tr>
       <th>relative_humidity_2m_pct_barranquilla</th>
-      <td>-0.16484</td>
+      <td>-0.18964</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cartagena</th>
-      <td>-0.1604</td>
+      <td>-0.18329</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_medellin</th>
-      <td>-0.15985</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_pereira</th>
-      <td>-0.12652</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_cucuta</th>
-      <td>-0.12198</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_bogota</th>
-      <td>-0.11151</td>
+      <td>-0.15601</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bucaramanga</th>
-      <td>-0.11003</td>
+      <td>-0.14346</td>
     </tr>
     <tr>
-      <th>relative_humidity_2m_pct_cali</th>
-      <td>-0.099551</td>
+      <th>relative_humidity_2m_pct_cucuta</th>
+      <td>-0.12771</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_pereira</th>
+      <td>-0.11528</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bucaramanga</th>
-      <td>-0.070865</td>
+      <td>-0.088227</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cali</th>
+      <td>-0.086752</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bogota</th>
+      <td>-0.086103</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_pereira</th>
-      <td>-0.047244</td>
+      <td>-0.066521</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cartagena</th>
-      <td>-0.038106</td>
+      <td>-0.058812</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_barranquilla</th>
-      <td>-0.030186</td>
-    </tr>
-    <tr>
-      <th>precipitation_preceding_hour_mm_cali</th>
-      <td>-0.0086095</td>
+      <td>-0.051152</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cucuta</th>
-      <td>-0.0062685</td>
+      <td>-0.011483</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cali</th>
+      <td>-0.0078953</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_medellin</th>
-      <td>0.026864</td>
+      <td>0.013681</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bogota</th>
-      <td>0.054335</td>
+      <td>0.057011</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bogota</th>
-      <td>0.18994</td>
+      <td>0.18317</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cucuta</th>
-      <td>0.2094</td>
-    </tr>
-    <tr>
-      <th>temperature_2m_c_cali</th>
-      <td>0.22104</td>
+      <td>0.19307</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cartagena</th>
-      <td>0.22422</td>
+      <td>0.21721</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cali</th>
+      <td>0.22321</td>
     </tr>
     <tr>
       <th>temperature_2m_c_medellin</th>
-      <td>0.23578</td>
-    </tr>
-    <tr>
-      <th>temperature_2m_c_pereira</th>
-      <td>0.23798</td>
+      <td>0.22812</td>
     </tr>
     <tr>
       <th>temperature_2m_c_barranquilla</th>
-      <td>0.23966</td>
+      <td>0.23011</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_pereira</th>
+      <td>0.23635</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bucaramanga</th>
-      <td>0.25754</td>
+      <td>0.24777</td>
     </tr>
     <tr>
       <th>demanda_comercial_kwh</th>
-      <td>0.6254</td>
+      <td>0.63885</td>
     </tr>
     <tr>
       <th>demanda_real_kwh</th>
-      <td>0.62889</td>
+      <td>0.64207</td>
     </tr>
     <tr>
       <th>precio_bolsa_cop_kwh</th>
@@ -602,8 +977,8 @@
 <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">aligned</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="mi">12000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">aligned</span><span class="p">)),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 <span class="n">sample</span> <span class="o">=</span> <span class="n">aligned</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
 <span class="n">mi</span> <span class="o">=</span> <span class="n">mutual_info_regression</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">TARGET</span><span class="p">),</span> <span class="n">sample</span><span class="p">[</span><span class="n">TARGET</span><span class="p">],</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">SEED</span><span class="p">)</span>
-<span class="n">lagged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'spearman_rezago_24h'</span><span class="p">:</span> <span class="n">aligned</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">)[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">TARGET</span><span class="p">),</span> <span class="s1">'informacion_mutua_muestra_train'</span><span class="p">:</span> <span class="n">mi</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">predictors</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'spearman_rezago_24h'</span><span class="p">)</span>
-<span class="n">table</span><span class="p">(</span><span class="n">lagged</span><span class="p">,</span> <span class="s1">'asociaciones_rezagadas_train'</span><span class="p">)</span>
+<span class="n">lagged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'spearman_rezago_24h'</span><span class="p">:</span> <span class="n">aligned</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">)[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">TARGET</span><span class="p">),</span> <span class="s1">'informacion_mutua_muestra_desarrollo'</span><span class="p">:</span> <span class="n">mi</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">predictors</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'spearman_rezago_24h'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">lagged</span><span class="p">,</span> <span class="s1">'asociaciones_rezagadas_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -627,139 +1002,139 @@
     <tr style="text-align: right;">
       <th></th>
       <th>spearman_rezago_24h</th>
-      <th>informacion_mutua_muestra_train</th>
+      <th>informacion_mutua_muestra_desarrollo</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>relative_humidity_2m_pct_barranquilla</th>
-      <td>-0.16752</td>
-      <td>0.041177</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_medellin</th>
-      <td>-0.16461</td>
-      <td>0.034723</td>
+      <td>-0.19261</td>
+      <td>0.043141</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cartagena</th>
-      <td>-0.16291</td>
-      <td>0.047077</td>
+      <td>-0.18556</td>
+      <td>0.038304</td>
     </tr>
     <tr>
-      <th>relative_humidity_2m_pct_pereira</th>
-      <td>-0.12976</td>
-      <td>0.02586</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_cucuta</th>
-      <td>-0.12824</td>
-      <td>0.039703</td>
-    </tr>
-    <tr>
-      <th>relative_humidity_2m_pct_bogota</th>
-      <td>-0.11723</td>
-      <td>0.037738</td>
+      <th>relative_humidity_2m_pct_medellin</th>
+      <td>-0.16088</td>
+      <td>0.024517</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bucaramanga</th>
-      <td>-0.11564</td>
-      <td>0.016464</td>
+      <td>-0.14919</td>
+      <td>0.032759</td>
     </tr>
     <tr>
-      <th>relative_humidity_2m_pct_cali</th>
-      <td>-0.10089</td>
-      <td>0.011836</td>
+      <th>relative_humidity_2m_pct_cucuta</th>
+      <td>-0.13415</td>
+      <td>0.033156</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_pereira</th>
+      <td>-0.11842</td>
+      <td>0.0069202</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bucaramanga</th>
-      <td>-0.077291</td>
-      <td>0.0091161</td>
+      <td>-0.094557</td>
+      <td>0.013255</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bogota</th>
+      <td>-0.091627</td>
+      <td>0.018885</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cali</th>
+      <td>-0.088247</td>
+      <td>0.013143</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_pereira</th>
-      <td>-0.048003</td>
-      <td>0.021154</td>
+      <td>-0.067975</td>
+      <td>0.018304</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cartagena</th>
-      <td>-0.043803</td>
-      <td>0.01869</td>
+      <td>-0.064507</td>
+      <td>0.014555</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_barranquilla</th>
-      <td>-0.036532</td>
-      <td>0.022058</td>
-    </tr>
-    <tr>
-      <th>precipitation_preceding_hour_mm_cali</th>
-      <td>-0.015062</td>
-      <td>0.026163</td>
+      <td>-0.057384</td>
+      <td>0.012862</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cucuta</th>
-      <td>-0.012664</td>
-      <td>0.015168</td>
+      <td>-0.018091</td>
+      <td>0.010046</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cali</th>
+      <td>-0.014374</td>
+      <td>0.012685</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_medellin</th>
-      <td>0.016097</td>
-      <td>0.018914</td>
+      <td>0.0039961</td>
+      <td>0.0079539</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bogota</th>
-      <td>0.046482</td>
-      <td>0.011949</td>
+      <td>0.048837</td>
+      <td>0.016712</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bogota</th>
-      <td>0.18993</td>
-      <td>0.047489</td>
+      <td>0.18285</td>
+      <td>0.031745</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cucuta</th>
-      <td>0.21227</td>
-      <td>0.051813</td>
-    </tr>
-    <tr>
-      <th>temperature_2m_c_cali</th>
-      <td>0.22279</td>
-      <td>0.051701</td>
+      <td>0.19604</td>
+      <td>0.036702</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cartagena</th>
-      <td>0.22948</td>
-      <td>0.046838</td>
+      <td>0.22232</td>
+      <td>0.046983</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cali</th>
+      <td>0.22498</td>
+      <td>0.031022</td>
     </tr>
     <tr>
       <th>temperature_2m_c_medellin</th>
-      <td>0.23747</td>
-      <td>0.055688</td>
-    </tr>
-    <tr>
-      <th>temperature_2m_c_pereira</th>
-      <td>0.23933</td>
-      <td>0.057904</td>
+      <td>0.22963</td>
+      <td>0.048145</td>
     </tr>
     <tr>
       <th>temperature_2m_c_barranquilla</th>
-      <td>0.2443</td>
-      <td>0.057263</td>
+      <td>0.23461</td>
+      <td>0.041879</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_pereira</th>
+      <td>0.2376</td>
+      <td>0.042925</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bucaramanga</th>
-      <td>0.26021</td>
-      <td>0.057481</td>
+      <td>0.25047</td>
+      <td>0.050404</td>
     </tr>
     <tr>
       <th>demanda_comercial_kwh</th>
-      <td>0.60836</td>
-      <td>0.28121</td>
+      <td>0.62392</td>
+      <td>0.30311</td>
     </tr>
     <tr>
       <th>demanda_real_kwh</th>
-      <td>0.61189</td>
-      <td>0.27918</td>
+      <td>0.6272</td>
+      <td>0.30463</td>
     </tr>
   </tbody>
 </table>
@@ -774,7 +1149,7 @@
 <span class="n">condition</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">matrix</span><span class="p">[::</span><span class="mi">24</span><span class="p">])</span>
 <span class="n">gram</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">matrix</span><span class="p">[::</span><span class="mi">24</span><span class="p">],</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">vif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">gram</span><span class="p">))</span>
-<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'VIF_aproximado'</span><span class="p">:</span> <span class="n">vif</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'VIF_aproximado'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="s1">'colinealidad_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'VIF_aproximado'</span><span class="p">:</span> <span class="n">vif</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'VIF_aproximado'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="s1">'colinealidad_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -803,107 +1178,107 @@
   <tbody>
     <tr>
       <th>demanda_real_kwh</th>
-      <td>863.61</td>
+      <td>1415.3</td>
     </tr>
     <tr>
       <th>demanda_comercial_kwh</th>
-      <td>861.22</td>
+      <td>1414</td>
     </tr>
     <tr>
       <th>temperature_2m_c_barranquilla</th>
-      <td>10.665</td>
+      <td>10.875</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cartagena</th>
-      <td>8.6616</td>
+      <td>8.5492</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_barranquilla</th>
-      <td>6.348</td>
-    </tr>
-    <tr>
-      <th>temperature_2m_c_cucuta</th>
-      <td>4.5652</td>
+      <td>6.9684</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cartagena</th>
-      <td>4.4872</td>
+      <td>4.6246</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cucuta</th>
+      <td>4.3457</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cali</th>
-      <td>4.3426</td>
+      <td>4.22</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cucuta</th>
-      <td>3.9774</td>
+      <td>3.8927</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bucaramanga</th>
-      <td>3.4348</td>
+      <td>3.2817</td>
     </tr>
     <tr>
       <th>temperature_2m_c_pereira</th>
-      <td>3.3791</td>
+      <td>3.2557</td>
     </tr>
     <tr>
       <th>temperature_2m_c_medellin</th>
-      <td>3.2665</td>
+      <td>3.0304</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cali</th>
-      <td>2.7318</td>
+      <td>2.6697</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bogota</th>
-      <td>2.292</td>
+      <td>2.2948</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bucaramanga</th>
-      <td>2.1693</td>
+      <td>2.1097</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_pereira</th>
-      <td>1.8432</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_medellin</th>
-      <td>1.7419</td>
+      <td>1.7603</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bogota</th>
-      <td>1.4973</td>
+      <td>1.5273</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cartagena</th>
-      <td>1.4803</td>
+      <td>1.4635</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bucaramanga</th>
-      <td>1.3575</td>
+      <td>1.3224</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_barranquilla</th>
-      <td>1.2972</td>
+      <td>1.2803</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_pereira</th>
-      <td>1.164</td>
+      <td>1.1784</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bogota</th>
-      <td>1.1332</td>
+      <td>1.1225</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_medellin</th>
-      <td>1.1103</td>
+      <td>1.1104</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cucuta</th>
-      <td>1.0972</td>
+      <td>1.0982</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cali</th>
-      <td>1.0487</td>
+      <td>1.0507</td>
     </tr>
   </tbody>
 </table>
@@ -911,7 +1286,7 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<p>Número de condición de la matriz estandarizada diaria de covariables: <strong>189.1</strong>. El VIF usa pseudoinversa si hay singularidad; se interpreta junto al número de condición, no como identificación causal.</p>
+<p>Número de condición de la matriz estandarizada diaria de covariables: <strong>210.3</strong>. El VIF usa pseudoinversa si hay singularidad; se interpreta junto al número de condición, no como identificación causal.</p>
 </div>
 </div>
 <div class="cell docutils container">
@@ -919,7 +1294,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">daily</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">hydro</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="s1">'number'</span><span class="p">)</span>
 <span class="n">changes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'precio_diario'</span><span class="p">:</span> <span class="n">daily</span><span class="p">,</span> <span class="s1">'reserva_rezago_1d'</span><span class="p">:</span> <span class="n">h</span><span class="p">[</span><span class="s1">'reserva_util_kwh'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="s1">'aportes_acumulados_7d_pasados'</span><span class="p">:</span> <span class="n">h</span><span class="p">[</span><span class="s1">'aportes_kwh_dia'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s1">'cambio_reserva_7d_pasado'</span><span class="p">:</span> <span class="n">h</span><span class="p">[</span><span class="s1">'reserva_util_kwh'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">[</span><span class="s1">'reserva_util_kwh'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">8</span><span class="p">)})</span>
-<span class="n">table</span><span class="p">(</span><span class="n">changes</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">),</span> <span class="s1">'hidrologia_cambios_pasados_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">changes</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">),</span> <span class="s1">'hidrologia_cambios_pasados_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -952,29 +1327,29 @@
     <tr>
       <th>precio_diario</th>
       <td>1</td>
-      <td>-0.25455</td>
-      <td>-0.13292</td>
-      <td>-0.23034</td>
+      <td>-0.23569</td>
+      <td>-0.15116</td>
+      <td>-0.24923</td>
     </tr>
     <tr>
       <th>reserva_rezago_1d</th>
-      <td>-0.25455</td>
+      <td>-0.23569</td>
       <td>1</td>
-      <td>0.31059</td>
-      <td>0.084981</td>
+      <td>0.35394</td>
+      <td>0.09316</td>
     </tr>
     <tr>
       <th>aportes_acumulados_7d_pasados</th>
-      <td>-0.13292</td>
-      <td>0.31059</td>
+      <td>-0.15116</td>
+      <td>0.35394</td>
       <td>1</td>
-      <td>0.82355</td>
+      <td>0.82243</td>
     </tr>
     <tr>
       <th>cambio_reserva_7d_pasado</th>
-      <td>-0.23034</td>
-      <td>0.084981</td>
-      <td>0.82355</td>
+      <td>-0.24923</td>
+      <td>0.09316</td>
+      <td>0.82243</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -987,7 +1362,7 @@
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">numeric</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">any</span><span class="p">((</span><span class="n">s</span> <span class="ow">in</span> <span class="n">c</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'temperature'</span><span class="p">,</span> <span class="s1">'humidity'</span><span class="p">,</span> <span class="s1">'precipitation'</span><span class="p">])):</span>
         <span class="n">weather</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">media</span><span class="o">=</span><span class="n">numeric</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">sd</span><span class="o">=</span><span class="n">numeric</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">p01</span><span class="o">=</span><span class="n">numeric</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">p99</span><span class="o">=</span><span class="n">numeric</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)))</span>
-<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'variable'</span><span class="p">),</span> <span class="s1">'heterogeneidad_ciudades_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'variable'</span><span class="p">),</span> <span class="s1">'heterogeneidad_ciudades_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1026,171 +1401,171 @@
   <tbody>
     <tr>
       <th>temperature_2m_c_bogota</th>
-      <td>14.903</td>
-      <td>3.4963</td>
-      <td>9.1</td>
-      <td>22.7</td>
+      <td>14.884</td>
+      <td>3.4523</td>
+      <td>9</td>
+      <td>22.6</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bogota</th>
-      <td>75.278</td>
-      <td>19.113</td>
-      <td>31</td>
+      <td>76.062</td>
+      <td>18.819</td>
+      <td>32</td>
       <td>100</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bogota</th>
-      <td>0.1093</td>
-      <td>0.38829</td>
+      <td>0.11357</td>
+      <td>0.39781</td>
       <td>0</td>
-      <td>1.7</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>temperature_2m_c_medellin</th>
-      <td>21.057</td>
-      <td>3.5071</td>
+      <td>21.114</td>
+      <td>3.5114</td>
       <td>15.7</td>
-      <td>29.1</td>
+      <td>29.2</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_medellin</th>
-      <td>84.593</td>
-      <td>15.322</td>
+      <td>84.397</td>
+      <td>15.399</td>
       <td>43</td>
       <td>100</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_medellin</th>
-      <td>0.32341</td>
-      <td>0.72186</td>
+      <td>0.31745</td>
+      <td>0.71837</td>
       <td>0</td>
       <td>3.5</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cali</th>
-      <td>22.283</td>
-      <td>2.8215</td>
-      <td>17.5</td>
+      <td>22.363</td>
+      <td>2.8095</td>
+      <td>17.6</td>
       <td>28.6</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cali</th>
-      <td>83.762</td>
-      <td>9.4969</td>
+      <td>83.786</td>
+      <td>9.4603</td>
       <td>59</td>
       <td>98</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cali</th>
-      <td>0.35617</td>
-      <td>0.94759</td>
+      <td>0.34987</td>
+      <td>0.94161</td>
       <td>0</td>
       <td>4.6</td>
     </tr>
     <tr>
       <th>temperature_2m_c_barranquilla</th>
-      <td>28.089</td>
-      <td>2.3497</td>
-      <td>24.2</td>
+      <td>28.14</td>
+      <td>2.3415</td>
+      <td>24.3</td>
       <td>33.8</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_barranquilla</th>
-      <td>82.437</td>
-      <td>12.399</td>
-      <td>49</td>
+      <td>82.127</td>
+      <td>12.507</td>
+      <td>48</td>
       <td>99</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_barranquilla</th>
-      <td>0.2198</td>
-      <td>0.75527</td>
+      <td>0.21481</td>
+      <td>0.75274</td>
       <td>0</td>
-      <td>3.8</td>
+      <td>3.7</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cartagena</th>
-      <td>27.618</td>
-      <td>1.6948</td>
-      <td>24.7</td>
+      <td>27.665</td>
+      <td>1.6973</td>
+      <td>24.8</td>
       <td>32</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cartagena</th>
-      <td>82.704</td>
-      <td>8.7719</td>
-      <td>55</td>
+      <td>82.567</td>
+      <td>8.8668</td>
+      <td>54</td>
       <td>94</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cartagena</th>
-      <td>0.1824</td>
-      <td>0.54102</td>
+      <td>0.1764</td>
+      <td>0.52962</td>
       <td>0</td>
       <td>2.6</td>
     </tr>
     <tr>
       <th>temperature_2m_c_bucaramanga</th>
-      <td>21.911</td>
-      <td>2.173</td>
-      <td>17.7</td>
+      <td>21.954</td>
+      <td>2.1651</td>
+      <td>17.8</td>
       <td>26.7</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_bucaramanga</th>
-      <td>85.644</td>
-      <td>6.6481</td>
-      <td>67</td>
+      <td>85.495</td>
+      <td>6.8177</td>
+      <td>66</td>
       <td>98</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_bucaramanga</th>
-      <td>1.0672</td>
-      <td>1.7749</td>
+      <td>1.0189</td>
+      <td>1.7142</td>
       <td>0</td>
-      <td>9.6</td>
+      <td>9.2</td>
     </tr>
     <tr>
       <th>temperature_2m_c_pereira</th>
-      <td>19.723</td>
-      <td>2.7564</td>
-      <td>14.8</td>
-      <td>26</td>
+      <td>19.8</td>
+      <td>2.7555</td>
+      <td>14.9</td>
+      <td>26.1</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_pereira</th>
-      <td>88.068</td>
-      <td>9.2601</td>
+      <td>88.073</td>
+      <td>9.2737</td>
       <td>61</td>
       <td>100</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_pereira</th>
-      <td>1.5922</td>
-      <td>1.4847</td>
+      <td>1.5951</td>
+      <td>1.5081</td>
       <td>0</td>
-      <td>6.5</td>
+      <td>6.6</td>
     </tr>
     <tr>
       <th>temperature_2m_c_cucuta</th>
-      <td>27.987</td>
-      <td>4.1708</td>
-      <td>21.1</td>
-      <td>37.6</td>
+      <td>28.023</td>
+      <td>4.1174</td>
+      <td>21.2</td>
+      <td>37.5</td>
     </tr>
     <tr>
       <th>relative_humidity_2m_pct_cucuta</th>
-      <td>63.706</td>
-      <td>20.013</td>
-      <td>23</td>
+      <td>63.248</td>
+      <td>19.749</td>
+      <td>24</td>
       <td>96</td>
     </tr>
     <tr>
       <th>precipitation_preceding_hour_mm_cucuta</th>
-      <td>0.12678</td>
-      <td>0.55801</td>
+      <td>0.12203</td>
+      <td>0.53059</td>
       <td>0</td>
-      <td>1.9</td>
+      <td>1.8</td>
     </tr>
   </tbody>
 </table>
@@ -1206,12 +1581,12 @@
     <span class="n">means</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'Mes'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">ncol</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'clima_por_ciudad_train'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'clima_por_ciudad_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0212bb1710b317a72e996445c22468affa27b1370a6add1723660343c5e341e9.png" src="_images/0212bb1710b317a72e996445c22468affa27b1370a6add1723660343c5e341e9.png" />
+<img alt="_images/5a5e649eac1a383f1fe5753bd581e4b9df765d4d6690f31e73c9d851dcda817a.png" src="_images/5a5e649eac1a383f1fe5753bd581e4b9df765d4d6690f31e73c9d851dcda817a.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -1225,6 +1600,1409 @@
 </ul>
 </div>
 </div>
+<section id="datos-efectivos-de-entrenamiento">
+<h2>6.1 Datos efectivos de entrenamiento<a class="headerlink" href="#datos-efectivos-de-entrenamiento" title="Link to this heading">#</a></h2>
+<p>Se describen las 37 entradas numéricas alineadas mediante el mismo constructor del entrenamiento: precio, dos demandas, 24 variables meteorológicas, cuatro hidrológicas y seis componentes cíclicas de calendario. Los resúmenes cuentan cada hora de entrada una vez; las ventanas superpuestas repiten esas filas durante el ajuste.</p>
+<p>La auditoría reproduce los cinco folds y los contextos de 24, 72, 168 y 336 horas. La búsqueda comparte orígenes determinados por la ventana máxima. Se contrasta la cobertura con sus archivos de preparación y se reconstruyen las filas del reajuste histórico en todo desarrollo para verificar sus medias y escalas guardadas. La descripción agregada no se utiliza para estimar el escalado de los folds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">load_pipeline_config</span><span class="p">()</span>
+<span class="n">pilot</span> <span class="o">=</span> <span class="n">build_training_pipeline</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">build_training_pipeline</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">lookback_hours</span><span class="o">=</span><span class="mi">336</span><span class="p">))</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">pilot</span><span class="p">[</span><span class="s1">'features'</span><span class="p">]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">index</span>
+<span class="n">horizon</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'horizon_hours'</span><span class="p">]</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">coverage</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">saved_audit</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">((</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results/variant_search/fold_audit.json'</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">history</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">336</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">fold</span> <span class="ow">in</span> <span class="n">search</span><span class="p">[</span><span class="s1">'folds'</span><span class="p">]:</span>
+        <span class="n">train</span><span class="p">,</span> <span class="n">valid</span> <span class="o">=</span> <span class="p">(</span><span class="n">fold</span><span class="p">[</span><span class="s1">'train_origins'</span><span class="p">],</span> <span class="n">fold</span><span class="p">[</span><span class="s1">'validation_origins'</span><span class="p">])</span>
+        <span class="n">train_inputs</span><span class="p">,</span> <span class="n">train_labels</span> <span class="o">=</span> <span class="n">used_window_rows</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">history</span><span class="p">,</span> <span class="n">horizon</span><span class="p">)</span>
+        <span class="n">valid_inputs</span><span class="p">,</span> <span class="n">valid_labels</span> <span class="o">=</span> <span class="n">used_window_rows</span><span class="p">(</span><span class="n">valid</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">history</span><span class="p">,</span> <span class="n">horizon</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">((</span><span class="n">train_labels</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">valid_labels</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">train_inputs</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;</span> <span class="n">index</span><span class="p">[</span><span class="n">valid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">saved_audit</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="s1">'lookback'</span><span class="p">]</span> <span class="o">==</span> <span class="n">history</span> <span class="ow">and</span> <span class="n">a</span><span class="p">[</span><span class="s1">'fold'</span><span class="p">]</span> <span class="o">==</span> <span class="n">fold</span><span class="p">[</span><span class="s1">'fold'</span><span class="p">]))</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">)</span> <span class="o">==</span> <span class="n">record</span><span class="p">[</span><span class="s1">'n_train'</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid</span><span class="p">)</span> <span class="o">==</span> <span class="n">record</span><span class="p">[</span><span class="s1">'n_validation'</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">valid</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span> <span class="o">==</span> <span class="n">record</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">==</span> <span class="n">record</span><span class="p">[</span><span class="s1">'feature_names'</span><span class="p">]</span>
+        <span class="n">train_values</span> <span class="o">=</span> <span class="n">pilot</span><span class="p">[</span><span class="s1">'target'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)]</span>
+        <span class="n">valid_values</span> <span class="o">=</span> <span class="n">pilot</span><span class="p">[</span><span class="s1">'target'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">valid_labels</span><span class="p">)]</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">historia_horas</span><span class="o">=</span><span class="n">history</span><span class="p">,</span> <span class="n">fold</span><span class="o">=</span><span class="n">fold</span><span class="p">[</span><span class="s1">'fold'</span><span class="p">],</span> <span class="n">ventanas_train</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">),</span> <span class="n">ventanas_validacion</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">valid</span><span class="p">),</span> <span class="n">filas_entrada_train</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">train_inputs</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="n">horas_etiqueta_train</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">train_labels</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="n">entrada_desde</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">train_inputs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]),</span> <span class="n">entrada_hasta</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">train_inputs</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]),</span> <span class="n">etiquetas_train_hasta</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">train_labels</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]),</span> <span class="n">validacion_desde</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">valid</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span> <span class="n">media_precio_train</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">train_values</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span> <span class="n">media_precio_validacion</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valid_values</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span> <span class="n">q99_precio_train</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">train_values</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)),</span> <span class="n">q99_precio_validacion</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valid_values</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">))))</span>
+    <span class="n">all_origins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">search</span><span class="p">[</span><span class="s1">'folds'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'train_origins'</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">'validation_origins'</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">search</span><span class="p">[</span><span class="s1">'folds'</span><span class="p">]]))</span>
+    <span class="n">used</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">used_window_rows</span><span class="p">(</span><span class="n">all_origins</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">history</span><span class="p">,</span> <span class="n">horizon</span><span class="p">)</span>
+    <span class="n">coverage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">historia_horas</span><span class="o">=</span><span class="n">history</span><span class="p">,</span> <span class="n">ventanas_desarrollo</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">all_origins</span><span class="p">),</span> <span class="n">filas_entrada_unicas</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">used</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="n">horas_etiqueta_unicas</span><span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">labels</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="n">celdas_entrada_totales</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">used</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">multiplicidad_maxima_hora</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">used</span><span class="o">.</span><span class="n">max</span><span class="p">())))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'historia_horas'</span><span class="p">,</span> <span class="s1">'fold'</span><span class="p">]),</span> <span class="s1">'eda_entrenamiento_folds_contextos'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>ventanas_train</th>
+      <th>ventanas_validacion</th>
+      <th>filas_entrada_train</th>
+      <th>horas_etiqueta_train</th>
+      <th>entrada_desde</th>
+      <th>entrada_hasta</th>
+      <th>etiquetas_train_hasta</th>
+      <th>validacion_desde</th>
+      <th>media_precio_train</th>
+      <th>media_precio_validacion</th>
+      <th>q99_precio_train</th>
+      <th>q99_precio_validacion</th>
+    </tr>
+    <tr>
+      <th>historia_horas</th>
+      <th>fold</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">24</th>
+      <th>1</th>
+      <td>6559</td>
+      <td>293</td>
+      <td>157416</td>
+      <td>157416</td>
+      <td>2000-01-16 00:00:00-05:00</td>
+      <td>2017-12-30 23:00:00-05:00</td>
+      <td>2017-12-31 23:00:00-05:00</td>
+      <td>2018-01-01 00:00:00-05:00</td>
+      <td>124.78</td>
+      <td>108.72</td>
+      <td>822.44</td>
+      <td>211.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6852</td>
+      <td>292</td>
+      <td>164448</td>
+      <td>164448</td>
+      <td>2000-01-16 00:00:00-05:00</td>
+      <td>2018-10-19 23:00:00-05:00</td>
+      <td>2018-10-20 23:00:00-05:00</td>
+      <td>2018-10-21 00:00:00-05:00</td>
+      <td>124.09</td>
+      <td>189.59</td>
+      <td>822.44</td>
+      <td>391.61</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7144</td>
+      <td>292</td>
+      <td>171456</td>
+      <td>171456</td>
+      <td>2000-01-16 00:00:00-05:00</td>
+      <td>2019-08-07 23:00:00-05:00</td>
+      <td>2019-08-08 23:00:00-05:00</td>
+      <td>2019-08-09 00:00:00-05:00</td>
+      <td>126.77</td>
+      <td>302.41</td>
+      <td>819.73</td>
+      <td>599.02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7436</td>
+      <td>292</td>
+      <td>178464</td>
+      <td>178464</td>
+      <td>2000-01-16 00:00:00-05:00</td>
+      <td>2020-05-25 23:00:00-05:00</td>
+      <td>2020-05-26 23:00:00-05:00</td>
+      <td>2020-05-27 00:00:00-05:00</td>
+      <td>133.66</td>
+      <td>198.39</td>
+      <td>816.81</td>
+      <td>455.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7728</td>
+      <td>292</td>
+      <td>185472</td>
+      <td>185472</td>
+      <td>2000-01-16 00:00:00-05:00</td>
+      <td>2021-03-13 23:00:00-05:00</td>
+      <td>2021-03-14 23:00:00-05:00</td>
+      <td>2021-03-15 00:00:00-05:00</td>
+      <td>136.11</td>
+      <td>133.55</td>
+      <td>810.3</td>
+      <td>575.41</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">72</th>
+      <th>1</th>
+      <td>6559</td>
+      <td>293</td>
+      <td>157464</td>
+      <td>157416</td>
+      <td>2000-01-14 00:00:00-05:00</td>
+      <td>2017-12-30 23:00:00-05:00</td>
+      <td>2017-12-31 23:00:00-05:00</td>
+      <td>2018-01-01 00:00:00-05:00</td>
+      <td>124.78</td>
+      <td>108.72</td>
+      <td>822.44</td>
+      <td>211.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6852</td>
+      <td>292</td>
+      <td>164496</td>
+      <td>164448</td>
+      <td>2000-01-14 00:00:00-05:00</td>
+      <td>2018-10-19 23:00:00-05:00</td>
+      <td>2018-10-20 23:00:00-05:00</td>
+      <td>2018-10-21 00:00:00-05:00</td>
+      <td>124.09</td>
+      <td>189.59</td>
+      <td>822.44</td>
+      <td>391.61</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7144</td>
+      <td>292</td>
+      <td>171504</td>
+      <td>171456</td>
+      <td>2000-01-14 00:00:00-05:00</td>
+      <td>2019-08-07 23:00:00-05:00</td>
+      <td>2019-08-08 23:00:00-05:00</td>
+      <td>2019-08-09 00:00:00-05:00</td>
+      <td>126.77</td>
+      <td>302.41</td>
+      <td>819.73</td>
+      <td>599.02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7436</td>
+      <td>292</td>
+      <td>178512</td>
+      <td>178464</td>
+      <td>2000-01-14 00:00:00-05:00</td>
+      <td>2020-05-25 23:00:00-05:00</td>
+      <td>2020-05-26 23:00:00-05:00</td>
+      <td>2020-05-27 00:00:00-05:00</td>
+      <td>133.66</td>
+      <td>198.39</td>
+      <td>816.81</td>
+      <td>455.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7728</td>
+      <td>292</td>
+      <td>185520</td>
+      <td>185472</td>
+      <td>2000-01-14 00:00:00-05:00</td>
+      <td>2021-03-13 23:00:00-05:00</td>
+      <td>2021-03-14 23:00:00-05:00</td>
+      <td>2021-03-15 00:00:00-05:00</td>
+      <td>136.11</td>
+      <td>133.55</td>
+      <td>810.3</td>
+      <td>575.41</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">168</th>
+      <th>1</th>
+      <td>6559</td>
+      <td>293</td>
+      <td>157560</td>
+      <td>157416</td>
+      <td>2000-01-10 00:00:00-05:00</td>
+      <td>2017-12-30 23:00:00-05:00</td>
+      <td>2017-12-31 23:00:00-05:00</td>
+      <td>2018-01-01 00:00:00-05:00</td>
+      <td>124.78</td>
+      <td>108.72</td>
+      <td>822.44</td>
+      <td>211.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6852</td>
+      <td>292</td>
+      <td>164592</td>
+      <td>164448</td>
+      <td>2000-01-10 00:00:00-05:00</td>
+      <td>2018-10-19 23:00:00-05:00</td>
+      <td>2018-10-20 23:00:00-05:00</td>
+      <td>2018-10-21 00:00:00-05:00</td>
+      <td>124.09</td>
+      <td>189.59</td>
+      <td>822.44</td>
+      <td>391.61</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7144</td>
+      <td>292</td>
+      <td>171600</td>
+      <td>171456</td>
+      <td>2000-01-10 00:00:00-05:00</td>
+      <td>2019-08-07 23:00:00-05:00</td>
+      <td>2019-08-08 23:00:00-05:00</td>
+      <td>2019-08-09 00:00:00-05:00</td>
+      <td>126.77</td>
+      <td>302.41</td>
+      <td>819.73</td>
+      <td>599.02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7436</td>
+      <td>292</td>
+      <td>178608</td>
+      <td>178464</td>
+      <td>2000-01-10 00:00:00-05:00</td>
+      <td>2020-05-25 23:00:00-05:00</td>
+      <td>2020-05-26 23:00:00-05:00</td>
+      <td>2020-05-27 00:00:00-05:00</td>
+      <td>133.66</td>
+      <td>198.39</td>
+      <td>816.81</td>
+      <td>455.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7728</td>
+      <td>292</td>
+      <td>185616</td>
+      <td>185472</td>
+      <td>2000-01-10 00:00:00-05:00</td>
+      <td>2021-03-13 23:00:00-05:00</td>
+      <td>2021-03-14 23:00:00-05:00</td>
+      <td>2021-03-15 00:00:00-05:00</td>
+      <td>136.11</td>
+      <td>133.55</td>
+      <td>810.3</td>
+      <td>575.41</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">336</th>
+      <th>1</th>
+      <td>6559</td>
+      <td>293</td>
+      <td>157728</td>
+      <td>157416</td>
+      <td>2000-01-03 00:00:00-05:00</td>
+      <td>2017-12-30 23:00:00-05:00</td>
+      <td>2017-12-31 23:00:00-05:00</td>
+      <td>2018-01-01 00:00:00-05:00</td>
+      <td>124.78</td>
+      <td>108.72</td>
+      <td>822.44</td>
+      <td>211.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6852</td>
+      <td>292</td>
+      <td>164760</td>
+      <td>164448</td>
+      <td>2000-01-03 00:00:00-05:00</td>
+      <td>2018-10-19 23:00:00-05:00</td>
+      <td>2018-10-20 23:00:00-05:00</td>
+      <td>2018-10-21 00:00:00-05:00</td>
+      <td>124.09</td>
+      <td>189.59</td>
+      <td>822.44</td>
+      <td>391.61</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7144</td>
+      <td>292</td>
+      <td>171768</td>
+      <td>171456</td>
+      <td>2000-01-03 00:00:00-05:00</td>
+      <td>2019-08-07 23:00:00-05:00</td>
+      <td>2019-08-08 23:00:00-05:00</td>
+      <td>2019-08-09 00:00:00-05:00</td>
+      <td>126.77</td>
+      <td>302.41</td>
+      <td>819.73</td>
+      <td>599.02</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7436</td>
+      <td>292</td>
+      <td>178776</td>
+      <td>178464</td>
+      <td>2000-01-03 00:00:00-05:00</td>
+      <td>2020-05-25 23:00:00-05:00</td>
+      <td>2020-05-26 23:00:00-05:00</td>
+      <td>2020-05-27 00:00:00-05:00</td>
+      <td>133.66</td>
+      <td>198.39</td>
+      <td>816.81</td>
+      <td>455.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7728</td>
+      <td>292</td>
+      <td>185784</td>
+      <td>185472</td>
+      <td>2000-01-03 00:00:00-05:00</td>
+      <td>2021-03-13 23:00:00-05:00</td>
+      <td>2021-03-14 23:00:00-05:00</td>
+      <td>2021-03-15 00:00:00-05:00</td>
+      <td>136.11</td>
+      <td>133.55</td>
+      <td>810.3</td>
+      <td>575.41</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">coverage</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'historia_horas'</span><span class="p">),</span> <span class="s1">'eda_entrenamiento_cobertura_ventanas'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ventanas_desarrollo</th>
+      <th>filas_entrada_unicas</th>
+      <th>horas_etiqueta_unicas</th>
+      <th>celdas_entrada_totales</th>
+      <th>multiplicidad_maxima_hora</th>
+    </tr>
+    <tr>
+      <th>historia_horas</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>24</th>
+      <td>8020</td>
+      <td>192480</td>
+      <td>192480</td>
+      <td>7121760</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>8020</td>
+      <td>192528</td>
+      <td>192480</td>
+      <td>21365280</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>8020</td>
+      <td>192624</td>
+      <td>192480</td>
+      <td>49852320</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>336</th>
+      <td>8020</td>
+      <td>192792</td>
+      <td>192480</td>
+      <td>99704640</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refit_origins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">pilot</span><span class="p">[</span><span class="s1">'folds'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'train_origins'</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s1">'validation_origins'</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">pilot</span><span class="p">[</span><span class="s1">'folds'</span><span class="p">]]))</span>
+<span class="n">used</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">used_window_rows</span><span class="p">(</span><span class="n">refit_origins</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">config</span><span class="p">[</span><span class="s1">'lookback_hours'</span><span class="p">],</span> <span class="n">horizon</span><span class="p">)</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">used</span><span class="p">)]</span>
+<span class="n">refit</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">((</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results/test_pytorch/preprocessing.json'</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">refit_origins</span><span class="p">)</span> <span class="o">==</span> <span class="n">refit</span><span class="p">[</span><span class="s1">'train_windows'</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="n">refit</span><span class="p">[</span><span class="s1">'scaler_fit_start'</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">refit</span><span class="p">[</span><span class="s1">'scaler_fit_end'</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">refit</span><span class="p">[</span><span class="s1">'feature_mean'</span><span class="p">],</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-09</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-07</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">refit</span><span class="p">[</span><span class="s1">'feature_scale'</span><span class="p">],</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-09</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-07</span><span class="p">)</span>
+<span class="n">descriptives</span> <span class="o">=</span> <span class="n">actual</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">percentiles</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">descriptives</span><span class="p">[</span><span class="s1">'faltantes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">actual</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">descriptives</span><span class="p">[</span><span class="s1">'bloque'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'calendario'</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">'_sin'</span><span class="p">,</span> <span class="s1">'_cos'</span><span class="p">))</span> <span class="k">else</span> <span class="s1">'hidrologia'</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'llenado_valor_original'</span><span class="p">,</span> <span class="s1">'reserva_util_kwh'</span><span class="p">,</span> <span class="s1">'capacidad_util_kwh'</span><span class="p">,</span> <span class="s1">'aportes_kwh_dia'</span><span class="p">]</span> <span class="k">else</span> <span class="s1">'precio'</span> <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="n">TARGET</span> <span class="k">else</span> <span class="s1">'demanda'</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'demanda'</span><span class="p">)</span> <span class="k">else</span> <span class="s1">'meteorologia'</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">actual</span><span class="p">]</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">descriptives</span><span class="p">,</span> <span class="s1">'eda_37_entradas_entrenamiento'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s1">'horas_entrada_unicas'</span><span class="p">),</span> <span class="s1">'eda_entradas_por_anio'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>1%</th>
+      <th>50%</th>
+      <th>99%</th>
+      <th>max</th>
+      <th>faltantes</th>
+      <th>bloque</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>precio_bolsa_cop_kwh</th>
+      <td>1.9279e+05</td>
+      <td>135.78</td>
+      <td>137.03</td>
+      <td>21.531</td>
+      <td>29.318</td>
+      <td>93.226</td>
+      <td>810.01</td>
+      <td>2821.5</td>
+      <td>0</td>
+      <td>precio</td>
+    </tr>
+    <tr>
+      <th>demanda_real_kwh</th>
+      <td>1.9279e+05</td>
+      <td>6.5275e+06</td>
+      <td>1.5261e+06</td>
+      <td>4.1315e+05</td>
+      <td>3.4455e+06</td>
+      <td>6.4885e+06</td>
+      <td>9.6612e+06</td>
+      <td>1.0886e+07</td>
+      <td>0</td>
+      <td>demanda</td>
+    </tr>
+    <tr>
+      <th>demanda_comercial_kwh</th>
+      <td>1.9279e+05</td>
+      <td>6.6346e+06</td>
+      <td>1.543e+06</td>
+      <td>1.2123e+05</td>
+      <td>3.4973e+06</td>
+      <td>6.5977e+06</td>
+      <td>9.7937e+06</td>
+      <td>1.1026e+07</td>
+      <td>0</td>
+      <td>demanda</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_barranquilla</th>
+      <td>1.9279e+05</td>
+      <td>0.21489</td>
+      <td>0.75287</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.709</td>
+      <td>17.4</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bogota</th>
+      <td>1.9279e+05</td>
+      <td>0.11359</td>
+      <td>0.39788</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.8</td>
+      <td>14.5</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_bucaramanga</th>
+      <td>1.9279e+05</td>
+      <td>1.0189</td>
+      <td>1.7143</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.5</td>
+      <td>9.2</td>
+      <td>21.1</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cali</th>
+      <td>1.9279e+05</td>
+      <td>0.3496</td>
+      <td>0.94103</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4.6</td>
+      <td>22.3</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cartagena</th>
+      <td>1.9279e+05</td>
+      <td>0.17646</td>
+      <td>0.5297</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.6</td>
+      <td>17.4</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_cucuta</th>
+      <td>1.9279e+05</td>
+      <td>0.12199</td>
+      <td>0.5306</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.8</td>
+      <td>25.3</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_medellin</th>
+      <td>1.9279e+05</td>
+      <td>0.31751</td>
+      <td>0.71845</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.5</td>
+      <td>17</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>precipitation_preceding_hour_mm_pereira</th>
+      <td>1.9279e+05</td>
+      <td>1.5952</td>
+      <td>1.5082</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.2</td>
+      <td>6.6</td>
+      <td>16.1</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_barranquilla</th>
+      <td>1.9279e+05</td>
+      <td>82.129</td>
+      <td>12.507</td>
+      <td>30</td>
+      <td>48</td>
+      <td>85</td>
+      <td>99</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bogota</th>
+      <td>1.9279e+05</td>
+      <td>76.064</td>
+      <td>18.818</td>
+      <td>6</td>
+      <td>32</td>
+      <td>82</td>
+      <td>100</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_bucaramanga</th>
+      <td>1.9279e+05</td>
+      <td>85.494</td>
+      <td>6.818</td>
+      <td>45</td>
+      <td>66</td>
+      <td>87</td>
+      <td>98</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cali</th>
+      <td>1.9279e+05</td>
+      <td>83.785</td>
+      <td>9.4609</td>
+      <td>44</td>
+      <td>59</td>
+      <td>86</td>
+      <td>98</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cartagena</th>
+      <td>1.9279e+05</td>
+      <td>82.568</td>
+      <td>8.8662</td>
+      <td>39</td>
+      <td>54</td>
+      <td>85</td>
+      <td>94</td>
+      <td>99</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_cucuta</th>
+      <td>1.9279e+05</td>
+      <td>63.244</td>
+      <td>19.749</td>
+      <td>11</td>
+      <td>24</td>
+      <td>64</td>
+      <td>96</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_medellin</th>
+      <td>1.9279e+05</td>
+      <td>84.396</td>
+      <td>15.4</td>
+      <td>23</td>
+      <td>43</td>
+      <td>91</td>
+      <td>100</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>relative_humidity_2m_pct_pereira</th>
+      <td>1.9279e+05</td>
+      <td>88.073</td>
+      <td>9.2745</td>
+      <td>37</td>
+      <td>61</td>
+      <td>91</td>
+      <td>100</td>
+      <td>100</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_barranquilla</th>
+      <td>1.9279e+05</td>
+      <td>28.14</td>
+      <td>2.3414</td>
+      <td>21.9</td>
+      <td>24.3</td>
+      <td>27.6</td>
+      <td>33.8</td>
+      <td>37.7</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bogota</th>
+      <td>1.9279e+05</td>
+      <td>14.883</td>
+      <td>3.4522</td>
+      <td>3.2</td>
+      <td>9</td>
+      <td>14.1</td>
+      <td>22.6</td>
+      <td>26.4</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_bucaramanga</th>
+      <td>1.9279e+05</td>
+      <td>21.954</td>
+      <td>2.165</td>
+      <td>13.2</td>
+      <td>17.8</td>
+      <td>21.7</td>
+      <td>26.7</td>
+      <td>29.6</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cali</th>
+      <td>1.9279e+05</td>
+      <td>22.364</td>
+      <td>2.8097</td>
+      <td>14.5</td>
+      <td>17.6</td>
+      <td>21.8</td>
+      <td>28.6</td>
+      <td>31.2</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cartagena</th>
+      <td>1.9279e+05</td>
+      <td>27.665</td>
+      <td>1.6973</td>
+      <td>23.1</td>
+      <td>24.8</td>
+      <td>27.4</td>
+      <td>32</td>
+      <td>35.1</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_cucuta</th>
+      <td>1.9279e+05</td>
+      <td>28.024</td>
+      <td>4.1173</td>
+      <td>17.2</td>
+      <td>21.2</td>
+      <td>27.1</td>
+      <td>37.5</td>
+      <td>41.1</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_medellin</th>
+      <td>1.9279e+05</td>
+      <td>21.114</td>
+      <td>3.5115</td>
+      <td>12.7</td>
+      <td>15.7</td>
+      <td>20.1</td>
+      <td>29.2</td>
+      <td>32.5</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>temperature_2m_c_pereira</th>
+      <td>1.9279e+05</td>
+      <td>19.8</td>
+      <td>2.7556</td>
+      <td>11.4</td>
+      <td>14.9</td>
+      <td>19.3</td>
+      <td>26.1</td>
+      <td>29.3</td>
+      <td>0</td>
+      <td>meteorologia</td>
+    </tr>
+    <tr>
+      <th>llenado_valor_original</th>
+      <td>1.9279e+05</td>
+      <td>0.67766</td>
+      <td>0.13955</td>
+      <td>0.31812</td>
+      <td>0.37351</td>
+      <td>0.6899</td>
+      <td>0.88299</td>
+      <td>1.4914</td>
+      <td>0</td>
+      <td>hidrologia</td>
+    </tr>
+    <tr>
+      <th>reserva_util_kwh</th>
+      <td>1.9279e+05</td>
+      <td>1.048e+10</td>
+      <td>2.2544e+09</td>
+      <td>2.6915e+09</td>
+      <td>2.9586e+09</td>
+      <td>1.0779e+10</td>
+      <td>1.4327e+10</td>
+      <td>1.4676e+10</td>
+      <td>0</td>
+      <td>hidrologia</td>
+    </tr>
+    <tr>
+      <th>capacidad_util_kwh</th>
+      <td>1.9279e+05</td>
+      <td>1.5505e+10</td>
+      <td>1.7095e+09</td>
+      <td>4.9534e+09</td>
+      <td>5.3872e+09</td>
+      <td>1.5335e+10</td>
+      <td>1.7274e+10</td>
+      <td>1.7286e+10</td>
+      <td>0</td>
+      <td>hidrologia</td>
+    </tr>
+    <tr>
+      <th>aportes_kwh_dia</th>
+      <td>1.9279e+05</td>
+      <td>1.4247e+08</td>
+      <td>7.0731e+07</td>
+      <td>2.5253e+07</td>
+      <td>3.5554e+07</td>
+      <td>1.3135e+08</td>
+      <td>3.7348e+08</td>
+      <td>5.9125e+08</td>
+      <td>0</td>
+      <td>hidrologia</td>
+    </tr>
+    <tr>
+      <th>hour_sin</th>
+      <td>1.9279e+05</td>
+      <td>1.571e-17</td>
+      <td>0.70711</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>6.1232e-17</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+    <tr>
+      <th>hour_cos</th>
+      <td>1.9279e+05</td>
+      <td>-4.0992e-17</td>
+      <td>0.70711</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-6.1232e-17</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+    <tr>
+      <th>week_sin</th>
+      <td>1.9279e+05</td>
+      <td>0.00026474</td>
+      <td>0.70709</td>
+      <td>-1</td>
+      <td>-0.9993</td>
+      <td>1.2246e-16</td>
+      <td>0.9993</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+    <tr>
+      <th>week_cos</th>
+      <td>1.9279e+05</td>
+      <td>-5.5238e-05</td>
+      <td>0.70713</td>
+      <td>-1</td>
+      <td>-0.9993</td>
+      <td>-1.837e-16</td>
+      <td>0.9993</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+    <tr>
+      <th>year_sin</th>
+      <td>1.9279e+05</td>
+      <td>-3.0686e-06</td>
+      <td>0.70724</td>
+      <td>-1</td>
+      <td>-0.9995</td>
+      <td>0</td>
+      <td>0.9995</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+    <tr>
+      <th>year_cos</th>
+      <td>1.9279e+05</td>
+      <td>-0.00037341</td>
+      <td>0.70698</td>
+      <td>-1</td>
+      <td>-0.9995</td>
+      <td>-0.00071726</td>
+      <td>0.99948</td>
+      <td>1</td>
+      <td>0</td>
+      <td>calendario</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>horas_entrada_unicas</th>
+    </tr>
+    <tr>
+      <th>tiempo_colombia</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000</th>
+      <td>8736</td>
+    </tr>
+    <tr>
+      <th>2001</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2002</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2003</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2004</th>
+      <td>8784</td>
+    </tr>
+    <tr>
+      <th>2005</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>8784</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2011</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <td>8784</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>8784</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2018</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>8760</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>8784</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>8736</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">actual_target</span> <span class="o">=</span> <span class="n">pilot</span><span class="p">[</span><span class="s1">'target'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">labels</span><span class="p">)]</span>
+<span class="n">table</span><span class="p">(</span><span class="n">actual_target</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">actual_target</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">'count'</span><span class="p">,</span> <span class="s1">'mean'</span><span class="p">,</span> <span class="s1">'std'</span><span class="p">,</span> <span class="s1">'min'</span><span class="p">,</span> <span class="s1">'median'</span><span class="p">,</span> <span class="s1">'max'</span><span class="p">]),</span> <span class="s1">'eda_etiquetas_entrenamiento_por_anio'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>median</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>tiempo_colombia</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2000</th>
+      <td>8568</td>
+      <td>44.953</td>
+      <td>15.846</td>
+      <td>21.531</td>
+      <td>42.297</td>
+      <td>96.138</td>
+    </tr>
+    <tr>
+      <th>2001</th>
+      <td>8760</td>
+      <td>52.471</td>
+      <td>20</td>
+      <td>24.823</td>
+      <td>46.728</td>
+      <td>118.07</td>
+    </tr>
+    <tr>
+      <th>2002</th>
+      <td>8760</td>
+      <td>48.728</td>
+      <td>11.978</td>
+      <td>26.778</td>
+      <td>47.684</td>
+      <td>138.55</td>
+    </tr>
+    <tr>
+      <th>2003</th>
+      <td>8760</td>
+      <td>66.726</td>
+      <td>10.915</td>
+      <td>37.013</td>
+      <td>66.624</td>
+      <td>148</td>
+    </tr>
+    <tr>
+      <th>2004</th>
+      <td>8784</td>
+      <td>64.17</td>
+      <td>12.822</td>
+      <td>32.253</td>
+      <td>65.371</td>
+      <td>189.9</td>
+    </tr>
+    <tr>
+      <th>2005</th>
+      <td>8760</td>
+      <td>74.359</td>
+      <td>15.345</td>
+      <td>27.581</td>
+      <td>74.333</td>
+      <td>186.75</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>8760</td>
+      <td>73.794</td>
+      <td>29.437</td>
+      <td>26.715</td>
+      <td>69.887</td>
+      <td>281.23</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>8760</td>
+      <td>83.775</td>
+      <td>18.712</td>
+      <td>30.174</td>
+      <td>85.002</td>
+      <td>154.7</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>8784</td>
+      <td>87.875</td>
+      <td>33.351</td>
+      <td>29.199</td>
+      <td>89.425</td>
+      <td>438.84</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <td>8760</td>
+      <td>139.28</td>
+      <td>46.06</td>
+      <td>32.892</td>
+      <td>129.26</td>
+      <td>321.27</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <td>8760</td>
+      <td>128.72</td>
+      <td>58.248</td>
+      <td>32.025</td>
+      <td>122.29</td>
+      <td>360.64</td>
+    </tr>
+    <tr>
+      <th>2011</th>
+      <td>8760</td>
+      <td>75.088</td>
+      <td>31.696</td>
+      <td>33.291</td>
+      <td>76.737</td>
+      <td>403.71</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <td>8784</td>
+      <td>116</td>
+      <td>61.457</td>
+      <td>34.988</td>
+      <td>118.15</td>
+      <td>307.61</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <td>8760</td>
+      <td>177.35</td>
+      <td>62.979</td>
+      <td>40.415</td>
+      <td>169.48</td>
+      <td>451.39</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>8760</td>
+      <td>224.98</td>
+      <td>106.55</td>
+      <td>38.942</td>
+      <td>181.81</td>
+      <td>480.54</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <td>8760</td>
+      <td>378.11</td>
+      <td>342.6</td>
+      <td>46.791</td>
+      <td>217.46</td>
+      <td>2821.5</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>8784</td>
+      <td>299.8</td>
+      <td>251.81</td>
+      <td>61.101</td>
+      <td>175.78</td>
+      <td>884.84</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <td>8760</td>
+      <td>106.11</td>
+      <td>37.888</td>
+      <td>60.312</td>
+      <td>103.88</td>
+      <td>383.45</td>
+    </tr>
+    <tr>
+      <th>2018</th>
+      <td>8760</td>
+      <td>116.25</td>
+      <td>49.624</td>
+      <td>61.459</td>
+      <td>102.66</td>
+      <td>555.12</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <td>8760</td>
+      <td>228.31</td>
+      <td>97.183</td>
+      <td>69.947</td>
+      <td>220.78</td>
+      <td>910.47</td>
+    </tr>
+    <tr>
+      <th>2020</th>
+      <td>8784</td>
+      <td>251.1</td>
+      <td>113.44</td>
+      <td>71.336</td>
+      <td>217.14</td>
+      <td>745.5</td>
+    </tr>
+    <tr>
+      <th>2021</th>
+      <td>8760</td>
+      <td>150.07</td>
+      <td>94.112</td>
+      <td>81.757</td>
+      <td>107.95</td>
+      <td>592.91</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span> <span class="o">=</span> <span class="n">actual</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'spearman'</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">correlation</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'RdBu_r'</span><span class="p">)</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'relative_humidity_2m_pct_'</span><span class="p">,</span> <span class="s1">'RH '</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'temperature_2m_c_'</span><span class="p">,</span> <span class="s1">'T '</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'precipitation_preceding_hour_mm_'</span><span class="p">,</span> <span class="s1">'P '</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">actual</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)),</span> <span class="n">names</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)),</span> <span class="n">names</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'37 entradas alineadas: horas únicas usadas en el reajuste 2000–2021'</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Spearman'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'eda_correlaciones_37_entradas'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9056f9e104903d3aa7920d67bcb72096074a036a311f48878b3de0c8df61f4b9.png" src="_images/9056f9e104903d3aa7920d67bcb72096074a036a311f48878b3de0c8df61f4b9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scope</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">period_start</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">],</span> <span class="n">period_end_exclusive</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">],</span> <span class="n">raw_hours</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="n">feature_count</span><span class="o">=</span><span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">feature_names</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">refit_windows</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">refit_origins</span><span class="p">),</span> <span class="n">refit_input_rows</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">actual</span><span class="p">),</span> <span class="n">refit_input_start</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">refit_input_end</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">feature_preprocessing_matches_saved_refit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">search_folds_match_saved_audit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">test_values_read</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">model_training_repeated</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">'Una fila horaria única; las ventanas superpuestas no se cuentan como observaciones independientes.'</span><span class="p">)</span>
+<span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'eda_training_scope.json'</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1858
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1248,14 +3026,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
-              
 
-              
-              
-              
-              
+
+
+
+
+
                 <footer class="prev-next-footer d-print-none">
-                  
+
 <div class="prev-next-area">
     <a class="left-prev"
        href="05_dependencia.html"
@@ -1277,53 +3055,70 @@
     </a>
 </div>
                 </footer>
-              
+
             </div>
-            
-            
-              
-            
+
+
+
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-efectivos-de-entrenamiento">6.1 Datos efectivos de entrenamiento</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+
+
           </div>
           <footer class="bd-footer-content">
-            
+
 <div class="bd-footer-content__inner container">
-  
+
   <div class="footer-item">
-    
+
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
 
   <p class="copyright">
-    
+
       © Copyright 2026.
       <br/>
-    
+
   </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
 </div>
           </footer>
-        
+
 
       </main>
     </div>
   </div>
-  
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>

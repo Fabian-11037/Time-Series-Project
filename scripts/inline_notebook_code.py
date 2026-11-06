@@ -180,7 +180,7 @@ def materialize_notebook(nb,stem):
             nodes=ast.parse('study = SimpleNamespace()').body
             nodes+=copy.deepcopy(catalog.methods['__init__'].body)
             nodes+=copy.deepcopy(catalog.methods['lexical'].body)
-        elif source in {'study.fit_topics()','study.profiles()','study.drift()'}:
+        elif source in {'study.fit_topics()','study.profiles()','study.drift()','study.development_analysis()'}:
             method=source.split('.')[1].split('(')[0]
             nodes=copy.deepcopy(catalog.methods[method].body)
         elif source.startswith('eda.') and len(ast.parse(source).body)==1:

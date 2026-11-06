@@ -52,11 +52,11 @@ eda.figure(fig,'flujo_bibliografico_parcial')
     write('10_conclusiones',[
 ('md','# 11. Síntesis e implicaciones metodológicas\n\nLos resultados del análisis exploratorio se integran para orientar el preprocesamiento, la representación temporal y el diseño de evaluación del pronóstico.'),
 ('code',SETUP),
-('code','''q=pd.read_csv(ROOT/'results/tables/calidad_train.csv',index_col=0)
-d=pd.read_csv(ROOT/'results/tables/distribucion_precio_train.csv',index_col=0)
-s=pd.read_csv(ROOT/'results/tables/adf_kpss_train.csv',index_col=0)
+('code','''q=pd.read_csv(ROOT/'results/tables/calidad_desarrollo.csv',index_col=0)
+d=pd.read_csv(ROOT/'results/tables/distribucion_precio_desarrollo.csv',index_col=0)
+s=pd.read_csv(ROOT/'results/tables/adf_kpss_desarrollo.csv',index_col=0)
 t=eda.metadata('coverage_summary.json')
-display(Markdown(f"""En entrenamiento se comprobaron **{int(q.loc['horas recibidas','resultado']):,} horas**, **{int(q.loc['horas ausentes','resultado'])} horas ausentes** y **{int(q.loc['claves horarias duplicadas','resultado'])} claves duplicadas**. La asimetría del precio es **{float(d.loc['asimetría'].iloc[0]):.3f}** y su curtosis en exceso **{float(d.loc['curtosis_exceso'].iloc[0]):.3f}**. Los valores extremos se conservan y se interpretan como parte de la distribución observada.
+display(Markdown(f"""En desarrollo 2000–2021 se comprobaron **{int(q.loc['horas recibidas','resultado']):,} horas**, **{int(q.loc['horas ausentes','resultado'])} horas ausentes** y **{int(q.loc['claves horarias duplicadas','resultado'])} claves duplicadas**. La asimetría del precio es **{float(d.loc['asimetría'].iloc[0]):.3f}** y su curtosis en exceso **{float(d.loc['curtosis_exceso'].iloc[0]):.3f}**. Los valores extremos se conservan y se interpretan como parte de la distribución observada.
 
 El corpus seleccionado contiene **{t['exports']['titulares_prensa_2000_2025.csv']:,} titulares de prensa**, de los cuales **{t['exports']['titulares_prensa_2020_2025.csv']:,}** tienen fecha declarada en el tramo reciente. Hay **{t['exports']['titulos_informes_ideam_xm.csv']:,}** entradas de informes. El conjunto de fechas declaradas reúne **{t['exports']['textos_ampliados_fechas_declaradas_2000_2025.csv']:,}** textos fechados, y el subconjunto de disponibilidad comprobada **{t['exports']['textos_disponibilidad_verificada_2020_2025.csv']:,}** versiones. La cobertura corresponde al archivo recuperado y a las condiciones de disponibilidad documentadas.
 """))

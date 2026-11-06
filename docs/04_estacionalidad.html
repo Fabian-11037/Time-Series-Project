@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Estacionalidad y descomposición &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-  
-  
-  
+
+
+
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-  
+
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-  
+
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -71,29 +71,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-  
-    
+
+
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-  
+
   </head>
   <body data-default-mode="">
-  
-  
+
+
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
+
   <div id="pst-scroll-pixel-helper"></div>
-  
+
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-  
-  
-  
-  
+
+
+
+
   <dialog id="pst-search-dialog">
-    
+
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,21 +115,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-  
+
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-  
-  
+
+
   <div class="col-lg-9 navbar-header-items">
-    
-    
+
+
     <div class="navbar-header-items__end">
-      
+
         <div class="navbar-item navbar-persistent--container">
-          
+
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,13 +137,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-      
-      
+
+
     </div>
-    
+
   </div>
-  
-  
+
+
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -152,47 +152,47 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
-  
 
-  
+
+
 </div>
 
     </header>
-  
+
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
+
+
+
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
-        
 
-  
+
+
   <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-  
-    
-  
+
+
+
 
 <a class="navbar-brand logo" href="intro.html">
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-  
+
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -222,8 +222,8 @@
     </div>
 </nav></div>
     </div>
-  
-  
+
+
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -236,30 +236,30 @@
 
 
       </div>
-      
+
       <main id="main-content" class="bd-main" role="main">
-        
-        
+
+
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-              
+
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-  
+
     <div class="header-article-items__start">
-      
+
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-      
+
     </div>
-  
-  
+
+
     <div class="header-article-items__end">
-      
+
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -273,15 +273,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      
-      
-      
+
+
+
       <li><a href="_sources/04_estacionalidad.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -289,17 +289,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-      
-      
-      
-      
+
+
+
+
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -307,7 +307,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-      
+
   </ul>
 </div>
 
@@ -319,7 +319,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -341,33 +341,34 @@
 </button>
 
 </div></div>
-      
+
     </div>
-  
+
 </div>
 </div>
-              
-              
+
+
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>4. Estacionalidad y descomposición</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-            
+
         </div>
     </div>
 </div>
 
-              
-                
+
+
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
+
   <section class="tex2jax_ignore mathjax_ignore" id="estacionalidad-y-descomposicion">
 <h1>4. Estacionalidad y descomposición<a class="headerlink" href="#estacionalidad-y-descomposicion" title="Link to this heading">#</a></h1>
-<p>Se representan perfiles por hora, día de semana y mes; las bandas son cuantiles empíricos, no intervalos de confianza. STL diaria aproxima el ciclo anual con 365 días. La descomposición de múltiples ciclos horarios se limita al último año completo de entrenamiento, fijado en el protocolo para acotar el coste.</p>
-<p>El espectro de Welch usa segmentos de 365 días, frecuencia de muestreo de una observación por hora y detrending lineal. Las descomposiciones centradas observan ambos lados de cada punto dentro del entrenamiento y sólo sirven para diagnóstico. Una implementación operativa requiere filtros causales o reajustes sólo con pasado. Véase <a class="reference external" href="https://otexts.com/fpp3/decomposition.html">Hyndman y Athanasopoulos</a>.</p>
+<p>El análisis numérico utiliza el periodo completo de desarrollo <strong>2000–2021</strong>. Los ajustes de escaladores y modelos se realizan dentro de cada fold.</p>
+<p>Se representan perfiles por hora, día de semana y mes; las bandas son cuantiles empíricos, no intervalos de confianza. STL diaria aproxima el ciclo anual con 365 días. La descomposición de múltiples ciclos horarios se limita al último año completo de desarrollo, 2021, para acotar el coste; los perfiles y el espectro incorporan 2000–2021.</p>
+<p>El espectro de Welch usa segmentos de 365 días, frecuencia de muestreo de una observación por hora y detrending lineal. Las descomposiciones centradas observan ambos lados de cada punto dentro del periodo de desarrollo y sólo sirven para diagnóstico retrospectivo de desarrollo. Una implementación operativa requiere filtros causales o reajustes sólo con pasado. Véase <a class="reference external" href="https://otexts.com/fpp3/decomposition.html">Hyndman y Athanasopoulos</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -380,6 +381,7 @@
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.seasonal</span><span class="w"> </span><span class="kn">import</span> <span class="n">STL</span><span class="p">,</span> <span class="n">MSTL</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -391,10 +393,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TARGET</span> <span class="o">=</span> <span class="s1">'precio_bolsa_cop_kwh'</span>
-<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
 <span class="n">EDA_SPLITS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'train'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2017</span><span class="p">),</span> <span class="s1">'validation'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="s1">'test'</span><span class="p">:</span> <span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)}</span>
 <span class="n">SPLITS</span> <span class="o">=</span> <span class="n">EDA_SPLITS</span>
 <span class="n">TIME</span> <span class="o">=</span> <span class="s1">'timestamp_start_colombia'</span>
+<span class="n">RESULTS</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results'</span>
+<span class="n">PIPELINE_DEFAULTS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'method'</span><span class="p">:</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">,</span> <span class="s1">'n_splits'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'development_start'</span><span class="p">:</span> <span class="s1">'2000-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">:</span> <span class="s1">'2018-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">:</span> <span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">:</span> <span class="s1">'2026-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">:</span> <span class="mi">168</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hourly_release_lag_hours'</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'include_calendar'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'seed'</span><span class="p">:</span> <span class="mi">11037</span><span class="p">,</span> <span class="s1">'availability_scenario'</span><span class="p">:</span> <span class="s1">'retrospective_assumed_release_lags'</span><span class="p">}</span>
 <span class="n">RESULTS</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'figures'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">(</span><span class="n">RESULTS</span> <span class="o">/</span> <span class="s1">'tables'</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -405,8 +408,6 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -434,16 +435,86 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train_daily</span><span class="p">():</span>
-    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_numeric</span><span class="p">()</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">load_numeric</span><span class="p">(</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">),</span> <span class="n">load_numeric</span><span class="p">(</span><span class="s1">'validation'</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">table</span><span class="p">)])</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="p">,</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">train_daily</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pipeline_config</span><span class="p">(</span><span class="n">overrides</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">overrides</span><span class="p">:</span>
+        <span class="n">unknown</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unknown</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Opciones desconocidas: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">unknown</span><span class="p">)))</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">overrides</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'n_splits'</span><span class="p">,</span> <span class="s1">'lookback_hours'</span><span class="p">,</span> <span class="s1">'horizon_hours'</span><span class="p">,</span> <span class="s1">'stride_hours'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere un entero positivo: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'hourly_release_lag_hours'</span><span class="p">,</span> <span class="s1">'hydrology_release_lag_days'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Rezago inválido: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'hydrology_release_lag_days'</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'La hidrología diaria requiere al menos el cierre del día.'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'development_start'</span><span class="p">,</span> <span class="s1">'validation_start'</span><span class="p">,</span> <span class="s1">'development_end_exclusive'</span><span class="p">,</span> <span class="s1">'test_start'</span><span class="p">,</span> <span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="n">field</span><span class="p">])</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Se requiere zona horaria: '</span> <span class="o">+</span> <span class="n">field</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'method'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'split_train_val_forwardChaining'</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Método no autorizado'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="o">!=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">])</span> <span class="ow">or</span> <span class="n">config</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]</span> <span class="o">!=</span> <span class="n">PIPELINE_DEFAULTS</span><span class="p">[</span><span class="s1">'test_end_exclusive'</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'El periodo de prueba está congelado.'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Cortes temporales inválidos'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">'stride_hours'</span><span class="p">]</span> <span class="o">%</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Los orígenes deben conservar el paso diario.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_pipeline_config</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'configs/training_pipeline.json'</span> <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">path</span>
+    <span class="k">return</span> <span class="n">pipeline_config</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_eda_development</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="s1">'hourly'</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Desarrollo completo; no cambia las particiones que usa el entrenamiento."""</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">load_pipeline_config</span><span class="p">()</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_development_data</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="ow">and</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'La fuente contiene fechas de prueba.'</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_start'</span><span class="p">])</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'development_end_exclusive'</span><span class="p">])</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">frame</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">'test_start'</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="s1">'El EDA sólo admite desarrollo anterior a prueba.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">development_daily</span><span class="p">():</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">load_eda_development</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'D'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="p">,</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">development_daily</span><span class="p">()</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="n">TARGET</span><span class="p">]</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">title</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="s1">'Hora de Colombia'</span><span class="p">),</span> <span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dayofweek</span><span class="p">,</span> <span class="s1">'Día de semana (lunes=0)'</span><span class="p">),</span> <span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">frame</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s1">'Mes'</span><span class="p">)]:</span>
@@ -459,11 +530,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>D:\Documents\Maestria\Proyecto Final\Time-Series-Project\tmp\temp\ipykernel_38680\3403872482.py:4: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>D:\Documents\Maestria\Proyecto Final\Time-Series-Project\tmp\temp\ipykernel_27912\1839081426.py:4: Pandas4Warning: DatetimeIndex.dayofweek is deprecated and will be removed in a future version. Use DatetimeIndex.day_of_week instead.
   for ax, group, title in [(axes[0], frame.index.hour, 'Hora de Colombia'), (axes[1], frame.index.dayofweek, 'Día de semana (lunes=0)'), (axes[2], frame.index.month, 'Mes')]:
 </pre></div>
 </div>
-<img alt="_images/5d6163c34b08fc8f50262cd1f00c877446287261f31c50582eac132ab3555cee.png" src="_images/5d6163c34b08fc8f50262cd1f00c877446287261f31c50582eac132ab3555cee.png" />
+<img alt="_images/8e1cf7cacf450b4db429221f10b9ea8525e21d4073e146483903a1431f90212e.png" src="_images/8e1cf7cacf450b4db429221f10b9ea8525e21d4073e146483903a1431f90212e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -476,21 +547,21 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/294b1b6eb12e6adf2c06bac3b7dbdb5d1d6d731621dbf5fe8574b972419cc338.png" src="_images/294b1b6eb12e6adf2c06bac3b7dbdb5d1d6d731621dbf5fe8574b972419cc338.png" />
+<img alt="_images/6a40b5debc422a4de99502c2bcaf412317f490f190fa02e16a027ed94fec2d1e.png" src="_images/6a40b5debc422a4de99502c2bcaf412317f490f190fa02e16a027ed94fec2d1e.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2021</span><span class="p">])</span>
 <span class="n">multiple</span> <span class="o">=</span> <span class="n">MSTL</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">168</span><span class="p">),</span> <span class="n">stl_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'robust'</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">multiple</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
-<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'mstl_horaria_2017'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'mstl_horaria_2021'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/6750580f85828926c75872e64165aa5054ee781a147d13d444c266382bb343f2.png" src="_images/6750580f85828926c75872e64165aa5054ee781a147d13d444c266382bb343f2.png" />
+<img alt="_images/45078f57b7f9baf0c60e13cd09e41da43160d0f6643ec2e5b026ffbe12e2d7da.png" src="_images/45078f57b7f9baf0c60e13cd09e41da43160d0f6643ec2e5b026ffbe12e2d7da.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -500,7 +571,7 @@
 <span class="n">periods</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">freq</span><span class="p">[</span><span class="n">valid</span><span class="p">]</span>
 <span class="n">power</span> <span class="o">=</span> <span class="n">power</span><span class="p">[</span><span class="n">valid</span><span class="p">]</span>
 <span class="n">peaks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">power</span><span class="p">)[</span><span class="o">-</span><span class="mi">12</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'periodo_horas'</span><span class="p">:</span> <span class="n">periods</span><span class="p">[</span><span class="n">peaks</span><span class="p">],</span> <span class="s1">'potencia'</span><span class="p">:</span> <span class="n">power</span><span class="p">[</span><span class="n">peaks</span><span class="p">]}),</span> <span class="s1">'picos_espectrales_train'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'periodo_horas'</span><span class="p">:</span> <span class="n">periods</span><span class="p">[</span><span class="n">peaks</span><span class="p">],</span> <span class="s1">'potencia'</span><span class="p">:</span> <span class="n">power</span><span class="p">[</span><span class="n">peaks</span><span class="p">]}),</span> <span class="s1">'picos_espectrales_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -531,62 +602,62 @@
     <tr>
       <th>0</th>
       <td>8760</td>
-      <td>1.2651e+07</td>
+      <td>1.2361e+07</td>
     </tr>
     <tr>
       <th>1</th>
       <td>4380</td>
-      <td>8.2091e+06</td>
+      <td>8.1278e+06</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2920</td>
-      <td>6.7363e+06</td>
+      <td>6.4343e+06</td>
     </tr>
     <tr>
       <th>3</th>
       <td>1752</td>
-      <td>3.1855e+06</td>
+      <td>3.0718e+06</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2190</td>
-      <td>2.3934e+06</td>
+      <td>2.34e+06</td>
     </tr>
     <tr>
       <th>5</th>
       <td>1251.4</td>
-      <td>2.0197e+06</td>
+      <td>1.7579e+06</td>
     </tr>
     <tr>
       <th>6</th>
       <td>1095</td>
-      <td>1.6177e+06</td>
+      <td>1.3606e+06</td>
     </tr>
     <tr>
       <th>7</th>
       <td>1460</td>
-      <td>1.3679e+06</td>
+      <td>1.3501e+06</td>
     </tr>
     <tr>
       <th>8</th>
       <td>24</td>
-      <td>1.0641e+06</td>
+      <td>1.2871e+06</td>
     </tr>
     <tr>
       <th>9</th>
       <td>876</td>
-      <td>1.0616e+06</td>
+      <td>9.1981e+05</td>
     </tr>
     <tr>
       <th>10</th>
       <td>796.36</td>
-      <td>6.3599e+05</td>
+      <td>6.4602e+05</td>
     </tr>
     <tr>
       <th>11</th>
       <td>673.85</td>
-      <td>6.1502e+05</td>
+      <td>5.1786e+05</td>
     </tr>
   </tbody>
 </table>
@@ -599,13 +670,13 @@
 <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span><span class="p">]:</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">period</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#d17a32'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">period</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">period</span><span class="p">)</span> <span class="o">+</span> <span class="s1">' h'</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'Periodo (horas)'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Densidad espectral'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Espectro de Welch: entrenamiento'</span><span class="p">)</span>
-<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'espectro_train'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'Periodo (horas)'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Densidad espectral'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Espectro de Welch: desarrollo'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'espectro_desarrollo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a5ea0ba7416689886199138718a491406c5f5e07246296b3107af4d53a4c6331.png" src="_images/a5ea0ba7416689886199138718a491406c5f5e07246296b3107af4d53a4c6331.png" />
+<img alt="_images/04151b2a3e6143968cfb44aca20a597be2517f0007ff9d324fbaf626224c2870.png" src="_images/04151b2a3e6143968cfb44aca20a597be2517f0007ff9d324fbaf626224c2870.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -642,14 +713,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
-              
 
-              
-              
-              
-              
+
+
+
+
+
                 <footer class="prev-next-footer d-print-none">
-                  
+
 <div class="prev-next-area">
     <a class="left-prev"
        href="03_objetivo.html"
@@ -671,53 +742,53 @@
     </a>
 </div>
                 </footer>
-              
+
             </div>
-            
-            
-              
-            
+
+
+
+
           </div>
           <footer class="bd-footer-content">
-            
+
 <div class="bd-footer-content__inner container">
-  
+
   <div class="footer-item">
-    
+
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
 
   <p class="copyright">
-    
+
       © Copyright 2026.
       <br/>
-    
+
   </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
 </div>
           </footer>
-        
+
 
       </main>
     </div>
   </div>
-  
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>

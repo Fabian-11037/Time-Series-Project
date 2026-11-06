@@ -1,67 +1,67 @@
 [
   {
     "notebook": "05_dependencia.ipynb",
-    "seconds": 14.13,
-    "code_cells": 12,
+    "seconds": 13.828,
+    "code_cells": 16,
     "errors": 0
   },
   {
     "notebook": "06_covariables.ipynb",
-    "seconds": 13.1,
-    "code_cells": 15,
+    "seconds": 20.831,
+    "code_cells": 34,
     "errors": 0
   },
   {
     "notebook": "07_texto.ipynb",
-    "seconds": 76.005,
-    "code_cells": 47,
+    "seconds": 66.603,
+    "code_cells": 55,
     "errors": 0
   },
   {
     "notebook": "08_validacion.ipynb",
-    "seconds": 14.952,
+    "seconds": 16.699,
     "code_cells": 37,
     "errors": 0
   },
   {
     "notebook": "09_literatura.ipynb",
-    "seconds": 4.729,
+    "seconds": 4.481,
     "code_cells": 23,
     "errors": 0
   },
   {
     "notebook": "10_conclusiones.ipynb",
-    "seconds": 2.952,
+    "seconds": 3.378,
     "code_cells": 8,
     "errors": 0
   },
   {
     "notebook": "01_datos.ipynb",
-    "seconds": 1.921,
-    "code_cells": 9,
+    "seconds": 4.593,
+    "code_cells": 15,
     "errors": 0
   },
   {
     "notebook": "03_objetivo.ipynb",
-    "seconds": 6.388,
-    "code_cells": 17,
+    "seconds": 6.933,
+    "code_cells": 21,
     "errors": 0
   },
   {
     "notebook": "02_calidad.ipynb",
-    "seconds": 2.428,
-    "code_cells": 11,
+    "seconds": 5.026,
+    "code_cells": 15,
     "errors": 0
   },
   {
     "notebook": "04_estacionalidad.ipynb",
-    "seconds": 62.526,
-    "code_cells": 13,
+    "seconds": 131.875,
+    "code_cells": 17,
     "errors": 0
   },
   {
     "notebook": "10_modelos.ipynb",
-    "seconds": 10.356,
+    "seconds": 17.947,
     "code_cells": 42,
     "errors": 0
   }

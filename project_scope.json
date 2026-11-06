@@ -71,7 +71,20 @@
     "validation_projection_only": true,
     "test_content_allowed": false,
     "raw_manual_labels_added": false,
-    "E1_features_added": false
+    "E1_features_added": false,
+    "full_development_summary": true,
+    "projection_period": "2000–2021",
+    "vocabulary_reference_period": "2000–2017"
   },
-  "original_Time_MMD_E1_modified": false
+  "original_Time_MMD_E1_modified": false,
+  "EDA": {
+    "numeric_period_start": "2000-01-01T00:00:00-05:00",
+    "numeric_period_end_exclusive": "2022-01-01T00:00:00-05:00",
+    "all_development_described": true,
+    "effective_model_features": 37,
+    "training_window_audit": true,
+    "legacy_shift_comparison": "2000–2017 vs 2018–2021",
+    "test_values_allowed": false,
+    "retrospective_update_after_training": true
+  }
 }

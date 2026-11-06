@@ -13,7 +13,7 @@ El objetivo general es desarrollar un modelo de pronóstico que integre series t
 
 Estado al actualizar este archivo:
 
-- Dataset consolidado, versionado y auditado; EDA y revisión bibliográfica publicados.
+- Dataset consolidado, versionado y auditado; EDA ampliado a desarrollo completo 2000–2021, con 37 entradas efectivas y auditoría de folds/contextos (sección 20); revisión bibliográfica publicada.
 - Revisión focalizada de 20 textos completos y tabla de frecuencia de baselines implementadas; fuentes, justificación y pendientes en sección 19.
 - Código adaptado para Windows/Linux y entrenamiento CPU o GPU CUDA/ROCm, con dispositivo registrado y fuentes experimentales originales preservadas. Véase `EJECUCION.md` y sección 18.
 - **Prueba 2022–2025 evaluada el 5 de noviembre de 2026 por solicitud explícita del usuario para las tres familias.** Ya no es un periodo sin consultar; véase sección 9. Los bloqueos de EDA y piloto continúan activos.
@@ -22,7 +22,7 @@ Estado al actualizar este archivo:
 - **Se completó un piloto colombiano de MLP, LSTM y CNN1D en PyTorch/ROCm:** 75 ajustes (cinco folds × cinco semillas × tres familias), 30 épocas fijas. El benchmark confirmatorio final sigue pendiente. `project_scope.json` distingue ambos estados.
 - Las implementaciones y resultados previos de Time-MMD pertenecen a otro proyecto; sus métricas, ventana semanal y margen de mejora no deben trasladarse a este dataset.
 
-La solicitud vigente sustituye la propuesta de `split_train_val_kFold` por **forward chaining**. El antiguo corte 2000–2017 / 2018–2021 se conserva únicamente para interpretar los diagnósticos del EDA; no constituye una única partición fija de entrenamiento/validación del nuevo pipeline.
+La solicitud vigente sustituye la propuesta de `split_train_val_kFold` por **forward chaining**. El EDA numérico principal describe todo desarrollo 2000–2021. El antiguo corte 2000–2017 / 2018–2021 se conserva únicamente para el contraste de desplazamiento y el vocabulario inicial de referencia; no constituye una única partición fija de entrenamiento/validación del nuevo pipeline.
 
 ## 2. Datos y protección de prueba
 
@@ -284,3 +284,18 @@ Reproducción: modificar primero el registro y las extracciones verificadas; eje
 No se reentrenó, seleccionó ni evaluó prueba para esta revisión. Se preservan dataset, predicciones, pesos y métricas. Pendientes: búsqueda sistemática conciliada; recuperación de candidatos; información arquitectónica insuficiente y condición E1 §3.2/E2 §14 (192 configuraciones exploratorias no acreditan ese requisito); δ, potencia, inferencia temporal y evaluación independiente. Esta actualización no declara completado todo el Entregable 1.
 
 Verificación de esta revisión: se ejecutaron de nuevo los tres capítulos modificados; el verificador del libro comprueba once cuadernos con ejecuciones completas, 234 celdas, cero errores y 17 páginas HTML sin enlaces locales rotos. Las 20 huellas de fuentes y 348 archivos protegidos de datos/resultados coinciden; los parámetros se contrastaron con las clases reales sin entrenar. Treinta pruebas: 29 correctas y una omitida por ausencia de GPU. Evidencia en `results/literature_review_verification.json` y `results/book_verification.json`.
+
+
+## 20. EDA de todo desarrollo y entradas efectivas, 6 de noviembre de 2026
+
+Por solicitud del usuario se amplió el EDA de 2000–2017 a todo el desarrollo 2000–2021: 192864 horas y 8036 días hidrológicos. Se actualizan capítulos 1–6 y la síntesis. Se mantienen separados el contraste diagnóstico 2000–2017/2018–2021 y el entrenamiento expansivo real. `load_eda_development` usa los lectores de desarrollo del pipeline sin alterar `data.SPLITS` ni permitir prueba.
+
+Capítulo 6: descripción de las 37 entradas alineadas (incluido calendario), correlaciones y filas de entrada/etiquetas por año, 20 combinaciones de historia/fold (24/72/168/336 horas × cinco folds), multiplicidad de ventanas y cobertura. Se reconstruyen los orígenes comunes de búsqueda con historia máxima 336 y se contrastan los registros de preparación guardados. El reajuste histórico de las configuraciones iniciales en desarrollo completo tiene 8027 ventanas de 168 horas; usa 192792 filas únicas entre 2000-01-03 00:00 y 2021-12-30 23:00 de Colombia. Las medias y DE poblacionales de esas 37 columnas coinciden con el escalador guardado en `results/test_pytorch/preprocessing.json`; no se abren datos de prueba para comprobarlo. El último bloque de validación de búsqueda sigue sin ser entrenamiento dentro de su fold; su inclusión en el reajuste histórico completo se identifica por separado.
+
+Capítulo 7: nueva sección de corpus completo 2000–2021, frecuencias/bigramas, fuentes por año, repetición, tópicos agregados y cobertura por fold. Se proyectan todos los documentos elegibles. El vocabulario/IDF/NMF permanece ajustado con el bloque inicial 2000–2017 para mantener una referencia común y la guarda de no ajustar con validación. La cobertura documental no representa atributos usados por el E1 numérico. No confundir expansión de descripción con ampliación del periodo de ajuste de NMF.
+
+Fuentes: `src/colombia_energy/eda.py`, `headline_eda.py` y generadores. Artefactos vigentes: `results/eda_training_scope.json`, `results/headlines/development_audit.json`, tablas `_desarrollo` y `eda_*`. Los `_train` anteriores permanecen como diagnóstico histórico; la síntesis usa las nuevas tablas. El verificador exige cobertura anual 2000–2021, 37 entradas, concordancia de preparación y ausencia de valores/contenido de prueba. El protocolo de esta ampliación es `PROTOCOLO_EDA_DESARROLLO_2026-11-06.md`; los protocolos históricos se conservan.
+
+No se reentrena ni se cambian datos, folds, arquitectura, hiperparámetros, pesos o métricas. Los diagnósticos agregados de desarrollo no sustituyen los escaladores causales de cada fold. El MI se mantiene en 12000 horas deterministas; NMF en su muestra protocolizada; MSTL horaria en 2021, con perfiles/espectro y STL diaria de todo desarrollo. Registrar estas restricciones de cálculo sin afirmar que cada estimador usa cada fila.
+
+Verificación de la ampliación: once cuadernos ejecutados, 283 celdas, 17 páginas HTML, cero errores y cero enlaces locales rotos. La tabla de las 37 entradas se muestra íntegra. El corpus conjunto contiene 484289 documentos elegibles; su primera disponibilidad recuperada es 2004-01-20, por lo que el intervalo analizado no implica cobertura textual continua desde 2000. Treinta y cinco pruebas: 34 correctas y una omitida por ausencia de GPU. Las huellas de 348 archivos de datos/resultados protegidos se mantienen. Evidencia: `results/eda_development_verification.json`.

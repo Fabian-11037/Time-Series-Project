@@ -23,7 +23,7 @@ El histórico editorial es **parcial**. La [cobertura mensual](data/metadata/cov
 
 ## Jupyter Book
 
-El libro contiene once cuadernos ejecutados, referencias y reproducción. Incluye calidad, distribución y anomalías, cambios de régimen, STL/MSTL, ADF/KPSS conjuntos, ACF/PACF, espectro, ARCH/BDS, covariables, cobertura textual y controles temporales. Cada análisis termina en decisiones de preprocesamiento, arquitectura, validación y riesgos.
+El libro contiene once cuadernos ejecutados, referencias y reproducción. El EDA numérico describe todo desarrollo 2000–2021 (192864 horas) y las 37 entradas efectivas, con auditoría de cinco folds y cuatro contextos; el corpus textual se resume conjuntamente para ese periodo. Incluye calidad, distribución y anomalías, cambios de régimen, STL/MSTL, ADF/KPSS conjuntos, ACF/PACF, espectro, ARCH/BDS, covariables, cobertura textual y controles temporales. Cada análisis termina en decisiones de preprocesamiento, arquitectura, validación y riesgos.
 
 - [Cuadernos y fuentes del libro](book/), con código analítico completo en celdas ejecutables y visibles.
 - [HTML construido](docs/): abrir `docs/index.html` tras descargar/clonar el repositorio.

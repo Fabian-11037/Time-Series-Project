@@ -1,0 +1,4 @@
+serie,n,adf_estadistico,adf_p,adf_rezagos,kpss_estadistico,kpss_p_acotado,kpss_rezagos,lectura_conjunta
+nivel_diario,8036,-5.840295459429629,3.7913062225677223e-07,29,4.182006079493328,<0.01,54,Conflicto: rupturas/heterocedasticidad u otra alternativa
+log1p_diario,8036,-4.164848247454774,0.0007552290486578617,28,8.06422312217035,<0.01,54,Conflicto: rupturas/heterocedasticidad u otra alternativa
+diferencia_log1p,8035,-19.284533485185378,0.0,27,0.006672518274393508,>0.10,24,Compatible con estacionariedad

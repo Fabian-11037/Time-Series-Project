@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-06",
+  "development_hours": 192864,
+  "effective_features": 37,
+  "development_documents": 484289,
+  "refit_input_rows": 192792,
+  "refit_windows": 8027,
+  "full_feature_table_visible": true,
+  "protected_files_unchanged": 348,
+  "protected_inventory_sha256": "6e0f2d5a3fda216d7b48561ab93cb333e46655fd1d9e1aa0c448519766d75826",
+  "test_values_read": false,
+  "test_content_read": false,
+  "training_repeated": false,
+  "notebook_count": 11,
+  "code_cells": 283,
+  "cell_errors": 0,
+  "broken_local_references": [],
+  "tests_run": 35,
+  "tests_passed": 34,
+  "tests_skipped_no_gpu": 1
+}

@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>7. Texto: cobertura, duplicados y disponibilidad &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-  
-  
-  
+
+
+
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-  
+
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-  
+
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -71,29 +71,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-  
-    
+
+
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-  
+
   </head>
   <body data-default-mode="">
-  
-  
+
+
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-  
+
   <div id="pst-scroll-pixel-helper"></div>
-  
+
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-  
-  
-  
-  
+
+
+
+
   <dialog id="pst-search-dialog">
-    
+
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,21 +115,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-  
+
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-  
-  
+
+
   <div class="col-lg-9 navbar-header-items">
-    
-    
+
+
     <div class="navbar-header-items__end">
-      
+
         <div class="navbar-item navbar-persistent--container">
-          
+
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,13 +137,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-      
-      
+
+
     </div>
-    
+
   </div>
-  
-  
+
+
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -152,51 +152,51 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
-  
 
-  
+
+
     <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
       <span class="fa-solid fa-outdent"></span>
     </button>
-  
+
 </div>
 
     </header>
-  
+
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
-      
+
+
+
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
-        
 
-  
+
+
   <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-  
-    
-  
+
+
+
 
 <a class="navbar-brand logo" href="intro.html">
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-  
+
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -226,8 +226,8 @@
     </div>
 </nav></div>
     </div>
-  
-  
+
+
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -240,30 +240,30 @@
 
 
       </div>
-      
+
       <main id="main-content" class="bd-main" role="main">
-        
-        
+
+
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-              
+
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-  
+
     <div class="header-article-items__start">
-      
+
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-      
+
     </div>
-  
-  
+
+
     <div class="header-article-items__end">
-      
+
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -277,15 +277,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      
-      
-      
+
+
+
       <li><a href="_sources/07_texto.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -293,17 +293,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-      
-      
-      
-      
+
+
+
+
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -311,7 +311,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-      
+
   </ul>
 </div>
 
@@ -323,7 +323,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-  
+
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -347,20 +347,20 @@
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
-      
+
     </div>
-  
+
 </div>
 </div>
-              
-              
+
+
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>7. Texto: cobertura, duplicados y disponibilidad</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-            
+
             <div>
                 <h2> Contenido </h2>
             </div>
@@ -370,19 +370,21 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limitaciones">7.4 Cambio del vocabulario y limitaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-completo-de-desarrollo-20002021">7.5 Corpus completo de desarrollo 2000–2021</a></li>
 </ul>
             </nav>
         </div>
     </div>
 </div>
 
-              
-                
+
+
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
+
   <section class="tex2jax_ignore mathjax_ignore" id="texto-cobertura-duplicados-y-disponibilidad">
 <h1>7. Texto: cobertura, duplicados y disponibilidad<a class="headerlink" href="#texto-cobertura-duplicados-y-disponibilidad" title="Link to this heading">#</a></h1>
+<p>El corpus se describe para todo desarrollo <strong>2000–2021</strong>, con resúmenes conjuntos y cobertura por fold en la sección 7.5. Los contrastes entre 2000–2017 y 2018–2021 utilizan una representación léxica común ajustada en el periodo inicial.</p>
 <p>El análisis documental comprende cobertura por mes y fuente, repetición de titulares, diversidad léxica y tópicos obtenidos mediante aprendizaje no supervisado.</p>
 <p>La disponibilidad temporal se representa mediante dos campos. <code class="docutils literal notranslate"><span class="pre">available_at_assumed</span></code> utiliza la fecha de publicación declarada y, cuando sólo consta el día, asigna disponibilidad desde las 00:00 del día siguiente en Colombia. <code class="docutils literal notranslate"><span class="pre">available_at_verified</span></code> identifica la disponibilidad respaldada por una captura de la versión exacta. Las versiones recuperadas retrospectivamente pueden contener revisiones posteriores; los registros sin fecha de publicación se conservan en el inventario documental.</p>
 <p>Se examinan repeticiones exactas, variaciones ortográficas y similitud entre títulos asociados a una misma URL. La interpretación considera la periodicidad de los boletines y las convenciones editoriales de cada fuente.</p>
@@ -2809,7 +2811,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1272
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1273
 </pre></div>
 </div>
 </div>
@@ -2828,6 +2830,1012 @@
 <li><p><strong>Validación:</strong> Proyectar validación con vocabulario, IDF y componentes estimados en entrenamiento; mantener fijo el número de componentes del protocolo.</p></li>
 <li><p><strong>Riesgos:</strong> El predominio editorial de una fuente y la incertidumbre sobre las versiones históricas condicionan la interpretación y transferencia de los componentes.</p></li>
 </ul>
+</div>
+</div>
+</section>
+<section id="corpus-completo-de-desarrollo-20002021">
+<h2>7.5 Corpus completo de desarrollo 2000–2021<a class="headerlink" href="#corpus-completo-de-desarrollo-20002021" title="Link to this heading">#</a></h2>
+<p>Se integran todos los documentos con disponibilidad supuesta en desarrollo para describir frecuencias, bigramas, repetición, fuentes y cobertura por fold. Los análisis de tópicos utilizan las proyecciones ya calculadas sobre todo el corpus de desarrollo, con el vocabulario de referencia ajustado en 2000–2017. Este ajuste inicial permite comparar los periodos sobre una base común; los documentos posteriores también forman parte de los resúmenes y las proyecciones. Las cifras por fold describen el historial documental disponible hasta cada corte, no ventanas de texto utilizadas por las redes numéricas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">"""Descripción conjunta de todos los textos de desarrollo y de su representación congelada."""</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">study</span><span class="o">.</span><span class="n">train</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">validation</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'available'</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">frame</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">is_unique</span>
+<span class="k">assert</span> <span class="n">frame</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">)</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">counters</span><span class="p">[</span><span class="s1">'train'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">study</span><span class="o">.</span><span class="n">counters</span><span class="p">[</span><span class="s1">'validation'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">docs</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">counters</span><span class="p">[</span><span class="s1">'train'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">study</span><span class="o">.</span><span class="n">counters</span><span class="p">[</span><span class="s1">'validation'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">title_raw</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="n">periodo</span><span class="o">=</span><span class="s1">'2000–2021'</span><span class="p">,</span> <span class="n">titulares</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span> <span class="n">primera_disponibilidad</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="n">ultima_disponibilidad</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="n">fuentes</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">mediana_palabras</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">lengths</span><span class="o">.</span><span class="n">median</span><span class="p">()),</span> <span class="n">vocablos_distintos</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">counter</span><span class="p">),</span> <span class="n">terminos_contenido</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">fraccion_titular_normalizado_repetido</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">title_raw</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">normalized</span><span class="p">)</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()))])</span>
+<span class="n">table</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="s1">'titulares_desarrollo_resumen'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>periodo</th>
+      <th>titulares</th>
+      <th>primera_disponibilidad</th>
+      <th>ultima_disponibilidad</th>
+      <th>fuentes</th>
+      <th>mediana_palabras</th>
+      <th>vocablos_distintos</th>
+      <th>terminos_contenido</th>
+      <th>fraccion_titular_normalizado_repetido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2000–2021</td>
+      <td>484289</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2021-12-31 00:00:00-05:00</td>
+      <td>8</td>
+      <td>8</td>
+      <td>82186</td>
+      <td>2390550</td>
+      <td>0.030261</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yearly</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'year'</span><span class="p">,</span> <span class="s1">'source_kind'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'titulares'</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">table</span><span class="p">(</span><span class="n">yearly</span><span class="p">,</span> <span class="s1">'titulares_desarrollo_anio_fuente'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>titulares</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th>source_kind</th>
+      <th>source</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2004</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>309</td>
+    </tr>
+    <tr>
+      <th>2005</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>364</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>361</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>360</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>20118</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>38161</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>34622</td>
+    </tr>
+    <tr>
+      <th>2011</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>36129</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>40545</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>46676</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>44088</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>41851</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>39870</td>
+    </tr>
+    <tr>
+      <th>2017</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>37087</td>
+    </tr>
+    <tr>
+      <th>2018</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>34225</td>
+    </tr>
+    <tr>
+      <th>2019</th>
+      <th>news</th>
+      <th>El Colombiano</th>
+      <td>30826</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">2020</th>
+      <th rowspan="7" valign="top">news</th>
+      <th>Dinero</th>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th>El Colombiano</th>
+      <td>14014</td>
+    </tr>
+    <tr>
+      <th>El Espectador</th>
+      <td>1128</td>
+    </tr>
+    <tr>
+      <th>El Tiempo</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>La República</th>
+      <td>569</td>
+    </tr>
+    <tr>
+      <th>Portafolio</th>
+      <td>331</td>
+    </tr>
+    <tr>
+      <th>Semana</th>
+      <td>2625</td>
+    </tr>
+    <tr>
+      <th>official_report</th>
+      <th>IDEAM</th>
+      <td>147</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">2021</th>
+      <th rowspan="7" valign="top">news</th>
+      <th>Dinero</th>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>El Colombiano</th>
+      <td>1757</td>
+    </tr>
+    <tr>
+      <th>El Espectador</th>
+      <td>2768</td>
+    </tr>
+    <tr>
+      <th>El Tiempo</th>
+      <td>4971</td>
+    </tr>
+    <tr>
+      <th>La República</th>
+      <td>1626</td>
+    </tr>
+    <tr>
+      <th>Portafolio</th>
+      <td>943</td>
+    </tr>
+    <tr>
+      <th>Semana</th>
+      <td>7523</td>
+    </tr>
+    <tr>
+      <th>official_report</th>
+      <th>IDEAM</th>
+      <td>157</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frequent</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="n">termino</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">titulares</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">porcentaje</span><span class="o">=</span><span class="mi">100</span> <span class="o">*</span> <span class="n">n</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">))</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">docs</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">30</span><span class="p">)])</span>
+<span class="n">table</span><span class="p">(</span><span class="n">frequent</span><span class="p">,</span> <span class="s1">'titulares_desarrollo_frecuencias'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>termino</th>
+      <th>titulares</th>
+      <th>porcentaje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>colombia</td>
+      <td>21926</td>
+      <td>4.5275</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>medellín</td>
+      <td>16924</td>
+      <td>3.4946</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>semana</td>
+      <td>8386</td>
+      <td>1.7316</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>nacional</td>
+      <td>8175</td>
+      <td>1.688</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>antioquia</td>
+      <td>8128</td>
+      <td>1.6783</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>años</td>
+      <td>7182</td>
+      <td>1.483</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>farc</td>
+      <td>7101</td>
+      <td>1.4663</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>nuevo</td>
+      <td>7071</td>
+      <td>1.4601</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>gobierno</td>
+      <td>6591</td>
+      <td>1.361</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>dos</td>
+      <td>6510</td>
+      <td>1.3442</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>colombiano</td>
+      <td>6053</td>
+      <td>1.2499</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>santos</td>
+      <td>5831</td>
+      <td>1.204</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>paz</td>
+      <td>5201</td>
+      <td>1.0739</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>mundial</td>
+      <td>5173</td>
+      <td>1.0682</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>millones</td>
+      <td>5139</td>
+      <td>1.0611</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>presidente</td>
+      <td>5050</td>
+      <td>1.0428</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>bogotá</td>
+      <td>4929</td>
+      <td>1.0178</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>tras</td>
+      <td>4847</td>
+      <td>1.0008</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>nueva</td>
+      <td>4807</td>
+      <td>0.99259</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>venezuela</td>
+      <td>4776</td>
+      <td>0.98619</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>caricatura</td>
+      <td>4417</td>
+      <td>0.91206</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>país</td>
+      <td>4396</td>
+      <td>0.90772</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>unidos</td>
+      <td>4316</td>
+      <td>0.8912</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>tres</td>
+      <td>4067</td>
+      <td>0.83979</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>policía</td>
+      <td>4015</td>
+      <td>0.82905</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>ser</td>
+      <td>3940</td>
+      <td>0.81356</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>mundo</td>
+      <td>3878</td>
+      <td>0.80076</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>año</td>
+      <td>3797</td>
+      <td>0.78404</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>espectador</td>
+      <td>3668</td>
+      <td>0.7574</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>uribe</td>
+      <td>3597</td>
+      <td>0.74274</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">frequent</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'termino'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'porcentaje'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">'Porcentaje de titulares de desarrollo 2000–2021'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Frecuencias léxicas: corpus completo de desarrollo'</span><span class="p">)</span>
+<span class="n">figure</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="s1">'titulares_desarrollo_frecuencias'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3a14326eb60e83548960e76499071496129c317baf87b67dbc0c097bc8b1ce70.png" src="_images/3a14326eb60e83548960e76499071496129c317baf87b67dbc0c097bc8b1ce70.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bigrams</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">title</span> <span class="ow">in</span> <span class="n">frame</span><span class="o">.</span><span class="n">title_raw</span><span class="p">:</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">bigrams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">words</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:])))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="n">bigrama</span><span class="o">=</span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">titulares</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">bigrams</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">30</span><span class="p">)]),</span> <span class="s1">'titulares_desarrollo_bigramas'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bigrama</th>
+      <th>titulares</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>revista semana</td>
+      <td>2300</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>encabezado caricatura</td>
+      <td>1885</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>real madrid</td>
+      <td>1325</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>programación televisión</td>
+      <td>1276</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>presidente santos</td>
+      <td>1211</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>selección colombia</td>
+      <td>1043</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>atlético nacional</td>
+      <td>922</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>millones dólares</td>
+      <td>829</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>papa francisco</td>
+      <td>815</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>james rodríguez</td>
+      <td>783</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>nueva york</td>
+      <td>753</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>proceso paz</td>
+      <td>727</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>liga águila</td>
+      <td>668</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>copa américa</td>
+      <td>667</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>corte suprema</td>
+      <td>667</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>valle aburrá</td>
+      <td>665</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>reforma tributaria</td>
+      <td>660</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>flor labios</td>
+      <td>651</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>américa latina</td>
+      <td>634</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>millones pesos</td>
+      <td>623</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>redes sociales</td>
+      <td>578</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>copa libertadores</td>
+      <td>569</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>álvaro uribe</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>tour francia</td>
+      <td>553</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>donald trump</td>
+      <td>548</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>nairo quintana</td>
+      <td>544</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>mil millones</td>
+      <td>541</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>juan manuel</td>
+      <td>505</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>juan carlos</td>
+      <td>496</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>pico placa</td>
+      <td>492</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">f</span><span class="p">[[</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'available'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'source_kind'</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">study</span><span class="o">.</span><span class="n">weights</span><span class="p">[</span><span class="n">s</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'train'</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">train</span><span class="p">),</span> <span class="p">(</span><span class="s1">'validation'</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">validation</span><span class="p">)]],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">projected</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span> <span class="ow">and</span> <span class="n">projected</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">is_unique</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">table</span><span class="p">(</span><span class="n">projected</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'source_kind'</span><span class="p">,</span> <span class="s1">'source'</span><span class="p">])[</span><span class="n">labels</span> <span class="o">+</span> <span class="p">[</span><span class="s1">'represented'</span><span class="p">,</span> <span class="s1">'entropy'</span><span class="p">,</span> <span class="s1">'reconstruction_error'</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s1">'titulares_desarrollo_topicos_por_fuente'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>T01</th>
+      <th>T02</th>
+      <th>T03</th>
+      <th>T04</th>
+      <th>T05</th>
+      <th>T06</th>
+      <th>T07</th>
+      <th>T08</th>
+      <th>represented</th>
+      <th>entropy</th>
+      <th>reconstruction_error</th>
+    </tr>
+    <tr>
+      <th>source_kind</th>
+      <th>source</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="7" valign="top">news</th>
+      <th>Dinero</th>
+      <td>0.17149</td>
+      <td>0.029183</td>
+      <td>0.0078845</td>
+      <td>0.23237</td>
+      <td>0.054059</td>
+      <td>0.0856</td>
+      <td>0.3057</td>
+      <td>0.11371</td>
+      <td>1</td>
+      <td>0.56983</td>
+      <td>0.99352</td>
+    </tr>
+    <tr>
+      <th>El Colombiano</th>
+      <td>0.11325</td>
+      <td>0.085921</td>
+      <td>0.022233</td>
+      <td>0.25701</td>
+      <td>0.10919</td>
+      <td>0.073314</td>
+      <td>0.27675</td>
+      <td>0.06233</td>
+      <td>0.94664</td>
+      <td>0.51918</td>
+      <td>0.98551</td>
+    </tr>
+    <tr>
+      <th>El Espectador</th>
+      <td>0.15814</td>
+      <td>0.064149</td>
+      <td>0.017628</td>
+      <td>0.22678</td>
+      <td>0.093393</td>
+      <td>0.064946</td>
+      <td>0.29623</td>
+      <td>0.07873</td>
+      <td>0.97972</td>
+      <td>0.57615</td>
+      <td>0.98978</td>
+    </tr>
+    <tr>
+      <th>El Tiempo</th>
+      <td>0.12639</td>
+      <td>0.073153</td>
+      <td>0.016224</td>
+      <td>0.22926</td>
+      <td>0.10387</td>
+      <td>0.071248</td>
+      <td>0.31485</td>
+      <td>0.065002</td>
+      <td>0.97952</td>
+      <td>0.57703</td>
+      <td>0.99091</td>
+    </tr>
+    <tr>
+      <th>La República</th>
+      <td>0.15204</td>
+      <td>0.058468</td>
+      <td>0.013548</td>
+      <td>0.25399</td>
+      <td>0.067788</td>
+      <td>0.0622</td>
+      <td>0.2971</td>
+      <td>0.094857</td>
+      <td>0.9836</td>
+      <td>0.64322</td>
+      <td>0.9952</td>
+    </tr>
+    <tr>
+      <th>Portafolio</th>
+      <td>0.29004</td>
+      <td>0.053157</td>
+      <td>0.029071</td>
+      <td>0.19591</td>
+      <td>0.06264</td>
+      <td>0.062333</td>
+      <td>0.23014</td>
+      <td>0.076712</td>
+      <td>0.98901</td>
+      <td>0.55049</td>
+      <td>0.98162</td>
+    </tr>
+    <tr>
+      <th>Semana</th>
+      <td>0.18184</td>
+      <td>0.088531</td>
+      <td>0.022582</td>
+      <td>0.248</td>
+      <td>0.065444</td>
+      <td>0.10459</td>
+      <td>0.22162</td>
+      <td>0.067388</td>
+      <td>0.99773</td>
+      <td>0.64864</td>
+      <td>0.99184</td>
+    </tr>
+    <tr>
+      <th>official_report</th>
+      <th>IDEAM</th>
+      <td>0.097369</td>
+      <td>0.033669</td>
+      <td>0.60003</td>
+      <td>0.072456</td>
+      <td>0.079355</td>
+      <td>0.020344</td>
+      <td>0.066581</td>
+      <td>0.030197</td>
+      <td>0.59211</td>
+      <td>0.49207</td>
+      <td>0.99556</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">audits</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">((</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'results/variant_search/fold_audit.json'</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">audits</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="s1">'lookback'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">168</span><span class="p">]:</span>
+    <span class="n">cutoff</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">'validation_start'</span><span class="p">])</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">'validation_last_origin'</span><span class="p">])</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">role</span><span class="p">,</span> <span class="n">mask</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">'historia_entrenamiento'</span><span class="p">,</span> <span class="n">projected</span><span class="o">.</span><span class="n">available</span> <span class="o">&lt;</span> <span class="n">cutoff</span><span class="p">),</span> <span class="p">(</span><span class="s1">'bloque_validacion'</span><span class="p">,</span> <span class="p">(</span><span class="n">projected</span><span class="o">.</span><span class="n">available</span> <span class="o">&gt;=</span> <span class="n">cutoff</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">projected</span><span class="o">.</span><span class="n">available</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">))]:</span>
+        <span class="n">selected</span> <span class="o">=</span> <span class="n">projected</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+        <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">fold</span><span class="o">=</span><span class="n">item</span><span class="p">[</span><span class="s1">'fold'</span><span class="p">],</span> <span class="n">tramo</span><span class="o">=</span><span class="n">role</span><span class="p">,</span> <span class="n">titulares</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">),</span> <span class="n">desde</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">selected</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span> <span class="n">hasta</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">selected</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="n">fraccion_representada</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">selected</span><span class="o">.</span><span class="n">represented</span><span class="o">.</span><span class="n">mean</span><span class="p">())))</span>
+<span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'fold'</span><span class="p">,</span> <span class="s1">'tramo'</span><span class="p">]),</span> <span class="s1">'titulares_cobertura_folds'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>titulares</th>
+      <th>desde</th>
+      <th>hasta</th>
+      <th>fraccion_representada</th>
+    </tr>
+    <tr>
+      <th>fold</th>
+      <th>tramo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">1</th>
+      <th>historia_entrenamiento</th>
+      <td>380541</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2017-12-31 19:03:53-05:00</td>
+      <td>0.95026</td>
+    </tr>
+    <tr>
+      <th>bloque_validacion</th>
+      <td>27900</td>
+      <td>2018-01-01 09:27:29-05:00</td>
+      <td>2018-10-20 20:27:19-05:00</td>
+      <td>0.93029</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
+      <th>historia_entrenamiento</th>
+      <td>408441</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2018-10-20 20:27:19-05:00</td>
+      <td>0.94889</td>
+    </tr>
+    <tr>
+      <th>bloque_validacion</th>
+      <td>25528</td>
+      <td>2018-10-21 00:00:00-05:00</td>
+      <td>2019-08-08 21:58:38-05:00</td>
+      <td>0.92647</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">3</th>
+      <th>historia_entrenamiento</th>
+      <td>433969</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2019-08-08 21:58:38-05:00</td>
+      <td>0.94757</td>
+    </tr>
+    <tr>
+      <th>bloque_validacion</th>
+      <td>23845</td>
+      <td>2019-08-09 00:00:00-05:00</td>
+      <td>2020-05-26 23:26:38-05:00</td>
+      <td>0.92527</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>historia_entrenamiento</th>
+      <td>457814</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2020-05-26 23:26:38-05:00</td>
+      <td>0.94641</td>
+    </tr>
+    <tr>
+      <th>bloque_validacion</th>
+      <td>9861</td>
+      <td>2020-05-27 00:00:00-05:00</td>
+      <td>2021-03-14 22:04:54-05:00</td>
+      <td>0.97546</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">5</th>
+      <th>historia_entrenamiento</th>
+      <td>467675</td>
+      <td>2004-01-20 16:36:43-05:00</td>
+      <td>2021-03-14 22:04:54-05:00</td>
+      <td>0.94703</td>
+    </tr>
+    <tr>
+      <th>bloque_validacion</th>
+      <td>16614</td>
+      <td>2021-03-15 00:03:04-05:00</td>
+      <td>2021-12-31 00:00:00-05:00</td>
+      <td>0.98664</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">OUT</span> <span class="o">/</span> <span class="s1">'development_audit.json'</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">period_start</span><span class="o">=</span><span class="s1">'2000-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="n">period_end_exclusive</span><span class="o">=</span><span class="s1">'2022-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="n">documents</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span> <span class="n">max_available</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">available</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="n">test_documents_read</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vocabulary_refit_with_validation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">topic_fit_end_exclusive</span><span class="o">=</span><span class="s1">'2018-01-01T00:00:00-05:00'</span><span class="p">,</span> <span class="n">full_development_projected</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">E1_features_added</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>375
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -2854,14 +3862,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
-              
 
-              
-              
-              
-              
+
+
+
+
+
                 <footer class="prev-next-footer d-print-none">
-                  
+
 <div class="prev-next-area">
     <a class="left-prev"
        href="06_covariables.html"
@@ -2883,11 +3891,11 @@
     </a>
 </div>
                 </footer>
-              
+
             </div>
-            
-            
-              
+
+
+
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
@@ -2903,53 +3911,54 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topicos-aprendidos-con-tf-idf-y-nmf">7.2 Tópicos aprendidos con TF-IDF y NMF</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal-y-composicion-por-fuente">7.3 Evolución temporal y composición por fuente</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambio-del-vocabulario-y-limitaciones">7.4 Cambio del vocabulario y limitaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-completo-de-desarrollo-20002021">7.5 Corpus completo de desarrollo 2000–2021</a></li>
 </ul>
   </nav></div>
 
 </div></div>
-              
-            
+
+
           </div>
           <footer class="bd-footer-content">
-            
+
 <div class="bd-footer-content__inner container">
-  
+
   <div class="footer-item">
-    
+
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
 
   <p class="copyright">
-    
+
       © Copyright 2026.
       <br/>
-    
+
   </p>
 
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
   <div class="footer-item">
-    
+
   </div>
-  
+
 </div>
           </footer>
-        
+
 
       </main>
     </div>
   </div>
-  
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>

@@ -1,0 +1,5 @@
+historia_horas,ventanas_desarrollo,filas_entrada_unicas,horas_etiqueta_unicas,celdas_entrada_totales,multiplicidad_maxima_hora
+24,8020,192480,192480,7121760,1
+72,8020,192528,192480,21365280,3
+168,8020,192624,192480,49852320,7
+336,8020,192792,192480,99704640,14

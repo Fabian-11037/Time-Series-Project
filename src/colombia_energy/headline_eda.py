@@ -265,3 +265,57 @@ class HeadlineStudy:
             'La representación por tópicos permite examinar la composición documental y su variación entre fuentes y periodos.',
             'Proyectar validación con vocabulario, IDF y componentes estimados en entrenamiento; mantener fijo el número de componentes del protocolo.',
             'El predominio editorial de una fuente y la incertidumbre sobre las versiones históricas condicionan la interpretación y transferencia de los componentes.')
+
+
+    def development_analysis(self):
+        """Descripción conjunta de todos los textos de desarrollo y de su representación congelada."""
+        frame = pd.concat([self.train,self.validation],ignore_index=True).sort_values(['available','id']).reset_index(drop=True)
+        assert frame.id.is_unique
+        assert frame.available.max() < pd.Timestamp('2022-01-01T00:00:00-05:00')
+        counter = self.counters['train'][0]+self.counters['validation'][0]
+        docs = self.counters['train'][1]+self.counters['validation'][1]
+        lengths = frame.title_raw.str.split().str.len()
+        summary = pd.DataFrame([dict(periodo='2000–2021',titulares=len(frame),
+            primera_disponibilidad=str(frame.available.min()),ultima_disponibilidad=str(frame.available.max()),
+            fuentes=frame.source.nunique(),mediana_palabras=float(lengths.median()),
+            vocablos_distintos=len(counter),terminos_contenido=sum(counter.values()),
+            fraccion_titular_normalizado_repetido=float(frame.title_raw.map(normalized).duplicated().mean()))])
+        table(summary,'titulares_desarrollo_resumen')
+        yearly = frame.groupby(['year','source_kind','source']).size().rename('titulares').to_frame()
+        table(yearly,'titulares_desarrollo_anio_fuente')
+        frequent = pd.DataFrame([dict(termino=w,titulares=n,porcentaje=100*n/len(frame)) for w,n in docs.most_common(30)])
+        table(frequent,'titulares_desarrollo_frecuencias')
+        fig,ax = plt.subplots(figsize=(11,7))
+        frequent.head(25).iloc[::-1].plot.barh(x='termino',y='porcentaje',ax=ax,legend=False)
+        ax.set(xlabel='Porcentaje de titulares de desarrollo 2000–2021',ylabel='',title='Frecuencias léxicas: corpus completo de desarrollo')
+        figure(fig,'titulares_desarrollo_frecuencias')
+        bigrams = collections.Counter()
+        for title in frame.title_raw:
+            words = tokenize(title)
+            bigrams.update(set(zip(words[:-1],words[1:])))
+        table(pd.DataFrame([dict(bigrama=' '.join(w),titulares=n) for w,n in bigrams.most_common(30)]),
+            'titulares_desarrollo_bigramas')
+        # Se utilizan las proyecciones ya calculadas: no se reajusta TF-IDF o NMF con validación.
+        projected = pd.concat([pd.concat([f[['id','available','source','source_kind']].reset_index(drop=True),self.weights[s]],axis=1)
+            for s,f in [('train',self.train),('validation',self.validation)]],ignore_index=True)
+        assert len(projected)==len(frame) and projected.id.is_unique
+        labels = list(self.labels.values())
+        table(projected.groupby(['source_kind','source'])[labels+['represented','entropy','reconstruction_error']].mean(),
+            'titulares_desarrollo_topicos_por_fuente')
+        counts = []
+        audits = json.loads((ROOT/'results/variant_search/fold_audit.json').read_text(encoding='utf-8'))
+        for item in [a for a in audits if a['lookback']==168]:
+            cutoff = pd.Timestamp(item['validation_start'])
+            end = pd.Timestamp(item['validation_last_origin'])+pd.Timedelta(hours=24)
+            for role,mask in [('historia_entrenamiento',projected.available<cutoff),
+                              ('bloque_validacion',(projected.available>=cutoff)&(projected.available<end))]:
+                selected = projected.loc[mask]
+                counts.append(dict(fold=item['fold'],tramo=role,titulares=len(selected),
+                    desde=str(selected.available.min()),hasta=str(selected.available.max()),
+                    fraccion_representada=float(selected.represented.mean())))
+        table(pd.DataFrame(counts).set_index(['fold','tramo']),'titulares_cobertura_folds')
+        (OUT/'development_audit.json').write_text(json.dumps(dict(period_start='2000-01-01T00:00:00-05:00',
+            period_end_exclusive='2022-01-01T00:00:00-05:00',documents=len(frame),
+            max_available=str(frame.available.max()),test_documents_read=0,
+            vocabulary_refit_with_validation=False,topic_fit_end_exclusive='2018-01-01T00:00:00-05:00',
+            full_development_projected=True,E1_features_added=False),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

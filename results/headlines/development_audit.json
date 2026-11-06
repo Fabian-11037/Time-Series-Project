@@ -1,0 +1,11 @@
+{
+  "period_start": "2000-01-01T00:00:00-05:00",
+  "period_end_exclusive": "2022-01-01T00:00:00-05:00",
+  "documents": 484289,
+  "max_available": "2021-12-31 00:00:00-05:00",
+  "test_documents_read": 0,
+  "vocabulary_refit_with_validation": false,
+  "topic_fit_end_exclusive": "2018-01-01T00:00:00-05:00",
+  "full_development_projected": true,
+  "E1_features_added": false
+}
