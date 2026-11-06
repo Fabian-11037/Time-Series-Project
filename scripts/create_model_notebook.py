@@ -20,11 +20,11 @@ def diagram(name,labels):
             parts.append(f'<text x="{x+box/2}" y="{105+(j-(len(lines)-1)/2)*25}" text-anchor="middle" fill="#163247" font-family="sans-serif" font-size="20">{escape(line)}</text>')
         if i<len(labels)-1:parts.append(f'<path d="M{x+box+2},105 H{x+box+gap-3}" stroke="#526575" marker-end="url(#arrow)"/>')
     parts.append('</svg>')
-    (BOOK/'_static'/f'{name}.svg').write_text(''.join(parts))
+    (BOOK/'_static'/f'{name}.svg').write_text(''.join(parts),encoding='utf-8')
 
 INTRO=r'''# 10. Modelos numéricos y búsqueda de configuraciones
 
-Se comparan redes densas (MLP), recurrentes (LSTM) y convolucionales temporales (CNN1D) para pronosticar el precio nacional horario de bolsa. La búsqueda comprende 192 configuraciones y 4800 ajustes independientes, exclusivamente con desarrollo 2000–2021. Las configuraciones se seleccionan mediante el MAE de cinco bloques de validación consecutivos en 2018–2021, con cinco inicializaciones por configuración.
+Se comparan redes densas (MLP), recurrentes (LSTM) y convolucionales temporales (CNN1D) para pronosticar el precio nacional horario de bolsa. La búsqueda comprende 192 configuraciones y 4800 ajustes, exclusivamente con desarrollo 2000–2021. Las configuraciones se seleccionan mediante el MAE de cinco bloques de validación consecutivos en 2018–2021, con cinco inicializaciones por configuración.
 
 El experimento utiliza únicamente variables numéricas y calendario. Los resultados presentados son de **selección en validación**: el mismo bloque interviene en la parada anticipada y en la comparación de configuraciones. La prueba 2022–2025 no se reevalúa en esta búsqueda. Ese periodo se consultó previamente para otras configuraciones; por tanto, estos resultados no constituyen una nueva evaluación externa ni un benchmark confirmatorio.
 
@@ -191,12 +191,12 @@ El periodo 2022–2025 fue evaluado previamente con configuraciones iniciales di
 
 ## 10.8 Código del pipeline de entrenamiento
 
-Las celdas siguientes contienen las definiciones ejecutables de las arquitecturas, penalización, parada y búsqueda utilizadas. Las funciones de preparación temporal y escalado aparecen al inicio del cuaderno. La ejecución documental define las funciones y verifica los artefactos, sin repetir los 4800 ajustes. El entrenamiento completo se invoca desde la raíz del repositorio mediante `python scripts/train_variants.py`, con un entorno PyTorch compatible con la GPU.
+Las celdas siguientes contienen las definiciones ejecutables de las arquitecturas, penalización, parada y búsqueda utilizadas. Las funciones de preparación temporal y escalado aparecen al inicio del cuaderno. La ejecución documental define las funciones y verifica los artefactos, sin repetir los 4800 ajustes. El entrenamiento completo se invoca desde la raíz del repositorio mediante `python scripts/train_variants.py --device auto`. La ejecución admite CPU o una GPU CUDA/ROCm compatible con la instalación de PyTorch; `--device cpu` fuerza CPU y `--device gpu` exige GPU. El registro identifica el dispositivo utilizado.
 '''
 
 def source_nodes(path):
     nodes=[]
-    for node in ast.parse(path.read_text()).body:
+    for node in ast.parse(path.read_text(encoding='utf-8')).body:
         if isinstance(node,ast.ImportFrom) and (node.module or '').startswith('colombia_energy'):continue
         if isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ROOT' for t in node.targets):continue
         if isinstance(node,ast.Expr) and isinstance(node.value,ast.Call) and ast.unparse(node.value.func)=='sys.path.insert':continue
@@ -306,11 +306,13 @@ axes[0].legend(frameon=False,fontsize=8)
 fig.tight_layout(); plt.show()''')]
     cells += [nbf.v4.new_markdown_cell(END)]
     cells += [nbf.v4.new_code_cell("SOURCE_PATH = ROOT / 'scripts/train_variants.py'")]
+    runtime_names=ast.parse('select_device; synchronize_device; seed_training; runtime_environment; exclusive_run').body
+    cells += catalog.support_cells(runtime_names)
     for node in source_nodes(ROOT/'scripts/train_variants.py'):
         code=ast.unparse(node).replace('Path(__file__).read_bytes()', 'SOURCE_PATH.read_bytes()')
         if not isinstance(node,ast.Expr) or not isinstance(node.value,ast.Constant):
             cells.append(nbf.v4.new_code_cell(code))
-    cells += [nbf.v4.new_markdown_cell('### Reproducción y trazabilidad\n\nLas fuentes y el registro experimental se conservan en `scripts/train_variants.py` y `PROTOCOLO_VARIANTES_2026-11-05.md`; los resultados están en `results/variant_search/`. La configuración registra huellas de código y protocolo; cada checkpoint incluye arquitectura, contexto, penalización, semilla, escaladores y época óptima. La ejecución documental verifica resultados existentes y no inicia entrenamiento.\n\nPyTorch 2.9.1+rocm6.4, Python 3.12.3 y AMD Radeon RX 6700 XT de 12 GB constituyen el entorno experimental. La ejecución empleó el ajuste de compatibilidad local `HSA_OVERRIDE_GFX_VERSION=10.3.0`; no se presupone necesario para otros dispositivos. Los datos y supuestos retrospectivos se describen en los capítulos de fuentes y validación.')]
+    cells += [nbf.v4.new_markdown_cell('### Reproducción y trazabilidad\n\nLas fuentes originales del experimento se conservan con sus huellas en `resources/experiment_sources/`; el registro es `PROTOCOLO_VARIANTES_2026-11-05.md`. La versión portable de ejecución está en `scripts/train_variants.py`; los resultados están en `results/variant_search/`. La configuración histórica registra huellas del código original archivado y del protocolo; cada checkpoint incluye arquitectura, contexto, penalización, semilla, escaladores y época óptima. La ejecución documental verifica resultados existentes y no inicia entrenamiento.\n\nPyTorch 2.9.1+rocm6.4, Python 3.12.3 y AMD Radeon RX 6700 XT de 12 GB constituyen el entorno experimental. La ejecución empleó el ajuste de compatibilidad local `HSA_OVERRIDE_GFX_VERSION=10.3.0`; no se presupone necesario para otros dispositivos. La reconstrucción documental se realiza por CPU en Windows y Linux; no requiere los controladores de ese equipo ni repite los ajustes. Las nuevas ejecuciones usan una carpeta distinta y registran su entorno; los resultados entre dispositivos pueden diferir por aritmética y algoritmos de cálculo. Los datos y supuestos retrospectivos se describen en los capítulos de fuentes y validación.')]
     nb=nbf.v4.new_notebook(cells=cells)
     nb.metadata.kernelspec=dict(name='python3',display_name='Python 3',language='python')
     nb.metadata.language_info=dict(name='python',version='3.12')
@@ -323,6 +325,7 @@ fig.tight_layout(); plt.show()''')]
             if previous.cell_type==current.cell_type:current.id=previous.id
             if previous.cell_type==current.cell_type=='code' and previous.source==current.source:
                 current.outputs=previous.get('outputs',[]);current.execution_count=previous.get('execution_count')
-    nbf.write(nb,path)
+    with path.open('w',encoding='utf-8',newline='\n') as stream:
+        nbf.write(nb,stream)
 
 if __name__=='__main__':main()

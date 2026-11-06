@@ -41,3 +41,6 @@ El inventario de archivos aportados conserva sus huellas y señala que los docum
 - Goodfellow, I., Bengio, Y. y Courville, A. (2016). *Deep Learning*. MIT Press. [Redes de propagación hacia delante](https://www.deeplearningbook.org/contents/mlp.html) y [redes convolucionales](https://www.deeplearningbook.org/contents/convnets.html).
 - Hochreiter, S. y Schmidhuber, J. (1997). Long Short-Term Memory. *Neural Computation*, 9(8), 1735–1780. [Texto completo](https://www.bioinf.jku.at/publications/older/2604.pdf).
 - PyTorch. Documentación de [LSTM](https://docs.pytorch.org/docs/stable/generated/torch.nn.LSTM.html), [Conv1d](https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv1d.html) y [Softplus](https://docs.pytorch.org/docs/stable/generated/torch.nn.Softplus.html). Las ecuaciones y convenciones implementadas se contrastan con esta documentación; las versiones efectivamente ejecutadas se registran en los artefactos experimentales.
+
+
+- Lago, J., De Ridder, F. y De Schutter, B. (2018). Forecasting spot electricity prices: Deep learning approaches and empirical comparison of traditional algorithms. *Applied Energy*, 221, 386–405. [DOI](https://doi.org/10.1016/j.apenergy.2018.02.069) · [Texto completo](https://jesuslago.com/wp-content/uploads/Lago2018b.pdf).

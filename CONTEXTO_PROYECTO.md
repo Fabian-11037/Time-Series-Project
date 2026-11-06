@@ -14,6 +14,7 @@ El objetivo general es desarrollar un modelo de pronóstico que integre series t
 Estado al actualizar este archivo:
 
 - Dataset consolidado, versionado y auditado; EDA y revisión bibliográfica publicados.
+- Código adaptado para Windows/Linux y entrenamiento CPU o GPU CUDA/ROCm, con dispositivo registrado y fuentes experimentales originales preservadas. Véase `EJECUCION.md` y sección 18.
 - **Prueba 2022–2025 evaluada el 5 de noviembre de 2026 por solicitud explícita del usuario para las tres familias.** Ya no es un periodo sin consultar; véase sección 9. Los bloqueos de EDA y piloto continúan activos.
 - Pipeline de validación **`split_train_val_forwardChaining`** implementado y configurado con cinco folds.
 - Preparación de ventanas y escaladores independiente por fold; interfaz disponible para incorporar modelos.
@@ -75,11 +76,13 @@ Activar el entorno (`.venv\Scripts\Activate.ps1` en PowerShell o `source .venv/b
 
 ```bash
 python -m pip install -r requirements.lock.txt
+python -m pip install -r requirements-pytorch-cpu.txt
 python scripts/verify_dataset.py
 python -m unittest discover -s tests
 python scripts/prepare_pipeline.py
 python scripts/create_notebooks.py
 python scripts/create_literature_notebooks.py
+python scripts/create_model_notebook.py
 python scripts/run_eda.py
 python scripts/verify_book.py
 ```
@@ -241,3 +244,21 @@ Verificaciones nuevas: 17 pruebas correctas; 142 archivos de datos íntegros; 11
 Las configuraciones seleccionadas son C3 con 24 h, L2 con 72 h y M3 con 24 h; sus errores son de selección en validación. La prueba previa corresponde a las configuraciones iniciales de 168 h. Para el estado actual prevalecen estas precisiones sobre las descripciones históricas de preparación anterior al entrenamiento. No presentar 2022–2025 como una prueba intacta del diseño posterior.
 
 Pendientes documentados adicionales: expresiones desactualizadas en el capítulo 8, uso de «ajustes independientes» en el capítulo 10 y portabilidad a Windows (`fcntl` en script/cuaderno; búsqueda con GPU). Este clon distribuye predicciones seleccionadas, curvas y métricas, pero no todos los checkpoints ni predicciones de la prueba inicial. La revisión registra estas brechas sin modificar los experimentos ni el HTML.
+
+## 18. Portabilidad y evidencia bibliográfica, 6 de noviembre de 2026
+
+La implementación vigente admite Windows y Linux. `src/colombia_energy/runtime.py` selecciona CPU o GPU CUDA/ROCm y proporciona el bloqueo de carpeta: importa `msvcrt` sólo en Windows y `fcntl` sólo en Linux. Las funciones completas están también en las celdas del capítulo 10. Entrenamiento: `python scripts/train_variants.py --device auto`, `--device cpu` o `--device gpu`; se admite `cuda:N` y `--threads`. El piloto y la interpretación por permutación también admiten selección de dispositivo; el script de prueba conserva el acceso explícito y el bloqueo por evaluación ya completada.
+
+La selección automática utiliza una GPU detectada por PyTorch o CPU; no convierte una GPU no soportada en compatible ni cambia silenciosamente de dispositivo tras un error durante entrenamiento. La distribución PyTorch CPU permite construir el libro en ambos sistemas. Para GPU se requiere instalar la distribución y los controladores compatibles con el equipo; no se aplica globalmente el override AMD original. La reproducción bit a bit entre CPU/GPU o sistemas no está garantizada; se registran backend, versiones, dispositivo, hilos y determinismo.
+
+Las nuevas carpetas predeterminadas son `results/variant_search_portable` y `results/pilot_pytorch_portable`. Las fuentes y el entorno forman parte de su configuración: para cambiar dispositivo/fuentes se utiliza otra carpeta, sin mezclar ajustes. Los experimentos históricos y sus protocolos permanecen intactos. Sus fuentes originales exactas se conservan en `resources/experiment_sources/manifest.json`; los hashes antiguos se contrastan con esas copias, no con los scripts portables modificados. La comparación del AST verifica que `Variant`, `Forecaster`, `EarlyStop` y la penalización mantienen sus definiciones matemáticas.
+
+`run_eda.py` utiliza por defecto un kernel local de IPython/nbclient en un proceso separado por cuaderno, evitando dependencias de comunicación TCP en la ejecución documental. La cola de salidas se procesa sin bloquear el bucle de eventos; se verifican stdout, Markdown, tablas, figuras, errores y aislamiento entre procesos. Las dependencias documentales fijan ipykernel 6.30.1, jupyter_client 8.6.3 y nest-asyncio 1.6.0. `--kernel-mode tcp` conserva el modo convencional. El modo local se destina a las celdas síncronas del libro; las extensiones que necesiten await de nivel superior o funcionalidades interactivas del kernel deben usar el modo convencional y verificarse separadamente. El ejecutor del libro no inicia el benchmark de entrenamiento.
+
+Pruebas añadidas: entrenamiento y recarga por CPU de las tres familias iniciales y las doce variantes; selección auto/CPU/GPU; bloqueo entre procesos y liberación por error; guardas de prueba y carpetas congeladas; preservación de las arquitecturas; ejecución y salidas de cuadernos. La comprobación GPU real es condicional a disponer de CUDA/ROCm. Este equipo sólo aporta validación por CPU; no afirmar que se ejecutaron pruebas físicas de GPU aquí. El workflow configura la ejecución completa en `ubuntu-latest` y `windows-latest`; consultar sus resultados por commit en GitHub Actions. La evidencia local se guarda en `results/portability_verification.json`.
+
+Se incorporó evidencia dirigida de Lago et al. (2018, DOI `10.1016/j.apenergy.2018.02.069`) y Lago et al. (2021, DOI `10.1016/j.apenergy.2021.116983`) al capítulo 9 y a `literature/baseline_evidence_2026-11-06.csv`. `architecture_source_manifest.json` identifica las copias consultadas con URL, páginas y SHA-256. El primero aporta configuraciones concretas DNN, LSTM-DNN y CNN y un comparador MLP; el segundo, una DNN de referencia y metodología de evaluación. La tabla distingue modelos propuestos de comparadores. Estas consultas no cierran las frecuencias de uso como baseline de los estudios elegibles ni justifican automáticamente que las variantes actuales repliquen esas arquitecturas. δ, potencia y evaluación independiente siguen pendientes.
+
+Guía de instalación, dispositivos, reproducción y trazabilidad: `EJECUCION.md`. No se realizó un nuevo benchmark ni se reabrió prueba como parte de esta adaptación.
+
+Verificación local final de esta adaptación: 30 pruebas ejecutadas, 29 correctas y una omitida por ausencia de GPU CUDA/ROCm; los once cuadernos se ejecutaron completamente por CPU en Windows y se reconstruyó el HTML sin errores ni enlaces locales rotos. Las tablas numéricas anteriores se reprodujeron sin cambios de contenido. La verificación GPU real permanece condicionada a hardware disponible.

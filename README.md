@@ -85,3 +85,6 @@ Dropout fijo 0.1, salida Softplus positiva y parada anticipada por MAE. Referenc
 Se versionan las métricas de los 4800 ajustes y las predicciones/curvas de las tres configuraciones seleccionadas (75 ejecuciones). Las predicciones se distribuyen en `results/variant_search/selected_predictions.zip`, con huellas individuales en `selected_predictions_manifest.json`. Los checkpoints y el resto de artefactos de entrenamiento permanecen en el archivo local; no se incluyen los 5.4 GB completos en Git. Los scripts permiten regenerarlos. El libro se reconstruye con las predicciones seleccionadas, sin necesidad de pesos ni GPU.
 
 Para reconstrucción documental, instalar `requirements.lock.txt` y después `requirements-pytorch-cpu.txt`, generar los cuadernos con los tres generadores de `scripts/` y ejecutar `scripts/run_eda.py`. El generador nuevo es `scripts/create_model_notebook.py`. Para entrenamiento AMD, usar el entorno PyTorch/ROCm registrado en los artefactos, no el paquete CPU documental.
+
+
+Ejecución en Windows/Linux y entrenamiento CPU/GPU: [EJECUCION.md](EJECUCION.md). La evidencia dirigida para la extracción de arquitecturas se encuentra en `literature/baseline_evidence_2026-11-06.csv` y en el capítulo de literatura.

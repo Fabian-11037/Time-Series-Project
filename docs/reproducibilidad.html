@@ -369,6 +369,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-numericos">Modelos numéricos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-operativos-y-dispositivos">Sistemas operativos y dispositivos</a></li>
 </ul>
             </nav>
         </div>
@@ -412,6 +413,10 @@ python<span class="w"> </span>scripts/verify_book.py
 <h2>Modelos numéricos<a class="headerlink" href="#modelos-numericos" title="Link to this heading">#</a></h2>
 <p>El capítulo de modelos se genera con <code class="docutils literal notranslate"><span class="pre">scripts/create_model_notebook.py</span></code> y se ejecuta con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">scripts/run_eda.py</span> <span class="pre">--chapters</span> <span class="pre">10_modelos</span> <span class="pre">--no-build</span></code>. Sus celdas incluyen el código de preparación temporal, arquitectura y entrenamiento, y verifican las métricas desde artefactos existentes sin repetir la búsqueda. El entrenamiento exige el entorno PyTorch registrado en <code class="docutils literal notranslate"><span class="pre">results/variant_search/environment.json</span></code>; Jupyter Book permanece en la versión 1.0.4. Las fuentes y el registro experimental se identifican mediante huellas en <code class="docutils literal notranslate"><span class="pre">configuration.json</span></code>.</p>
 <p>La búsqueda compara 192 configuraciones mediante 4800 ajustes en desarrollo 2000–2021. Los orígenes se comparten entre contextos y cada fold ajusta sus escaladores sólo con entrenamiento. El periodo 2022–2025 se evaluó previamente para configuraciones iniciales y no se reevalúa en esta búsqueda. Las métricas de selección no equivalen a errores de prueba de los candidatos seleccionados.</p>
+</section>
+<section id="sistemas-operativos-y-dispositivos">
+<h2>Sistemas operativos y dispositivos<a class="headerlink" href="#sistemas-operativos-y-dispositivos" title="Link to this heading">#</a></h2>
+<p>El libro se ejecuta por CPU en Windows y Linux con las dependencias fijadas. La selección de dispositivo y el bloqueo de ejecuciones se incluyen como código en el capítulo de modelos. El entrenamiento utiliza <code class="docutils literal notranslate"><span class="pre">--device</span> <span class="pre">auto</span></code>, <code class="docutils literal notranslate"><span class="pre">--device</span> <span class="pre">cpu</span></code> o <code class="docutils literal notranslate"><span class="pre">--device</span> <span class="pre">gpu</span></code>; la GPU requiere una instalación CUDA/ROCm compatible. La configuración registra sistema, versiones y dispositivo. Las nuevas ejecuciones se separan de los resultados históricos y no reabren la prueba ya evaluada. Las instrucciones completas están en <a class="reference external" href="https://github.com/Fabian-11037/Time-Series-Project/blob/main/EJECUCION.md">la guía de ejecución</a>.</p>
 </section>
 </section>
 
@@ -484,6 +489,7 @@ python<span class="w"> </span>scripts/verify_book.py
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particion-y-disponibilidad-temporal">Partición y disponibilidad temporal</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedencia">Procedencia</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-numericos">Modelos numéricos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-operativos-y-dispositivos">Sistemas operativos y dispositivos</a></li>
 </ul>
   </nav></div>
 

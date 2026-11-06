@@ -61,3 +61,8 @@ El 5 de noviembre de 2026 se reentrenaron los tres modelos con desarrollo comple
 ## Búsqueda de variantes con Dropout fijo
 
 Iniciada el5de noviembre de2026. Registro: `PROTOCOLO_VARIANTES_2026-11-05.md`. Script reanudable: `scripts/train_variants.py`,192configuraciones y4800ajustes, sólo desarrollo, salida positiva Softplus y parada anticipada. Estado vivo: `results/variant_search/status.json`; URL/PID del panel local: `results/variant_search/processes.json`. La barra de consola se obtiene con `python scripts/show_training_progress.py --watch`. No lanzar una copia mientras otra ejecución tenga el bloqueo. Las métricas de selección con parada sobre validación no son una evaluación externa independiente.
+
+
+## Ejecución portable
+
+Los scripts `train_pytorch.py` y `train_variants.py` aceptan `--device auto|cpu|gpu|cuda:N` y `--threads`. La implementación de dispositivo/bloqueo está en `src/colombia_energy/runtime.py` y se incorpora al cuaderno de modelos. Las fuentes originales referidas por los hashes históricos se preservan en `resources/experiment_sources/`. Consulte [EJECUCION.md](EJECUCION.md) para dependencias, sistemas soportados, separación de resultados y protección de prueba.

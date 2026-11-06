@@ -38,3 +38,8 @@ Los scripts de adquisición se conservan en `scripts/acquisition/`. La conversi�
 El capítulo de modelos se genera con `scripts/create_model_notebook.py` y se ejecuta con `python scripts/run_eda.py --chapters 10_modelos --no-build`. Sus celdas incluyen el código de preparación temporal, arquitectura y entrenamiento, y verifican las métricas desde artefactos existentes sin repetir la búsqueda. El entrenamiento exige el entorno PyTorch registrado en `results/variant_search/environment.json`; Jupyter Book permanece en la versión 1.0.4. Las fuentes y el registro experimental se identifican mediante huellas en `configuration.json`.
 
 La búsqueda compara 192 configuraciones mediante 4800 ajustes en desarrollo 2000–2021. Los orígenes se comparten entre contextos y cada fold ajusta sus escaladores sólo con entrenamiento. El periodo 2022–2025 se evaluó previamente para configuraciones iniciales y no se reevalúa en esta búsqueda. Las métricas de selección no equivalen a errores de prueba de los candidatos seleccionados.
+
+
+## Sistemas operativos y dispositivos
+
+El libro se ejecuta por CPU en Windows y Linux con las dependencias fijadas. La selección de dispositivo y el bloqueo de ejecuciones se incluyen como código en el capítulo de modelos. El entrenamiento utiliza `--device auto`, `--device cpu` o `--device gpu`; la GPU requiere una instalación CUDA/ROCm compatible. La configuración registra sistema, versiones y dispositivo. Las nuevas ejecuciones se separan de los resultados históricos y no reabren la prueba ya evaluada. Las instrucciones completas están en [la guía de ejecución](https://github.com/Fabian-11037/Time-Series-Project/blob/main/EJECUCION.md).

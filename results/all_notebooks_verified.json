@@ -49,7 +49,7 @@
   },
   {
     "notebook": "09_literatura.ipynb",
-    "code_cells": 12,
+    "code_cells": 13,
     "presentation_inputs_removed": 5,
     "errors": 0
   },
@@ -61,7 +61,7 @@
   },
   {
     "notebook": "10_modelos.ipynb",
-    "code_cells": 35,
+    "code_cells": 42,
     "presentation_inputs_removed": 1,
     "errors": 0
   }

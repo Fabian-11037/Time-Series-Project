@@ -1,0 +1,18 @@
+{
+  "train_variants": {
+    "path": "resources/experiment_sources/train_variants_2026-11-05.py",
+    "sha256": "a42c95db87b1d990daa3ad1b65f0f1088c919cd38a6544e9d1b0b43e8679e1ff"
+  },
+  "train_pytorch": {
+    "path": "resources/experiment_sources/train_pytorch_2026-11-05.py",
+    "sha256": "28c110c120280aba964531c703dcfb42bb9d666810515a42b61002a77c8e70ed"
+  },
+  "evaluate_test_pytorch": {
+    "path": "resources/experiment_sources/evaluate_test_pytorch_2026-11-05.py",
+    "sha256": "34e7f9102d068ac336e88aff014971317ea0b55c0ab052e6d27280c9e0f1b3a1"
+  },
+  "feature_importance_pytorch": {
+    "path": "resources/experiment_sources/feature_importance_pytorch_2026-11-05.py",
+    "sha256": "f2532394d77f4809be1d8a1ac658af6ef6bd9cc41891f410eb7fc1a7bd73b9dc"
+  }
+}

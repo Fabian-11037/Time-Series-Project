@@ -67,10 +67,18 @@ def main():
     for fold in folds:
         assert fold['train_end_exclusive']<=fold['validation_start']
         assert fold['validation_end_exclusive']<='2022-01-01 00:00:00-05:00'
+    model_nb=json.loads((ROOT/'book/10_modelos.ipynb').read_text(encoding='utf-8'))
+    model_nodes=[]
+    for cell in model_nb['cells']:
+        if cell['cell_type']=='code':
+            model_nodes.extend(ast.parse('\n'.join(line for line in ''.join(cell['source']).splitlines() if not line.startswith('%'))).body)
+    functions={n.name for n in model_nodes if isinstance(n,ast.FunctionDef)}
+    assert {'select_device','synchronize_device','seed_training','runtime_environment','exclusive_run'}.issubset(functions)
+    assert model_nb['metadata']['inline_analysis_sources']['runtime']==hashlib.sha256((ROOT/'src/colombia_energy/runtime.py').read_bytes()).hexdigest()
     report=dict(html_pages=len(pages),notebooks_executed=len(notebooks),
         code_cells=sum(r['code_cells'] for r in notebooks),cell_errors=0,
         broken_local_references=broken,analysis_code_in_notebooks=True,analysis_inputs_visible=True,presentation_inputs_removed=sum(r['presentation_inputs_removed'] for r in notebooks),project_library_imports=0,E1_numeric_only=True,
-        headline_topic_fit_split='train',headline_topic_test_documents_read=0,validation_method=config['method'],forward_chaining_folds=len(folds))
+        portable_runtime_code_in_notebook=True,headline_topic_fit_split='train',headline_topic_test_documents_read=0,validation_method=config['method'],forward_chaining_folds=len(folds))
     (ROOT/'results/all_notebooks_verified.json').write_text(json.dumps(notebooks,indent=2)+'\n',encoding='utf-8')
     (ROOT/'results/book_verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False,indent=2))

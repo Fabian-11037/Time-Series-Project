@@ -1,0 +1,6 @@
+referencia,modelo,papel_en_articulo,arquitectura_verificada,dataset,resultado_reportado,localizador,doi
+Lago et al. (2018),MLP,Referencia comparativa,Apéndice C: detalle pendiente de extracción,Mercado belga,sMAPE 13.27 %,"Tabla 7, p.12 PDF",10.1016/j.apenergy.2018.02.069
+Lago et al. (2018),DNN,Modelo propuesto,"Dos capas ocultas 239/162, ReLU; sin Dropout ni regularización en solución seleccionada",Mercado belga,sMAPE 12.34 %,"§5.4.1, tabla 3 p.11; tabla 7 p.12 PDF",10.1016/j.apenergy.2018.02.069
+Lago et al. (2018),LSTM-DNN,Modelo propuesto híbrido,LSTM 83 + densa 184; historia de dos semanas,Mercado belga,sMAPE 13.06 %,"§5.4.2, tabla 4; tabla 7 p.12 PDF",10.1016/j.apenergy.2018.02.069
+Lago et al. (2018),CNN,Modelo propuesto de dos ramas,"Cada rama: convoluciones 64/128/256, kernel 3, max pooling, batch normalization; Dropout 0.31",Mercado belga,sMAPE 13.91 %,"§5.4.4, tabla 6; tabla 7 p.12 PDF",10.1016/j.apenergy.2018.02.069
+Lago et al. (2021),DNN,Referencia del benchmark,"Dos capas ocultas, salida 24, Adam; ancho e hiperparámetros optimizados por mercado",Nord Pool (ejemplo tabla 2); además PJM y EPEX BE/FR/DE,NP: MAE DNN3 1.712; LEAR84 1.952,§4.3 pp.9–10; tabla 2 p.15 PDF,10.1016/j.apenergy.2021.116983

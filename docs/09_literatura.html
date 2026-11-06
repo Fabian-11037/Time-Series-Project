@@ -34,10 +34,10 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a009507d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
   
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -218,7 +218,7 @@
 <li class="toctree-l1"><a class="reference internal" href="08_validacion.html">8. Partición, desplazamiento y controles de fuga</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Literatura consultada e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">10. Síntesis e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias y fuentes</a></li>
 </ul>
@@ -369,6 +369,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resultados-extraidos-de-los-estudios">Resultados extraídos de los estudios</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-complementaria">Documentación complementaria</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicaciones-para-el-diseno-del-pronostico">Implicaciones para el diseño del pronóstico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evidencia-especifica-para-la-seleccion-de-modelos-numericos">9.1 Evidencia específica para la selección de modelos numéricos</a></li>
 </ul>
             </nav>
         </div>
@@ -745,6 +746,91 @@
 <h2>Implicaciones para el diseño del pronóstico<a class="headerlink" href="#implicaciones-para-el-diseno-del-pronostico" title="Link to this heading">#</a></h2>
 <p>Las familias MLP, LSTM y CNN1D ofrecen representaciones complementarias de las relaciones entre rezagos, la memoria temporal y los patrones locales. Su caracterización como modelos de referencia requiere completar la extracción de arquitecturas y frecuencias de uso en los estudios elegibles.</p>
 <p>La evaluación del aporte textual requiere comparar modelos con el mismo bloque numérico, los mismos orígenes y una política común de disponibilidad. Los mecanismos de agrupamiento y fusión deben ajustarse con entrenamiento. La incertidumbre sobre versiones retrospectivas se incorpora al análisis de sensibilidad del diseño experimental.</p>
+</section>
+<section id="evidencia-especifica-para-la-seleccion-de-modelos-numericos">
+<h2>9.1 Evidencia específica para la selección de modelos numéricos<a class="headerlink" href="#evidencia-especifica-para-la-seleccion-de-modelos-numericos" title="Link to this heading">#</a></h2>
+<p>La extracción dirigida identifica configuraciones y resultados utilizables en la caracterización de modelos. Se distingue el papel de cada arquitectura en el artículo —propuesta o referencia comparativa— antes de contabilizar su uso como baseline.</p>
+<p><strong>Lago, De Ridder y De Schutter (2018).</strong> El estudio reporta una DNN con capas ocultas de 239 y 162 unidades, una LSTM de 83 unidades seguida de una capa densa de 184, y una CNN con dos ramas convolucionales. Estas configuraciones están descritas en §5.4 y tablas 3–6; sus sMAPE son 12,34 %, 13,06 % y 13,91 %, respectivamente (tabla 7). La MLP comparadora alcanza 13,27 %. Las redes propuestas aportan especificaciones arquitectónicas, pero su presencia no acredita frecuencia de uso como referencia en otros estudios. Las diferencias frente a M3/L2/C3 —anchos, ramas, regularización, entradas y salida— se documentan como adaptaciones. <a class="reference external" href="https://doi.org/10.1016/j.apenergy.2018.02.069">Artículo</a>.</p>
+<p><strong>Lago, Marcjasz, De Schutter y Weron (2021).</strong> El benchmark proporciona una DNN de dos capas ocultas, salida conjunta de 24 horas, Adam y selección de hiperparámetros (§4.3). En Nord Pool, DNN3 registra MAE 1,712 y LEAR84, 1,952 en la tabla 2; las unidades pertenecen a ese mercado. El estudio fundamenta referencias numéricas competitivas, evaluación temporal y contrastes de precisión (§5.4–5.5). Diferencia rMAE de MASE; ambas necesitan definiciones explícitas y consistentes de su referencia. <a class="reference external" href="https://doi.org/10.1016/j.apenergy.2021.116983">Artículo</a>.</p>
+<p>La tabla siguiente conserva los localizadores y el papel verificado de los modelos. Para cerrar la extracción se requiere completar, en los estudios elegibles, profundidad, ancho, regularización, entrenamiento, datos y resultados, y construir después la frecuencia de uso como baseline. Esta consulta dirigida no sustituye el cribado sistemático ni determina por sí sola las tres familias más frecuentes. El margen práctico δ y la potencia del experimento colombiano requieren una justificación propia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evidence</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'literature/baseline_evidence_2026-11-06.csv'</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">evidence</span><span class="p">[[</span><span class="s1">'referencia'</span><span class="p">,</span> <span class="s1">'modelo'</span><span class="p">,</span> <span class="s1">'papel_en_articulo'</span><span class="p">,</span> <span class="s1">'resultado_reportado'</span><span class="p">,</span> <span class="s1">'localizador'</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>referencia</th>
+      <th>modelo</th>
+      <th>papel_en_articulo</th>
+      <th>resultado_reportado</th>
+      <th>localizador</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Lago et al. (2018)</td>
+      <td>MLP</td>
+      <td>Referencia comparativa</td>
+      <td>sMAPE 13.27 %</td>
+      <td>Tabla 7, p.12 PDF</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lago et al. (2018)</td>
+      <td>DNN</td>
+      <td>Modelo propuesto</td>
+      <td>sMAPE 12.34 %</td>
+      <td>§5.4.1, tabla 3 p.11; tabla 7 p.12 PDF</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Lago et al. (2018)</td>
+      <td>LSTM-DNN</td>
+      <td>Modelo propuesto híbrido</td>
+      <td>sMAPE 13.06 %</td>
+      <td>§5.4.2, tabla 4; tabla 7 p.12 PDF</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Lago et al. (2018)</td>
+      <td>CNN</td>
+      <td>Modelo propuesto de dos ramas</td>
+      <td>sMAPE 13.91 %</td>
+      <td>§5.4.4, tabla 6; tabla 7 p.12 PDF</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lago et al. (2021)</td>
+      <td>DNN</td>
+      <td>Referencia del benchmark</td>
+      <td>NP: MAE DNN3 1.712; LEAR84 1.952</td>
+      <td>§4.3 pp.9–10; tabla 2 p.15 PDF</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
@@ -828,6 +914,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resultados-extraidos-de-los-estudios">Resultados extraídos de los estudios</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentacion-complementaria">Documentación complementaria</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implicaciones-para-el-diseno-del-pronostico">Implicaciones para el diseño del pronóstico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evidencia-especifica-para-la-seleccion-de-modelos-numericos">9.1 Evidencia específica para la selección de modelos numéricos</a></li>
 </ul>
   </nav></div>
 

@@ -75,3 +75,8 @@ La evaluación anterior de prueba utiliza contexto de 168 horas, salidas y entre
 5. **Cerrar reproducción y redacción.** Documentar el sistema operativo soportado, conservar el material necesario para reproducir resultados y armonizar capítulos/contexto. Verificar nuevamente cuadernos y publicación después de cambios.
 
 Esta revisión registra el estado y las brechas; no altera modelos, hiperparámetros, cortes, datos, protocolos históricos ni resultados del libro.
+
+
+## Actualización posterior de ejecución
+
+La adaptación posterior a la versión examinada incorpora ejecución documental Windows/Linux, selección CPU/GPU y fuentes experimentales históricas preservadas. La guía vigente es `EJECUCION.md` y su evidencia está en `results/portability_verification.json`. La tabla anterior describe la versión auditada; sus limitaciones de portabilidad se sustituyen por el estado de esta actualización. Las brechas bibliográficas e inferenciales continúan sujetas al cierre descrito.

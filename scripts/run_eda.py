@@ -15,7 +15,7 @@ for key,sub in [('MPLCONFIGDIR','mpl'),('JUPYTER_RUNTIME_DIR','jupyter'),('IPYTH
 for key in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']:os.environ[key]='1'
 os.environ['PYTHONUTF8']='1'
 
-def main(chapters=None,build=True,execute=True):
+def main(chapters=None,build=True,execute=True,kernel_mode='local'):
     if os.name=='nt':
         import asyncio
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -38,9 +38,14 @@ def main(chapters=None,build=True,execute=True):
     for path in (sorted((ROOT/'book').glob('*.ipynb')) if execute else []):
         if chapters and path.stem not in chapters:continue
         start=time.perf_counter();print('Ejecutando '+path.name,flush=True)
-        nb=nbformat.read(path,as_version=4)
-        client=NotebookClient(nb,timeout=1800,kernel_name='python3',resources={'metadata':{'path':str(ROOT/'book')}},kernel_manager_class=LocalKernelManager)
-        client.execute()
+        if kernel_mode=='local':
+            subprocess.run([sys.executable,str(ROOT/'scripts/execute_notebook_local.py'),str(path)],
+                cwd=ROOT/'book',check=True,timeout=2000)
+            nb=nbformat.read(path,as_version=4)
+        else:
+            nb=nbformat.read(path,as_version=4)
+            client=NotebookClient(nb,timeout=1800,kernel_name='python3',resources={'metadata':{'path':str(ROOT/'book')}},kernel_manager_class=LocalKernelManager)
+            client.execute()
         with path.open('w',encoding='utf-8',newline='\n') as stream:nbformat.write(nb,stream)
         errors=[out for cell in nb.cells if cell.cell_type=='code' for out in cell.get('outputs',[]) if out.output_type=='error']
         assert not errors
@@ -59,5 +64,5 @@ def main(chapters=None,build=True,execute=True):
     faulthandler.cancel_dump_traceback_later();trace.close()
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--chapters',nargs='*');p.add_argument('--no-build',action='store_true');p.add_argument('--build-only',action='store_true');a=p.parse_args()
-    main(a.chapters,not a.no_build,not a.build_only)
+    p=argparse.ArgumentParser();p.add_argument('--chapters',nargs='*');p.add_argument('--no-build',action='store_true');p.add_argument('--build-only',action='store_true');p.add_argument('--kernel-mode',choices=['local','tcp'],default='local');a=p.parse_args()
+    main(a.chapters,not a.no_build,not a.build_only,a.kernel_mode)

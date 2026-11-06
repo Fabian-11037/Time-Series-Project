@@ -23,7 +23,25 @@
     "variant_search_dropout": 0.1,
     "variant_search_completed": true,
     "variant_search_completed_runs": 4800,
-    "variant_search_results": "results/variant_search/RESUMEN_VARIANTES.md"
+    "variant_search_results": "results/variant_search/RESUMEN_VARIANTES.md",
+    "portable_runtime": {
+      "operating_systems": [
+        "Windows",
+        "Linux"
+      ],
+      "device_modes": [
+        "auto",
+        "cpu",
+        "gpu",
+        "cuda:N"
+      ],
+      "gpu_interfaces": [
+        "CUDA",
+        "ROCm"
+      ],
+      "new_run_output_suffix": "_portable",
+      "historical_sources_preserved": true
+    }
   },
   "E2_E3": {
     "text_corpus_preserved": true,

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "lago_2018",
+    "url": "https://jesuslago.com/wp-content/uploads/Lago2018b.pdf",
+    "retrieved_date_colombia": "2026-11-06",
+    "sha256": "da8cda75bf68cf90bb68e321fc258c0b6febf4636f61f8c33e897ce6fcff9c94",
+    "bytes": 1151908,
+    "pages": 20,
+    "scope": "Extracción dirigida de especificaciones y resultados; no revisión sistemática completa"
+  },
+  {
+    "name": "lago_2021",
+    "url": "https://jesuslago.com/wp-content/uploads/1-s2.0-S0306261921004529-main-1.pdf",
+    "retrieved_date_colombia": "2026-11-06",
+    "sha256": "ab1d0e5901c11b93c8457e3926028e042b1de17694e4ebf9c92ccde6ea36f5fb",
+    "bytes": 1540324,
+    "pages": 21,
+    "scope": "Extracción dirigida de especificaciones y resultados; no revisión sistemática completa"
+  }
+]
