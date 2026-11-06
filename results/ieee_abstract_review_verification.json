@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-06",
+  "records": 438,
+  "prioritized": 12,
+  "context": 8,
+  "retracted_records_excluded": 4,
+  "protected_files_unchanged": 357,
+  "baseline_frequency_csv_sha256": "cd936131a91265ef8350da718571de53c9743cd12bef66a062d9813ce6ceed72",
+  "new_fulltexts_reviewed": 0,
+  "test_data_read": false,
+  "models_changed": false,
+  "chapter_execution_errors": 0,
+  "broken_local_references": []
+}

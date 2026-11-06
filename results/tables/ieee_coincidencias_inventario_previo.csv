@@ -1,0 +1,29 @@
+,record_id,title,inherited_title_matches
+0,IEEE001,Multi-Modal Fusion Transformer for Multivariate Time Series Classification,H077
+1,IEEE002,Compute KV First: Scaling up Time Series Model with Cross-Retention-only Transformer,H036
+12,IEEE013,Time-Series Large Language Models: A Systematic Review of State-of-the-Art,H034
+22,IEEE023,Beyond Words: Adapting NLP Methodologies for Time Series Forecasting Challenges,H052
+26,IEEE027,Improving Stock Index Prediction Based on Financial Sentiment Analysis and Time Series Models,H048
+34,IEEE035,Volatility Forecasting in Stock Markets Using ML with NLP-Based Sentiments and Time Series Data,H031
+36,IEEE037,TS-PTLM: Enhancing General Time Series Analysis with Pre-Trained Language Models,H053
+40,IEEE041,Stock Return Prediction using Financial News: A Unified Sequence Model based on Hierarchical Attention and Long-Short Term Memory Networks,H081
+45,IEEE046,Enhancing Early Mortality Prediction With Clinical Notes as Time-Series Scores,H008
+55,IEEE056,Design Hybrid Model To Improve Stock Selection And Market Timing By Integrating Deep Learning And Sentiment Analysis,H025
+61,IEEE062,An Intelligent Multi-Modal Framework for AI-Driven Stock Market Forecasting and Investment Decision Support,H024
+66,IEEE067,"A Hybrid NLP Time Series Framework for Emotion, Sentiment, and Trend Forecasting: A Social Media Driven Decision Model for Sri Lankan Cake Businesses",H014
+68,IEEE069,Sales Forecast Assistant - Integrating Natural Language Processing with Machine Learning Forecasting Models,H006
+77,IEEE078,Transformer-Based Models for Commodity Trading Price Forecasting,H058
+93,IEEE094,AdamW-LSTM Next-Generation Economic Forecasting: Integrated Technical-Sentiment Indicators and Quantum-Driven Optimization for Market Prediction,H023
+121,IEEE122,Bitcoin Evolution Analytics: Twitter Sentiments to Predict Price Change as Bearish or Bullish,H072
+139,IEEE140,Impact of Regulatory Announcements and Sentiments on Market Volatility,H016
+153,IEEE154,A Hybrid LSTM-Based Model for Stock Price Prediction Using Sentiment Analysis and Volatility Features,H007
+172,IEEE173,Deep Learning-Based Investor Sentiment Indicator Construction and Stock Prediction Research,H066
+193,IEEE194,BERT-Enhanced Deep Gaussian Regression: A Unified Approach for Sentiment Analysis and Price Prediction,H063
+194,IEEE195,Leveraging LLMs for Financial News Analysis and Macroeconomic Indicator Nowcasting,H040
+232,IEEE233,Impact of News Sentiment on Foreign Exchange Rate Prediction,H065
+246,IEEE247,Sentiment-Driven Sector Forecasting: An NLP Based Approach to Investment Strategy,H026
+258,IEEE259,Forecasting Crude Oil Price Using Event Extraction,H082
+279,IEEE280,Improving Transmission Loss Forecasting Using Large Language Models,H041
+394,IEEE395,BELT: A Pipeline for Stock Price Prediction Using News,H083
+401,IEEE402,Predicting Merger and Acquisition Deal Completion and Stock Movement with Stance Detection,H067
+405,IEEE406,Hybrid Models for Stock Market Forecasting: Combining Technical Analysis and News Sentiment,H022

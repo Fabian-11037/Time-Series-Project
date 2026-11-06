@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-06",
+  "files": 5,
+  "exported_records": 438,
+  "unique_records": 438,
+  "duplicates_within_exports": 0,
+  "priority_studies": 12,
+  "context_studies": 8,
+  "selected_studies": 20,
+  "retracted_or_notices": 4,
+  "not_selected": 414,
+  "inherited_title_matches": 28,
+  "new_fulltexts_reviewed": 0,
+  "existing_verified_baseline_frequencies_modified": false,
+  "independent_double_review": false,
+  "search_strings_provided": false,
+  "selection_method": "Cribado asistido por reglas y lectura detallada de candidatos; priorización por cercanía al objetivo y contribución metodológica."
+}

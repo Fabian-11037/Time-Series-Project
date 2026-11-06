@@ -86,5 +86,17 @@
     "legacy_shift_comparison": "2000–2017 vs 2018–2021",
     "test_values_allowed": false,
     "retrospective_update_after_training": true
+  },
+  "IEEE_abstract_review": {
+    "unique_records": 438,
+    "priority_studies": 12,
+    "context_studies": 8,
+    "retracted_or_notices_excluded": 4,
+    "inherited_normalized_title_matches": 28,
+    "evidence_level": "provided_abstracts",
+    "new_fulltexts_reviewed": 0,
+    "verified_baseline_frequencies_modified": false,
+    "models_modified": false,
+    "evidence": "literature/ieee_abstracts_2026-11-06/"
   }
 }

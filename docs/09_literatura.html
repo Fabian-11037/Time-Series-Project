@@ -381,6 +381,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-de-los-textos-completos-examinados">Referencias de los textos completos examinados</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstracts-de-ieee-xplore-seleccion-y-arquitecturas-de-interes">9.3 Abstracts de IEEE Xplore: selección y arquitecturas de interés</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estudios-prioritarios-y-alcance-de-su-aportacion">Estudios prioritarios y alcance de su aportación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priorizacion-de-arquitecturas-para-evaluaciones-posteriores">Priorización de arquitecturas para evaluaciones posteriores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estudios-de-apoyo-y-controles-de-interpretacion">Estudios de apoyo y controles de interpretación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-identificadas-en-los-abstracts-seleccionados">Referencias identificadas en los abstracts seleccionados</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -394,7 +401,7 @@
 
   <section class="tex2jax_ignore mathjax_ignore" id="literatura-consultada-e-implicaciones-metodologicas">
 <h1>9. Literatura consultada e implicaciones metodológicas<a class="headerlink" href="#literatura-consultada-e-implicaciones-metodologicas" title="Link to this heading">#</a></h1>
-<p>La revisión integra un inventario de Scopus y Web of Science, una preselección de estudios y una consulta dirigida de textos completos. Los conteos del cribado previo se presentan junto con una auditoría de las exportaciones disponibles. La documentación del inventario presenta limitaciones de trazabilidad en las cadenas originales, los motivos de exclusión por registro y la revisión independiente.</p>
+<p>La revisión integra un inventario de Scopus y Web of Science, una preselección de estudios, una consulta dirigida de textos completos y cinco exportaciones de abstracts de IEEE Xplore analizadas en la sección 9.3. Los conteos del cribado previo se presentan junto con una auditoría de las exportaciones disponibles. La documentación del inventario presenta limitaciones de trazabilidad en las cadenas originales, los motivos de exclusión por registro y la revisión independiente.</p>
 <p>Las extracciones verificadas comprenden Time-MMD, NSW-EPNews, Tan y colaboradores, Lago y colaboradores, REST-TS, TeR-TSF y TimesX. El directorio <code class="docutils literal notranslate"><span class="pre">literature/</span></code> registra versiones, fuentes, huellas y localizadores de resultados. La caracterización de modelos de referencia se fundamenta en su descripción metodológica en texto completo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2043,6 +2050,758 @@ P_{\mathrm{CNN}}=(kp+1)c+(kc+1)c+(qc+1)H.
 <li><p><strong>Khalid et al. (2020; online 2019).</strong> Electricity Load and Price Forecasting Using Jaya-Long Short Term Memory (JLSTM) in Smart Grids. <a class="reference external" href="https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7516403/fullTextXML">10.3390/e22010010</a>.</p></li>
 <li><p><strong>Zamee et al. (2024).</strong> Self-Supervised Adaptive Learning Algorithm for Multi-Horizon Electricity Price Forecasting. <a class="reference external" href="https://opus.lib.uts.edu.au/bitstream/10453/181427/2/Self-Supervised_Adaptive_Learning_Algorithm_for_Multi-Horizon_Electricity_Price_Forecasting.pdf">10.1109/ACCESS.2024.3389039</a>.</p></li>
 </ul>
+</section>
+</section>
+<section id="abstracts-de-ieee-xplore-seleccion-y-arquitecturas-de-interes">
+<h2>9.3 Abstracts de IEEE Xplore: selección y arquitecturas de interés<a class="headerlink" href="#abstracts-de-ieee-xplore-seleccion-y-arquitecturas-de-interes" title="Link to this heading">#</a></h2>
+<p>Las cinco exportaciones aportadas el 6 de noviembre de 2026 contienen <strong>438 registros únicos</strong>. La ampliación evalúa su cercanía al precio eléctrico colombiano, los mecanismos de integración de información operativa y documental, la representación multivariada y la disponibilidad temporal. El cribado asistido por reglas y la lectura detallada de candidatos identifican <strong>12 estudios prioritarios y ocho de contexto</strong>. Cuatro registros están marcados como retractados o avisos de retractación y se excluyen de la evidencia. Los restantes 414 no se priorizan por distancia de objetivo, tarea o redundancia metodológica.</p>
+<p>La selección se fundamenta en los abstracts proporcionados. Las afirmaciones de desempeño se atribuyen a sus autores; arquitectura reproducible, comparadores, partición y resultados completos requieren consulta posterior. Este material amplía el mapa de candidatos y no se añade a las frecuencias verificadas de baselines de la sección 9.1. Las exportaciones no incluyen las cadenas originales de búsqueda ni permiten declarar una consulta exhaustiva a IEEE Xplore. Se detectan 28 coincidencias de título normalizado con el inventario heredado, que se registran para conciliación antes de combinar flujos.</p>
+<p>El <a class="reference external" href="https://github.com/Fabian-11037/Time-Series-Project/tree/main/literature/ieee_abstracts_2026-11-06">inventario y la extracción por estudio</a> conservan identificadores, procedencia, huellas, decisiones y evaluación crítica. Los originales y sus abstracts íntegros no se redistribuyen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ieee_dir</span> <span class="o">=</span> <span class="n">ROOT</span> <span class="o">/</span> <span class="s1">'literature/ieee_abstracts_2026-11-06'</span>
+<span class="n">ieee_records</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ieee_dir</span> <span class="o">/</span> <span class="s1">'records.csv'</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ieee_screen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ieee_dir</span> <span class="o">/</span> <span class="s1">'screening.csv'</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ieee_selected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ieee_dir</span> <span class="o">/</span> <span class="s1">'selected_abstracts.csv'</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ieee_manifest</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">((</span><span class="n">ieee_dir</span> <span class="o">/</span> <span class="s1">'source_manifest.json'</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">))</span>
+<span class="k">assert</span> <span class="n">ieee_records</span><span class="o">.</span><span class="n">record_id</span><span class="o">.</span><span class="n">is_unique</span> <span class="ow">and</span> <span class="n">ieee_screen</span><span class="o">.</span><span class="n">record_id</span><span class="o">.</span><span class="n">is_unique</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_records</span><span class="o">.</span><span class="n">record_id</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">record_id</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">ieee_records</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_records</span><span class="o">.</span><span class="n">doi</span><span class="o">.</span><span class="n">ne</span><span class="p">(</span><span class="s1">''</span><span class="p">),</span> <span class="s1">'doi'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span><span class="o">.</span><span class="n">is_unique</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">((</span><span class="n">f</span><span class="p">[</span><span class="s1">'records'</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">ieee_manifest</span><span class="p">[</span><span class="s1">'files'</span><span class="p">]))</span> <span class="o">==</span> <span class="n">ieee_manifest</span><span class="p">[</span><span class="s1">'exported_records'</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ieee_records</span><span class="p">)</span> <span class="o">==</span> <span class="n">ieee_manifest</span><span class="p">[</span><span class="s1">'unique_records'</span><span class="p">]</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_selected</span><span class="o">.</span><span class="n">record_id</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">decision</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">'prioritario'</span><span class="p">,</span> <span class="s1">'contexto'</span><span class="p">]),</span> <span class="s1">'record_id'</span><span class="p">])</span>
+<span class="k">assert</span> <span class="ow">not</span> <span class="n">ieee_selected</span><span class="o">.</span><span class="n">fulltext_reviewed</span><span class="o">.</span><span class="n">any</span><span class="p">()</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">ieee_selected</span><span class="o">.</span><span class="n">baseline_frequency_eligible</span><span class="o">.</span><span class="n">any</span><span class="p">())</span>
+<span class="k">assert</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">decision</span> <span class="o">==</span> <span class="s1">'excluido_retractacion'</span><span class="p">,</span> <span class="s1">'record_id'</span><span class="p">])</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">ieee_selected</span><span class="o">.</span><span class="n">record_id</span><span class="p">)</span>
+<span class="n">ieee_flow</span> <span class="o">=</span> <span class="n">ieee_screen</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'decision'</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">'registros'</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">table</span><span class="p">(</span><span class="n">ieee_flow</span><span class="p">,</span> <span class="s1">'ieee_seleccion_abstracts'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>registros</th>
+    </tr>
+    <tr>
+      <th>decision</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>contexto</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>excluido_retractacion</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>no_seleccionado</th>
+      <td>414</td>
+    </tr>
+    <tr>
+      <th>prioritario</th>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ieee_manifest</span><span class="p">[</span><span class="s1">'files'</span><span class="p">])[[</span><span class="s1">'file'</span><span class="p">,</span> <span class="s1">'records'</span><span class="p">,</span> <span class="s1">'sha256'</span><span class="p">]],</span> <span class="s1">'ieee_exportaciones_auditadas'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>file</th>
+      <th>records</th>
+      <th>sha256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>IEEE Xplore Citation Plain Text Download 2026....</td>
+      <td>99</td>
+      <td>111a138e95afbbabd7ebed7e2823c556fb21fcb37b008e...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IEEE Xplore Citation Plain Text Download 2026....</td>
+      <td>39</td>
+      <td>62b866c5c4c86518f9a8866c012f75a2d500727de4e2ed...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>IEEE Xplore Citation Plain Text Download 2026....</td>
+      <td>100</td>
+      <td>598b429ba789c09e92e59eeaadb1d3013d8b6d438f8ea7...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>IEEE Xplore Citation Plain Text Download 2026....</td>
+      <td>100</td>
+      <td>5fc7256099b62d22981c17bdc9a5fadce2b490a9eabb71...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>IEEE Xplore Citation Plain Text Download 2026....</td>
+      <td>100</td>
+      <td>c8d50bd172c28247cf18f30aa6e0afc03b10cb01ddc249...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">(</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">decision</span> <span class="o">==</span> <span class="s1">'excluido_retractacion'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'record_id'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'doi'</span><span class="p">]],</span> <span class="s1">'ieee_retractaciones_excluidas'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>record_id</th>
+      <th>title</th>
+      <th>doi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>136</th>
+      <td>IEEE137</td>
+      <td>Retraction Notice: Sentiment Analysis of Finan...</td>
+      <td>10.1109/WCCEST66994.2025.11752357</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>IEEE138</td>
+      <td>Retraction Notice: AI and Cost Management: Str...</td>
+      <td>10.1109/ICKECS61492.2024.11752943</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>IEEE193</td>
+      <td>Retracted: AI and Cost Management: Strategies ...</td>
+      <td>10.1109/ICKECS61492.2024.10616761</td>
+    </tr>
+    <tr>
+      <th>387</th>
+      <td>IEEE388</td>
+      <td>Retracted: Sentiment Analysis of Financial New...</td>
+      <td>10.1109/WCCEST66994.2025.11389979</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="estudios-prioritarios-y-alcance-de-su-aportacion">
+<h3>Estudios prioritarios y alcance de su aportación<a class="headerlink" href="#estudios-prioritarios-y-alcance-de-su-aportacion" title="Link to this heading">#</a></h3>
+<p><strong>Información operativa anticipatoria.</strong> IEEE428 integra informes de desconexiones programadas en un esquema de predicción inicial y refinamiento mediante clusters, con horizonte de 24 horas para pérdidas de transmisión. Es la referencia más cercana a utilizar anuncios de mantenimientos o restricciones de XM. IEEE280 convierte comentarios del operador de Alberta en series de sentimiento obtenidas con LLM y comunica mejoras de precisión del 2–3 % según modelo y experimento. Ambos pronostican pérdidas, no precios. El segundo abstract no identifica las redes, el LLM ni la métrica concreta; el porcentaje no se adopta como margen colombiano. La utilidad de estos textos depende de acreditar que el anuncio y su versión eran conocidos al origen.</p>
+<p><strong>Eventos y representación documental.</strong> AGESL (IEEE259) combina eventos extraídos de noticias, sentimiento e historia de precios para WTI; su red profunda de fusión no está suficientemente descrita en el resumen. HAN–LSTM (IEEE041) separa la atención sobre palabras/oraciones de la dependencia temporal. BELT (IEEE395) combina BERT ajustado y LSTM apilada con entrenamiento conjunto. Estos dos últimos evalúan dirección de retornos o precios bursátiles; requieren adaptar la salida a regresión de 24 precios y verificar que cualquier diferencia frente a la rama numérica utilice las mismas covariables y orígenes.</p>
+<p><strong>Referencia textual interpretable.</strong> TSITM (IEEE003) acopla LDA con regresión y regularización elastic net para seleccionar tópicos asociados a la serie. Es un control útil antes de introducir fusión profunda, aunque no pertenece a Deep Learning. El submuestreo aleatorio repetido descrito en su abstract debe sustituirse por validación cronológica en esta aplicación. Los tópicos se aprenden dentro de entrenamiento y no se convierten en una taxonomía temática manual.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ieee_priority</span> <span class="o">=</span> <span class="n">ieee_selected</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_selected</span><span class="o">.</span><span class="n">priority</span> <span class="o">==</span> <span class="s1">'prioritario'</span><span class="p">]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'record_id'</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">'display.max_colwidth'</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">ieee_priority</span><span class="p">[[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'objective'</span><span class="p">,</span> <span class="s1">'architecture'</span><span class="p">,</span> <span class="s1">'project_relevance'</span><span class="p">]],</span> <span class="s1">'ieee_estudios_prioritarios'</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">ieee_priority</span><span class="p">[[</span><span class="s1">'reported_result'</span><span class="p">,</span> <span class="s1">'critical_assessment'</span><span class="p">]],</span> <span class="s1">'ieee_resultados_y_limitaciones_abstracts'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>objective</th>
+      <th>architecture</th>
+      <th>project_relevance</th>
+    </tr>
+    <tr>
+      <th>record_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>IEEE003</th>
+      <td>Time Series Impact Through Topic Modeling</td>
+      <td>Desaprobación política y retornos de empresas</td>
+      <td>TSITM: LDA acoplada a regresión lineal con prior elastic net</td>
+      <td>Referencia interpretable para medir si tópicos aprendidos aportan información antes de añadir fusión profunda.</td>
+    </tr>
+    <tr>
+      <th>IEEE010</th>
+      <td>DDformer: Decomposition and Dimension Transformer for Multivariate Time Series Forecasting</td>
+      <td>Pronóstico multivariado de energía, finanzas y clima</td>
+      <td>DDformer: Transformer con descomposición tendencia/estacionalidad y expansión/reducción dimensional</td>
+      <td>Combina estructura de ciclos y dependencias entre variables, pertinentes para precio, demanda y meteorología.</td>
+    </tr>
+    <tr>
+      <th>IEEE021</th>
+      <td>MTS-Mixers: Multivariate Time Series Forecasting via Factorized Temporal and Channel Mixing</td>
+      <td>Pronóstico multivariado general</td>
+      <td>MTS-Mixers: mezcla temporal y de canales mediante módulos factorizados</td>
+      <td>Candidato numérico eficiente para separar dependencia temporal y relaciones entre las 37 variables.</td>
+    </tr>
+    <tr>
+      <th>IEEE025</th>
+      <td>Modeling Frequency Correlation to Achieve Better Long-Term Series Forecasting</td>
+      <td>Pronóstico multivariado de largo plazo</td>
+      <td>CSConv: filtrado espectral cruzado + convolución causal dilatada piramidal + MLP</td>
+      <td>Extiende CNN1D con escalas temporales y relaciones espectrales entre canales.</td>
+    </tr>
+    <tr>
+      <th>IEEE041</th>
+      <td>Stock Return Prediction using Financial News: A Unified Sequence Model based on Hierarchical Attention and Long-Short Term Memory Networks</td>
+      <td>Dirección de retornos bursátiles</td>
+      <td>HAN de palabras/oraciones + LSTM temporal</td>
+      <td>Ofrece una fusión jerárquica aprendida para varios titulares por origen, sin agrupamiento temático manual.</td>
+    </tr>
+    <tr>
+      <th>IEEE079</th>
+      <td>RSAM: Robust Self-Attention Based Multi-Horizon Model for Solar Irradiance Forecasting</td>
+      <td>Irradiancia solar multihorizonte</td>
+      <td>RSAM: Transformer con self-attention y regresión cuantílica</td>
+      <td>Referencia para pronósticos por horizonte e intervalos, útil en una extensión probabilística del precio.</td>
+    </tr>
+    <tr>
+      <th>IEEE088</th>
+      <td>Forwardformer: Efficient Transformer With Multi-Scale Forward Self-Attention for Day-Ahead Load Forecasting</td>
+      <td>Demanda eléctrica day-ahead</td>
+      <td>Forwardformer: atención hacia delante multiescala y encoder con doble decoder</td>
+      <td>Candidato para horizonte de 24 h y variaciones de calendario; atención local/dilatada y global.</td>
+    </tr>
+    <tr>
+      <th>IEEE096</th>
+      <td>Time Fusion Transformers: Integrating Deep Sentiment Embeddings for Probabilistic E-Commerce Sales Forecasting</td>
+      <td>Ventas probabilísticas de comercio electrónico</td>
+      <td>BART con LoRA + BGE M3 + Transformer encoder-decoder + ponderación dinámica de entradas</td>
+      <td>Mecanismo de fusión que adapta el peso textual a volumen y consistencia, pertinente ante cobertura desigual de titulares.</td>
+    </tr>
+    <tr>
+      <th>IEEE259</th>
+      <td>Forecasting Crude Oil Price Using Event Extraction</td>
+      <td>Precio WTI</td>
+      <td>AGESL: extracción de eventos + sentimiento + red neuronal profunda de fusión</td>
+      <td>Permite estudiar hechos operativos y regulatorios, además del tono de la noticia, como mecanismo de señal textual.</td>
+    </tr>
+    <tr>
+      <th>IEEE280</th>
+      <td>Improving Transmission Loss Forecasting Using Large Language Models</td>
+      <td>Pérdidas de transmisión</td>
+      <td>LLM para sentimiento + predictor estadístico/ML/DL no identificado</td>
+      <td>Transforma comentarios del operador de Alberta en una covariable temporal; antecedente directo para informes de XM.</td>
+    </tr>
+    <tr>
+      <th>IEEE395</th>
+      <td>BELT: A Pipeline for Stock Price Prediction Using News</td>
+      <td>Dirección bursátil</td>
+      <td>BELT: BERT ajustado + LSTM apilada many-to-many, entrenamiento conjunto</td>
+      <td>Referencia concreta para un encoder textual combinado con memoria temporal y relevancia aprendida.</td>
+    </tr>
+    <tr>
+      <th>IEEE428</th>
+      <td>Forecasting Transmission Line Loss Using a Cluster-Based Refinement Framework and Scheduled Outage Data</td>
+      <td>Pérdidas de transmisión a 24 h</td>
+      <td>Base inicial + refinamiento por clusters; NLP y submodelos no especificados</td>
+      <td>Integra informes de desconexiones programadas; es la analogía más cercana al texto anticipatorio de XM.</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>reported_result</th>
+      <th>critical_assessment</th>
+    </tr>
+    <tr>
+      <th>record_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>IEEE003</th>
+      <td>Los autores reportan MSE, MAE y R² fuera de muestra y contrastes; sin valores en el resumen.</td>
+      <td>La validación por submuestreo aleatorio repetido descrita en el abstract no debe trasladarse a las series temporales; usar folds cronológicos. No es un modelo de Deep Learning.</td>
+    </tr>
+    <tr>
+      <th>IEEE010</th>
+      <td>Los autores declaran una reducción de error de hasta 45,9 % frente a FEDformer.</td>
+      <td>La cifra es un máximo entre escenarios; métrica y protocolo no se detallan. Energía no implica precio eléctrico y la descomposición debe ser causal al origen.</td>
+    </tr>
+    <tr>
+      <th>IEEE021</th>
+      <td>Resultados competitivos y mayor eficiencia declarados en varios datasets; sin valores en el resumen.</td>
+      <td>El resumen no prueba precio eléctrico ni ganancia por texto; capas, anchos, parámetros y presupuesto requieren lectura completa.</td>
+    </tr>
+    <tr>
+      <th>IEEE025</th>
+      <td>Ocho datasets y resultados competitivos declarados; sin cifras en el resumen.</td>
+      <td>CSConv no es sinónimo de una TCN convencional. La estimación espectral y descomposición deben utilizar sólo la ventana pasada de cada origen.</td>
+    </tr>
+    <tr>
+      <th>IEEE041</th>
+      <td>Evaluación DJIA con métricas de clasificación; compara módulos aislados y Bag of Words.</td>
+      <td>Clasificación de retornos no equivale a regresión de 24 precios; se debe adaptar la salida y conservar el mismo bloque numérico en las ablaciones.</td>
+    </tr>
+    <tr>
+      <th>IEEE079</th>
+      <td>Dos sitios NREL; RMSE, MAE, MBE y forecast skill declarados, sin valores en el resumen.</td>
+      <td>No utiliza noticias según el abstract y no prueba precio eléctrico; revisar calibración y cobertura de intervalos además del error puntual.</td>
+    </tr>
+    <tr>
+      <th>IEEE088</th>
+      <td>Datasets de China y Estados Unidos; mejoras de precisión y tiempo declaradas, sin cifras en el abstract.</td>
+      <td>El objetivo es demanda, no precio. Referencia textual a NLP describe el origen de Transformer; no implica uso de noticias.</td>
+    </tr>
+    <tr>
+      <th>IEEE096</th>
+      <td>Autores declaran aproximadamente 20 % menos MAE/RMSE y 79 % mejor cold-start en 3000 productos durante doce meses.</td>
+      <td>No identificar automáticamente el modelo con Temporal Fusion Transformer canónico. Las cifras requieren verificar comparadores y partición; pesos de atención no demuestran causalidad; adaptar de reseñas a noticias e idioma español.</td>
+    </tr>
+    <tr>
+      <th>IEEE259</th>
+      <td>Los autores reportan superioridad sobre varios benchmarks, sin magnitud en el abstract.</td>
+      <td>La red de fusión, profundidad, comparadores, fechas de noticia y ablaciones no están detallados; transferencia desde petróleo requiere evaluación propia.</td>
+    </tr>
+    <tr>
+      <th>IEEE280</th>
+      <td>Los autores declaran mejoras de precisión de 2–3 %, dependientes de modelo y experimento.</td>
+      <td>El resumen no identifica LLM, redes, métrica concreta ni partición; sentimiento no garantiza anticipación y el porcentaje no fija el margen colombiano.</td>
+    </tr>
+    <tr>
+      <th>IEEE395</th>
+      <td>Los autores reportan mejora frente a historia sola y StockNet; no dan magnitud en el resumen.</td>
+      <td>No es regresión eléctrica; comprobar ventana de ajuste BERT, conocimiento del preentrenamiento, versiones de noticias y comparación con encoder congelado.</td>
+    </tr>
+    <tr>
+      <th>IEEE428</th>
+      <td>IEEE-118 y Alberta; autores reportan mejora frente a comparadores, sin cifra en el resumen.</td>
+      <td>Verificar fecha del anuncio y sus revisiones, horizonte de las desconexiones y ajuste de clusters sólo con entrenamiento; no es pronóstico de precio.</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="priorizacion-de-arquitecturas-para-evaluaciones-posteriores">
+<h3>Priorización de arquitecturas para evaluaciones posteriores<a class="headerlink" href="#priorizacion-de-arquitecturas-para-evaluaciones-posteriores" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>MTS-Mixers (IEEE021) y DLinear como referencia adicional (IEEE023).</strong> Separar mezcla temporal y de canales permite contrastar la necesidad de atención con una alternativa numérica eficiente. El abstract de MTS-Mixers no especifica anchos o profundidad. DLinear figura entre los modelos evaluados en IEEE023; no se infiere de ello una validación en precio eléctrico.</p></li>
+<li><p><strong>Convolución causal dilatada y multiescala inspirada en CSConv (IEEE025).</strong> Es la ampliación más cercana a CNN1D para captar varios ciclos. CSConv añade filtrado espectral cruzado y una salida basada en MLP; no equivale a una TCN convencional. Espectro y descomposición deben estimarse sobre información pasada de cada origen.</p></li>
+<li><p><strong>Forwardformer (IEEE088) y DDformer (IEEE010).</strong> El primero aporta atención multiescala y tratamiento de calendario en demanda day-ahead; el segundo combina descomposición tendencia/estacionalidad y transformaciones entre dimensiones. Constituyen alternativas numéricas para dependencias entre precio, demanda y clima. El máximo de reducción de error de 45,9 % declarado por DDformer frente a FEDformer no es una mejora promedio ni una ganancia ya acreditada en XM.</p></li>
+<li><p><strong>LSTM con HAN o BERT (IEEE041/IEEE395).</strong> Son diseños concretos para fusionar titulares y la representación numérica. Conviene comparar encoder congelado, ajuste del encoder y módulos de atención/relevancia aprendidos, con una rama numérica común y controles de texto permutado o retirado.</p></li>
+<li><p><strong>Fusión con ponderación dinámica (IEEE096).</strong> El abstract describe BART con LoRA, embeddings BGE M3 y un Transformer encoder-decoder que modula la influencia textual según volumen y consistencia. Esta idea es pertinente para la cobertura editorial desigual. El nombre <em>Time Fusion Transformers</em> no demuestra que implemente el Temporal Fusion Transformer canónico. Las reducciones aproximadas de MAE/RMSE y la mejora cold-start que comunica requieren verificar comparadores, periodos y ablaciones. La atención, por sí sola, no identifica un efecto causal.</p></li>
+<li><p><strong>Salida probabilística y multihorizonte inspirada en RSAM (IEEE079).</strong> Su Transformer con regresión cuantílica permite ampliar la evaluación puntual hacia cobertura y amplitud de intervalos. La evidencia se refiere a irradiancia y meteorología numérica, sin noticias exógenas.</p></li>
+</ol>
+<p>Las referencias numéricas MLP, LSTM y CNN1D existentes mantienen su función de comparación. Esta priorización identifica candidatos; sus espacios, presupuestos y evaluación temporal se definirán tras revisar los textos completos. Las arquitecturas propuestas en abstracts no acreditan por sí mismas uso como baseline en otros estudios.</p>
+</section>
+<section id="estudios-de-apoyo-y-controles-de-interpretacion">
+<h3>Estudios de apoyo y controles de interpretación<a class="headerlink" href="#estudios-de-apoyo-y-controles-de-interpretacion" title="Link to this heading">#</a></h3>
+<p>CKVF y LHCnn aportan alternativas de retención y convolución con atención; MTSMAE y TS-PTLM plantean preentrenamiento o adaptación de representaciones. Su inspiración en NLP no equivale a incorporar noticias observadas. Los trabajos de clima interior, lluvia y noticias ambientales sirven de contexto para covariables y auditoría documental, sin constituir evidencia directa de mejora en el precio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">'display.max_colwidth'</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">'display.max_rows'</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+    <span class="n">table</span><span class="p">(</span><span class="n">ieee_selected</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_selected</span><span class="o">.</span><span class="n">priority</span> <span class="o">==</span> <span class="s1">'contexto'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'record_id'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'architecture'</span><span class="p">,</span> <span class="s1">'critical_assessment'</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'record_id'</span><span class="p">),</span> <span class="s1">'ieee_estudios_contexto'</span><span class="p">)</span>
+<span class="n">ieee_matches</span> <span class="o">=</span> <span class="n">ieee_screen</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ieee_screen</span><span class="o">.</span><span class="n">inherited_title_matches</span><span class="o">.</span><span class="n">ne</span><span class="p">(</span><span class="s1">''</span><span class="p">),</span> <span class="p">[</span><span class="s1">'record_id'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'inherited_title_matches'</span><span class="p">]]</span>
+<span class="n">table</span><span class="p">(</span><span class="n">ieee_matches</span><span class="p">,</span> <span class="s1">'ieee_coincidencias_inventario_previo'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>architecture</th>
+      <th>critical_assessment</th>
+    </tr>
+    <tr>
+      <th>record_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>IEEE002</th>
+      <td>Compute KV First: Scaling up Time Series Model with Cross-Retention-only Transformer</td>
+      <td>CKVF: Transformer de cross-retention con adyacencia adaptativa</td>
+      <td>NLP inspira la arquitectura; no hay evidencia de noticias exógenas ni aplicación al precio eléctrico en el abstract.</td>
+    </tr>
+    <tr>
+      <th>IEEE008</th>
+      <td>LHCnn: A Novel Efficient Multivariate Time Series Prediction Framework Utilizing Convolutional Neural Networks</td>
+      <td>LHCnn: convoluciones de nivel bajo/alto con atención</td>
+      <td>CNN dimensionalidad, arquitectura reproducible y alcance del benchmark no especificados; no confundir atención sobre rasgos con NLP externo.</td>
+    </tr>
+    <tr>
+      <th>IEEE023</th>
+      <td>Beyond Words: Adapting NLP Methodologies for Time Series Forecasting Challenges</td>
+      <td>Autoformer, DLinear, WaveNet, DeepAR y SimpleFeedForward</td>
+      <td>Usar arquitecturas originadas en NLP no prueba beneficio de noticias. Faltan dataset, denominador MASE y protocolo para transferir ese valor.</td>
+    </tr>
+    <tr>
+      <th>IEEE029</th>
+      <td>MTSMAE: Masked Autoencoders for Multivariate Time-Series Forecasting</td>
+      <td>MTSMAE: Transformer con preentrenamiento por enmascaramiento y patches</td>
+      <td>El preentrenamiento local debe respetar los cortes; no usar las series completas de validación o prueba para aprender la representación.</td>
+    </tr>
+    <tr>
+      <th>IEEE037</th>
+      <td>TS-PTLM: Enhancing General Time Series Analysis with Pre-Trained Language Models</td>
+      <td>TS-PTLM: transferencia entre modalidades y adaptadores temporales/frecuenciales</td>
+      <td>No atribuir mejora al texto anticipatorio: el abstract describe alineamiento con modelos de lenguaje, no noticias externas del mercado.</td>
+    </tr>
+    <tr>
+      <th>IEEE060</th>
+      <td>Sequence to Sequence Deep Learning Architecture for Forecasting Temperature and Humidity inside Closed Space</td>
+      <td>LSTM seq2seq y GRU seq2seq</td>
+      <td>Unidades/normalización no quedan claras; clima interior no equivale a ciudades ERA5. Predecir covariables no autoriza usar su futuro realizado.</td>
+    </tr>
+    <tr>
+      <th>IEEE139</th>
+      <td>Bi-LSTM Model based Real-time Rainfall Prediction</td>
+      <td>BiLSTM frente a LSTM</td>
+      <td>Accuracy está insuficientemente definida para pronóstico continuo. Bidireccionalidad dentro de una ventana pasada no es fuga por sí sola; incluir observaciones posteriores al origen sí lo sería.</td>
+    </tr>
+    <tr>
+      <th>IEEE203</th>
+      <td>Understanding Climate Change and Air Quality Over the Last Decade: Evidence From News and Weather Data Processing</td>
+      <td>LDA, K-prototypes y K-means con reducción de dimensión</td>
+      <td>No es un benchmark predictivo ni prueba causal de noticias; los agrupamientos de una aplicación futura deben ajustarse dentro de entrenamiento.</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>record_id</th>
+      <th>title</th>
+      <th>inherited_title_matches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>IEEE001</td>
+      <td>Multi-Modal Fusion Transformer for Multivariat...</td>
+      <td>H077</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IEEE002</td>
+      <td>Compute KV First: Scaling up Time Series Model...</td>
+      <td>H036</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>IEEE013</td>
+      <td>Time-Series Large Language Models: A Systemati...</td>
+      <td>H034</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>IEEE023</td>
+      <td>Beyond Words: Adapting NLP Methodologies for T...</td>
+      <td>H052</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>IEEE027</td>
+      <td>Improving Stock Index Prediction Based on Fina...</td>
+      <td>H048</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>IEEE035</td>
+      <td>Volatility Forecasting in Stock Markets Using ...</td>
+      <td>H031</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>IEEE037</td>
+      <td>TS-PTLM: Enhancing General Time Series Analysi...</td>
+      <td>H053</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>IEEE041</td>
+      <td>Stock Return Prediction using Financial News: ...</td>
+      <td>H081</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>IEEE046</td>
+      <td>Enhancing Early Mortality Prediction With Clin...</td>
+      <td>H008</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>IEEE056</td>
+      <td>Design Hybrid Model To Improve Stock Selection...</td>
+      <td>H025</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>IEEE062</td>
+      <td>An Intelligent Multi-Modal Framework for AI-Dr...</td>
+      <td>H024</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>IEEE067</td>
+      <td>A Hybrid NLP Time Series Framework for Emotion...</td>
+      <td>H014</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>IEEE069</td>
+      <td>Sales Forecast Assistant - Integrating Natural...</td>
+      <td>H006</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>IEEE078</td>
+      <td>Transformer-Based Models for Commodity Trading...</td>
+      <td>H058</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>IEEE094</td>
+      <td>AdamW-LSTM Next-Generation Economic Forecastin...</td>
+      <td>H023</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>IEEE122</td>
+      <td>Bitcoin Evolution Analytics: Twitter Sentiment...</td>
+      <td>H072</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>IEEE140</td>
+      <td>Impact of Regulatory Announcements and Sentime...</td>
+      <td>H016</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>IEEE154</td>
+      <td>A Hybrid LSTM-Based Model for Stock Price Pred...</td>
+      <td>H007</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>IEEE173</td>
+      <td>Deep Learning-Based Investor Sentiment Indicat...</td>
+      <td>H066</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>IEEE194</td>
+      <td>BERT-Enhanced Deep Gaussian Regression: A Unif...</td>
+      <td>H063</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>IEEE195</td>
+      <td>Leveraging LLMs for Financial News Analysis an...</td>
+      <td>H040</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>IEEE233</td>
+      <td>Impact of News Sentiment on Foreign Exchange R...</td>
+      <td>H065</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>IEEE247</td>
+      <td>Sentiment-Driven Sector Forecasting: An NLP Ba...</td>
+      <td>H026</td>
+    </tr>
+    <tr>
+      <th>258</th>
+      <td>IEEE259</td>
+      <td>Forecasting Crude Oil Price Using Event Extrac...</td>
+      <td>H082</td>
+    </tr>
+    <tr>
+      <th>279</th>
+      <td>IEEE280</td>
+      <td>Improving Transmission Loss Forecasting Using ...</td>
+      <td>H041</td>
+    </tr>
+    <tr>
+      <th>394</th>
+      <td>IEEE395</td>
+      <td>BELT: A Pipeline for Stock Price Prediction Us...</td>
+      <td>H083</td>
+    </tr>
+    <tr>
+      <th>401</th>
+      <td>IEEE402</td>
+      <td>Predicting Merger and Acquisition Deal Complet...</td>
+      <td>H067</td>
+    </tr>
+    <tr>
+      <th>405</th>
+      <td>IEEE406</td>
+      <td>Hybrid Models for Stock Market Forecasting: Co...</td>
+      <td>H022</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>El cribado descarta equivalencias que alterarían la interpretación: FUSION (IEEE276) evalúa recuperación y respuesta a preguntas financieras con ROUGE, no precisión de precios; en IEEE437, NLP significa programación no lineal, no procesamiento de lenguaje natural. <em>Reservoir computing</em> (IEEE252) designa una arquitectura recurrente para clasificación documental y no modela embalses hidroeléctricos. En lluvia (IEEE139), la <em>accuracy</em> comunicada está insuficientemente definida para compararla con errores de regresión; procesar bidireccionalmente una ventana íntegramente pasada no constituye fuga por sí mismo.</p>
+<p>La revisión posterior debe extraer profundidad, ancho, regularización, optimización, comparadores y disponibilidad de cada entrada. Para informes operativos se comprobará anuncio frente a ejecución del evento; para noticias, publicación frente a recuperación; para preentrenamiento, periodo y procedencia del corpus. El aporte textual se evaluará con ablaciones que mantengan invariable la información numérica. Estas condiciones convierten la proximidad temática en una hipótesis verificable, sin atribuir al contexto colombiano las mejoras declaradas en otros dominios.</p>
+</section>
+<section id="referencias-identificadas-en-los-abstracts-seleccionados">
+<h3>Referencias identificadas en los abstracts seleccionados<a class="headerlink" href="#referencias-identificadas-en-los-abstracts-seleccionados" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>IEEE002.</strong> C. Zheng, «Compute KV First: Scaling up Time Series Model with Cross-Retention-only Transformer,» 2025 4th International Symposium on Computer Applications and Information Technology (ISCAIT), Xi’an, China, 2025, pp. 1267-1272, doi: 10.1109/ISCAIT64916.2025.11010571. <a class="reference external" href="https://doi.org/10.1109/ISCAIT64916.2025.11010571">DOI</a>.</p></li>
+<li><p><strong>IEEE003.</strong> J. Cendrero, J. Gonzalo, M. Galletero and I. Zapata, «Time Series Impact Through Topic Modeling,» in IEEE Access, vol. 10, pp. 97327-97347, 2022, doi: 10.1109/ACCESS.2022.3202960. <a class="reference external" href="https://doi.org/10.1109/ACCESS.2022.3202960">DOI</a>.</p></li>
+<li><p><strong>IEEE008.</strong> C. Liu, K. Li, J. Liu and C. Chen, «LHCnn: A Novel Efficient Multivariate Time Series Prediction Framework Utilizing Convolutional Neural Networks,» 2019 IEEE 21st International Conference on High Performance Computing and Communications; IEEE 17th International Conference on Smart City; IEEE 5th International Conference on Data Science and Systems (HPCC/SmartCity/DSS), Zhangjiajie, China, 2019, pp. 2324-2332, doi: 10.1109/HPCC/SmartCity/DSS.2019.00323. <a class="reference external" href="https://doi.org/10.1109/HPCC/SmartCity/DSS.2019.00323">DOI</a>.</p></li>
+<li><p><strong>IEEE010.</strong> S. Kawano and T. Kawahara, «DDformer: Decomposition and Dimension Transformer for Multivariate Time Series Forecasting,» 2024 19th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP), Chonburi, Thailand, 2024, pp. 1-6, doi: 10.1109/iSAI-NLP64410.2024.10799493. <a class="reference external" href="https://doi.org/10.1109/iSAI-NLP64410.2024.10799493">DOI</a>.</p></li>
+<li><p><strong>IEEE021.</strong> Z. Li, X. Li, Z. Rao, L. Pan and Z. Xu, «MTS-Mixers: Multivariate Time Series Forecasting via Factorized Temporal and Channel Mixing,» 2025 International Joint Conference on Neural Networks (IJCNN), Rome, Italy, 2025, pp. 1-8, doi: 10.1109/IJCNN64981.2025.11229402. <a class="reference external" href="https://doi.org/10.1109/IJCNN64981.2025.11229402">DOI</a>.</p></li>
+<li><p><strong>IEEE023.</strong> L. Dalal, R. Verma and R. Chahar, «Beyond Words: Adapting NLP Methodologies for Time Series Forecasting Challenges,» 2024 4th International Conference on Intelligent Technologies (CONIT), Bangalore, India, 2024, pp. 1-8, doi: 10.1109/CONIT61985.2024.10627058. <a class="reference external" href="https://doi.org/10.1109/CONIT61985.2024.10627058">DOI</a>.</p></li>
+<li><p><strong>IEEE025.</strong> Y. Zhai, Y. Li and W. Luo, «Modeling Frequency Correlation to Achieve Better Long-Term Series Forecasting,» 2025 IEEE International Conference on Big Data (BigData), Macau, China, 2025, pp. 1278-1287, doi: 10.1109/BigData66926.2025.11401830. <a class="reference external" href="https://doi.org/10.1109/BigData66926.2025.11401830">DOI</a>.</p></li>
+<li><p><strong>IEEE029.</strong> P. Tang and X. Zhang, «MTSMAE: Masked Autoencoders for Multivariate Time-Series Forecasting,» 2022 IEEE 34th International Conference on Tools with Artificial Intelligence (ICTAI), Macao, China, 2022, pp. 982-989, doi: 10.1109/ICTAI56018.2022.00150. <a class="reference external" href="https://doi.org/10.1109/ICTAI56018.2022.00150">DOI</a>.</p></li>
+<li><p><strong>IEEE037.</strong> X. Ye, S. Du, H. Shi, J. Hu, Y. Yang and T. Li, «TS-PTLM: Enhancing General Time Series Analysis with Pre-Trained Language Models,» 2024 10th International Conference on Computer and Communications (ICCC), Chengdu, China, 2024, pp. 263-268, doi: 10.1109/ICCC62609.2024.10942078. <a class="reference external" href="https://doi.org/10.1109/ICCC62609.2024.10942078">DOI</a>.</p></li>
+<li><p><strong>IEEE041.</strong> H. Chen and P. Liu, «Stock Return Prediction using Financial News: A Unified Sequence Model based on Hierarchical Attention and Long-Short Term Memory Networks,» 2021 International Conference on Signal Processing and Machine Learning (CONF-SPML), Stanford, CA, USA, 2021, pp. 133-138, doi: 10.1109/CONF-SPML54095.2021.00034. <a class="reference external" href="https://doi.org/10.1109/CONF-SPML54095.2021.00034">DOI</a>.</p></li>
+<li><p><strong>IEEE060.</strong> K. E. Setiawan, G. N. Elwirehardja and B. Pardamean, «Sequence to Sequence Deep Learning Architecture for Forecasting Temperature and Humidity inside Closed Space,» 2022 10th International Conference on Cyber and IT Service Management (CITSM), Yogyakarta, Indonesia, 2022, pp. 1-7, doi: 10.1109/CITSM56380.2022.9936008. <a class="reference external" href="https://doi.org/10.1109/CITSM56380.2022.9936008">DOI</a>.</p></li>
+<li><p><strong>IEEE079.</strong> S. Sharda, M. Singh and K. Sharma, «RSAM: Robust Self-Attention Based Multi-Horizon Model for Solar Irradiance Forecasting,» in IEEE Transactions on Sustainable Energy, vol. 12, no. 2, pp. 1394-1405, April 2021, doi: 10.1109/TSTE.2020.3046098. <a class="reference external" href="https://doi.org/10.1109/TSTE.2020.3046098">DOI</a>.</p></li>
+<li><p><strong>IEEE088.</strong> K. Qu, G. Si, Z. Shan, Q. Wang, X. Liu and C. Yang, «Forwardformer: Efficient Transformer With Multi-Scale Forward Self-Attention for Day-Ahead Load Forecasting,» in IEEE Transactions on Power Systems, vol. 39, no. 1, pp. 1421-1433, Jan. 2024, doi: 10.1109/TPWRS.2023.3266369. <a class="reference external" href="https://doi.org/10.1109/TPWRS.2023.3266369">DOI</a>.</p></li>
+<li><p><strong>IEEE096.</strong> S. Manivannan, N. Prasad, N. Patil, N. VGK, Y. Shinde and S. K. Gupta, «Time Fusion Transformers: Integrating Deep Sentiment Embeddings for Probabilistic E-Commerce Sales Forecasting,» 2026 International Conference on Natural Language Processing and Computer Vision (ICNPCV), BANGALORE, India, 2026, pp. 1-10, doi: 10.1109/ICNPCV69434.2026.11708925. <a class="reference external" href="https://doi.org/10.1109/ICNPCV69434.2026.11708925">DOI</a>.</p></li>
+<li><p><strong>IEEE139.</strong> N. A, N. P. SS, R. R and K. G. R, «Bi-LSTM Model based Real-time Rainfall Prediction,» 2023 Second International Conference on Augmented Intelligence and Sustainable Systems (ICAISS), Trichy, India, 2023, pp. 1078-1081, doi: 10.1109/ICAISS58487.2023.10250469. <a class="reference external" href="https://doi.org/10.1109/ICAISS58487.2023.10250469">DOI</a>.</p></li>
+<li><p><strong>IEEE203.</strong> A. -G. Văduva, M. Munteanu, S. -V. Oprea, A. Bâra and A. -M. Niculae, «Understanding Climate Change and Air Quality Over the Last Decade: Evidence From News and Weather Data Processing,» in IEEE Access, vol. 11, pp. 144631-144648, 2023, doi: 10.1109/ACCESS.2023.3345466. <a class="reference external" href="https://doi.org/10.1109/ACCESS.2023.3345466">DOI</a>.</p></li>
+<li><p><strong>IEEE259.</strong> J. Liu and X. Huang, «Forecasting Crude Oil Price Using Event Extraction,» in IEEE Access, vol. 9, pp. 149067-149076, 2021, doi: 10.1109/ACCESS.2021.3124802. <a class="reference external" href="https://doi.org/10.1109/ACCESS.2021.3124802">DOI</a>.</p></li>
+<li><p><strong>IEEE280.</strong> G. Egharevba, A. Dankers and H. Zareipour, «Improving Transmission Loss Forecasting Using Large Language Models,» 2024 IEEE PES Generation, Transmission and Distribution Latin America Conference and Industrial Exposition (GTDLA), Ixtapa, Mexico, 2024, pp. 1-6, doi: 10.1109/GTDLA61236.2024.10913949. <a class="reference external" href="https://doi.org/10.1109/GTDLA61236.2024.10913949">DOI</a>.</p></li>
+<li><p><strong>IEEE395.</strong> Y. Dong, D. Yan, A. I. Almudaifer, S. Yan, Z. Jiang and Y. Zhou, «BELT: A Pipeline for Stock Price Prediction Using News,» 2020 IEEE International Conference on Big Data (Big Data), Atlanta, GA, USA, 2020, pp. 1137-1146, doi: 10.1109/BigData50022.2020.9378345. <a class="reference external" href="https://doi.org/10.1109/BigData50022.2020.9378345">DOI</a>.</p></li>
+<li><p><strong>IEEE428.</strong> G. Egharevba, A. Dankers and H. Zareipour, «Forecasting Transmission Line Loss Using a Cluster-Based Refinement Framework and Scheduled Outage Data,» in IEEE Access, vol. 13, pp. 131378-131389, 2025, doi: 10.1109/ACCESS.2025.3591059. <a class="reference external" href="https://doi.org/10.1109/ACCESS.2025.3591059">DOI</a>.</p></li>
+</ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
@@ -2135,6 +2894,13 @@ P_{\mathrm{CNN}}=(kp+1)c+(kc+1)c+(qc+1)H.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#justificacion-de-los-tres-modelos">9.2 Justificación de los tres modelos</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brecha-delimitada-por-el-corpus">Brecha delimitada por el corpus</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-de-los-textos-completos-examinados">Referencias de los textos completos examinados</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstracts-de-ieee-xplore-seleccion-y-arquitecturas-de-interes">9.3 Abstracts de IEEE Xplore: selección y arquitecturas de interés</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estudios-prioritarios-y-alcance-de-su-aportacion">Estudios prioritarios y alcance de su aportación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#priorizacion-de-arquitecturas-para-evaluaciones-posteriores">Priorización de arquitecturas para evaluaciones posteriores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estudios-de-apoyo-y-controles-de-interpretacion">Estudios de apoyo y controles de interpretación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias-identificadas-en-los-abstracts-seleccionados">Referencias identificadas en los abstracts seleccionados</a></li>
 </ul>
 </li>
 </ul>
