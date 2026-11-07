@@ -62,11 +62,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '08_validacion';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="9. Literatura consultada e implicaciones metodológicas" href="09_literatura.html" />
+    <link rel="next" title="9. Literatura: estudios relevantes y selección de modelos" href="09_literatura.html" />
     <link rel="prev" title="7. Texto: cobertura, duplicados y disponibilidad" href="07_texto.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -216,7 +218,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_covariables.html">6. Demanda, clima e hidrología</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_texto.html">7. Texto: cobertura, duplicados y disponibilidad</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Partición, desplazamiento y controles de fuga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura consultada e implicaciones metodológicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_literatura.html">9. Literatura: estudios relevantes y selección de modelos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_modelos.html">10. Modelos numéricos y búsqueda de configuraciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_conclusiones.html">11. Síntesis e implicaciones metodológicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reproducibilidad.html">Reproducibilidad</a></li>
@@ -367,6 +369,7 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-de-validacion-forward-chaining">8.1 Pipeline de validación forward chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrica-principal-y-criterio-de-comparacion">8.2 Métrica principal y criterio de comparación</a></li>
 </ul>
             </nav>
         </div>
@@ -380,9 +383,10 @@
 
   <section class="tex2jax_ignore mathjax_ignore" id="particion-desplazamiento-y-controles-de-fuga">
 <h1>8. Partición, desplazamiento y controles de fuga<a class="headerlink" href="#particion-desplazamiento-y-controles-de-fuga" title="Link to this heading">#</a></h1>
-<p>El diseño de entrenamiento utiliza cinco folds de validación forward chaining dentro de 2000–2021 y reserva 2022–2025 para prueba. Los contrastes descriptivos entre 2000–2017 y 2018–2021 que se presentan a continuación caracterizan el desplazamiento entre dos subperiodos disjuntos. Sólo se muestran distribuciones del objetivo y covariables de entrenamiento/validación. Del tramo de prueba se usan calendario y controles de integridad/procedencia, sin explorar sus valores para decidir preprocesamiento.</p>
+<p>El desarrollo 2000–2021 utiliza cinco folds de validación forward chaining. El periodo 2022–2025 se evaluó el 5 de noviembre de 2026 con las configuraciones iniciales de 168 horas; esa evaluación precedió a la búsqueda de variantes y no constituye una prueba intacta para el diseño seleccionado posteriormente. Los diagnósticos de este capítulo utilizan desarrollo y comprobaciones de calendario e integridad, sin volver a evaluar los modelos en prueba.</p>
+<p>Los contrastes entre 2000–2017 y 2018–2021 caracterizan el desplazamiento entre dos subperiodos disjuntos de desarrollo. Las etiquetas train y validation de sus tablas identifican ese contraste histórico; los cinco folds expansivos constituyen la partición activa del entrenamiento.</p>
 <p>KS se presenta como distancia descriptiva sin su p-valor IID; Wasserstein se normaliza con el IQR de entrenamiento. El intervalo de la diferencia de medias usa bootstrap de bloques móviles de 30 días, con 199 réplicas y semilla fija. Supone estabilidad aproximada dentro de cada periodo y se interpreta como diagnóstico.</p>
-<p>El diseño de pronóstico considerado utiliza origen diario, contexto de una semana y salida directa de las siguientes 24 horas. Los conteos de ventanas sólo usan calendario: no leen valores de prueba. Los horizontes que atraviesan un corte se purgan. Los entrenamientos exploratorios existentes y la evaluación inicial se documentan en el capítulo de modelos; los experimentos confirmatorios restantes requieren un protocolo establecido antes de obtener nuevos resultados.</p>
+<p>El pronóstico utiliza origen diario y salida directa de las siguientes 24 horas. El pipeline inicial y los conteos diagnósticos de calendario emplean 168 horas de contexto; la búsqueda posterior compara 24, 72, 168 y 336 horas sobre orígenes comunes determinados por la ventana máxima. Los conteos de ventanas sólo usan calendario: no leen valores de prueba. Los horizontes que atraviesan un corte se purgan. Los entrenamientos exploratorios existentes y la evaluación inicial se documentan en el capítulo de modelos; los experimentos confirmatorios restantes requieren un protocolo establecido antes de obtener nuevos resultados.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1321,7 +1325,7 @@
 <section id="pipeline-de-validacion-forward-chaining">
 <h2>8.1 Pipeline de validación forward chaining<a class="headerlink" href="#pipeline-de-validacion-forward-chaining" title="Link to this heading">#</a></h2>
 <p>La función <code class="docutils literal notranslate"><span class="pre">split_train_val_forwardChaining</span></code> de timeseries-cv 0.1.5 organiza una secuencia de bloques temporales. Los bloques se traducen a orígenes diarios de pronóstico: el entrenamiento se amplía con cada fold y la validación corresponde siempre a un periodo posterior. Se conservan únicamente ventanas cuyas etiquetas están completas dentro del bloque asignado.</p>
-<p>El contexto comprende 168 horas, el horizonte 24 horas y el paso entre orígenes 24 horas. La preparación incorpora un rezago supuesto de publicación de 24 horas para variables horarias y dos días para hidrología. Cada escalador se ajusta exclusivamente con las filas usadas en las entradas de entrenamiento de su fold. Las etiquetas se conservan en COP/kWh.</p>
+<p>La configuración inicial comprende 168 horas de contexto, un horizonte de 24 horas y un paso de 24 horas entre orígenes. La búsqueda compara longitudes de historia de 24, 72, 168 y 336 horas, conservando los bloques temporales y utilizando orígenes comunes. Los contextos seleccionados son 24 horas para MLP y CNN1D y 72 horas para LSTM. La preparación incorpora un rezago supuesto de publicación de 24 horas para variables horarias y dos días para hidrología. Cada escalador se ajusta exclusivamente con las filas usadas en las entradas de entrenamiento de su fold. Las etiquetas se conservan en COP/kWh.</p>
 <p>El pipeline admite funciones de construcción, ajuste y evaluación de modelos, con una instancia nueva por fold y semilla. Los parámetros y los artefactos de preparación se registran en <code class="docutils literal notranslate"><span class="pre">configs/training_pipeline.json</span></code> y <code class="docutils literal notranslate"><span class="pre">results/pipeline/</span></code>. <a class="reference external" href="https://pypi.org/project/timeseries-cv/">Fuente del método</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1525,6 +1529,20 @@
 </div>
 </div>
 </section>
+<section id="metrica-principal-y-criterio-de-comparacion">
+<h2>8.2 Métrica principal y criterio de comparación<a class="headerlink" href="#metrica-principal-y-criterio-de-comparacion" title="Link to this heading">#</a></h2>
+<p>El <strong>error absoluto medio (MAE), expresado en COP/kWh, es la métrica principal del benchmark</strong>. La referencia numérica se selecciona por el menor MAE medio entre inicializaciones, evaluado sobre los mismos orígenes diarios y las mismas 24 horas objetivo. RMSE y R² se conservan como métricas secundarias para caracterizar errores grandes y variación explicada.</p>
+<p>Para una semilla <span class="math notranslate nohighlight">\(r\)</span> y el conjunto <span class="math notranslate nohighlight">\(\mathcal O\)</span> de orígenes de validación de los cinco folds,</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{MAE}_r=\frac{1}{24|\mathcal O|}\sum_{o\in\mathcal O}\sum_{h=0}^{23}|y_{o+h}-\widehat y^{(r)}_{o,h}|,
+\qquad \overline{\operatorname{MAE}}=\frac{1}{R}\sum_{r=1}^{R}\operatorname{MAE}_r.
+\]</div>
+<p>Cada hora objetivo recibe el mismo peso; los folds contribuyen según su número de observaciones. Se calcula la métrica de cada semilla y después su media y desviación estándar. Esta agregación difiere de promediar predicciones para formar un ensemble; la desviación entre semillas caracteriza la inicialización y no equivale a un intervalo de confianza temporal.</p>
+<p><strong>Fundamento bibliográfico.</strong> <a class="reference external" href="https://doi.org/10.3390/en11051255">Ugurlu et al. (2018, §4.1)</a> adoptan el MAE como criterio de evaluación del pronóstico eléctrico. <a class="reference external" href="https://doi.org/10.1016/j.apenergy.2021.116983">Lago et al. (2021, §5.4)</a> señalan que las pérdidas lineales representan mejor determinados riesgos y costos del error de precio que las pérdidas cuadráticas, y advierten sobre la inestabilidad de MAPE cuando el precio se aproxima a cero. En este estudio, el MAE permite interpretar directamente la magnitud media del error en COP/kWh y penaliza linealmente las desviaciones. RMSE complementa esa lectura mediante una mayor ponderación de errores grandes. El MAE no representa por sí solo el costo monetario de una operación, que también depende del volumen y de la estrategia comercial.</p>
+<p>Lago et al. recomiendan además acompañar los errores absolutos con una referencia relativa. La comparación existente utiliza el pronóstico semanal <span class="math notranslate nohighlight">\(\widehat y^{\mathrm{sem}}_{o,h}=y_{o+h-168}\)</span> sobre los mismos orígenes. Su reducción porcentual del MAE es <span class="math notranslate nohighlight">\(100(1-\operatorname{MAE}_{\mathrm{modelo}}/\operatorname{MAE}_{\mathrm{sem}})\)</span>, equivalente a <span class="math notranslate nohighlight">\(100(1-\mathrm{rMAE})\)</span> para esa referencia. El denominador se evalúa en el mismo bloque y no corresponde a MASE. El precio semanal utilizado precede al origen y respeta el rezago horario supuesto de 24 horas.</p>
+<p>La selección exploratoria por MAE no acredita superioridad estadística ni equivalencia entre familias. El margen práctico <span class="math notranslate nohighlight">\(\delta\)</span>, la potencia y los contrastes con dependencia temporal permanecen por definir para una evaluación confirmatoria. Esta declaración documenta el criterio utilizado por la búsqueda y su adopción como métrica principal; no constituye un registro previo de experimentos ya realizados.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1571,7 +1589,7 @@
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">9. Literatura consultada e implicaciones metodológicas</p>
+        <p class="prev-next-title">9. Literatura: estudios relevantes y selección de modelos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1594,6 +1612,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-de-validacion-forward-chaining">8.1 Pipeline de validación forward chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrica-principal-y-criterio-de-comparacion">8.2 Métrica principal y criterio de comparación</a></li>
 </ul>
   </nav></div>
 

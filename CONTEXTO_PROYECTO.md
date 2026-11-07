@@ -13,6 +13,9 @@ El objetivo general es desarrollar un modelo de pronóstico que integre series t
 
 Estado al actualizar este archivo:
 
+- MAE en COP/kWh declarado como métrica principal del benchmark y criterio de selección; RMSE/R² secundarios. Corrección documental y justificación bibliográfica en sección 23.
+- Búsqueda exploratoria completada: 192 configuraciones y 4800 ajustes; ganadores C3 24 h, L2 72 h y M3 24 h. Sus métricas son de selección en validación; no se ha realizado una prueba independiente de esas configuraciones.
+
 - Dataset consolidado, versionado y auditado; EDA ampliado a desarrollo completo 2000–2021, con 37 entradas efectivas y auditoría de folds/contextos (sección 20); revisión bibliográfica publicada.
 - Abstracts IEEE aportados: 438 registros únicos, 12 prioritarios y ocho de apoyo, con selección y arquitecturas consolidadas en el capítulo 9 y sección 22 (extracción original en sección 21).
 - Revisión focalizada de 20 textos completos y tabla de frecuencia de baselines implementadas; fuentes, justificación y pendientes en sección 19.
@@ -49,7 +52,7 @@ La configuración está en `configs/training_pipeline.json`; los cortes efectivo
 - Desarrollo: 2000–2021.
 - Cinco validaciones consecutivas que, en conjunto, cubren 2018–2021. Los bloques contienen cantidades aproximadamente iguales de orígenes diarios; no son cinco años de validación.
 - Entrenamiento expansivo: el primer fold utiliza etiquetas anteriores a 2018; los siguientes incorporan los periodos anteriores a su respectiva validación.
-- Contexto: 168 horas. Horizonte: 24 horas. Paso: 24 horas. Orígenes: 00:00 de Colombia.
+- Contexto base del pipeline y piloto: 168 horas. Búsqueda completada: 24/72/168/336 horas, con orígenes comunes fijados por 336 horas. Seleccionados: MLP/CNN1D 24 horas; LSTM 72 horas. Horizonte: 24 horas. Paso: 24 horas. Orígenes: 00:00 de Colombia.
 - Las etiquetas de entrenamiento terminan antes o exactamente al inicio de validación. Los horizontes que cruzan el final de un bloque se purgan.
 - Las entradas de validación pueden usar observaciones pasadas de periodos anteriores: la separación corresponde a sus etiquetas futuras.
 - Cada fold estima un `StandardScaler` nuevo exclusivamente con las filas usadas en las entradas de entrenamiento. Las etiquetas permanecen en COP/kWh.
@@ -340,3 +343,20 @@ Frecuencias sin cambios: LSTM 7/16, MLP/DNN 6/16, CNN 2/16 (una fuente confirma 
 Para actualizar: editar la matriz conservando fuente y caso, regenerar con `python scripts/create_literature_notebooks.py`, ejecutar `python scripts/run_eda.py --chapters 09_literatura --no-build`, construir con `--build-only` y verificar con `scripts/verify_book.py`. El cálculo de frecuencias, controles y gráficos aparece completo en el cuaderno; la construcción editorial de tablas Markdown pertenece al generador.
 
 Verificación de la consolidación: tres tablas con 6/7/10 estudios y cinco campos completos, sin estudios duplicados. El texto Markdown pasa de 4396 a 2229 palabras (reducción de 49.3 %); dos gráficos y ejecución del capítulo sin errores. Once cuadernos y 17 páginas verificados, con cero enlaces locales rotos. Datos, resultados y extracciones originales preservan sus huellas. Evidencia: `results/literature_consolidation_verification.json`.
+
+
+## 23. Consistencia documental y MAE como métrica principal, 6 de noviembre de 2026
+
+Por solicitud del usuario, se corrigen inconsistencias documentales y se declara **MAE en COP/kWh como métrica principal del benchmark**. El baseline es el modelo de referencia; MAE es la métrica para seleccionarlo y compararlo. RMSE y R² permanecen secundarios. No se calculan métricas nuevas ni se modifican entrenamientos, datos, folds, pesos o hiperparámetros.
+
+La sección 8.2 contiene fórmula por semilla y agregación: errores de todos los orígenes de los cinco folds y sus 24 horas, con igual peso por hora, seguidos de media/DE entre cinco semillas. No se promedian predicciones como ensemble ni se consideran 25 ajustes como réplicas independientes. La DE de semillas no expresa incertidumbre temporal.
+
+Justificación en textos completos ya consultados: Ugurlu et al. (2018), §4.1, PDF p.11, DOI 10.3390/en11051255, adopta MAE como criterio; Lago et al. (2021), §§5.4–5.4.2, DOI 10.1016/j.apenergy.2021.116983, discute error lineal, limitaciones de métricas porcentuales y comparación relativa. El MAE conserva COP/kWh y penalización lineal, sin equivaler a costo comercial sin volúmenes/estrategia. La mejora semanal ya publicada equivale a 100(1-rMAE) sobre el mismo bloque; no se identifica con MASE. No afirmar que Lago recomienda MAE sin acompañamiento: su propuesta incluye rMAE.
+
+Estado único: desarrollo 2000–2021 con cinco folds expansivos; 168 h corresponde al pipeline/piloto inicial, la búsqueda usa 24/72/168/336 h y orígenes comunes, seleccionando CNN1D/MLP 24 h y LSTM 72 h. Prueba 2022–2025 evaluada el 5 de noviembre con modelos iniciales de 168 h, antes de la búsqueda posterior completada el 6. La síntesis distingue piloto (75 ajustes), prueba inicial (15) y selección posterior (4800). El MAE inicial de prueba de CNN1D 81,618 no pertenece a C3; su MAE de selección 24,155 no mide una mejora comparable entre periodos.
+
+Se actualizan generadores de capítulos 1, 8, 9, 10 y 11, introducción, PIPELINE.md, MODELOS_E1.md y revisión. Los generadores activos siguen siendo create_notebooks.py, create_literature_notebooks.py con consolidated_literature_cells.py y create_model_notebook.py. No añadir de nuevo las síntesis bibliográficas históricas. El corpus textual permanece en el capítulo 7 por solicitud del usuario.
+
+Esta actualización no es un protocolo a priori de experimentos previos, no fija δ ni un número nuevo de semillas y no declara equivalencia/superioridad estadística. Siguen pendientes el dimensionamiento, IC/contrastes con dependencia temporal y multiplicidad, evaluación independiente, conciliación bibliográfica y especificación condicional E1 §3.2. Las secciones históricas se leen cronológicamente; prevalecen este estado y las actualizaciones posteriores.
+
+Verificación documental: once cuadernos con sus salidas ejecutadas (268 celdas de código), 17 páginas HTML, cero errores y cero enlaces locales rotos. Se ejecutó de nuevo la síntesis cuyo texto de tabla cambió; los cálculos restantes conservaron sus fuentes y salidas. Los 379 archivos protegidos de datos, literatura y resultados experimentales mantienen sus SHA-256. Evidencia: `results/documentation_mae_verification.json` y `results/book_verification.json`.

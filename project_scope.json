@@ -58,6 +58,23 @@
         "CNN": 2
       },
       "cnn_explicit_1d_studies": 1
+    },
+    "benchmark_metric_documentation": {
+      "primary_metric": "MAE",
+      "unit": "COP/kWh",
+      "secondary_metrics": [
+        "RMSE",
+        "R2"
+      ],
+      "selection": "lowest_mean_MAE_across_seeds_on_pooled_validation_origins",
+      "documentation_date": "2026-11-06",
+      "retrospective_preregistration_claimed": false,
+      "confirmatory_inference_completed": false,
+      "book_section": "8.2",
+      "sources": [
+        "10.3390/en11051255 §4.1",
+        "10.1016/j.apenergy.2021.116983 §§5.4–5.4.2"
+      ]
     }
   },
   "E2_E3": {

@@ -14,10 +14,16 @@ La revisión focalizada de 20 textos completos recuperó 16 estudios puntuales, 
 
 Los tamaños proceden de la búsqueda exploratoria colombiana; no son reproducciones exactas de las publicaciones. El capítulo 9 contiene fórmulas de parámetros/costo y el capítulo 10 contiene ecuaciones, diagramas, implementación y resultados. La revisión documental es posterior a esa búsqueda y no se presenta como selección a priori.
 
+## Métrica principal del benchmark
+
+El MAE en COP/kWh es el criterio principal para comparar configuraciones y seleccionar la referencia numérica. Se calcula sobre todas las horas objetivo de los mismos orígenes de validación y después se resume entre cinco semillas, sin promediar predicciones. RMSE y R² son métricas secundarias. El MAE conserva la unidad del precio y penaliza linealmente el error, conforme al uso de Ugurlu et al. (2018, §4.1; DOI 10.3390/en11051255) y a la discusión de Lago et al. (2021, §5.4; DOI 10.1016/j.apenergy.2021.116983). La referencia semanal aporta una comparación relativa sobre el mismo periodo. Véase la sección 8.2 del libro para la fórmula y sus límites.
+
+CNN1D C3 tiene el menor MAE descriptivo de selección (24,155 COP/kWh). Su designación es exploratoria: siguen pendientes δ, potencia, incertidumbre temporal y evaluación independiente. Esta declaración documental no se presenta como preregistro de las ejecuciones existentes.
+
 ## Estado experimental
 
 Se completaron el piloto de 75 ajustes y la búsqueda de 192 configuraciones/4800 ajustes sobre desarrollo. Sus protocolos y fuentes históricas se conservan. Las métricas de selección comparten bloques con parada anticipada y HPO; no son una evaluación externa. Las entradas de entrenamiento excluyen texto y atributos derivados de noticias; sus representaciones permanecen en el EDA del corpus para la investigación posterior.
 
 La adaptación Windows/Linux permite CPU o GPU CUDA/ROCm según `EJECUCION.md`. La revisión bibliográfica no modifica datos, arquitecturas, métricas ni prueba. Los siguientes experimentos deben definir δ, potencia, inferencia temporal, presupuesto comparable y evaluación independiente antes de obtener nuevos resultados. La especificación insuficiente de algunos comparadores mantiene vigente la condición E1 §3.2 que remite a la búsqueda de arquitectura E2 §14; las 192 configuraciones ya ejecutadas no acreditan por sí solas su cumplimiento.
 
-Estado detallado e instrucciones de continuidad: `CONTEXTO_PROYECTO.md`, sección 19. El proyecto histórico Time-MMD conserva sus protocolos y resultados propios.
+Estado detallado e instrucciones de continuidad: `CONTEXTO_PROYECTO.md`, secciones 19, 22 y 23. El proyecto histórico Time-MMD conserva sus protocolos y resultados propios.

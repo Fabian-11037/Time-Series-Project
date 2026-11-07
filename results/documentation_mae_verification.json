@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-06",
+  "scope": "documentation_only",
+  "primary_metric": "MAE",
+  "unit": "COP/kWh",
+  "secondary_metrics": [
+    "RMSE",
+    "R2"
+  ],
+  "primary_metric_rationale_sources": [
+    {
+      "doi": "10.3390/en11051255",
+      "section": "4.1",
+      "evidence": "fulltext_previously_reviewed"
+    },
+    {
+      "doi": "10.1016/j.apenergy.2021.116983",
+      "sections": "5.4–5.4.2",
+      "evidence": "fulltext_previously_reviewed"
+    }
+  ],
+  "aggregation": "pool_hours_across_validation_origins_per_seed_then_mean_across_seeds",
+  "chronology_distinguishes_pilot_initial_test_later_search": true,
+  "initial_test_not_attributed_to_selected_variants": true,
+  "context_168h_distinguished_from_search_and_selected_contexts": true,
+  "retrospective_preregistration_claimed": false,
+  "delta_power_independent_evaluation_pending": true,
+  "protected_files": 379,
+  "protected_files_changed": [],
+  "training_repeated": false,
+  "test_values_read": false,
+  "new_model_metrics_computed": false
+}

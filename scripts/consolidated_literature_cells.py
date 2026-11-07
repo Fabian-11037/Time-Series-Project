@@ -85,6 +85,8 @@ eda.figure(fig,'literatura_mapa_evidencia_consolidado')
 
 La validación será cronológica. Descomposición, espectro, vocabulario, agrupamientos y escalado se estiman con el pasado disponible en cada fold. Atención no demuestra causalidad; una mejora bursátil o de demanda no acredita mejora del precio eléctrico. Las publicaciones sin configuración suficiente requieren lectura completa antes de definir su implementación.
 
+**Criterio del benchmark.** El proyecto adopta MAE en COP/kWh como métrica principal. Ugurlu et al. (P03, §4.1) lo emplean para comparar los pronósticos; Lago et al. (P02, §§5.4–5.4.2) fundamentan las pérdidas lineales y recomiendan una referencia relativa. La elección conserva interpretación en la unidad del objetivo y coherencia con la pérdida absoluta de entrenamiento. La comparación semanal existente complementa el MAE; RMSE y R² describen aspectos secundarios del desempeño. Lago et al. también advierten que los errores absolutos dependen de la escala y del periodo, por lo que no se utilizan para ordenar mercados diferentes ni para atribuir una mejora al comparar validación y prueba de configuraciones distintas. La definición operativa se presenta en la [sección 8.2](08_validacion.ipynb).
+
 ## 9.3 Justificación de las tres referencias numéricas
 
 La frecuencia se calcula en **16 estudios puntuales de precio eléctrico con texto completo**, contando cada familia una vez por estudio y sólo cuando actúa como comparador evaluado. Propuestas, componentes y ablaciones se excluyen. MLP y DNN simples se agrupan; los híbridos mantienen su identidad. Los abstracts IEEE no incrementan estos conteos.

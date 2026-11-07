@@ -24,9 +24,9 @@ def diagram(name,labels):
 
 INTRO=r'''# 10. Modelos numéricos y búsqueda de configuraciones
 
-Se comparan redes densas (MLP), recurrentes (LSTM) y convolucionales temporales (CNN1D) para pronosticar el precio nacional horario de bolsa. La búsqueda comprende 192 configuraciones y 4800 ajustes, exclusivamente con desarrollo 2000–2021. Las configuraciones se seleccionan mediante el MAE de cinco bloques de validación consecutivos en 2018–2021, con cinco inicializaciones por configuración.
+Se comparan redes densas (MLP), recurrentes (LSTM) y convolucionales temporales (CNN1D) para pronosticar el precio nacional horario de bolsa. La búsqueda comprende 192 configuraciones y 4800 ajustes, exclusivamente con desarrollo 2000–2021. El MAE en COP/kWh es la métrica principal del benchmark y el criterio de selección; RMSE y R² son métricas secundarias. Se utilizan cinco bloques de validación consecutivos en 2018–2021 y cinco inicializaciones por configuración. La justificación bibliográfica y la agregación se desarrollan en la [sección 8.2](08_validacion.ipynb).
 
-El experimento utiliza únicamente variables numéricas y calendario. Los resultados presentados son de **selección en validación**: el mismo bloque interviene en la parada anticipada y en la comparación de configuraciones. La prueba 2022–2025 no se reevalúa en esta búsqueda. Ese periodo se consultó previamente para otras configuraciones; por tanto, estos resultados no constituyen una nueva evaluación externa ni un benchmark confirmatorio.
+El experimento utiliza únicamente variables numéricas y calendario. Los resultados presentados son de **selección en validación**: el mismo bloque interviene en la parada anticipada y en la comparación de configuraciones. La prueba 2022–2025 no se reevalúa en esta búsqueda. Ese periodo se evaluó el 5 de noviembre de 2026 con las configuraciones iniciales de 168 horas; por tanto, estos resultados no constituyen una nueva evaluación externa ni un benchmark confirmatorio.
 
 ## 10.1 Estructura de la entrada y disponibilidad temporal
 

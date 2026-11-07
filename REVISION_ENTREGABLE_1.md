@@ -2,7 +2,7 @@
 
 Fecha de revisión: **6 de noviembre de 2026**, hora de Colombia. Autores del proyecto: Fabian José Manrique Morelos y Gloria Bastida.
 
-Versión examinada: `f67a377e225087437829ee0826be971886acdf29`, rama `main`. Libro: https://fabian-11037.github.io/Time-Series-Project/.
+Versión de la auditoría original: `f67a377e225087437829ee0826be971886acdf29`, rama `main`. La tabla y los conteos originales describen esa versión; los apartados de actualización y CONTEXTO_PROYECTO.md registran los cambios posteriores. Libro: https://fabian-11037.github.io/Time-Series-Project/.
 
 Documento normativo consultado: *Entregable1DeepLearningProject.pdf*, 34 páginas, SHA-256 `56cffb2e0e23bbdfd28815b7c7515d2663bf501ed5d6e0656a37a76fc45e43eb`. Las páginas citadas corresponden al PDF original. Se consultó también la sección 14 del E2 por remisión expresa de la sección 3.2 del E1; los demás requisitos propios del E2 no se exigen aquí.
 
@@ -92,3 +92,8 @@ La fila de extracción de la tabla auditada queda **atendida para el corpus foca
 ## Actualización posterior: exportaciones IEEE
 
 Se analizaron cinco exportaciones de abstracts IEEE aportadas por el usuario: 438 registros únicos, 12 prioritarios y ocho de contexto. La selección y las arquitecturas están en capítulo 9.3 y `literature/ieee_abstracts_2026-11-06/`. Se excluyen cuatro registros retractados/avisos. Se dispone de material IEEE, aunque faltan cadenas de búsqueda originales y verificación de textos completos de los nuevos candidatos; no se declara cerrada la búsqueda sistemática ni se modifican las frecuencias verificadas de baselines.
+
+
+## Actualización de consistencia y criterio del benchmark
+
+6 de noviembre de 2026. Se corrigen las expresiones pendientes del capítulo 8 sobre prueba y contexto semanal y se incorpora la sección 8.2 con **MAE en COP/kWh como métrica principal**, RMSE/R² secundarios, fórmula de agregación y justificación en Ugurlu (2018, §4.1) y Lago (2021, §§5.4–5.4.2). El capítulo 11 separa piloto, prueba inicial y selección posterior; introducción y documentos de continuidad reflejan ese estado. La tabla original es histórica: la portabilidad, la ampliación del EDA y la síntesis bibliográfica se actualizaron después, según CONTEXTO_PROYECTO.md §§18–23. La nueva declaración no constituye preregistro retroactivo; δ, potencia, inferencia temporal, evaluación independiente y condiciones arquitectónicas permanecen pendientes. No se reentrena ni se reevalúa prueba.

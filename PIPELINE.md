@@ -1,6 +1,6 @@
 # Pipeline de entrenamiento
 
-La configuración activa está en `configs/training_pipeline.json`. El método es `split_train_val_forwardChaining`, con entrenamiento expansivo y cinco bloques consecutivos de validación dentro de 2000–2021. El periodo 2022–2025 está reservado para prueba.
+La configuración activa está en `configs/training_pipeline.json`. El método es `split_train_val_forwardChaining`, con entrenamiento expansivo y cinco bloques consecutivos de validación dentro de 2000–2021. El periodo 2022–2025 corresponde a la prueba inicial, evaluada el 5 de noviembre de 2026; no es una prueba intacta del diseño seleccionado después. Los accesos automáticos de EDA y búsqueda siguen bloqueados.
 
 ## Preparar
 
@@ -8,7 +8,7 @@ La configuración activa está en `configs/training_pipeline.json`. El método e
 python scripts/prepare_pipeline.py
 ```
 
-Se generan el plan de folds, índices, parámetros de escalado y auditoría en `results/pipeline/`. Las dimensiones de entrada son `(n,168,p)` y las de salida `(n,24)`. Las etiquetas permanecen en COP/kWh. Los rezagos de publicación supuestos se configuran por separado para datos horarios e hidrología.
+Se generan el plan de folds, índices, parámetros de escalado y auditoría en `results/pipeline/`. La configuración inicial usa entradas `(n,168,p)` y salidas `(n,24)`. La búsqueda compara historias de 24, 72, 168 y 336 horas sobre orígenes comunes; las seleccionadas son 24 horas para MLP/CNN1D y 72 horas para LSTM. Las etiquetas permanecen en COP/kWh. Los rezagos de publicación supuestos se configuran por separado para datos horarios e hidrología.
 
 ## Incorporar modelos
 
@@ -52,7 +52,7 @@ HSA_OVERRIDE_GFX_VERSION=10.3.0 python scripts/train_pytorch.py --output results
 python scripts/summarize_pytorch.py results/pilot_pytorch_gfx1030
 ```
 
-El override corresponde a la ejecución local en RX 6700 XT; no es una exigencia para otras GPUs. No se cambia a CPU silenciosamente. La ejecución reanuda los ajustes completos; los cambios de configuración requieren otra carpeta. Se completaron 75 ajustes con prueba intacta. El bloqueo original del EDA se conserva; las versiones del piloto están en `environment_freeze.txt` dentro de sus resultados.
+El override corresponde a la ejecución local en RX 6700 XT; no es una exigencia para otras GPUs. No se cambia a CPU silenciosamente. La ejecución reanuda los ajustes completos; los cambios de configuración requieren otra carpeta. Se completaron 75 ajustes antes de la primera evaluación de prueba descrita a continuación. El bloqueo original del EDA se conserva; las versiones del piloto están en `environment_freeze.txt` dentro de sus resultados.
 
 ## Evaluación de prueba autorizada
 
@@ -60,7 +60,7 @@ El 5 de noviembre de 2026 se reentrenaron los tres modelos con desarrollo comple
 
 ## Búsqueda de variantes con Dropout fijo
 
-Iniciada el5de noviembre de2026. Registro: `PROTOCOLO_VARIANTES_2026-11-05.md`. Script reanudable: `scripts/train_variants.py`,192configuraciones y4800ajustes, sólo desarrollo, salida positiva Softplus y parada anticipada. Estado vivo: `results/variant_search/status.json`; URL/PID del panel local: `results/variant_search/processes.json`. La barra de consola se obtiene con `python scripts/show_training_progress.py --watch`. No lanzar una copia mientras otra ejecución tenga el bloqueo. Las métricas de selección con parada sobre validación no son una evaluación externa independiente.
+Completada el 6 de noviembre de 2026, tras iniciarse el 5 de noviembre. Registro: `PROTOCOLO_VARIANTES_2026-11-05.md`. Script reanudable: `scripts/train_variants.py`,192configuraciones y4800ajustes, sólo desarrollo, salida positiva Softplus y parada anticipada. Estado vivo: `results/variant_search/status.json`; URL/PID del panel local: `results/variant_search/processes.json`. La barra de consola se obtiene con `python scripts/show_training_progress.py --watch`. No lanzar una copia mientras otra ejecución tenga el bloqueo. Las métricas de selección con parada sobre validación no son una evaluación externa independiente.
 
 
 ## Ejecución portable

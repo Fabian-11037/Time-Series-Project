@@ -366,6 +366,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secuencia-experimental-y-alcance-de-los-resultados">Secuencia experimental y alcance de los resultados</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones-y-desarrollo-del-estudio">Limitaciones y desarrollo del estudio</a></li>
 </ul>
             </nav>
@@ -488,7 +489,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Contexto semanal y salida diaria como propuesta previa al benchmark.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales, purga de etiquetas que cruzan cortes y prueba congelada.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes e igual presupuesto; inferencia temporal en benchmark.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Salida diaria de 24 horas; contextos de 24, 72, 168 y 336 horas comparados en desarrollo.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales y purga de etiquetas; prueba inicial ya evaluada en 2022–2025.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes y presupuesto de evaluaciones; inferencia temporal pendiente.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
 <span class="n">table</span><span class="p">(</span><span class="n">decisions</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'hallazgo'</span><span class="p">),</span> <span class="s1">'matriz_decisiones_eda'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -535,7 +536,7 @@
     <tr>
       <th>Ciclos y dependencia</th>
       <td>Calendario y rezagos diarios/semanales; filtro...</td>
-      <td>Contexto semanal y salida diaria como propuest...</td>
+      <td>Salida diaria de 24 horas; contextos de 24, 72...</td>
     </tr>
     <tr>
       <th>Covariables</th>
@@ -549,18 +550,45 @@
     </tr>
     <tr>
       <th>Validación</th>
-      <td>Cortes temporales, purga de etiquetas que cruz...</td>
-      <td>Mismos orígenes e igual presupuesto; inferenci...</td>
+      <td>Cortes temporales y purga de etiquetas; prueba...</td>
+      <td>Mismos orígenes y presupuesto de evaluaciones;...</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<section id="secuencia-experimental-y-alcance-de-los-resultados">
+<h2>Secuencia experimental y alcance de los resultados<a class="headerlink" href="#secuencia-experimental-y-alcance-de-los-resultados" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Etapa</p></th>
+<th class="head"><p>Diseño</p></th>
+<th class="head"><p>Alcance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Piloto inicial</p></td>
+<td><p>75 ajustes: tres familias, cinco folds y cinco semillas; contexto de 168 h y 30 épocas</p></td>
+<td><p>Caracterización exploratoria en desarrollo</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prueba inicial, 5 de noviembre de 2026</p></td>
+<td><p>15 reajustes con desarrollo 2000–2021 y evaluación en 2022–2025</p></td>
+<td><p>Resultados de las configuraciones iniciales de 168 h; CNN1D obtuvo MAE medio de 81,618 COP/kWh</p></td>
+</tr>
+<tr class="row-even"><td><p>Selección posterior, completada el 6 de noviembre de 2026</p></td>
+<td><p>192 configuraciones y 4800 ajustes en desarrollo, con parada anticipada</p></td>
+<td><p>CNN1D C3 de 24 h obtuvo el menor MAE de selección: 24,155 COP/kWh</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Los dos errores citados corresponden a configuraciones y periodos distintos. Su diferencia no estima una mejora atribuible a la nueva arquitectura. La búsqueda posterior no volvió a evaluar prueba; sus resultados no constituyen una evaluación independiente del proceso de selección.</p>
+</section>
 <section id="limitaciones-y-desarrollo-del-estudio">
 <h2>Limitaciones y desarrollo del estudio<a class="headerlink" href="#limitaciones-y-desarrollo-del-estudio" title="Link to this heading">#</a></h2>
 <p>El análisis caracteriza la distribución, calidad, dependencia temporal, estacionalidad, cambios de régimen, heterocedasticidad y asociaciones entre variables. El estudio documental complementa estos resultados mediante la cobertura de fuentes, las características léxicas y la representación de tópicos.</p>
 <p>Las limitaciones principales corresponden a la representación meteorológica mediante rejillas de reanálisis, la disponibilidad histórica de las versiones numéricas y textuales y la desigual cobertura editorial. La evaluación de duplicados semánticos y la conciliación del inventario bibliográfico constituyen extensiones del análisis.</p>
-<p>La revisión de 20 textos completos identifica 16 estudios de pronóstico puntual y tres estudios empíricos complementarios; la frecuencia de comparadores y sus especificaciones se documentan en el capítulo 9. LSTM y MLP/DNN son las familias más recurrentes y CNN1D complementa sus representaciones mediante filtros locales. La evaluación numérica comprende una búsqueda de 192 configuraciones de MLP, LSTM y CNN1D, con 4800 ajustes sobre desarrollo. El capítulo de modelos presenta las arquitecturas seleccionadas, sus fundamentos y resultados frente a la referencia semanal. Las métricas de validación también intervienen en la parada y selección, por lo que no constituyen una evaluación externa imparcial. La definición de un margen de relevancia práctica, el análisis de potencia y la inferencia con dependencia temporal permanecen pendientes.</p>
+<p>La revisión de 20 textos completos identifica 16 estudios de pronóstico puntual y tres estudios empíricos complementarios; la frecuencia de comparadores y sus especificaciones se documentan en el capítulo 9. LSTM y MLP/DNN son las familias más recurrentes y CNN1D complementa sus representaciones mediante filtros locales. La evaluación numérica comprende una búsqueda de 192 configuraciones de MLP, LSTM y CNN1D, con 4800 ajustes sobre desarrollo. El capítulo de modelos presenta las arquitecturas seleccionadas, sus fundamentos y resultados frente a la referencia semanal. Las métricas de validación también intervienen en la parada y selección, por lo que no constituyen una evaluación externa imparcial. El MAE en COP/kWh constituye la métrica principal del benchmark, con RMSE y R² como métricas secundarias. La definición de un margen de relevancia práctica, el análisis de potencia y la inferencia con dependencia temporal permanecen pendientes.</p>
 </section>
 </section>
 
@@ -630,6 +658,7 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secuencia-experimental-y-alcance-de-los-resultados">Secuencia experimental y alcance de los resultados</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones-y-desarrollo-del-estudio">Limitaciones y desarrollo del estudio</a></li>
 </ul>
   </nav></div>
