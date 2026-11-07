@@ -63,3 +63,7 @@ Completada el 6 de noviembre de 2026, tras iniciarse el 5 de noviembre. Registro
 ## Ejecución portable
 
 Los scripts `train_pytorch.py` y `train_variants.py` aceptan `--device auto|cpu|gpu|cuda:N` y `--threads`. La implementación de dispositivo/bloqueo está en `src/colombia_energy/runtime.py` y se incorpora al cuaderno de modelos. Las fuentes originales referidas por los hashes históricos se preservan en `resources/experiment_sources/`. Consulte [EJECUCION.md](EJECUCION.md) para dependencias, sistemas soportados, separación de resultados y protección de prueba.
+
+## Protocolo estadístico del benchmark
+
+La configuración declarativa es configs/benchmark_protocol.json y el documento PROTOCOLO_BENCHMARK_2026-11-06.md. MAE principal; δ = 2 %; α = 0,05 y potencia objetivo ≥ 0,80. Evaluación por origen diario de 24 precios; bootstrap emparejado por bloques móviles de 14 días, separado por fold, sin cruce de huecos y con sensibilidad 7/28 días. La variabilidad entre semillas se informa aparte. Esta declaración no ejecuta los contrastes ni autoriza nuevas ejecuciones de modelos; dimensionamiento y periodo independiente siguen pendientes.

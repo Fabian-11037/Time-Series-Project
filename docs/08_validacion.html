@@ -370,6 +370,19 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-de-validacion-forward-chaining">8.1 Pipeline de validación forward chaining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrica-principal-y-criterio-de-comparacion">8.2 Métrica principal y criterio de comparación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-del-benchmark">8.3 Protocolo del benchmark</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pregunta-y-alcance">Pregunta y alcance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-y-margen-de-relevancia">Métricas y margen de relevancia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hipotesis-comparaciones-y-error-estadistico">Hipótesis, comparaciones y error estadístico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-y-evaluacion-final">Selección y evaluación final</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unidad-de-evaluacion-e-inferencia-temporal">8.4 Unidad de evaluación e inferencia temporal</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-diario-y-perdida-evaluada">Origen diario y pérdida evaluada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bloques-y-dependencia">Bloques y dependencia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabilidad-de-las-ejecuciones">Variabilidad de las ejecuciones</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -1541,7 +1554,60 @@
 <p>Cada hora objetivo recibe el mismo peso; los folds contribuyen según su número de observaciones. Se calcula la métrica de cada semilla y después su media y desviación estándar. Esta agregación difiere de promediar predicciones para formar un ensemble; la desviación entre semillas caracteriza la inicialización y no equivale a un intervalo de confianza temporal.</p>
 <p><strong>Fundamento bibliográfico.</strong> <a class="reference external" href="https://doi.org/10.3390/en11051255">Ugurlu et al. (2018, §4.1)</a> adoptan el MAE como criterio de evaluación del pronóstico eléctrico. <a class="reference external" href="https://doi.org/10.1016/j.apenergy.2021.116983">Lago et al. (2021, §5.4)</a> señalan que las pérdidas lineales representan mejor determinados riesgos y costos del error de precio que las pérdidas cuadráticas, y advierten sobre la inestabilidad de MAPE cuando el precio se aproxima a cero. En este estudio, el MAE permite interpretar directamente la magnitud media del error en COP/kWh y penaliza linealmente las desviaciones. RMSE complementa esa lectura mediante una mayor ponderación de errores grandes. El MAE no representa por sí solo el costo monetario de una operación, que también depende del volumen y de la estrategia comercial.</p>
 <p>Lago et al. recomiendan además acompañar los errores absolutos con una referencia relativa. La comparación existente utiliza el pronóstico semanal <span class="math notranslate nohighlight">\(\widehat y^{\mathrm{sem}}_{o,h}=y_{o+h-168}\)</span> sobre los mismos orígenes. Su reducción porcentual del MAE es <span class="math notranslate nohighlight">\(100(1-\operatorname{MAE}_{\mathrm{modelo}}/\operatorname{MAE}_{\mathrm{sem}})\)</span>, equivalente a <span class="math notranslate nohighlight">\(100(1-\mathrm{rMAE})\)</span> para esa referencia. El denominador se evalúa en el mismo bloque y no corresponde a MASE. El precio semanal utilizado precede al origen y respeta el rezago horario supuesto de 24 horas.</p>
-<p>La selección exploratoria por MAE no acredita superioridad estadística ni equivalencia entre familias. El margen práctico <span class="math notranslate nohighlight">\(\delta\)</span>, la potencia y los contrastes con dependencia temporal permanecen por definir para una evaluación confirmatoria. Esta declaración documenta el criterio utilizado por la búsqueda y su adopción como métrica principal; no constituye un registro previo de experimentos ya realizados.</p>
+<p>La selección exploratoria por MAE no acredita superioridad estadística ni equivalencia entre familias. El margen práctico se fija en una reducción relativa del MAE del 2 %, con α = 0,05 y potencia objetivo de al menos 0,80; las secciones 8.3 y 8.4 definen el protocolo y la unidad temporal. El dimensionamiento y los contrastes permanecen pendientes de ejecución. El MAE establece el criterio común de comparación del benchmark.</p>
+</section>
+<section id="protocolo-del-benchmark">
+<h2>8.3 Protocolo del benchmark<a class="headerlink" href="#protocolo-del-benchmark" title="Link to this heading">#</a></h2>
+<section id="pregunta-y-alcance">
+<h3>Pregunta y alcance<a class="headerlink" href="#pregunta-y-alcance" title="Link to this heading">#</a></h3>
+<p>¿Qué familia, entre MLP, LSTM y CNN1D, presenta menor MAE al pronosticar los próximos 24 precios horarios nacionales de bolsa con las mismas fuentes numéricas y orígenes de evaluación? El benchmark distingue magnitud del error, evidencia estadística y relevancia práctica.</p>
+</section>
+<section id="metricas-y-margen-de-relevancia">
+<h3>Métricas y margen de relevancia<a class="headerlink" href="#metricas-y-margen-de-relevancia" title="Link to this heading">#</a></h3>
+<p>La métrica primaria es <strong>MAE en COP/kWh</strong>; RMSE y R² son secundarias. Se mantienen las mismas 24 horas y orígenes para todas las familias. La formulación y el fundamento del MAE se presentan en la sección 8.2 del libro, basados en <a class="reference external" href="https://doi.org/10.3390/en11051255">Ugurlu et al. (2018, §4.1)</a> y <a class="reference external" href="https://doi.org/10.1016/j.apenergy.2021.116983">Lago et al. (2021, §5.4)</a>.</p>
+<p>Se adopta <strong>δ = 2 % de reducción relativa del MAE</strong>. Para una referencia A y un candidato B, evaluados sobre el mismo periodo,</p>
+<div class="math notranslate nohighlight">
+\[
+g_{A\to B}=1-\frac{\operatorname{MAE}_B}{\operatorname{MAE}_A},\qquad \delta_{\mathrm{rel}}=0{,}02.
+\]</div>
+<p>Una reducción del 2 % corresponde a un MAE del candidato igual al 98 % del MAE de referencia. El margen se establece como umbral operativo del estudio. Su formulación relativa mantiene una exigencia proporcional al error de referencia y facilita interpretar mejoras entre periodos de distinta escala. La reducción relativa queda indefinida cuando el MAE de referencia es cero.</p>
+</section>
+<section id="hipotesis-comparaciones-y-error-estadistico">
+<h3>Hipótesis, comparaciones y error estadístico<a class="headerlink" href="#hipotesis-comparaciones-y-error-estadistico" title="Link to this heading">#</a></h3>
+<p>Para cada par se define <span class="math notranslate nohighlight">\(D_{A,B}=\operatorname{MAE}_A-\operatorname{MAE}_B\)</span>. La hipótesis de igualdad de precisión es <span class="math notranslate nohighlight">\(H_0:D_{A,B}=0\)</span>, frente a <span class="math notranslate nohighlight">\(H_1:D_{A,B}\ne0\)</span>. El signo positivo indica menor MAE de B. Se prevén tres comparaciones: <strong>MLP–LSTM, MLP–CNN1D y LSTM–CNN1D</strong>. El primer modelo de cada par fija el denominador de su reducción relativa; para modelos avanzados posteriores, la referencia será el baseline congelado.</p>
+<p>El nivel familiar es <strong>α = 0,05</strong>, con ajuste de Holm sobre las tres comparaciones principales. La potencia objetivo es <strong>1−β ≥ 0,80</strong> para detectar el efecto de interés. El número de semillas se determinará mediante el análisis de potencia, utilizando conservadoramente α/3 y considerando la variabilidad de las diferencias emparejadas.</p>
+<p>Se reportarán diferencias, reducciones relativas e intervalos del 95 % marginales; para afirmaciones conjuntas sobre los tres pares se utilizarán intervalos con cobertura familiar de al menos el 95 %, mediante Bonferroni (98,333 % por par), distinguiéndolos de los marginales. Una estimación <span class="math notranslate nohighlight">\(g\ge0{,}02\)</span> alcanza el umbral práctico puntual. Para afirmar con incertidumbre controlada una mejora superior al margen se exigirá que el límite inferior del intervalo simultáneo supere 0,02.</p>
+</section>
+<section id="seleccion-y-evaluacion-final">
+<h3>Selección y evaluación final<a class="headerlink" href="#seleccion-y-evaluacion-final" title="Link to this heading">#</a></h3>
+<p>La referencia descriptiva es la configuración con menor MAE medio entre semillas sobre los mismos orígenes. Si la inferencia no permite distinguirla de otra familia, se conservará esa designación descriptiva y se informará la falta de una superioridad concluyente. La referencia semanal permanece como control de contexto y no sustituye a las tres familias del benchmark.</p>
+<p>La evaluación final requiere registrar periodo, archivos y huellas, disponibilidad de covariables, configuraciones y escaladores, semillas, presupuesto y reglas de análisis antes de calcular sus errores. No se reajustan decisiones a partir de ese bloque. La configuración se registra en <code class="docutils literal notranslate"><span class="pre">configs/benchmark_protocol.json</span></code>.</p>
+</section>
+</section>
+<section id="unidad-de-evaluacion-e-inferencia-temporal">
+<h2>8.4 Unidad de evaluación e inferencia temporal<a class="headerlink" href="#unidad-de-evaluacion-e-inferencia-temporal" title="Link to this heading">#</a></h2>
+<section id="origen-diario-y-perdida-evaluada">
+<h3>Origen diario y pérdida evaluada<a class="headerlink" href="#origen-diario-y-perdida-evaluada" title="Link to this heading">#</a></h3>
+<p>La <strong>unidad de evaluación es cada origen diario de pronóstico</strong>, a las 00:00 de Colombia, con una salida conjunta de 24 precios horarios.</p>
+<p>Para la familia A, semilla r y origen o,</p>
+<div class="math notranslate nohighlight">
+\[
+\ell_{A,r,o}=\frac1{24}\sum_{h=0}^{23}|y_{o+h}-\widehat y_{A,r,o,h}|,\qquad
+\bar\ell_{A,o}=\frac1R\sum_{r=1}^{R}\ell_{A,r,o}.
+\]</div>
+<p>El contraste diario emparejado es <span class="math notranslate nohighlight">\(d_o=\bar\ell_{A,o}-\bar\ell_{B,o}\)</span>. Se promedian las pérdidas entre semillas para estimar el desempeño medio de las inicializaciones. Con 24 etiquetas completas por origen, promediar las pérdidas diarias reproduce el MAE agrupado por horas. Si falta una predicción o etiqueta, no se elimina silenciosamente para un solo modelo: se resuelve la incidencia o se declara un conjunto común y su exclusión.</p>
+</section>
+<section id="bloques-y-dependencia">
+<h3>Bloques y dependencia<a class="headerlink" href="#bloques-y-dependencia" title="Link to this heading">#</a></h3>
+<p>Los orígenes diarios consecutivos pueden presentar dependencia por autocorrelación, estacionalidad, regímenes y entrenamiento compartido. Los bloques constituyen la unidad de remuestreo temporal de la serie nacional.</p>
+<p>La inferencia temporal se planifica mediante <strong>bootstrap emparejado de bloques móviles de 14 días consecutivos</strong>, con <strong>5000 réplicas</strong> y semilla <strong>20261106</strong>. Se mantendrán juntos todos los modelos y semillas correspondientes a cada origen seleccionado. Los bloques conservarán el orden interno y se extraerán sin unión circular del final al inicio. El mecanismo se documenta en la <a class="reference external" href="https://arch.readthedocs.io/en/latest/bootstrap/generated/arch.bootstrap.MovingBlockBootstrap.html">referencia de MovingBlockBootstrap</a>.</p>
+<p>La longitud de 14 días conserva tramos de dos ciclos semanales. Se evaluará sensibilidad con <strong>7 y 28 días</strong>, manteniendo 14 días como especificación principal.</p>
+<p>En validación, cada fold constituye un estrato temporal: se remuestrea dentro de él hasta recuperar su cantidad original de orígenes, recortando el último bloque cuando sea necesario. Se mantienen sus pesos según el número de días. Los bloques no cruzan folds ni discontinuidades del calendario; si no hay suficientes tramos consecutivos para una longitud prevista, se informa la limitación en lugar de concatenar segmentos. En un periodo final único se conserva su estructura temporal, sin imponer artificialmente los folds de desarrollo.</p>
+</section>
+<section id="variabilidad-de-las-ejecuciones">
+<h3>Variabilidad de las ejecuciones<a class="headerlink" href="#variabilidad-de-las-ejecuciones" title="Link to this heading">#</a></h3>
+<p>La incertidumbre temporal se estimará sobre las pérdidas diarias promediadas entre semillas. La variabilidad de inicialización se describirá mediante media, desviación estándar y coeficiente de variación del MAE, con diferencias emparejadas por semilla y bloque. Los folds se tratarán como estratos temporales que comparten historia de entrenamiento. La interpretación de los intervalos quedará referida al periodo y régimen evaluados y a las condiciones de estabilidad local del remuestreo.</p>
+</section>
 </section>
 </section>
 
@@ -1613,6 +1679,19 @@
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-de-validacion-forward-chaining">8.1 Pipeline de validación forward chaining</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metrica-principal-y-criterio-de-comparacion">8.2 Métrica principal y criterio de comparación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo-del-benchmark">8.3 Protocolo del benchmark</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pregunta-y-alcance">Pregunta y alcance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-y-margen-de-relevancia">Métricas y margen de relevancia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hipotesis-comparaciones-y-error-estadistico">Hipótesis, comparaciones y error estadístico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-y-evaluacion-final">Selección y evaluación final</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unidad-de-evaluacion-e-inferencia-temporal">8.4 Unidad de evaluación e inferencia temporal</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-diario-y-perdida-evaluada">Origen diario y pérdida evaluada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bloques-y-dependencia">Bloques y dependencia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variabilidad-de-las-ejecuciones">Variabilidad de las ejecuciones</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

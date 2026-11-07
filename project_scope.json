@@ -71,7 +71,21 @@
         "10.1016/j.apenergy.2021.116983 §§5.4–5.4.2"
       ]
     },
-    "holdout_independence_certified": false
+    "holdout_independence_certified": false,
+    "benchmark_protocol": {
+      "document": "PROTOCOLO_BENCHMARK_2026-11-06.md",
+      "config": "configs/benchmark_protocol.json",
+      "delta_relative": 0.02,
+      "alpha": 0.05,
+      "target_power": 0.8,
+      "evaluation_unit": "daily_origin_24_hour_targets",
+      "inference_resampling_unit": "14_consecutive_daily_origins",
+      "independence_assumed": false,
+      "protocol_defined": true,
+      "inferential_analysis_executed": false,
+      "sample_size_dimensioning_completed": false,
+      "confirmatory_ready": false
+    }
   },
   "E2_E3": {
     "text_corpus_preserved": true,

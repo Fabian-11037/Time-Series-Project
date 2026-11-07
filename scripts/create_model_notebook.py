@@ -187,7 +187,7 @@ Los 4800 ajustes terminaron por paciencia y ninguno alcanzó el máximo de 200 �
 
 La búsqueda utiliza datos retrospectivos y rezagos de disponibilidad supuestos. Las variables meteorológicas urbanas no representan directamente las cuencas aportantes; la correlación entre predictores dificulta atribuir su contribución individual. El análisis de importancia de los modelos iniciales no se transfiere automáticamente a estas nuevas configuraciones.
 
-La validación utilizada para selección no constituye una estimación externa imparcial. Una conclusión confirmatoria requiere un diseño de evaluación independiente, control de comparaciones, margen práctico y potencia definidos antes de observar sus resultados.
+La validación utilizada para selección no constituye una estimación externa imparcial. El protocolo de las secciones 8.3–8.4 fija δ = 2 % de reducción relativa del MAE, α = 0,05, potencia objetivo ≥ 0,80 y tres comparaciones con ajuste de Holm. La unidad de evaluación es el origen diario de 24 precios; la incertidumbre temporal se planifica con bloques móviles de 14 días, manteniendo separada la inicialización. El dimensionamiento, los contrastes y una evaluación independiente permanecen pendientes de ejecución.
 
 ## 10.8 Código del pipeline de entrenamiento
 
