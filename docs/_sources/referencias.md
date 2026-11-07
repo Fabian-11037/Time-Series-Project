@@ -72,7 +72,7 @@ El corpus y sus decisiones se documentan en el capítulo 9 y `literature/baselin
 
 ## Estudios identificados en abstracts IEEE Xplore
 
-Las referencias siguientes se analizaron mediante los abstracts exportados aportados; no se atribuye revisión de sus textos completos. La extracción crítica y priorización están en la sección 9.3.
+Las referencias siguientes se analizaron mediante los abstracts exportados aportados; no se atribuye revisión de sus textos completos. La extracción crítica y priorización se sintetizan en la matriz del capítulo 9.
 
 - **IEEE002.** C. Zheng, "Compute KV First: Scaling up Time Series Model with Cross-Retention-only Transformer," 2025 4th International Symposium on Computer Applications and Information Technology (ISCAIT), Xi'an, China, 2025, pp. 1267-1272, doi: 10.1109/ISCAIT64916.2025.11010571. [DOI](https://doi.org/10.1109/ISCAIT64916.2025.11010571).
 - **IEEE003.** J. Cendrero, J. Gonzalo, M. Galletero and I. Zapata, "Time Series Impact Through Topic Modeling," in IEEE Access, vol. 10, pp. 97327-97347, 2022, doi: 10.1109/ACCESS.2022.3202960. [DOI](https://doi.org/10.1109/ACCESS.2022.3202960).

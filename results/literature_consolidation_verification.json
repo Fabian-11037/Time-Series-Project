@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "highlighted_studies": 23,
+  "comparison_table_rows": [
+    6,
+    7,
+    10
+  ],
+  "fulltext_results": 11,
+  "abstract_results": 12,
+  "distinct_origin_and_dataset_countries": true,
+  "unverified_origins": [
+    "CSConv",
+    "Time Fusion Transformers"
+  ],
+  "original_markdown_words": 4396,
+  "consolidated_markdown_words": 2229,
+  "word_reduction_percent": 49.3,
+  "protected_files_unchanged": 363,
+  "verified_baseline_frequencies_modified": false,
+  "models_changed": false,
+  "test_values_read": false,
+  "chapter_execution_errors": 0,
+  "broken_local_references": 0,
+  "figures_visually_reviewed": true
+}

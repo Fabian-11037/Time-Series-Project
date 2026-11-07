@@ -1,0 +1,7 @@
+familia,Estudios (N=16),Sin preprints (N=14),Ampliado (N=19),Porcentaje (N=16)
+LSTM,7,6,9,43.75
+MLP/DNN,6,6,8,37.5
+CNN,2,2,4,12.5
+CNN-LSTM,2,2,2,12.5
+Transformer,2,1,3,12.5
+GRU,1,1,1,6.25

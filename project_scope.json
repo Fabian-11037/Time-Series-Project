@@ -98,5 +98,18 @@
     "verified_baseline_frequencies_modified": false,
     "models_modified": false,
     "evidence": "literature/ieee_abstracts_2026-11-06/"
+  },
+  "literature_presentation": {
+    "source": "literature/consolidated/relevant_studies.csv",
+    "highlighted_studies": 23,
+    "fulltext_results": 11,
+    "abstract_results": 12,
+    "country_definition": "afiliaciones institucionales verificadas; separado del caso de datos",
+    "unverified_origins": [
+      "CSConv",
+      "Time Fusion Transformers"
+    ],
+    "baseline_frequencies_modified": false,
+    "generator": "scripts/consolidated_literature_cells.py"
   }
 }
