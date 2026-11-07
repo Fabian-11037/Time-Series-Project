@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>11. Síntesis e implicaciones metodológicas &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-
-
-
+  
+  
+  
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-
+  
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-
+  
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -71,29 +71,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-
-
+  
+    
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-
+  
   </head>
   <body data-default-mode="">
-
-
+  
+  
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-
+  
   <div id="pst-scroll-pixel-helper"></div>
-
+  
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-
-
-
-
+  
+  
+  
+  
   <dialog id="pst-search-dialog">
-
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,21 +115,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-
+  
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-
-
+  
+  
   <div class="col-lg-9 navbar-header-items">
-
-
+    
+    
     <div class="navbar-header-items__end">
-
+      
         <div class="navbar-item navbar-persistent--container">
-
+          
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,13 +137,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-
-
+      
+      
     </div>
-
+    
   </div>
-
-
+  
+  
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -152,51 +152,51 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
+  
 
-
-
+  
     <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
       <span class="fa-solid fa-outdent"></span>
     </button>
-
+  
 </div>
 
     </header>
-
+  
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-
-
-
+      
+      
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
 
-
-
+  
   <div class="sidebar-header-items sidebar-primary__section">
-
-
-
-
+    
+    
+    
+    
   </div>
-
+  
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-
-
-
+  
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-
+  
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -226,8 +226,8 @@
     </div>
 </nav></div>
     </div>
-
-
+  
+  
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -240,30 +240,30 @@
 
 
       </div>
-
+      
       <main id="main-content" class="bd-main" role="main">
-
-
+        
+        
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-
+              
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-
+  
     <div class="header-article-items__start">
-
+      
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-
+      
     </div>
-
-
+  
+  
     <div class="header-article-items__end">
-
+      
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -277,15 +277,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-
-
-
+      
+      
+      
       <li><a href="_sources/10_conclusiones.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -293,17 +293,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-
-
-
-
+      
+      
+      
+      
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -311,7 +311,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-
+      
   </ul>
 </div>
 
@@ -323,7 +323,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -347,20 +347,20 @@
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
-
+      
     </div>
-
+  
 </div>
 </div>
-
-
+              
+              
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>11. Síntesis e implicaciones metodológicas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-
+            
             <div>
                 <h2> Contenido </h2>
             </div>
@@ -374,11 +374,11 @@
     </div>
 </div>
 
-
-
+              
+                
 <div id="searchbox"></div>
                 <article class="bd-article">
-
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="sintesis-e-implicaciones-metodologicas">
 <h1>11. Síntesis e implicaciones metodológicas<a class="headerlink" href="#sintesis-e-implicaciones-metodologicas" title="Link to this heading">#</a></h1>
 <p>Los resultados del análisis exploratorio se integran para orientar el preprocesamiento, la representación temporal y el diseño de evaluación del pronóstico.</p>
@@ -489,7 +489,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Salida diaria de 24 horas; contextos de 24, 72, 168 y 336 horas comparados en desarrollo.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales y purga de etiquetas; desarrollo limitado a 2000–2021.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes y presupuesto de evaluaciones; inferencia temporal pendiente.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Salida diaria de 24 horas; contextos de 24, 72, 168 y 336 horas comparados en desarrollo.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales y purga de etiquetas; desarrollo limitado a 2000–2021.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes y presupuesto; comparación emparejada por bloques y Holm.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
 <span class="n">table</span><span class="p">(</span><span class="n">decisions</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'hallazgo'</span><span class="p">),</span> <span class="s1">'matriz_decisiones_eda'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -551,7 +551,7 @@
     <tr>
       <th>Validación</th>
       <td>Cortes temporales y purga de etiquetas; desarr...</td>
-      <td>Mismos orígenes y presupuesto de evaluaciones;...</td>
+      <td>Mismos orígenes y presupuesto; comparación emp...</td>
     </tr>
   </tbody>
 </table>
@@ -575,6 +575,10 @@
 <td><p>192 configuraciones y 4800 ajustes en desarrollo, con parada anticipada</p></td>
 <td><p>CNN1D C3 de 24 h obtuvo el menor MAE de selección: 24,155 COP/kWh</p></td>
 </tr>
+<tr class="row-even"><td><p>Evaluación de prueba</p></td>
+<td><p>Tres configuraciones congeladas; 15 ajustes finales en desarrollo; pesos y escaladores fijos</p></td>
+<td><p>1461 orígenes y 35064 horas de 2022–2025; métricas en la sección 10.17</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -584,7 +588,7 @@
 <h2>Limitaciones y desarrollo del estudio<a class="headerlink" href="#limitaciones-y-desarrollo-del-estudio" title="Link to this heading">#</a></h2>
 <p>El análisis caracteriza la distribución, calidad, dependencia temporal, estacionalidad, cambios de régimen, heterocedasticidad y asociaciones entre variables. El estudio documental complementa estos resultados mediante la cobertura de fuentes, las características léxicas y la representación de tópicos.</p>
 <p>Las limitaciones principales corresponden a la representación meteorológica mediante rejillas de reanálisis, la disponibilidad histórica de las versiones numéricas y textuales y la desigual cobertura editorial. La evaluación de duplicados semánticos y la conciliación del inventario bibliográfico constituyen extensiones del análisis.</p>
-<p>La revisión de 20 textos completos identifica 16 estudios de pronóstico puntual y tres estudios empíricos complementarios; la frecuencia de comparadores y sus especificaciones se documentan en el capítulo 9. LSTM y MLP/DNN son las familias más recurrentes y CNN1D complementa sus representaciones mediante filtros locales. La evaluación numérica comprende una búsqueda de 192 configuraciones de MLP, LSTM y CNN1D, con 4800 ajustes sobre desarrollo. El capítulo de modelos presenta las arquitecturas seleccionadas, sus fundamentos y resultados frente a la referencia semanal. Las métricas de validación también intervienen en la parada y selección, por lo que no constituyen una evaluación externa imparcial. El MAE en COP/kWh constituye la métrica principal del benchmark, con RMSE y R² como métricas secundarias. El protocolo establece δ = 2 % de reducción relativa del MAE, α = 0,05 y potencia objetivo ≥ 0,80. La unidad de evaluación es el origen diario de 24 precios; el remuestreo se planifica por bloques móviles de 14 días. El dimensionamiento, la ejecución inferencial y la evaluación independiente permanecen pendientes.</p>
+<p>La revisión de 20 textos completos identifica 16 estudios de pronóstico puntual y tres estudios empíricos complementarios; la frecuencia de comparadores y sus especificaciones se documentan en el capítulo 9. LSTM y MLP/DNN son las familias más recurrentes y CNN1D complementa sus representaciones mediante filtros locales. La evaluación numérica comprende una búsqueda de 192 configuraciones de MLP, LSTM y CNN1D, con 4800 ajustes sobre desarrollo. El capítulo de modelos presenta las arquitecturas seleccionadas, sus fundamentos y resultados frente a la referencia semanal. Las métricas de validación también intervienen en la parada y selección, por lo que no constituyen una evaluación externa imparcial. El MAE en COP/kWh constituye la métrica principal del benchmark, con RMSE y R² como métricas secundarias. El protocolo establece δ = 2 % de reducción relativa del MAE, α = 0,05 y potencia objetivo ≥ 0,80. La unidad de evaluación es el origen diario de 24 precios; el remuestreo se planifica por bloques móviles de 14 días. El análisis de las predicciones guardadas incorpora dimensionamiento, métricas por horizonte, MASE, errores por segmentos y contrastes temporales. CNN1D mantiene el menor MAE; la comparación principal frente a MLP presenta una reducción estimada del 3,35 % con p ajustado 0,0006, aunque su límite inferior simultáneo del 1,84 % no supera δ = 2 %. Las otras comparaciones globales no resultan significativas con el bootstrap principal y no se demuestra equivalencia. El piloto orienta a 38 semillas por familia bajo los supuestos del dimensionamiento. La evaluación de prueba de las configuraciones congeladas se presenta en la sección 10.17. La robustez ante perturbaciones de entrada y la latencia por pronóstico permanecen pendientes.</p>
 </section>
 </section>
 
@@ -609,14 +613,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
+              
 
-
-
-
-
-
+              
+              
+              
+              
                 <footer class="prev-next-footer d-print-none">
-
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="10_modelos.html"
@@ -638,11 +642,11 @@
     </a>
 </div>
                 </footer>
-
+              
             </div>
-
-
-
+            
+            
+              
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
@@ -660,49 +664,49 @@
   </nav></div>
 
 </div></div>
-
-
+              
+            
           </div>
           <footer class="bd-footer-content">
-
+            
 <div class="bd-footer-content__inner container">
-
+  
   <div class="footer-item">
-
+    
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-
+  
   <div class="footer-item">
-
+    
 
   <p class="copyright">
-
+    
       © Copyright 2026.
       <br/>
-
+    
   </p>
 
   </div>
-
+  
   <div class="footer-item">
-
+    
   </div>
-
+  
   <div class="footer-item">
-
+    
   </div>
-
+  
 </div>
           </footer>
-
+        
 
       </main>
     </div>
   </div>
-
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>

@@ -96,3 +96,7 @@ Las referencias siguientes se analizaron mediante los abstracts exportados aport
 - **IEEE428.** G. Egharevba, A. Dankers and H. Zareipour, "Forecasting Transmission Line Loss Using a Cluster-Based Refinement Framework and Scheduled Outage Data," in IEEE Access, vol. 13, pp. 131378-131389, 2025, doi: 10.1109/ACCESS.2025.3591059. [DOI](https://doi.org/10.1109/ACCESS.2025.3591059).
 
 - Sheppard, K. y colaboradores. *arch: MovingBlockBootstrap*. Documentación del método de bootstrap de bloques móviles. [Referencia](https://arch.readthedocs.io/en/latest/bootstrap/generated/arch.bootstrap.MovingBlockBootstrap.html). Consulta: 6 de noviembre de 2026.
+
+- SciPy. *Studentized range distribution*. [Documentación](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.studentized_range.html). Distribución utilizada en Nemenyi.
+- statsmodels. *TTestPower*. [Documentación](https://www.statsmodels.org/stable/generated/statsmodels.stats.power.TTestPower.html). Dimensionamiento de comparaciones pareadas mediante diferencias y t no central.
+- statsmodels. *BDS test*. [Documentación](https://www.statsmodels.org/stable/generated/statsmodels.tsa.stattools.bds.html). Diagnóstico de independencia de los residuos.

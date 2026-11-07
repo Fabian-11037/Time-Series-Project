@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Estacionalidad y descomposición &#8212; Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</title>
-
-
-
+  
+  
+  
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -25,7 +25,7 @@
 
     </style>
   </noscript>
-
+  
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=0261ba6e" />
-
+  
   <!-- So that users can add custom icons -->
   <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -71,29 +71,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   <meta name="docsearch:version" content="" />
-
-
+  
+    
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
-
+  
   </head>
   <body data-default-mode="">
-
-
+  
+  
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
 
-
+  
   <div id="pst-scroll-pixel-helper"></div>
-
+  
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
-
-
-
-
+  
+  
+  
+  
   <dialog id="pst-search-dialog">
-
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,21 +115,21 @@
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
 </div>
 
-
+  
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
     <span class="fa-solid fa-bars"></span>
   </button>
-
-
+  
+  
   <div class="col-lg-9 navbar-header-items">
-
-
+    
+    
     <div class="navbar-header-items__end">
-
+      
         <div class="navbar-item navbar-persistent--container">
-
+          
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,13 +137,13 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
         </div>
-
-
+      
+      
     </div>
-
+    
   </div>
-
-
+  
+  
     <div class="navbar-persistent--mobile">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -152,47 +152,47 @@
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
 </button>
     </div>
+  
 
-
-
+  
 </div>
 
     </header>
-
+  
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-
-
-
+      
+      
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
 
-
-
+  
   <div class="sidebar-header-items sidebar-primary__section">
-
-
-
-
+    
+    
+    
+    
   </div>
-
+  
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-
-
-
+  
+    
+  
 
 <a class="navbar-brand logo" href="intro.html">
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
     <p class="title logo__title">Precio eléctrico colombiano: datos, análisis y modelos de pronóstico</p>
-
+  
 </a></div>
         <div class="sidebar-primary-item">
 
@@ -222,8 +222,8 @@
     </div>
 </nav></div>
     </div>
-
-
+  
+  
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
 <div id="ethical-ad-placement"
@@ -236,30 +236,30 @@
 
 
       </div>
-
+      
       <main id="main-content" class="bd-main" role="main">
-
-
+        
+        
 
 <div class="sbt-scroll-pixel-helper"></div>
 
           <div class="bd-content">
             <div class="bd-article-container">
-
+              
               <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
-
+  
     <div class="header-article-items__start">
-
+      
         <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
 </button></div>
-
+      
     </div>
-
-
+  
+  
     <div class="header-article-items__end">
-
+      
         <div class="header-article-item">
 
 <div class="article-header-buttons">
@@ -273,15 +273,15 @@
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-
-
-
+      
+      
+      
       <li><a href="_sources/04_estacionalidad.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
@@ -289,17 +289,17 @@
 <span class="btn__text-container">.ipynb</span>
 </a>
 </li>
-
-
-
-
+      
+      
+      
+      
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
   title="Imprimir en PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
@@ -307,7 +307,7 @@
 <span class="btn__text-container">.pdf</span>
 </button>
 </li>
-
+      
   </ul>
 </div>
 
@@ -319,7 +319,7 @@
   title="Modo de pantalla completa"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
-
+  
 
 <span class="btn__icon-container">
   <i class="fas fa-expand"></i>
@@ -341,29 +341,29 @@
 </button>
 
 </div></div>
-
+      
     </div>
-
+  
 </div>
 </div>
-
-
+              
+              
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>4. Estacionalidad y descomposición</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
-
+            
         </div>
     </div>
 </div>
 
-
-
+              
+                
 <div id="searchbox"></div>
                 <article class="bd-article">
-
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="estacionalidad-y-descomposicion">
 <h1>4. Estacionalidad y descomposición<a class="headerlink" href="#estacionalidad-y-descomposicion" title="Link to this heading">#</a></h1>
 <p>El análisis numérico utiliza el periodo completo de desarrollo <strong>2000–2021</strong>. Los ajustes de escaladores y modelos se realizan dentro de cada fold.</p>
@@ -537,6 +537,7 @@
 <img alt="_images/8e1cf7cacf450b4db429221f10b9ea8525e21d4073e146483903a1431f90212e.png" src="_images/8e1cf7cacf450b4db429221f10b9ea8525e21d4073e146483903a1431f90212e.png" />
 </div>
 </div>
+<p><strong>Interpretación.</strong> El precio medio es mayor hacia las 19:00 y menor en la madrugada; el domingo presenta el menor nivel semanal. En el perfil mensual destacan octubre y febrero frente al mínimo de julio, con amplia dispersión dentro de cada grupo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annual</span> <span class="o">=</span> <span class="n">STL</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">daily</span><span class="p">),</span> <span class="n">period</span><span class="o">=</span><span class="mi">365</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -550,6 +551,7 @@
 <img alt="_images/6a40b5debc422a4de99502c2bcaf412317f490f190fa02e16a027ed94fec2d1e.png" src="_images/6a40b5debc422a4de99502c2bcaf412317f490f190fa02e16a027ed94fec2d1e.png" />
 </div>
 </div>
+<p><strong>Interpretación.</strong> La tendencia recoge cambios prolongados de nivel y la componente estacional varía de amplitud durante el periodo. Los residuos conservan picos marcados, especialmente en 2015–2016, por lo que tendencia y estacionalidad anual no explican todos los episodios extremos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2021</span><span class="p">])</span>
@@ -564,6 +566,7 @@
 <img alt="_images/45078f57b7f9baf0c60e13cd09e41da43160d0f6643ec2e5b026ffbe12e2d7da.png" src="_images/45078f57b7f9baf0c60e13cd09e41da43160d0f6643ec2e5b026ffbe12e2d7da.png" />
 </div>
 </div>
+<p><strong>Interpretación.</strong> En 2021, las componentes diaria y semanal pierden amplitud durante el tramo relativamente estable de mayo–septiembre y se intensifican en octubre–noviembre. El aumento de nivel de diciembre y los residuos persistentes indican variaciones que no quedan absorbidas por los ciclos diario y semanal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">welch</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">nperseg</span><span class="o">=</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span><span class="p">,</span> <span class="n">detrend</span><span class="o">=</span><span class="s1">'linear'</span><span class="p">)</span>
@@ -679,6 +682,7 @@
 <img alt="_images/04151b2a3e6143968cfb44aca20a597be2517f0007ff9d324fbaf626224c2870.png" src="_images/04151b2a3e6143968cfb44aca20a597be2517f0007ff9d324fbaf626224c2870.png" />
 </div>
 </div>
+<p><strong>Interpretación.</strong> Aparecen picos en 24 y 168 horas, compatibles con los ciclos diario y semanal. La mayor potencia se concentra en periodos largos, incluido 8760 horas, señalando la importancia conjunta de estacionalidad y variaciones lentas del nivel.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <h3 class="rubric" id="implicaciones-del-analisis">Implicaciones del análisis</h3>
@@ -713,14 +717,14 @@
     <script>kernelName = 'python3'</script>
 
                 </article>
+              
 
-
-
-
-
-
+              
+              
+              
+              
                 <footer class="prev-next-footer d-print-none">
-
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="03_objetivo.html"
@@ -742,53 +746,53 @@
     </a>
 </div>
                 </footer>
-
+              
             </div>
-
-
-
-
+            
+            
+              
+            
           </div>
           <footer class="bd-footer-content">
-
+            
 <div class="bd-footer-content__inner container">
-
+  
   <div class="footer-item">
-
+    
 <p class="component-author">
 Por Fabian José Manrique Morelos y Gloria Bastida · Maestría en Estadística Aplicada · Universidad del Norte
 </p>
 
   </div>
-
+  
   <div class="footer-item">
-
+    
 
   <p class="copyright">
-
+    
       © Copyright 2026.
       <br/>
-
+    
   </p>
 
   </div>
-
+  
   <div class="footer-item">
-
+    
   </div>
-
+  
   <div class="footer-item">
-
+    
   </div>
-
+  
 </div>
           </footer>
-
+        
 
       </main>
     </div>
   </div>
-
+  
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
 <script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
