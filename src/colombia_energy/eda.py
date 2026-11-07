@@ -444,16 +444,10 @@ def training_input_analysis():
     table(pd.DataFrame(rows).set_index(['historia_horas','fold']),'eda_entrenamiento_folds_contextos')
     table(pd.DataFrame(coverage).set_index('historia_horas'),'eda_entrenamiento_cobertura_ventanas')
 
-    # Reajuste histórico de las configuraciones iniciales: desarrollo completo, sin leer prueba.
-    refit_origins = np.unique(np.concatenate([pilot['folds'][0]['train_origins']]+[f['validation_origins'] for f in pilot['folds']]))
-    used, labels = used_window_rows(refit_origins,len(index),config['lookback_hours'],horizon)
+    # Cobertura diagnóstica de todo desarrollo con contexto de 168 horas.
+    development_origins = np.unique(np.concatenate([pilot['folds'][0]['train_origins']]+[f['validation_origins'] for f in pilot['folds']]))
+    used, labels = used_window_rows(development_origins,len(index),config['lookback_hours'],horizon)
     actual = features.iloc[np.flatnonzero(used)]
-    refit = json.loads((ROOT/'results/test_pytorch/preprocessing.json').read_text(encoding='utf-8'))
-    assert len(refit_origins)==refit['train_windows']
-    assert str(actual.index[0])==refit['scaler_fit_start']
-    assert str(actual.index[-1])==refit['scaler_fit_end']
-    np.testing.assert_allclose(actual.mean().to_numpy(),refit['feature_mean'],rtol=1e-9,atol=1e-7)
-    np.testing.assert_allclose(actual.std(ddof=0).to_numpy(),refit['feature_scale'],rtol=1e-9,atol=1e-7)
     descriptives = actual.describe(percentiles=[.01,.5,.99]).T
     descriptives['faltantes'] = actual.isna().sum()
     descriptives['bloque'] = ['calendario' if c.endswith(('_sin','_cos')) else
@@ -462,7 +456,7 @@ def training_input_analysis():
     with pd.option_context('display.max_rows', 50):
         table(descriptives,'eda_37_entradas_entrenamiento')
     table(actual.groupby(actual.index.year).size().to_frame('horas_entrada_unicas'),'eda_entradas_por_anio')
-    # Resúmenes por año sobre etiquetas que efectivamente participan en el reajuste completo.
+    # Resúmenes por año sobre etiquetas que efectivamente participan en el desarrollo completo.
     actual_target = pilot['target'].iloc[np.flatnonzero(labels)]
     table(actual_target.groupby(actual_target.index.year).agg(['count','mean','std','min','median','max']),
         'eda_etiquetas_entrenamiento_por_anio')
@@ -473,14 +467,14 @@ def training_input_analysis():
         .replace('precipitation_preceding_hour_mm_','P ') for c in actual]
     ax.set_xticks(range(len(names)),names,rotation=90,fontsize=7)
     ax.set_yticks(range(len(names)),names,fontsize=7)
-    ax.set_title('37 entradas alineadas: horas únicas usadas en el reajuste 2000–2021')
+    ax.set_title('37 entradas alineadas: horas únicas admisibles en desarrollo 2000–2021')
     fig.colorbar(im,ax=ax,label='Spearman')
     figure(fig,'eda_correlaciones_37_entradas')
     scope = dict(period_start=config['development_start'],period_end_exclusive=config['development_end_exclusive'],
         raw_hours=len(features),feature_count=features.shape[1],feature_names=list(features.columns),
-        refit_windows=len(refit_origins),refit_input_rows=len(actual),
-        refit_input_start=str(actual.index[0]),refit_input_end=str(actual.index[-1]),
-        feature_preprocessing_matches_saved_refit=True,search_folds_match_saved_audit=True,
+        development_windows_168h=len(development_origins),development_input_rows_168h=len(actual),
+        development_input_start_168h=str(actual.index[0]),development_input_end_168h=str(actual.index[-1]),
+        search_folds_match_saved_audit=True,
         test_values_read=False,model_training_repeated=False,
         unit='Una fila horaria única; las ventanas superpuestas no se cuentan como observaciones independientes.')
     (RESULTS/'eda_training_scope.json').write_text(json.dumps(scope,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

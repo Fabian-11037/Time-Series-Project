@@ -489,7 +489,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Salida diaria de 24 horas; contextos de 24, 72, 168 y 336 horas comparados en desarrollo.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales y purga de etiquetas; prueba inicial ya evaluada en 2022–2025.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes y presupuesto de evaluaciones; inferencia temporal pendiente.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decisions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'Integridad y rangos'</span><span class="p">,</span> <span class="s1">'Sin imputación innecesaria; conservar anomalías de llenado y versiones originales.'</span><span class="p">,</span> <span class="s1">'Máscaras de calidad; no borrar extremos de precio.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Distribución y regímenes'</span><span class="p">,</span> <span class="s1">'Comparar escala robusta/log1p usando train; evaluar pérdida robusta.'</span><span class="p">,</span> <span class="s1">'Memoria y adaptación a nivel/varianza; no escoger por prueba.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Ciclos y dependencia'</span><span class="p">,</span> <span class="s1">'Calendario y rezagos diarios/semanales; filtros operativos causales.'</span><span class="p">,</span> <span class="s1">'Salida diaria de 24 horas; contextos de 24, 72, 168 y 336 horas comparados en desarrollo.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Covariables'</span><span class="p">,</span> <span class="s1">'Conservar ciudades y frecuencias; acumulados hacia atrás.'</span><span class="p">,</span> <span class="s1">'Representación multivariada con observaciones disponibles al origen.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Texto y cobertura'</span><span class="p">,</span> <span class="s1">'Fechas supuestas/comprobadas separadas; desconocidos sin fecha inventada.'</span><span class="p">,</span> <span class="s1">'Representaciones documentales ajustadas con entrenamiento y evaluadas mediante un protocolo temporal común.'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Validación'</span><span class="p">,</span> <span class="s1">'Cortes temporales y purga de etiquetas; desarrollo limitado a 2000–2021.'</span><span class="p">,</span> <span class="s1">'Mismos orígenes y presupuesto de evaluaciones; inferencia temporal pendiente.'</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'hallazgo'</span><span class="p">,</span> <span class="s1">'preprocesamiento'</span><span class="p">,</span> <span class="s1">'arquitectura_y_validación'</span><span class="p">])</span>
 <span class="n">table</span><span class="p">(</span><span class="n">decisions</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'hallazgo'</span><span class="p">),</span> <span class="s1">'matriz_decisiones_eda'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -550,7 +550,7 @@
     </tr>
     <tr>
       <th>Validación</th>
-      <td>Cortes temporales y purga de etiquetas; prueba...</td>
+      <td>Cortes temporales y purga de etiquetas; desarr...</td>
       <td>Mismos orígenes y presupuesto de evaluaciones;...</td>
     </tr>
   </tbody>
@@ -571,18 +571,14 @@
 <td><p>75 ajustes: tres familias, cinco folds y cinco semillas; contexto de 168 h y 30 épocas</p></td>
 <td><p>Caracterización exploratoria en desarrollo</p></td>
 </tr>
-<tr class="row-odd"><td><p>Prueba inicial, 5 de noviembre de 2026</p></td>
-<td><p>15 reajustes con desarrollo 2000–2021 y evaluación en 2022–2025</p></td>
-<td><p>Resultados de las configuraciones iniciales de 168 h; CNN1D obtuvo MAE medio de 81,618 COP/kWh</p></td>
-</tr>
-<tr class="row-even"><td><p>Selección posterior, completada el 6 de noviembre de 2026</p></td>
+<tr class="row-odd"><td><p>Selección de configuraciones</p></td>
 <td><p>192 configuraciones y 4800 ajustes en desarrollo, con parada anticipada</p></td>
 <td><p>CNN1D C3 de 24 h obtuvo el menor MAE de selección: 24,155 COP/kWh</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Los dos errores citados corresponden a configuraciones y periodos distintos. Su diferencia no estima una mejora atribuible a la nueva arquitectura. La búsqueda posterior no volvió a evaluar prueba; sus resultados no constituyen una evaluación independiente del proceso de selección.</p>
+<p>La validación participa en la parada y en la selección; sus resultados no constituyen una evaluación independiente del proceso de selección.</p>
 </section>
 <section id="limitaciones-y-desarrollo-del-estudio">
 <h2>Limitaciones y desarrollo del estudio<a class="headerlink" href="#limitaciones-y-desarrollo-del-estudio" title="Link to this heading">#</a></h2>

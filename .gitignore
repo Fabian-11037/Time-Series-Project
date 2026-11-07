@@ -23,7 +23,6 @@ results/**/test_access_started.json
 results/jbook_local_server.json
 results/pilot_pytorch/
 results/pilot_pytorch_gfx1030/*/
-results/test_pytorch/*/
 results/variant_search/runs/*/
 !results/variant_search/runs/C3_h24_l2_0.0001/
 !results/variant_search/runs/L2_h72_l2_0.001/

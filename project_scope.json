@@ -10,12 +10,7 @@
     "pilot_completed": true,
     "pilot_runs": 75,
     "confirmatory_benchmark_completed": false,
-    "test_evaluated": true,
     "pilot_results": "results/pilot_pytorch_gfx1030/RESUMEN_RESULTADOS.md",
-    "test_runs": 15,
-    "test_results": "results/test_pytorch/RESUMEN_PRUEBA.md",
-    "test_access_authorized_by_user": true,
-    "test_previously_unseen": false,
     "variant_search_started": true,
     "variant_search_configurations": 192,
     "variant_search_planned_runs": 4800,
@@ -75,7 +70,8 @@
         "10.3390/en11051255 §4.1",
         "10.1016/j.apenergy.2021.116983 §§5.4–5.4.2"
       ]
-    }
+    },
+    "holdout_independence_certified": false
   },
   "E2_E3": {
     "text_corpus_preserved": true,

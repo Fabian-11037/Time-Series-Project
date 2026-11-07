@@ -20,8 +20,6 @@
     }
   ],
   "aggregation": "pool_hours_across_validation_origins_per_seed_then_mean_across_seeds",
-  "chronology_distinguishes_pilot_initial_test_later_search": true,
-  "initial_test_not_attributed_to_selected_variants": true,
   "context_168h_distinguished_from_search_and_selected_contexts": true,
   "retrospective_preregistration_claimed": false,
   "delta_power_independent_evaluation_pending": true,

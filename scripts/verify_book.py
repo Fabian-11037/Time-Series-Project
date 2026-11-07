@@ -72,7 +72,7 @@ def main():
     assert scope['period_start']==config['development_start']
     assert scope['period_end_exclusive']==config['development_end_exclusive']
     assert scope['feature_count']==37 and not scope['test_values_read']
-    assert scope['feature_preprocessing_matches_saved_refit'] and scope['search_folds_match_saved_audit']
+    assert scope['search_folds_match_saved_audit']
     assert not scope['model_training_repeated']
     assert text_scope['test_documents_read']==0 and text_scope['full_development_projected']
     assert text_scope['max_available']<'2022' and not text_scope['vocabulary_refit_with_validation']

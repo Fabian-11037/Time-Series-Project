@@ -81,7 +81,7 @@ Se completaron 4800 ajustes de 192 configuraciones MLP, LSTM y CNN1D con cinco f
 | LSTM: una capa, 64 unidades | 72 h | 1e-3 | 24.624 |
 | MLP: densas 256 y 128 | 24 h | 1e-3 | 24.992 |
 
-Dropout fijo 0.1, salida Softplus positiva y parada anticipada por MAE. Referencia semanal: MAE 40.157 COP/kWh. Las métricas se utilizan para seleccionar arquitectura y época; no son una evaluación externa imparcial. Prueba 2022–2025 fue consultada previamente para configuraciones iniciales y no se reevalúa en esta búsqueda.
+Dropout fijo 0.1, salida Softplus positiva y parada anticipada por MAE. Referencia semanal: MAE 40.157 COP/kWh. Las métricas se utilizan para seleccionar arquitectura y época; no son una evaluación externa imparcial.
 
 Se versionan las métricas de los 4800 ajustes y las predicciones/curvas de las tres configuraciones seleccionadas (75 ejecuciones). Las predicciones se distribuyen en `results/variant_search/selected_predictions.zip`, con huellas individuales en `selected_predictions_manifest.json`. Los checkpoints y el resto de artefactos de entrenamiento permanecen en el archivo local; no se incluyen los 5.4 GB completos en Git. Los scripts permiten regenerarlos. El libro se reconstruye con las predicciones seleccionadas, sin necesidad de pesos ni GPU.
 

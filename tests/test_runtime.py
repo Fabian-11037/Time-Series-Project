@@ -110,11 +110,6 @@ class RuntimeTests(unittest.TestCase):
             new={n.name:ast.dump(n,include_attributes=False) for n in current.body if isinstance(n,(ast.ClassDef,ast.FunctionDef)) and n.name in names}
             self.assertEqual(old,new)
 
-    def test_previous_test_stays_blocked_before_any_data_load(self):
-        import evaluate_test_pytorch as entry
-        with patch.object(sys,'argv',['evaluate_test_pytorch.py','--evaluate-test','--device','cpu']),patch.object(entry,'load_numeric',side_effect=AssertionError('No abrir datos')) as load:
-            with self.assertRaisesRegex(RuntimeError,'Prueba ya consultada'):entry.main()
-            load.assert_not_called()
 
     def test_search_runner_on_cpu_with_synthetic_development(self):
         import contextlib,json

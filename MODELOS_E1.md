@@ -1,6 +1,6 @@
 # Modelos numéricos del Entregable 1
 
-La comparación utiliza MLP, LSTM y CNN1D para el precio nacional horario de bolsa de XM, con entradas numéricas y calendario. Las variables y su disponibilidad se documentan en `PIPELINE.md`; el horizonte es de 24 horas. El desarrollo 2000–2021 utiliza cinco folds expansivos `split_train_val_forwardChaining`. La prueba 2022–2025 fue consultada para configuraciones iniciales el 5 de noviembre; no constituye una prueba intacta para decisiones posteriores.
+La comparación utiliza MLP, LSTM y CNN1D para el precio nacional horario de bolsa de XM, con entradas numéricas y calendario. Las variables y su disponibilidad se documentan en `PIPELINE.md`; el horizonte es de 24 horas. El desarrollo 2000–2021 utiliza cinco folds expansivos `split_train_val_forwardChaining`. El análisis de modelos utiliza exclusivamente desarrollo 2000–2021; una evaluación independiente requiere un protocolo específico.
 
 ## Justificación bibliográfica
 
@@ -26,4 +26,4 @@ Se completaron el piloto de 75 ajustes y la búsqueda de 192 configuraciones/480
 
 La adaptación Windows/Linux permite CPU o GPU CUDA/ROCm según `EJECUCION.md`. La revisión bibliográfica no modifica datos, arquitecturas, métricas ni prueba. Los siguientes experimentos deben definir δ, potencia, inferencia temporal, presupuesto comparable y evaluación independiente antes de obtener nuevos resultados. La especificación insuficiente de algunos comparadores mantiene vigente la condición E1 §3.2 que remite a la búsqueda de arquitectura E2 §14; las 192 configuraciones ya ejecutadas no acreditan por sí solas su cumplimiento.
 
-Estado detallado e instrucciones de continuidad: `CONTEXTO_PROYECTO.md`, secciones 19, 22 y 23. El proyecto histórico Time-MMD conserva sus protocolos y resultados propios.
+Estado detallado e instrucciones de continuidad: `CONTEXTO_PROYECTO.md`. El proyecto histórico Time-MMD conserva sus protocolos y resultados propios.

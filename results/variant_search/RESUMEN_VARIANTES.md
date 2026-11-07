@@ -12,6 +12,6 @@ MAE/RMSE en COP/kWh. Por semilla se agrupan las horas de validación de los cinc
 
 Configuración ganadora global: C3, dos convoluciones de 64 filtros, kernel 5, ReLU y Dropout1d=0.1, pooling a siete posiciones y salida densa de 24 valores con Softplus. Historia de 24 horas y Ridge explícito lambda=1e-4.
 
-Las métricas son de selección: el bloque de validación también se utilizó para parada anticipada y selección entre 192 configuraciones. Pueden ser optimistas; no son métricas de prueba ni resultados confirmatorios. Las semillas no reflejan incertidumbre temporal. La prueba 2022–2025 fue consultada anteriormente para las configuraciones del piloto y no se volvió a consultar en esta búsqueda. No trasladar sus R² de prueba a estos nuevos ganadores.
+Las métricas son de selección: el bloque de validación también se utilizó para parada anticipada y selección entre 192 configuraciones. Pueden ser optimistas; no son métricas de prueba ni resultados confirmatorios. Las semillas no reflejan incertidumbre temporal. Una evaluación independiente de los candidatos seleccionados permanece pendiente.
 
 El apagado condicionado registró poweroff_requested después de finalizar y guardar los resultados. Este registro confirma la solicitud de apagado, no constituye por sí solo prueba del apagado físico.

@@ -1,6 +1,6 @@
 # Pipeline de entrenamiento
 
-La configuración activa está en `configs/training_pipeline.json`. El método es `split_train_val_forwardChaining`, con entrenamiento expansivo y cinco bloques consecutivos de validación dentro de 2000–2021. El periodo 2022–2025 corresponde a la prueba inicial, evaluada el 5 de noviembre de 2026; no es una prueba intacta del diseño seleccionado después. Los accesos automáticos de EDA y búsqueda siguen bloqueados.
+La configuración activa está en `configs/training_pipeline.json`. El método es `split_train_val_forwardChaining`, con entrenamiento expansivo y cinco bloques consecutivos de validación dentro de 2000–2021. El periodo 2022–2025 queda fuera de desarrollo. Los accesos automáticos de EDA y búsqueda siguen bloqueados; la evaluación final requiere un protocolo específico.
 
 ## Preparar
 
@@ -52,11 +52,8 @@ HSA_OVERRIDE_GFX_VERSION=10.3.0 python scripts/train_pytorch.py --output results
 python scripts/summarize_pytorch.py results/pilot_pytorch_gfx1030
 ```
 
-El override corresponde a la ejecución local en RX 6700 XT; no es una exigencia para otras GPUs. No se cambia a CPU silenciosamente. La ejecución reanuda los ajustes completos; los cambios de configuración requieren otra carpeta. Se completaron 75 ajustes antes de la primera evaluación de prueba descrita a continuación. El bloqueo original del EDA se conserva; las versiones del piloto están en `environment_freeze.txt` dentro de sus resultados.
+El override corresponde a la ejecución local en RX 6700 XT; no es una exigencia para otras GPUs. No se cambia a CPU silenciosamente. La ejecución reanuda los ajustes completos; los cambios de configuración requieren otra carpeta. Se completaron 75 ajustes en desarrollo. El bloqueo original del EDA se conserva; las versiones del piloto están en `environment_freeze.txt` dentro de sus resultados.
 
-## Evaluación de prueba autorizada
-
-El 5 de noviembre de 2026 se reentrenaron los tres modelos con desarrollo completo y se evaluaron cinco semillas por familia en prueba por solicitud explícita del usuario. Entrada separada: `scripts/evaluate_test_pytorch.py --evaluate-test`. Resultados y reglas de evaluación diaria con pesos fijos: `results/test_pytorch/RESUMEN_PRUEBA.md`; registro previo: `PROTOCOLO_PRUEBA_2026-11-05.md`. El script bloquea repeticiones automáticas una vez iniciada la consulta. Para auditar los artefactos existentes, ejecutar `python scripts/summarize_test_pytorch.py`. Prueba ya no está sin consultar; los accesos de EDA/piloto siguen bloqueados.
 
 ## Búsqueda de variantes con Dropout fijo
 

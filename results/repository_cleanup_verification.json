@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "artifact_removal_completed": true,
+  "current_reference_matches": [],
+  "protected_data_literature_validation_files": 359,
+  "protected_files_changed": [],
+  "numerical_model_training_repeated": false,
+  "test_values_read": false,
+  "tests_run": 34,
+  "tests_passed": 33,
+  "tests_skipped_no_gpu": 1,
+  "notebooks_verified": 11,
+  "html_pages": 17,
+  "cell_errors": 0,
+  "broken_local_references": []
+}

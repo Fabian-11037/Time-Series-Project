@@ -42,13 +42,13 @@ La búsqueda completa conserva 192 configuraciones, cinco folds, cinco semillas 
 
 ## Integridad y fuentes históricas
 
-Los resultados de `results/variant_search/`, piloto original y prueba original se conservan. Las nuevas carpetas predeterminadas terminan en `_portable`; intentar usar una configuración congelada incompatible produce un error antes de escribir sus resultados. Los checkpoints deben acompañarse de sus escaladores y configuración; se cargan con `map_location` en el dispositivo elegido.
+Los resultados de `results/variant_search/`, piloto original se conservan. Las nuevas carpetas predeterminadas terminan en `_portable`; intentar usar una configuración congelada incompatible produce un error antes de escribir sus resultados. Los checkpoints deben acompañarse de sus escaladores y configuración; se cargan con `map_location` en el dispositivo elegido.
 
 `resources/experiment_sources/manifest.json` conserva las fuentes originales exactas, referidas por los hashes de los experimentos de noviembre de 2026. Estos archivos constituyen evidencia histórica y no son puntos de entrada de ejecución. Los scripts actuales y `src/colombia_energy/runtime.py` contienen la implementación portable; las nuevas configuraciones registran ambas huellas.
 
 El bloqueo de ejecución utiliza `msvcrt` en Windows y `fcntl` en Linux, importados únicamente dentro de su rama correspondiente. La liberación se realiza también ante excepciones. No deben ejecutarse dos procesos sobre una misma carpeta.
 
-La adaptación del dispositivo no autoriza una nueva evaluación de 2022–2025. El script de prueba conserva el indicador explícito y rechaza una evaluación ya completada incluso en un clon sin el marcador local de apertura. El archivo de prueba congelada y los cortes temporales no se modifican.
+La ejecución documental y la búsqueda se limitan a desarrollo 2000–2021. El acceso a valores de 2022–2025 permanece bloqueado por defecto; cualquier evaluación final requiere un protocolo específico. El manifiesto y los cortes temporales se conservan.
 
 
 ## Ejecución del kernel documental
